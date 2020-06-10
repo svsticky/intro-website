@@ -18,3 +18,12 @@ code {
   height: calc(100% - 50px);
   width: 100%;
 }
+
+.sidebar {
+  position: absolute;
+  right: 0px;
+  top: 70px;
+  bottom: 20px;
+  width: 200px;
+  z-index: 1000;
+}
