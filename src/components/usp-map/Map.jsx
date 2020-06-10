@@ -18,7 +18,8 @@ class MapPage extends Component {
 
     this.state = {
       title: "Test",
-      content: "Content"
+      content: "Content",
+      hidden: true
     }
 
     this.pointOfInterest = this.pointOfInterest.bind(this)
@@ -27,8 +28,9 @@ class MapPage extends Component {
   pointOfInterest(title, content) {
     this.setState({
       title: title,
-      content: content
-    })
+      content: content,
+      hidden: (title === this.state.title || this.state.hidden) ? !this.state.hidden : this.state.hidden
+    });
   }
   
   render() {
@@ -40,7 +42,7 @@ class MapPage extends Component {
         <article>
           <h2>Ontdek de USP</h2>
         </article>
-        <Sidebar title={this.state.title} content={this.state.content} />
+        <Sidebar title={this.state.title} content={this.state.content} hidden={this.state.hidden} />
         <Map 
           center={position}
           zoom={this.coords.zoom}
