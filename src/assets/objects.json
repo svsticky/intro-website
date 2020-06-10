@@ -18,11 +18,10 @@
   ],
   "paths": [
     {
-      "start": [0, 0],
-      "end": [0, 0],
-      "title": "Path title",
-      "content": "Path content",
-      "video": "url"
+      "positions": [[52.085855, 5.171957], [52.086332, 5.175657]],
+      "title": "Test path",
+      "content": "Dit is een voorbeeld van hoe routes op de Utrecht Science Park gedeeld kunnen worden op deze website.",
+      "video": "QKx2l6230BI"
     }
   ]
 }
