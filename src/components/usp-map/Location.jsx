@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Circle } from "react-leaflet";
 
 class Location extends Component {
- 
   render() {
     return (
       <Circle

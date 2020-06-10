@@ -6,6 +6,9 @@ import { latLngBounds } from "leaflet";
 import Sidebar from "./Sidebar";
 import Location from "./Location";
 
+// Locations & Paths
+import data from "../../assets/objects.json";
+
 class MapPage extends Component {
   constructor() {
     super();
@@ -36,6 +39,15 @@ class MapPage extends Component {
   render() {
     const position = [this.coords.lat, this.coords.lng];
     const bounds = new latLngBounds([52.076361, 5.150056], [52.097342, 5.199981]);
+    const locations = data.points.map(point => {
+      return <Location
+        key={point.title}
+        position={point.location}
+        title={point.title}
+        content={point.content}
+        handler={this.pointOfInterest}
+      />
+    });
 
     return (
       <main>
@@ -53,18 +65,7 @@ class MapPage extends Component {
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Location
-            position={[52.085855, 5.171957]}
-            title="Educatorium"
-            content="Welkom bij het Educatorium! Dit gebouw wordt vooral door INCA en INKU studenten gebruikt voor het afnemen van tentamens."
-            handler={this.pointOfInterest}
-          />
-          <Location
-            position={position}
-            title="Test punt"
-            content="Hey hoi! Dit is een test punt. Met dit punt kan er namelijk getest worden of het klikken op points of interests werkt! :)"
-            handler={this.pointOfInterest}
-          />
+          {locations}
         </Map>
       </main>
     );
