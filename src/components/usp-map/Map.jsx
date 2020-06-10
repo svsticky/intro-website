@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import { latLngBounds } from "leaflet";
 
 class MapPage extends Component {
   constructor() {
@@ -13,7 +14,8 @@ class MapPage extends Component {
   }
   
   render() {
-    const position = [this.coords.lat, this.coords.lng]
+    const position = [this.coords.lat, this.coords.lng];
+    const bounds = new latLngBounds([52.076361, 5.150056], [52.097342, 5.199981]);
 
     return (
       <main>
@@ -21,8 +23,10 @@ class MapPage extends Component {
           <h2>Ontdek de USP</h2>
         </article>
         <Map 
-          center={position} 
+          center={position}
           zoom={this.coords.zoom}
+          maxBounds={bounds}
+          minZoom={15}
         >
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
