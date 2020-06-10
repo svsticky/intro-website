@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import { Map, TileLayer, Circle } from "react-leaflet";
 import { latLngBounds } from "leaflet";
 
 class MapPage extends Component {
@@ -11,6 +11,10 @@ class MapPage extends Component {
       lng: 5.175657,
       zoom: 16
     }
+  }
+
+  pointOfInterest(x) {
+    console.log(x);
   }
   
   render() {
@@ -32,11 +36,12 @@ class MapPage extends Component {
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          {/* <Marker position={position}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker> */}
+          <Circle
+            center={position}
+            radius={20}
+            mouseover={this.pointOfInterest("Test")}
+          >
+          </Circle>
         </Map>
       </main>
     );
