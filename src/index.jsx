@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import * as serviceWorker from './serviceWorker';
 
 // Import components
-import Home from './components/Home.jsx';
+// import Home from './components/Home.jsx';
 import MapPage from './components/usp-map/Map.jsx';
 
 // Import static content
@@ -18,7 +18,8 @@ class App extends Component {
         <main>
           <Switch>
             <Route path="/map" component={MapPage} />
-            <Route component={Home} />
+            <Route component={MapPage} />
+            {/* <Route component={Home} /> */}
           </Switch>
         </main>
       </Router>
