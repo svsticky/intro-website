@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.leaflet-container {
+  position: absolute;
+  top: 50px;
+  height: calc(100% - 50px);
+  width: 100%;
+}

@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 
 // Import components
 import Home from './components/Home.jsx';
-import Map from './components/usp-map/Map.jsx';
+import MapPage from './components/usp-map/Map.jsx';
 
 // Import static content
 import './assets/index.css';
@@ -17,7 +17,7 @@ class App extends Component {
       <Router>
         <main>
           <Switch>
-            <Route path="/map" component={Map} />
+            <Route path="/map" component={MapPage} />
             <Route component={Home} />
           </Switch>
         </main>
