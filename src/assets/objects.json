@@ -1,0 +1,27 @@
+{
+  "points": [
+    {
+      "location": [52.086332, 5.175657],
+      "title": "Test title",
+      "content": "Test content"
+    },
+    {
+      "location": [52.085855, 5.171957],
+      "title": "Educatorium",
+      "content": "Welkom bij het Educatorium! Dit gebouw wordt vooral door INCA en INKU studenten gebruikt voor het afnemen van tentamens."
+    },
+    {
+      "location": [52.085855, 5.172957],
+      "title": "Test punt",
+      "content": "Hey hoi! Dit is een test punt. Met dit punt kan er namelijk getest worden of het klikken op points of interests werkt! :)"
+    }
+  ],
+  "paths": [
+    {
+      "positions": [[52.085855, 5.171957], [52.086332, 5.175657]],
+      "title": "Test path",
+      "content": "Dit is een voorbeeld van hoe routes op de Utrecht Science Park gedeeld kunnen worden op deze website.",
+      "video": "QKx2l6230BI"
+    }
+  ]
+}
