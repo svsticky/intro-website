@@ -81,8 +81,8 @@ class MapPage extends Component {
     });
 
     return (
-      <main>
-        <article>
+      <article>
+        <article className="header">
           <h2>Ontdek de USP</h2>
         </article>
         <RouteInfo 
@@ -106,7 +106,7 @@ class MapPage extends Component {
           {locations}
           {paths}
         </Map>
-      </main>
+      </article>
     );
   }
 }
