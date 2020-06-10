@@ -12,16 +12,12 @@ import './assets/index.css';
 import './assets/logo.svg';
 
 class App extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return (
       <Router>
         <main>
           <Switch>
-            <Route path="/usp" component={Map} />
+            <Route path="/map" component={Map} />
             <Route component={Home} />
           </Switch>
         </main>
