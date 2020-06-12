@@ -2,11 +2,14 @@ import React from 'react';
 
 const Question = ({ question }) => (
 <div className="ui row">
-    <div className = "ui eight wide column">
-        <p>{question.question}</p>
-    </div>
-    <div className = "ui eight wide column">
-        <p>{question.answer}</p>
+    <div className="ui fluid styled accordion">
+        <div class="title">
+            <i class="dropdown icon"/>
+            {question.question}
+        </div>
+        <div class="content">
+            <p class="transition hidden">{question.answer}</p>
+        </div>
     </div>
 </div>
 );
