@@ -1,4 +1,119 @@
 {
+    "introduction":[
+        {
+            "name": "Kamp",
+            "text": "Dit wordt een super gaaf kamp voor iedereen"
+        },
+        {
+            "name": "Over Microsoft Teams",
+            "text": "Het is een geweldig programma. Toch?"
+        },
+        {
+            "name": "Hoe werkt Microsoft Teams?",
+            "text": "ja weet ik veel..."
+        }
+    ],
+    "program":[
+        {   
+            "name": "31 Augustus",
+            "activities":[
+                {
+                    "name": "website bouwen",
+                    "description": "het opzetten ervan",
+                    "time": "12:00 - 14:00"
+                },
+                {
+                    "name": "website uploaden",
+                    "description": "het opzetten ervan",
+                    "time": "14:00 - 18:00"
+                }
+            ]
+        },
+        {
+            "name": "1 September",
+            "activities":[
+                {
+                    "name": "website bouwen",
+                    "description": "het opzetten ervan",
+                    "time": "12:00 - 14:00"
+                },
+                {
+                    "name": "website uploaden",
+                    "description": "het opzetten ervan",
+                    "time": "14:00 - 18:00"
+                }
+            ]
+        },
+        {
+            "name": "2 September",
+            "activities":[
+                {
+                    "name": "website bouwen",
+                    "description": "het opzetten ervan",
+                    "time": "12:00 - 14:00"
+                },
+                {
+                    "name": "website uploaden",
+                    "description": "het opzetten ervan",
+                    "time": "14:00 - 18:00"
+                }
+            ]
+        },
+        {
+            "name": "3 September",
+            "activities":[
+                {
+                    "name": "website bouwen",
+                    "description": "het opzetten ervan",
+                    "time": "12:00 - 14:00"
+                },
+                {
+                    "name": "website uploaden",
+                    "description": "het opzetten ervan",
+                    "time": "14:00 - 18:00"
+                }
+            ]
+        },
+        {
+            "name": "4 September",
+            "activities":[
+                {
+                    "name": "website bouwen",
+                    "description": "het opzetten ervan",
+                    "time": "12:00 - 14:00"
+                },
+                {
+                    "name": "website uploaden",
+                    "description": "het opzetten ervan",
+                    "time": "14:00 - 18:00"
+                }
+            ]
+        }
+    ],
+    "Assosiations":[
+        {
+            "name": "Sticky",
+            "text": "Super coole vereniging met een !"
+        },
+        {
+            "name": "Aes-kwadraat",
+            "text": "Ook een leuke vereniging"
+        }
+    ],
+    "FAQ":[
+        {
+            "question": "Wanneer is het?",
+            "answer": "Van 31 Augustus tot 4 September, heb je het programma al gelezen?"
+        },
+        {
+            "question": "Wat gaan we doen?",
+            "answer": "Zie het programma op deze pagina"
+        },
+        {
+            "question": "Hoe werkt Microsoft Teams?",
+            "answer": "ja weet ik veel..."
+        }
+    ],
     "contactPersons": [
         {
             "name": "Rick",
