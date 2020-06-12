@@ -4,12 +4,17 @@ This is a single-page, association-neutral information site on the introduction 
 
 ## Installation
 
-Install node (>=8.10) and npm (>=5.6).
-Thats it.
+Install node (>=14.4.0) and npm (>=6.1.5):
+
+`nvm install stable`
+
+Install dependencies:
+
+`npm install`
 
 ## Developing
 
-`yarn start`
+`npm start`
 
 Runs the app in the development mode.
 
@@ -21,7 +26,7 @@ You will also see any lint errors in the console.
 
 ## Building
 
-`yarn build`
+`npm build`
 
 Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
