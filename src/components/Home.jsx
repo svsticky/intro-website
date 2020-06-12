@@ -13,13 +13,13 @@ class Home extends Component {
         <div className="ui container">
           <p className="ui center aligned huge header">INCA / INKU Introductie</p>
           {getText(data.introduction)}
-          <p className="ui center alinged large header">Programma</p>
+          <p className="ui center aligned large header">Programma</p>
           {getProgram(data.program)}
-          <h3 className="ui center aligned large header">Verenigingen</h3>
+          <p className="ui center aligned large header">Verenigingen</p>
           {getText(data.Assosiations)}
-          <h3 className="ui center alinged large header">FAQ</h3>
+          <p className="ui center aligned large header">FAQ</p>
           {getFAQ(data.FAQ)}
-          <h3 className="ui center alinged large header">Contact</h3>
+          <p className="ui center aligned large header">Contact</p>
           {getContactPersons(data.contactPersons)}
         </div>
       </main>      
@@ -30,8 +30,8 @@ const getText = texts =>{
   return(
     <div className="ui grid">
       {
-        texts.map(text=>(
-          <Text text={text}/>
+        texts.map((text, index)=>(
+          <Text text={text} key={index}/>
         ))
       }
     </div>
@@ -41,8 +41,8 @@ const getProgram = dates =>{
   return(
     <div className="ui grid">
       {
-        dates.map(date => (
-          <Date date={date}/>
+        dates.map((date, index) => (
+          <Date date={date} key={index}/>
         ))
       }
     </div>
@@ -52,8 +52,8 @@ const getFAQ = FAQ =>{
   return(
     <div className="ui celled grid">
       {
-        FAQ.map(question=>(
-          <Question question={question}/>
+        FAQ.map((question, index)=>(
+          <Question question={question} key={index}/>
         ))
       }
     </div>
@@ -61,10 +61,10 @@ const getFAQ = FAQ =>{
 }
 const getContactPersons = contactPersons=>{
   return (
-    <div className="ui four column doubling stackable grid">
+    <div className="ui centered four column doubling stackable grid">
       {
-        contactPersons.map(contactPerson=>(
-          <ContactPerson contactPerson={contactPerson}/>
+        contactPersons.map((contactPerson, index)=>(
+          <ContactPerson contactPerson={contactPerson} key={index}/>
         ))
       }
     </div>

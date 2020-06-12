@@ -93,11 +93,13 @@
     "Assosiations":[
         {
             "name": "Sticky",
-            "text": "Super coole vereniging met een !"
+            "text": "Super coole vereniging met een !",
+            "photo": ""
         },
         {
             "name": "Aes-kwadraat",
-            "text": "Ook een leuke vereniging"
+            "text": "Ook een leuke vereniging",
+            "photo": ""
         }
     ],
     "FAQ":[
@@ -117,7 +119,7 @@
     "contactPersons": [
         {
             "name": "Rick",
-            "type": "oud-bestuur",
+            "type": "bestuur",
             "mobile": "06",
             "email": "someone@example.com"
         },
@@ -130,14 +132,14 @@
         {
             "name": "Merijn",
             "type": "website beheerder",
-            "mobile": "10",
-            "email": "sietze.riemersma@gmail.com"
+            "mobile": "11",
+            "email": "iemand@example.com"
         },
         {
             "name": "Joris",
             "type": "KB",
-            "mobile": "10",
-            "email": "sietze.riemersma@gmail.com"
+            "mobile": "12",
+            "email": "example@someone.com"
         }
     ]
 }

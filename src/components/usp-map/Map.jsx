@@ -10,7 +10,7 @@ import RouteInfo from "./Route"
 
 // Locations & Paths
 import data from "../../assets/objects.json";
-
+import '../../assets/index.css';
 class MapPage extends Component {
   constructor() {
     super();
