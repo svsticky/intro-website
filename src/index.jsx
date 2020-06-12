@@ -18,12 +18,10 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <main>
-          <Switch>
-            <Route path="/map" component={MapPage} />
-            <Route component={Home} />
-          </Switch>
-        </main>
+        <Switch>
+          <Route path="/map" component={MapPage} />
+          <Route component={Home} />
+        </Switch>
       </Router>
     );
   }

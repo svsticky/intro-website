@@ -81,32 +81,34 @@ class MapPage extends Component {
     });
 
     return (
-      <article>
-        <article className="header">
-          <h2>Ontdek de USP</h2>
-        </article>
-        <RouteInfo 
-          title={this.state.title}
-          content={this.state.content}
-          video={this.state.video}
-          hidden={this.state.hiddenRoute}
-          close={this.close}
-        />
-        <Sidebar title={this.state.title} content={this.state.content} hidden={this.state.hiddenSidebar} />
-        <Map 
-          center={position}
-          zoom={this.coords.zoom}
-          maxBounds={bounds}
-          minZoom={15}
-        >
-          <TileLayer
-            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      <main>
+        <article>
+          <article className="header">
+            <h2>Ontdek de USP</h2>
+          </article>
+          <RouteInfo 
+            title={this.state.title}
+            content={this.state.content}
+            video={this.state.video}
+            hidden={this.state.hiddenRoute}
+            close={this.close}
           />
-          {locations}
-          {paths}
-        </Map>
-      </article>
+          <Sidebar title={this.state.title} content={this.state.content} hidden={this.state.hiddenSidebar} />
+          <Map 
+            center={position}
+            zoom={this.coords.zoom}
+            maxBounds={bounds}
+            minZoom={15}
+          >
+            <TileLayer
+              attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            {locations}
+            {paths}
+          </Map>
+        </article>
+      </main>
     );
   }
 }

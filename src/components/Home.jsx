@@ -5,20 +5,24 @@ class Home extends Component {
   render() {
     return (
       <main>
-        <article>
-          <h2>INCA / INKU Introductie</h2>
-          <div>
-            {getContactPersons(data.contactPersons)}
-          </div>
-        </article>
+        <div class="ui container">
+          <h2 class="ui center aligned header">INCA / INKU Introductie</h2>
+          {getContactPersons(data.contactPersons)}
+        </div>
       </main>      
     );
   }
 }
 const getContactPersons = contactPersons=>{
-  return contactPersons.map(contactPerson=>(
-  <ContactPerson contactPerson={contactPerson}/>
-  ))
+  return (
+  <div class="ui four column doubling stackable grid">
+    {
+      contactPersons.map(contactPerson=>(
+      <ContactPerson contactPerson={contactPerson}/>
+      ))
+    }
+  </div>
+  )
 }
 
 export default Home;

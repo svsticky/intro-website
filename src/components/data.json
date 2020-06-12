@@ -1,9 +1,28 @@
 {
     "contactPersons": [
         {
-            "name": "Jinny",
+            "name": "Rick",
+            "type": "oud-bestuur",
             "mobile": "06",
             "email": "someone@example.com"
+        },
+        {
+            "name": "Sietze",
+            "type": "website beheerder",
+            "mobile": "10",
+            "email": "sietze.riemersma@gmail.com"
+        },
+        {
+            "name": "Merijn",
+            "type": "website beheerder",
+            "mobile": "10",
+            "email": "sietze.riemersma@gmail.com"
+        },
+        {
+            "name": "Joris",
+            "type": "KB",
+            "mobile": "10",
+            "email": "sietze.riemersma@gmail.com"
         }
     ]
 }
