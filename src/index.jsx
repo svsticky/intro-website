@@ -7,6 +7,9 @@ import * as serviceWorker from './serviceWorker';
 import Home from './components/Home.jsx';
 import MapPage from './components/usp-map/Map.jsx';
 
+// CSS framework
+import 'fomantic-ui-css/semantic.min.css';
+
 // Import static content
 import './assets/index.css';
 import './assets/logo.svg';
