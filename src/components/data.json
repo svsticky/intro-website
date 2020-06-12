@@ -94,12 +94,14 @@
         {
             "name": "Sticky",
             "text": "Super coole vereniging met een !",
-            "photo": "sticky.png"
+            "photo": "sticky.png",
+            "link": "https://svsticky.nl/"
         },
         {
             "name": "Aes-kwadraat",
             "text": "Ook een leuke vereniging",
-            "photo": "aes.png"
+            "photo": "aes.png",
+            "link": "https://www.a-eskwadraat.nl/"
         }
     ],
     "FAQ":[
