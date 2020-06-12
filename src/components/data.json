@@ -1,0 +1,9 @@
+{
+    "contactPersons": [
+        {
+            "name": "Jinny",
+            "mobile": "06",
+            "email": "someone@example.com"
+        }
+    ]
+}
