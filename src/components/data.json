@@ -1,4 +1,27 @@
 {
+    "sections":[
+        {
+            "name": "Kamp"
+        },
+        {
+            "name": "Over Microsoft Teams"
+        },
+        {
+            "name": "Hoe werkt Microsoft Teams"
+        },
+        {
+            "name": "Programma"
+        },
+        {
+            "name": "Verenigingen"
+        },
+        {
+            "name": "FAQ"
+        },
+        {
+            "name": "Contact"
+        }
+    ],
     "introduction":[
         {
             "name": "Kamp",
