@@ -94,12 +94,12 @@
         {
             "name": "Sticky",
             "text": "Super coole vereniging met een !",
-            "photo": ""
+            "photo": "sticky.png"
         },
         {
             "name": "Aes-kwadraat",
             "text": "Ook een leuke vereniging",
-            "photo": ""
+            "photo": "aes.png"
         }
     ],
     "FAQ":[
