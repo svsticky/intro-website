@@ -4,7 +4,6 @@ import Date from './Date';
 import data from './data.json';
 import Question from './Question';
 import Text from './Text';
-import assosiation from './Assosiation';
 import Assosiation from "./Assosiation";
 class Home extends Component {
   render() {
@@ -16,7 +15,7 @@ class Home extends Component {
           <p className="ui center aligned large header">Programma</p>
           {getProgram(data.program)}
           <p className="ui center aligned large header">Verenigingen</p>
-          {getText(data.Assosiations)}
+          {getAssosiation(data.Assosiations)}
           <p className="ui center aligned large header">FAQ</p>
           {getFAQ(data.FAQ)}
           <p className="ui center aligned large header">Contact</p>
@@ -43,6 +42,17 @@ const getProgram = dates =>{
       {
         dates.map((date, index) => (
           <Date date={date} key={index}/>
+        ))
+      }
+    </div>
+  )
+}
+const getAssosiation = assosiations =>{
+  return(
+    <div className="ui grid">
+      {
+        assosiations.map((assosiation, index)=>(
+          <Assosiation assosiation={assosiation} key={index}/>
         ))
       }
     </div>

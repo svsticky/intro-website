@@ -119,25 +119,49 @@
     "contactPersons": [
         {
             "name": "Rick",
-            "type": "bestuur",
+            "type": "Vertrouwens persoon",
             "mobile": "06",
             "email": "someone@example.com"
         },
         {
             "name": "Sietze",
-            "type": "website beheerder",
+            "type": "IT",
             "mobile": "10",
             "email": "sietze.riemersma@gmail.com"
         },
         {
             "name": "Merijn",
-            "type": "website beheerder",
+            "type": "IT",
             "mobile": "11",
             "email": "iemand@example.com"
         },
         {
             "name": "Joris",
-            "type": "KB",
+            "type": "Intro",
+            "mobile": "12",
+            "email": "example@someone.com"
+        },
+        {
+            "name": "Victor",
+            "type": "Intro",
+            "mobile": "06",
+            "email": "someone@example.com"
+        },
+        {
+            "name": "Hans",
+            "type": "Vertrouwens persoon",
+            "mobile": "10",
+            "email": "sietze.riemersma@gmail.com"
+        },
+        {
+            "name": "Marijke",
+            "type": "Vertrouwens persoon",
+            "mobile": "11",
+            "email": "iemand@example.com"
+        },
+        {
+            "name": "Jinny",
+            "type": "Vertrouwens persoon",
             "mobile": "12",
             "email": "example@someone.com"
         }
