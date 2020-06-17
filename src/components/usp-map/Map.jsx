@@ -10,7 +10,7 @@ import RouteInfo from "./Route"
 
 // Locations & Paths
 import data from "../../assets/objects.json";
-import '../../assets/index.css';
+import '../../assets/map.css';
 class MapPage extends Component {
   constructor() {
     super();
@@ -86,7 +86,7 @@ class MapPage extends Component {
           <article className="header">
             <h2>Ontdek de USP</h2>
           </article>
-          <RouteInfo 
+          <RouteInfo
             title={this.state.title}
             content={this.state.content}
             video={this.state.video}
@@ -94,7 +94,7 @@ class MapPage extends Component {
             close={this.close}
           />
           <Sidebar title={this.state.title} content={this.state.content} hidden={this.state.hiddenSidebar} />
-          <Map 
+          <Map
             center={position}
             zoom={this.coords.zoom}
             maxBounds={bounds}
