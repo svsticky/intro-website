@@ -19,9 +19,12 @@ class Home extends Component {
             <div className="card content">
             <a name="Title"/><p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnology 2020</p>
               {getText(data.introduction)}
-              <Link to="/helperworden">Helper worden</Link>
-              <br></br>
-              <Link to="/mentorworden">Mentor worden</Link>
+              <div className="ui fluid centered card">
+                <div className="ui collumn">
+                  <a className="ui button" href="/helperworden">Helper worden</a>
+                  <a className="ui button" href="/mentorworden">Mentor worden</a>
+                </div>
+              </div>
             </div>
           </div>
           <div className="ui fluid card">
