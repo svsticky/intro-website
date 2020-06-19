@@ -25,21 +25,23 @@ export default class Question extends Component {
         const { activeIndex } = this.state
 
         return (
-        <Accordion>
-            <Accordion.Title
-            active={activeIndex === 0}
-            index={0}
-            onClick={this.handleClick}
-            >
-            <Icon name='dropdown' />
-            {this.question}
-            </Accordion.Title>
-            <Accordion.Content active={activeIndex === 0}>
-            <p>
-                {this.answer}
-            </p>
-            </Accordion.Content>
-        </Accordion>
+            <div className="ui segment">
+                <Accordion>
+                    <Accordion.Title
+                    active={activeIndex === 0}
+                    index={0}
+                    onClick={this.handleClick}
+                    >
+                    <Icon name='dropdown' />
+                    {this.question}
+                    </Accordion.Title>
+                    <Accordion.Content active={activeIndex === 0}>
+                    <p>
+                        {this.answer}
+                    </p>
+                    </Accordion.Content>
+                </Accordion>
+            </div>
         )
     } 
 }
