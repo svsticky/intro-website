@@ -1,3 +1,16 @@
 .main.container {
-  margin-top: 7em;
+  margin-top: 5em;
+  margin-bottom: 2em;
 }
+
+.main.card{
+  padding-left: 1em;
+  background-color: white;
+}
+html{
+  background-color: lightgray;
+}
+#root{
+  background-color: lightgray;
+}
+

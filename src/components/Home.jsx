@@ -14,16 +14,36 @@ class Home extends Component {
       <main>
         {getMenu(data.sections)}
         <div className="ui main container">
-          <a name="Title"/><p className="ui center aligned huge header">INCA / INKU Introductie</p>
-          {getText(data.introduction)}
-          <a name="Programma"/><p className="ui center aligned large header">Programma</p>
-          {getProgram(data.program)}
-          <a name="Verenigingen"/><p className="ui center aligned large header">Verenigingen</p>
-          {getAssociation(data.Associations)}
-          <a name="FAQ"/><p className="ui center aligned large header">FAQ</p>
-          {getFAQ(data.FAQ)}
-          <a name="Contact"/><p className="ui center aligned large header">Contact</p>
-          {getContactPersons(data.contactPersons)}
+          <div className="ui fluid card">
+            <div className="card content">
+              <a name="Title"/><p className="ui center aligned huge header">INCA / INKU Introductie</p>
+              {getText(data.introduction)}
+            </div>
+          </div>
+          <div className="ui fluid card">
+            <div className="card content">
+              <a name="Programma"/><p className="ui center aligned large header">Programma</p>
+              {getProgram(data.program)}
+            </div>
+          </div>
+          <div className="ui fluid card">
+            <div className="card content">
+              <a name="Verenigingen"/><p className="ui center aligned large header">Verenigingen</p>
+              {getAssociation(data.Associations)}
+            </div>
+          </div>
+          <div className="ui fluid card">
+            <div className="card content">
+              <a name="FAQ"/><p className="ui center aligned large header">FAQ</p>
+              {getFAQ(data.FAQ)}
+            </div>
+          </div>
+          <div className="ui fluid card">
+            <div className="card content">
+              <a name="Contact"/><p className="ui center aligned large header">Contact</p>
+              {getContactPersons(data.contactPersons)}
+            </div>
+          </div>
         </div>
       </main>
     );
@@ -81,7 +101,7 @@ const getFAQ = FAQ =>{
       {
         
         FAQ.map((question, index)=>(
-          <Question question = {question} index = {index}/>
+          <Question question = {question} key = {index}/>
         ))
       }
     </div>

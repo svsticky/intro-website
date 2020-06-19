@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Menu = ({ item }) => (
-    <a class="item" href={"#"+item.name}>
+    <a className="item" href={"#"+item.name}>
         {item.name}
     </a>
 );
