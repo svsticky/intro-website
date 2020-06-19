@@ -31,7 +31,7 @@ class Home extends Component {
 }
 const getMenu = items =>{
   return(
-    <div className="ui fixed pointing menu">
+    <div className="ui inverted fixed pointing menu">
       <div className="ui container">
         {
           items.map((item,index)=>(
@@ -79,8 +79,9 @@ const getFAQ = FAQ =>{
   return(
     <div className="ui">
       {
+        
         FAQ.map((question, index)=>(
-          <Question question={question} key={index}/>
+          <Question question = {question} index = {index}/>
         ))
       }
     </div>
