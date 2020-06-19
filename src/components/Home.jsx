@@ -52,7 +52,7 @@ class Home extends Component {
 const getMenu = items =>{
   return(
     <div className="ui inverted fixed pointing menu">
-      <div className="ui container">
+      <div className="ui center aligned container">
         {
           items.map((item,index)=>(
             <Menu item={item} key={index}/>

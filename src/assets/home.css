@@ -5,6 +5,7 @@
 
 .main.card{
   padding-left: 1em;
+  padding-right: 1em;
   background-color: white;
 }
 html{
@@ -15,6 +16,10 @@ html{
 }
 a.anchor{
   position: relative;
-  top: -3em;
+  top: -2.2em;
+}
+img.association{
+  position: relative;
+  top: -1em;
 }
 
