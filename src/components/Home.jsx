@@ -6,12 +6,14 @@ import Question from './Question';
 import Text from './Text';
 import Association from "./Association";
 import Menu from "./Menu";
+import '../assets/home.css';
+
 class Home extends Component {
   render() {
     return (
       <main>
         {getMenu(data.sections)}
-        <div className="ui container">
+        <div className="ui main container">
           <a name="Title"/><p className="ui center aligned huge header">INCA / INKU Introductie</p>
           {getText(data.introduction)}
           <a name="Programma"/><p className="ui center aligned large header">Programma</p>
@@ -23,24 +25,26 @@ class Home extends Component {
           <a name="Contact"/><p className="ui center aligned large header">Contact</p>
           {getContactPersons(data.contactPersons)}
         </div>
-      </main>      
+      </main>
     );
   }
 }
 const getMenu = items =>{
   return(
-    <div className="ui pointing menu">
-      {
-        items.map((item,index)=>(
-          <Menu item={item} key={index}/>
-        ))
-      }
+    <div className="ui fixed pointing menu">
+      <div className="ui container">
+        {
+          items.map((item,index)=>(
+            <Menu item={item} key={index}/>
+          ))
+        }
+      </div>
     </div>
   )
 }
 const getText = texts =>{
   return(
-    <div className="ui grid">
+    <div className="ui">
       {
         texts.map((text, index)=>(
           <Text text={text} key={index}/>
@@ -51,7 +55,7 @@ const getText = texts =>{
 }
 const getProgram = dates =>{
   return(
-    <div className="ui grid">
+    <div className="ui">
       {
         dates.map((date, index) => (
           <Date date={date} key={index}/>
@@ -62,7 +66,7 @@ const getProgram = dates =>{
 }
 const getAssociation = associations =>{
   return(
-    <div className="ui grid">
+    <div className="ui">
       {
         associations.map((association, index)=>(
           <Association association={association} key={index}/>
@@ -73,7 +77,7 @@ const getAssociation = associations =>{
 }
 const getFAQ = FAQ =>{
   return(
-    <div className="ui grid">
+    <div className="ui">
       {
         FAQ.map((question, index)=>(
           <Question question={question} key={index}/>
