@@ -16,31 +16,31 @@ class Home extends Component {
         <div className="ui main container">
           <div className="ui fluid card">
             <div className="card content">
-              <a name="Title"/><p className="ui center aligned huge header">INCA / INKU Introductie</p>
+              <a className="anchor" name="Title"/><p className="ui center aligned huge header">INCA / INKU Introductie</p>
               {getText(data.introduction)}
             </div>
           </div>
           <div className="ui fluid card">
             <div className="card content">
-              <a name="Programma"/><p className="ui center aligned large header">Programma</p>
+              <a className="anchor" name="Programma"/><p className="ui center aligned large header">Programma</p>
               {getProgram(data.program)}
             </div>
           </div>
           <div className="ui fluid card">
             <div className="card content">
-              <a name="Verenigingen"/><p className="ui center aligned large header">Verenigingen</p>
+              <a className="anchor" name="Verenigingen"/><p className="ui center aligned large header">Verenigingen</p>
               {getAssociation(data.Associations)}
             </div>
           </div>
           <div className="ui fluid card">
             <div className="card content">
-              <a name="FAQ"/><p className="ui center aligned large header">FAQ</p>
+              <a className="anchor" name="FAQ"/><p className="ui center aligned large header">FAQ</p>
               {getFAQ(data.FAQ)}
             </div>
           </div>
           <div className="ui fluid card">
             <div className="card content">
-              <a name="Contact"/><p className="ui center aligned large header">Contact</p>
+              <a className="anchor" name="Contact"/><p className="ui center aligned large header">Contact</p>
               {getContactPersons(data.contactPersons)}
             </div>
           </div>
