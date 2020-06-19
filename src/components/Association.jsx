@@ -10,7 +10,7 @@ const Association = ({ association }) => (
                         <p>{association.text}</p>
                     </div>
                     <div className="six wide column">
-                        <a href={association.link}><img className="ui right floated small image" src={require('../assets/logos/' + association.photo)}/></a>
+                        <a href={association.link}><img className="ui right floated small image" src={require('../assets/logos/' + association.photo)} alt={association.name}/></a>
                     </div>
                 </div>
             </div>
