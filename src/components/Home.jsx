@@ -8,6 +8,7 @@ import Association from "./Association";
 import Menu from "./Menu";
 import '../assets/home.css';
 
+import { Link } from "react-router-dom";
 class Home extends Component {
   render() {
     return (
@@ -16,8 +17,11 @@ class Home extends Component {
         <div className="ui main container">
           <div className="ui fluid card">
             <div className="card content">
-              <a className="anchor" name="Title"/><p className="ui center aligned huge header">INCA / INKU Introductie</p>
+            <a name="Title"/><p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnology 2020</p>
               {getText(data.introduction)}
+              <Link to="/helperworden">Helper worden</Link>
+              <br></br>
+              <Link to="/mentorworden">Mentor worden</Link>
             </div>
           </div>
           <div className="ui fluid card">
