@@ -92,3 +92,7 @@ code {
 .hidden {
   visibility: hidden;
 }
+
+p {
+  white-space: pre-line;
+}
