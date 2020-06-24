@@ -3,6 +3,7 @@ import ContactPerson from './ContactPerson';
 import Date from './Date';
 import data from './data.json';
 import Question from './Question';
+import Hero from './Hero';
 import Text from './Text';
 import Association from "./Association";
 import Menu from "./Menu";
@@ -12,6 +13,7 @@ class Home extends Component {
   render() {
     return (
       <main>
+        <Hero></Hero>
         {getMenu(data.sections)}
         <div className="ui main container">
           <div className="ui fluid card">

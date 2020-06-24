@@ -92,3 +92,12 @@ code {
 .hidden {
   visibility: hidden;
 }
+
+.float-top {
+  position: absolute;
+  min-width: 100px;
+  width: 20vw;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
