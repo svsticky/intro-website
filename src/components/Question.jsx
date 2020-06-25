@@ -25,12 +25,13 @@ export default class Question extends Component {
         const { activeIndex } = this.state
 
         return (
-            <div className="ui segment">
+            <div className="ui inverted segment">
                 <Accordion>
                     <Accordion.Title
                     active={activeIndex === 0}
                     index={0}
                     onClick={this.handleClick}
+                    className="ui white"
                     >
                     <Icon name='dropdown' />
                     {this.question}
@@ -43,5 +44,5 @@ export default class Question extends Component {
                 </Accordion>
             </div>
         )
-    } 
+    }
 }

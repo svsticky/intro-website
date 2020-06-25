@@ -14,31 +14,31 @@ class Home extends Component {
       <main>
         {getMenu(data.sections)}
         <div className="ui main container">
-          <div className="ui fluid card">
+          <div className="ui fluid inverted card">
             <div className="card content">
               <a className="anchor" name="Title"/><p className="ui center aligned huge header">INCA / INKU Introductie</p>
               {getText(data.introduction)}
             </div>
           </div>
-          <div className="ui fluid card">
+          <div className="ui fluid inverted card">
             <div className="card content">
               <a className="anchor" name="Programma"/><p className="ui center aligned large header">Programma</p>
               {getProgram(data.program)}
             </div>
           </div>
-          <div className="ui fluid card">
+          <div className="ui fluid inverted card">
             <div className="card content">
               <a className="anchor" name="Verenigingen"/><p className="ui center aligned large header">Verenigingen</p>
               {getAssociation(data.Associations)}
             </div>
           </div>
-          <div className="ui fluid card">
+          <div className="ui fluid inverted card">
             <div className="card content">
               <a className="anchor" name="FAQ"/><p className="ui center aligned large header">FAQ</p>
               {getFAQ(data.FAQ)}
             </div>
           </div>
-          <div className="ui fluid card">
+          <div className="ui fluid inverted card">
             <div className="card content">
               <a className="anchor" name="Contact"/><p className="ui center aligned large header">Contact</p>
               {getContactPersons(data.contactPersons)}
@@ -109,12 +109,14 @@ const getFAQ = FAQ =>{
 }
 const getContactPersons = contactPersons=>{
   return (
-    <div className="ui centered four column doubling stackable grid">
-      {
-        contactPersons.map((contactPerson, index)=>(
-          <ContactPerson contactPerson={contactPerson} key={index}/>
-        ))
-      }
+    <div className="ui inverted segment">
+      <div className="ui four doubling inverted cards">
+        {
+          contactPersons.map((contactPerson, index)=>(
+            <ContactPerson contactPerson={contactPerson} key={index}/>
+          ))
+        }
+      </div>
     </div>
   )
 }
