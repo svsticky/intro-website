@@ -55,6 +55,13 @@ const getMenu = items =>{
   return(
     <div className="ui inverted fixed pointing menu">
       <div className="ui center aligned container">
+        <a className="item" href="/">
+          <img
+              className="ui mini image"
+              src={require('../assets/logo.svg')}
+              alt="logo"
+          />
+        </a>
         {
           items.map((item,index)=>(
             <Menu item={item} key={index}/>
