@@ -14,6 +14,9 @@ class Home extends Component {
       <main>
         {getMenu(data.sections)}
         <div className="ui main container">
+          <div className="video-container">
+            <iframe src="https://www.youtube.com/embed/ar9WRwCiSr0" title="themabekendmakingsvideo" frameborder="0"></iframe>
+          </div>
           <div className="ui fluid card">
             <div className="card content">
               <a className="anchor" name="Title"/><p className="ui center aligned huge header">INCA / INKU Introductie</p>
