@@ -19,32 +19,33 @@ class Home extends Component {
             <div className="card content">
             <a name="Title"/><p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnology 2020</p>
               {getText(data.introduction)}
-              <div className="ui fluid centered card">
+              <br></br>
+              <div className="ui section">
                 <div className="ui collumn">
-                  <a className="ui button" href="/helperworden">Helper worden</a>
-                  <a className="ui button" href="/mentorworden">Mentor worden</a>
+                  <a className="ui blue button" href="/helperworden">Helper worden</a>
+                  <a className="ui blue button" href="/mentorworden">Mentor worden</a>
                 </div>
               </div>
             </div>
           </div>
-          <div className="ui fluid card">
+          {/* <div className="ui fluid card">
             <div className="card content">
               <a className="anchor" name="Programma"/><p className="ui center aligned large header">Programma</p>
               {getProgram(data.program)}
             </div>
-          </div>
+          </div> */}
           <div className="ui fluid card">
             <div className="card content">
               <a className="anchor" name="Verenigingen"/><p className="ui center aligned large header">Verenigingen</p>
               {getAssociation(data.Associations)}
             </div>
           </div>
-          <div className="ui fluid card">
+          {/* <div className="ui fluid card">
             <div className="card content">
               <a className="anchor" name="FAQ"/><p className="ui center aligned large header">FAQ</p>
               {getFAQ(data.FAQ)}
             </div>
-          </div>
+          </div> */}
           <div className="ui fluid card">
             <div className="card content">
               <a className="anchor" name="Contact"/><p className="ui center aligned large header">Contact</p>

@@ -7,19 +7,10 @@
             "name": "Digitale introductie"
         },
         {
-            "name": "Hoe werkt Microsoft Teams?"
-        },
-        {
             "name": "Meehelpen"
         },
         {
-            "name": "Programma"
-        },
-        {
             "name": "Verenigingen"
-        },
-        {
-            "name": "FAQ"
         },
         {
             "name": "Contact"
@@ -35,12 +26,8 @@
             "text": "Dit jaar zal er voor het eerst een digitale introductie plaatsvinden. Achter de schermen wordt er hard gewerkt aan een introductie die aansluit op wat jullie nodig gaan hebben en om de transitie naar het studeren aan een universiteit te versoepelen. Binnenkort zal het programma worden aangevuld en hopelijk kunnen we jullie dan ook een keer op het Utrecht Science Park uitnodigen!"
         },
         {
-            "name": "Hoe werkt Microsoft Teams?",
-            "text": "Binnenkort zal hier een uitgebreide uitleg geplaatst worden over hoe je Microsoft Teams kan gebruiken voor de introductie."
-        },
-        {
             "name": "Meehelpen",
-            "text": "Als je je wilt opgeven om mentor of helper te worden, volg dan deze links:"
+            "text": "Als je al lid bent bij een van de verenigingen, en je mentor of helper wilt worden, volg dan deze links:"
         }
     ],
     "program": [
