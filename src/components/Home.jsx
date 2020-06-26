@@ -49,6 +49,7 @@ class Home extends Component {
           <div className="ui fluid card">
             <div className="card content">
               <a className="anchor" name="Contact"/><p className="ui center aligned large header">Contact</p>
+              <p className="ui centered grid">Bij voorkeur mailen vanwege wisselende telefonische beschikbaarheid in de zomer</p>
               {getContactPersons(data.contactPersons)}
             </div>
           </div>
