@@ -1,6 +1,6 @@
 .main.container {
-  margin-top: 5em;
-  margin-bottom: 2em;
+  padding-top: 5em;
+  padding-bottom: 2em;
 }
 
 .main.card{
@@ -8,11 +8,8 @@
   padding-right: 1em;
   background-color: white;
 }
-html{
-  background-color: lightgray;
-}
-#root{
-  background-color: lightgray;
+main{
+  background-image: linear-gradient(to bottom, lightblue, darkblue) !important;
 }
 a.anchor{
   position: relative;
