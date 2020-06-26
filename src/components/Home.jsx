@@ -41,6 +41,7 @@ class Home extends Component {
           <div className="ui fluid card">
             <div className="card content">
               <a className="anchor" name="Contact"/><p className="ui center aligned large header">Contact</p>
+              <p className="ui centered grid">Bij voorkeur mailen vanwege wisselende telefonische beschikbaarheid in de zomer</p>
               {getContactPersons(data.contactPersons)}
             </div>
           </div>
@@ -109,7 +110,7 @@ const getFAQ = FAQ =>{
 }
 const getContactPersons = contactPersons=>{
   return (
-    <div className="ui centered four column doubling stackable grid">
+    <div className="ui centered four doubling cards">
       {
         contactPersons.map((contactPerson, index)=>(
           <ContactPerson contactPerson={contactPerson} key={index}/>
