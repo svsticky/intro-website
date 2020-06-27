@@ -3,7 +3,6 @@ import ContactPerson from './ContactPerson';
 import Date from './Date';
 import data from './data.json';
 import Question from './Question';
-import Logo from './Logo';
 import Text from './Text';
 import Association from "./Association";
 import Menu from "./Menu";
@@ -16,7 +15,6 @@ class Home extends Component {
         {getMenu(data.sections)}
         <a className="anchor" name = "top"/>
         <div className="ui main container">
-          <Logo />
           <div className="ui fluid card">
             <div className="card content">
               <a className="anchor" name="Title"/><p className="ui center aligned huge header">INCA / INKU Introductie</p>
