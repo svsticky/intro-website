@@ -12,7 +12,7 @@ class Home extends Component {
   render() {
     return (
       <main>
-        {getMenu(data.sections)}
+        <Menu />
         <a className="anchor" name = "top"/>
         <div className="ui main container">
           <div className="video-container">
@@ -54,26 +54,7 @@ class Home extends Component {
     );
   }
 }
-const getMenu = items =>{
-  return(
-    <div className="ui inverted fixed pointing menu">
-      <div className="ui center aligned container">
-        <a className="item" href="#top">
-          <img
-              className="ui mini image"
-              src={require('../assets/logo.svg')}
-              alt="logo"
-          />
-        </a>
-        {
-          items.map((item,index)=>(
-            <Menu item={item} key={index}/>
-          ))
-        }
-      </div>
-    </div>
-  )
-}
+
 const getText = texts =>{
   return(
     <div className="ui">
