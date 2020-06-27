@@ -14,6 +14,7 @@ class Home extends Component {
     return (
       <main>
         {getMenu(data.sections)}
+        <a className="anchor" name = "top"/>
         <div className="ui main container">
           <Logo />
           <div className="ui fluid card">
@@ -55,7 +56,7 @@ const getMenu = items =>{
   return(
     <div className="ui inverted fixed pointing menu">
       <div className="ui center aligned container">
-        <a className="item" href="/">
+        <a className="item" href="#top">
           <img
               className="ui mini image"
               src={require('../assets/logo.svg')}
