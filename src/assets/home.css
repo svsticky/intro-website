@@ -1,15 +1,21 @@
 .main.container {
   padding-top: 5em;
   padding-bottom: 2em;
+  height: 200%;
 }
 
-.main.card{
+main.card{
   padding-left: 1em;
   padding-right: 1em;
   background-color: white;
 }
 main{
-  background-image: linear-gradient(to bottom, lightblue, darkblue) !important;
+  background-image: url("/images/stars.svg");
+}
+.parallax{
+  position: relative;
+  perspective: 8px;
+  transform: translateY(0px);
 }
 a.anchor{
   position: relative;
