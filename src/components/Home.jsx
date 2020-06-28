@@ -71,14 +71,6 @@ class Home extends Component {
     findDOMNode(this.refs.anchor3),
     findDOMNode(this.refs.anchor4),
     findDOMNode(this.refs.anchor5)]
-    this.normal = [$(this.anchor[0]).height(),
-    $(this.anchor[1]).height(),
-    $(this.anchor[2]).height(),
-    $(this.anchor[3]).height(),
-    $(this.anchor[4]).height(),
-    $(this.anchor[5]).height()]
-
-
     this.setSize();
   }
   setSize = () =>{
@@ -88,9 +80,9 @@ class Home extends Component {
   //parallax scrolling
   parallax = () =>{
     $(this.par).css("top",$(document).scrollTop()/4);
-    for(let i = 0; i < 6; ++i){
-      $(this.anchor[i]).css("top", this.normal[i]*($(document).scrollTop() / $(document).height() - 10)); //needs a better calculation
-    }
+    //for(let i = 0; i < 6; ++i){
+      //$(this.anchor[i]).css("top", this.normal[i]*($(document).scrollTop() / $(document).height() - 10)); //needs a better calculation
+    //}
   }
 }
 

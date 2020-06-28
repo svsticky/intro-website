@@ -3,7 +3,7 @@ import React from 'react';
 const Date = ({ date }) => (
 <div className="ui row">
     <h4>{date.name}</h4>
-    <div className="ui celled grid">
+    <div className="ui stackable celled grid">
         {
             date.activities.map((activity, index) =>(
                 <div className = "ui row" key={index}>
