@@ -80,9 +80,6 @@ class Home extends Component {
   //parallax scrolling
   parallax = () =>{
     $(this.par).css("top",$(document).scrollTop()/4);
-    //for(let i = 0; i < 6; ++i){
-      //$(this.anchor[i]).css("top", this.normal[i]*($(document).scrollTop() / $(document).height() - 10)); //needs a better calculation
-    //}
   }
 }
 
