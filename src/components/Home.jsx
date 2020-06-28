@@ -74,7 +74,7 @@ class Home extends Component {
     this.setSize();
   }
   setSize = () =>{
-    $('main').height($(this.par).height() * (1.537 - $(window).height() / 5260));
+    $('main').height($(this.par).height() * (1.562 - $(window).height() / 5260));
     $(findDOMNode(this.container)).height($(findDOMNode(this.container)).height() / 2.1);
   }
   //parallax scrolling
