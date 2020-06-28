@@ -10,7 +10,7 @@ main.card{
   background-color: white;
 }
 main{
-  background-image: url("/images/stars.svg");
+  background-image: url("/images/stars.png");
 }
 .parallax{
   position: relative;

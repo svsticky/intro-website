@@ -59,15 +59,24 @@ class Home extends Component {
       </main>
     );
   }
+  //parallax setup with window correction
   componentDidMount = () => {
     window.addEventListener('scroll', this.parallax);
-    console.log("event set");
+    window.addEventListener('resize',this.setSize)
     this.par = findDOMNode(this.refs.parallax);
-    $('main').height($('main').height() * 1.3);
-    $(findDOMNode(this.refs.container)).height($(findDOMNode(this.refs.container)).height() / 2.1);
-    console.log($('main').height());
+    this.container = findDOMNode(this.refs.container)
+    console.log($(window).height());
+    this.setSize();
+
   }
+  setSize = () =>{
+    console.log("resizing");
+    $('main').height($(this.par).height() * (1.537 - $(window).height() / 5260));
+    $(findDOMNode(this.container)).height($(findDOMNode(this.container)).height() / 2.1);
+  }
+  //parallax scrolling
   parallax = () =>{
+    console.log("scrolling");
     $(this.par).css("top",$(document).scrollTop()/4);
   }
 }
