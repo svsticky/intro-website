@@ -17,7 +17,7 @@ class Home extends Component {
         {getMenu(data.sections)}
 
         <a className="anchor" name = "top"/>
-        <div className="ui main container">
+        <div className="ui main container" ref="container">
           <div className="parallax" ref="parallax">
             <div className="video-container">
               <iframe src="https://www.youtube.com/embed/ar9WRwCiSr0" title="themabekendmakingsvideo" frameborder="0"></iframe>
@@ -63,9 +63,12 @@ class Home extends Component {
     window.addEventListener('scroll', this.parallax);
     console.log("event set");
     this.par = findDOMNode(this.refs.parallax);
+    $('main').height($('main').height() * 1.3);
+    $(findDOMNode(this.refs.container)).height($(findDOMNode(this.refs.container)).height() / 2.1);
+    console.log($('main').height());
   }
   parallax = () =>{
-    $(this.par).css("top",$(document).scrollTop()/10);
+    $(this.par).css("top",$(document).scrollTop()/4);
   }
 }
 
