@@ -16,7 +16,7 @@ class Home extends Component {
       <main>
         {getMenu(data.sections)}
 
-        <a className="anchor" name = "top"/>
+        <a className="anchor" name = "top" ref="anchor0"/>
         <div className="ui main container" ref="container">
           <div className="parallax" ref="parallax">
             <div className="video-container">
@@ -24,31 +24,31 @@ class Home extends Component {
             </div>
             <div className="ui fluid card">
               <div className="card content">
-                <a className="anchor" name="Title"/><p className="ui center aligned huge header">INCA / INKU Introductie</p>
+                <a className="anchor" name="Title" ref="anchor1"/><p className="ui center aligned huge header">INCA / INKU Introductie</p>
                 {getText(data.introduction)}
               </div>
             </div>
             <div className="ui fluid card">
               <div className="card content">
-                <a className="anchor" name="Programma"/><p className="ui center aligned large header">Programma</p>
+                <a className="anchor" name="Programma" ref="anchor2"/><p className="ui center aligned large header">Programma</p>
                 {getProgram(data.program)}
               </div>
             </div>
             <div className="ui fluid card">
               <div className="card content">
-                <a className="anchor" name="Verenigingen"/><p className="ui center aligned large header">Verenigingen</p>
+                <a className="anchor" name="Verenigingen" ref="anchor3"/><p className="ui center aligned large header">Verenigingen</p>
                 {getAssociation(data.Associations)}
               </div>
             </div>
             <div className="ui fluid card">
               <div className="card content">
-                <a className="anchor" name="FAQ"/><p className="ui center aligned large header">FAQ</p>
+                <a className="anchor" name="FAQ" ref="anchor4"/><p className="ui center aligned large header">FAQ</p>
                 {getFAQ(data.FAQ)}
               </div>
             </div>
             <div className="ui fluid card">
               <div className="card content">
-                <a className="anchor" name="Contact"/><p className="ui center aligned large header">Contact</p>
+                <a className="anchor" name="Contact" ref="anchor5"/><p className="ui center aligned large header">Contact</p>
                 <p className="ui centered grid">Bij voorkeur mailen vanwege wisselende telefonische beschikbaarheid in de zomer</p>
                 {getContactPersons(data.contactPersons)}
               </div>
@@ -64,20 +64,33 @@ class Home extends Component {
     window.addEventListener('scroll', this.parallax);
     window.addEventListener('resize',this.setSize)
     this.par = findDOMNode(this.refs.parallax);
-    this.container = findDOMNode(this.refs.container)
-    console.log($(window).height());
-    this.setSize();
+    this.container = findDOMNode(this.refs.container);
+    this.anchor = [findDOMNode(this.refs.anchor0),
+    findDOMNode(this.refs.anchor1),
+    findDOMNode(this.refs.anchor2),
+    findDOMNode(this.refs.anchor3),
+    findDOMNode(this.refs.anchor4),
+    findDOMNode(this.refs.anchor5)]
+    this.normal = [$(this.anchor[0]).height(),
+    $(this.anchor[1]).height(),
+    $(this.anchor[2]).height(),
+    $(this.anchor[3]).height(),
+    $(this.anchor[4]).height(),
+    $(this.anchor[5]).height()]
 
+
+    this.setSize();
   }
   setSize = () =>{
-    console.log("resizing");
     $('main').height($(this.par).height() * (1.537 - $(window).height() / 5260));
     $(findDOMNode(this.container)).height($(findDOMNode(this.container)).height() / 2.1);
   }
   //parallax scrolling
   parallax = () =>{
-    console.log("scrolling");
     $(this.par).css("top",$(document).scrollTop()/4);
+    for(let i = 0; i < 6; ++i){
+      $(this.anchor[i]).css("top", this.normal[i]*($(document).scrollTop() / $(document).height() - 10)); //needs a better calculation
+    }
   }
 }
 
