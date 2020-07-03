@@ -20,7 +20,7 @@ class Home extends Component {
         <div className="ui main container" ref="container">
           <div className="parallax" ref="parallax">
             <div className="video-container">
-              <iframe src="https://www.youtube.com/embed/ar9WRwCiSr0" title="themabekendmakingsvideo" frameborder="0"></iframe>
+              <iframe src="https://www.youtube.com/embed/_nCyMKGLcvk" title="themabekendmakingsvideo" frameborder="0"></iframe>
             </div>
             <div className="ui fluid card seg">
               <div className="card content">
