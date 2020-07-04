@@ -14,7 +14,7 @@ main{
 }
 .parallax{
   position: relative;
-  perspective: 8px;
+  perspective: 10px;
   transform: translateY(0px);
 }
 a.anchor{
