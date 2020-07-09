@@ -13,7 +13,7 @@ import $ from "jquery";
 class Home extends Component {
   render() {
     return (
-      <main>
+      <main class="home">
         {getMenu(data.sections)}
 
         <a className="anchor" name = "top" ref="anchor0"/>
