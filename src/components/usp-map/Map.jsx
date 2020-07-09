@@ -83,9 +83,15 @@ class MapPage extends Component {
     return (
       <main>
         <article>
-          <article className="header">
-            <h2>Ontdek de USP</h2>
-          </article>
+          <div className="ui centered grid">
+            <div className="ui inverted center pointing menu uspHeader">
+              <div className="ui center aligned container">
+                <span className="uspHeaderText">
+                  Ontdek de USP
+                </span>
+              </div>
+            </div>
+          </div>
           <RouteInfo
             title={this.state.title}
             content={this.state.content}
