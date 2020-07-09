@@ -9,7 +9,8 @@ class Location extends Component {
         radius={25}
         onclick={() => this.props.handler(
           this.props.title,
-          this.props.content
+          this.props.content,
+          this.props.image
         )}
       />
     )

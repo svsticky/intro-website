@@ -34,10 +34,11 @@ class MapPage extends Component {
     this.close = this.close.bind(this)
   }
 
-  pointOfInterest(title, content) {
+  pointOfInterest(title, content, image) {
     this.setState({
       title: title,
       content: content,
+      image: image,
       hiddenSidebar: (title === this.state.title || this.state.hiddenSidebar) ? !this.state.hiddenSidebar : this.state.hiddenSidebar
     });
   }
@@ -66,6 +67,7 @@ class MapPage extends Component {
         position={point.location}
         title={point.title}
         content={point.content}
+        image={point.image}
         handler={this.pointOfInterest}
       />
     });
@@ -79,6 +81,8 @@ class MapPage extends Component {
         handler={this.route}
       />
     });
+
+    // $('.ui.sidebar').sidebar('toggle');
 
     return (
       <main>
@@ -99,7 +103,11 @@ class MapPage extends Component {
             hidden={this.state.hiddenRoute}
             close={this.close}
           />
-          <Sidebar title={this.state.title} content={this.state.content} hidden={this.state.hiddenSidebar} />
+          <Sidebar 
+            title={this.state.title}
+            content={this.state.content}
+            image={this.state.image}
+            hidden={this.state.hiddenSidebar} />
           <Map
             center={position}
             zoom={this.coords.zoom}
