@@ -2,18 +2,21 @@
   "points": [
     {
       "location": [52.086332, 5.175657],
-      "title": "Test title",
-      "content": "Test content"
+      "title": "David de Wiedgebouw",
+      "content": "Test content",
+      "image": "https://www.uu.nl/sites/default/files/images/gebouw-daviddewiedgebouw-1800x1200p-12.jpg?mt=1589480798"
     },
     {
       "location": [52.085855, 5.171957],
       "title": "Educatorium",
-      "content": "Welkom bij het Educatorium! Dit gebouw wordt vooral door INCA en INKU studenten gebruikt voor het afnemen van tentamens."
+      "content": "Welkom bij het Educatorium! Dit gebouw wordt vooral door INCA en INKU studenten gebruikt voor het afnemen van tentamens.",
+      "image": "https://www.uu.nl/sites/default/files/photo/gebouw_educatorium_600x400.jpg"
     },
     {
       "location": [52.085855, 5.172957],
       "title": "Test punt",
-      "content": "Hey hoi! Dit is een test punt. Met dit punt kan er namelijk getest worden of het klikken op points of interests werkt! :)"
+      "content": "Hey hoi! Dit is een test punt. Met dit punt kan er namelijk getest worden of het klikken op points of interests werkt! :)",
+      "image": "https://www.uu.nl/sites/default/files/images/gebouw-buysballotgebouw-1800x1200p-4.jpg?mt=1589480795"
     }
   ],
   "paths": [
