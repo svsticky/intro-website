@@ -47,6 +47,23 @@ code {
   border-radius: 20px 0 0 20px;
 }
 
+.closeSection {
+  float: right !important;
+  z-index: 2000;
+}
+
+.closeButton {
+  text-align: center;
+  font-size: 20px;
+  background-color: #fff;
+  margin-bottom: -30px;
+  float: right;
+  width: 30px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .route {
   position: absolute;
   top: 0;

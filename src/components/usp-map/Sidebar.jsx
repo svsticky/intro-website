@@ -4,6 +4,11 @@ class Sidebar extends Component {
   render() {
     return (
       <div className={this.props.hidden ? "hidden" : "ui card buildingInfo"}>
+        <section className="closeSection">
+          <div className="closeButton" onClick={this.props.close}>
+            X
+          </div>
+        </section>
         <div className="image">
           <img src={this.props.image}/>
         </div>

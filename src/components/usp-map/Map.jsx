@@ -22,9 +22,6 @@ class MapPage extends Component {
     }
 
     this.state = {
-      title: "",
-      content: "",
-      video: "",
       hiddenSidebar: true,
       hiddenRoute: true
     }
@@ -54,7 +51,8 @@ class MapPage extends Component {
 
   close() {
     this.setState({
-      hiddenRoute: true
+      hiddenRoute: true,
+      hiddenSidebar: true
     });
   }
   
@@ -82,8 +80,6 @@ class MapPage extends Component {
       />
     });
 
-    // $('.ui.sidebar').sidebar('toggle');
-
     return (
       <main>
         <article>
@@ -107,7 +103,9 @@ class MapPage extends Component {
             title={this.state.title}
             content={this.state.content}
             image={this.state.image}
-            hidden={this.state.hiddenSidebar} />
+            hidden={this.state.hiddenSidebar} 
+            close={this.close}
+          />
           <Map
             center={position}
             zoom={this.coords.zoom}
