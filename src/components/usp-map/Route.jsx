@@ -3,14 +3,13 @@ import React, { Component } from "react";
 class RouteInfo extends Component {
   render() {
     return (
-      <article className={this.props.hidden ? "hidden" : "route"}>
-        <span 
-          className="close"
-          onClick={this.props.close}
-        >
-          X
-        </span>
-        <section className="content">
+      <div className={this.props.hidden ? "hidden" : "route"}>
+        <section className="closeSection">
+          <div className="closeButton" onClick={this.props.close}>
+            X
+          </div>
+        </section>
+        <div className="ui card routeBody">
           <section className="routeVideo">
             <iframe
               height="100%"
@@ -30,8 +29,8 @@ class RouteInfo extends Component {
               </p>
             </section>
           </section>
-        </section>
-      </article>
+        </div>
+      </div>
     )
   }
 }
