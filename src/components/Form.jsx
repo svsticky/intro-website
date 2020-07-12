@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Menu from "./Menu";
+import $ from "jquery";
 import data from './data.json';
-import '../assets/home.css';
+import '../assets/inschrijven.css';
 
 class Form extends Component {
   render() {
@@ -30,45 +31,12 @@ class Form extends Component {
                             <input type="text" id="fachternaam" name="fachternaam"/>
                             </div>
                             <div className="field">
-                            <label for="fgeslacht">Geslacht</label>
-                            <select id="fgeslacht" name="fgeslacht">
-                                <option value=""/>
-                                <option value="man">Man</option>
-                                <option value="vrouw">Vrouw</option>
-                                <option value="anders">Anders of onbekend</option>
-                            </select>
-                            </div>
-                            <div className="field">
                             <label for="fgeboortedatum">Geboortedatum</label>
                             <input type="date" id="fgeboortedatum" name="fgeboortedatum" min="1920-01-01" max="2016-01-01"/>
                             </div>
                             <div className="field">
                             <label for="fstudentnummer">Studentnummer</label>
                             <input type="number" id="fstudentnummer" name="fstudentnummer" min="1000000" max="9999999"/>
-                            </div>
-                            <div className="field">
-                            <label for="fstraat">Straat</label>
-                            <input type="text" id="fstraat" name="fstraat"/>
-                            </div>
-                            <div className="field">
-                                <label for="fhuisnummer">Huisnummer</label>
-                                <input type="number" id="fhuisnummer" name="fhuisnummer"/>
-                            </div>
-                            <div className="field">
-                                <label for="fhuisnummertoevoegsel">Toevoegsel</label>
-                                <input type="text" id="fhuisnummertoevoegsel" name="fhuisnummertoevoegsel"/>
-                            </div>
-                            <div className="field">
-                                <label for="fpostcode">Postcode</label>
-                                <input type="text" id="fpostcode" name="fpostcode"/>
-                            </div>
-                            <div className="field">
-                                <label for="fplaats">Plaats</label>
-                                <input type="text" id="fplaats" name="fplaats"/>
-                            </div>
-                            <div className="field">
-                                <label for ="fland">Land</label>
-                                <input type="text" id="fland" name="fland"/>
                             </div>
                             <div className="field">
                                 <label for="fmobiel">Mobiel</label>
@@ -94,6 +62,20 @@ class Form extends Component {
             </div>
         </main>
       )
+  }
+
+  componentDidMount = () => {
+    window.addEventListener('resize', this.setSize);
+    this.setSize();
+  }
+    //height fix
+  setSize = () =>{
+    if($(window).height() > $(document).height()){
+        $('main').height($(window).height());
+    }
+    else{
+        $('main').height($(document).height());
+    }
   }
 }
 const getMenu = items =>{
