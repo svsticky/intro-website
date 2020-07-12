@@ -1,25 +1,58 @@
 {
   "points": [
     {
-      "location": [52.086332, 5.175657],
-      "title": "Test title",
-      "content": "Test content"
+      "location": [52.087287, 5.165421],
+      "title": "Buys Ballotgebouw",
+      "content": "Text",
+      "image": "https://www.uu.nl/sites/default/files/images/gebouw-buysballotgebouw-1800x1200p-4.jpg"
     },
     {
       "location": [52.085855, 5.171957],
       "title": "Educatorium",
-      "content": "Welkom bij het Educatorium! Dit gebouw wordt vooral door INCA en INKU studenten gebruikt voor het afnemen van tentamens."
+      "content": "Welkom bij het Educatorium! Dit gebouw wordt vooral door INCA en INKU studenten gebruikt voor het afnemen van tentamens.",
+      "image": "https://www.uu.nl/sites/default/files/photo/gebouw_educatorium_600x400.jpg"
     },
     {
-      "location": [52.085855, 5.172957],
-      "title": "Test punt",
-      "content": "Hey hoi! Dit is een test punt. Met dit punt kan er namelijk getest worden of het klikken op points of interests werkt! :)"
+      "location": [52.085909, 5.174158],
+      "title": "Marinus Ruppertgebouw",
+      "content": "Text",
+      "image": "https://students.uu.nl/sites/default/files/images/gebouw-ruppertgebouw-1800x1200p-8.jpg"
+    },
+    {
+      "location": [52.084502, 5.172525],
+      "title": "Universiteitsbibliotheek",
+      "content": "Text",
+      "image": "https://lh3.googleusercontent.com/proxy/274-hrPkBv5Fd5fF6lnxV65iR5WTTgbqm9sF1JMG4KkSFzPKdnf_bGs-avs-EiFTkY4W4A6vkwWhuB9LzbO1SusH5lk247E"
+    },
+    {
+      "location": [52.086908, 5.166599],
+      "title": "Minnaertgebouw",
+      "content": "Text",
+      "image": "https://www.architectuur.org/images/neutelings01_1.jpg"
+    },
+    {
+      "location": [52.087281, 5.167378],
+      "title": "Victor J. Koningsbergergebouw",
+      "content": "Text",
+      "image": "https://www.uu.nl/sites/default/files/photo/victor_j._koningsbergergebouw_550x400.jpg"
+    },
+    {
+      "location": [52.081826, 5.175860],
+      "title": "Bolognalaan 101",
+      "content": "Text",
+      "image": "https://students.uu.nl/sites/default/files/images/gebouw-bolognalaan-1800x1200p-10.jpg"
     }
   ],
   "paths": [
     {
-      "positions": [[52.085855, 5.171957], [52.086332, 5.175657]],
+      "positions": [[52.085855, 5.171957], [52.086908, 5.166599]],
       "title": "Test path",
+      "content": "Dit is een voorbeeld van hoe routes op de Utrecht Science Park gedeeld kunnen worden op deze website.",
+      "video": "QKx2l6230BI"
+    },
+    {
+      "positions": [[52.085855, 5.171957], [52.085909, 5.174158]],
+      "title": "Lopen van Educatorium naar het Marinus Ruppertgebouw",
       "content": "Dit is een voorbeeld van hoe routes op de Utrecht Science Park gedeeld kunnen worden op deze website.",
       "video": "QKx2l6230BI"
     }
