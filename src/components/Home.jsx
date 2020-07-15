@@ -9,6 +9,7 @@ import Association from "./Association";
 import Menu from "./Menu";
 import '../assets/home.css';
 import $ from "jquery";
+import { Sticky } from "semantic-ui-react";
 
 class Home extends Component {
   render() {
@@ -54,6 +55,9 @@ class Home extends Component {
               </div>
             </div>
           </div>
+          <div className="ui fixed yellow inverted segment" ref="fixed">
+          <a href="/inschrijven"><p className="ui center aligned huge header">Schrijf je in!</p></a>
+          </div>
         </div>
       </main>
     );
@@ -70,15 +74,17 @@ class Home extends Component {
     findDOMNode(this.refs.anchor3),
     findDOMNode(this.refs.anchor4),
     findDOMNode(this.refs.anchor5)]
+    this.fixed = findDOMNode(this.refs.fixed);
     this.setSize();
   }
   setSize = () =>{
     $('main').height($(this.par).height() * (1.562 - $(window).height() / 5260));
     $(findDOMNode(this.container)).height($(findDOMNode(this.container)).height() / 2.1);
+    $(this.fixed).width($(this.container).width() - 28);
   }
   //parallax scrolling
   parallax = () =>{
-    $(this.par).css("top",$(document).scrollTop()/4);
+    $(this.par).css("top",$(document).scrollTop()/4 + 58);
   }
 }
 
