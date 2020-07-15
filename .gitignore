@@ -25,3 +25,4 @@ yarn-error.log*
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
+src/formBackend/ApplicationsDatabase.db-journal

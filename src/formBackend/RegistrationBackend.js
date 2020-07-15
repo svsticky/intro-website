@@ -8,17 +8,18 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
+const studyOptions = ["", "IK", "IC", "IC/IK", "NA", "WI", "GT", "WIT"];
 
 app.post('/submitRegistration',[
-    check('fvoornaam').isBase64().escape(),
+    check('fvoornaam').escape(),
     check('fvoorletters').escape(),
     check('ftussenvoegsel').escape(),
     check('fachternaam').escape(),
-    check('fgeboortedatum').isDate().escape(),
-    check('fstudentnummer').isNumeric().isLength({min: 7, max:7}).escape(), //TODO: check if not allready in DB
+    check('fgeboortedatum').isDate().withMessage("Your date of birth is not valid.").escape(),
+    check('fstudentnummer').custom(studentID => validStudentID((studentID))).escape(),
     check('fmobiel').escape(),
-    check('fstudie').isIn(["", "IK", "IC", "IC/IK"]),
-    check( 'femail').isEmail().escape()
+    check('fstudie').isIn(studyOptions).withMessage("The study you have entered does not exist, please stop hacking our site.").escape(),
+    check( 'femail').isEmail().escape().withMessage("Your email is not valid.").escape()
 ],
     function (req, res) {
 
@@ -100,7 +101,7 @@ function addStudentToDB(reqBody){
 
         DB.getasync(sql,studentID).then(((rows) => {if(rows.length == 0){
             let insertSQL = "INSERT INTO Applications (studentnummer, voornaam, voorletters, tussenvoegsel, achternaam, geboortedatum, mobielnummer, studie)";
-            insertSQL+= " VALUES (?,?,?,?,?,?,?,?) "
+            insertSQL+= " VALUES (?,?,?,?,?,?,?,?) ";
             DB.insertAsync(insertSQL, [reqBody.fstudentnummer, reqBody.fvoornaam, reqBody.fvoorletters, reqBody.ftussenvoegsel, reqBody.fachternaam, reqBody.fgeboortedatum, reqBody.fmobiel, reqBody.fstudie])
                 .then(function () {
                     resolve(0); //Adding the student was successful
@@ -117,4 +118,26 @@ function addStudentToDB(reqBody){
                 resolve(1); //Database error
             });
     })
+}
+
+/**
+ * Checks if a student ID is a valid student ID.
+ * @param studentID The studentID you want to check
+ */
+function validStudentID(studentID){
+    if(studentID.length != 7){
+        throw new Error("StudentID does not match the required length of 7 numbers.");
+    }
+    let multiplier = 7;
+    let result = 0;
+    while(multiplier > 0){
+        result +=  parseInt(studentID[7 - multiplier]) * multiplier;
+        multiplier--;
+    }
+    if(result % 11 != 0){
+        throw new Error("StudentID is not a valid student ID.");
+        return false;
+    }
+
+    return true;
 }
