@@ -160,6 +160,30 @@
             "type": "Contactpersoon mentoren",
             "mobile": "(+31) 06 47 14 57 25",
             "email": "inge@intro-cs.nl"
+        },
+        {
+            "name": "Merijn Stiekema",
+            "type": "Vertrouwenspersoon infromatica",
+            "mobile": "(+31) 06 11 47 11 14",
+            "email": "merijn@intro-cs.nl"
+        },
+        {
+            "name": "Iris Tuhumena",
+            "type": "Vertrouwenspersoon infromatica",
+            "mobile": "(+31) 06 30 31 41 63",
+            "email": "iris@intro-cs.nl"
+        },
+        {
+            "name": "Willem Hust",
+            "type": "Vertrouwenspersoon informatiekunde",
+            "mobile": "(+31) 06 24 94 21 54",
+            "email": "willem@intro-cs.nl"
+        },
+        {
+            "name": "Marian Biekart",
+            "type": "Vertrouwenspersoon informatiekunde",
+            "mobile": "(+31) 06 21 94 83 26",
+            "email": "marian@intro-cs.nl"
         }
     ]
 }

@@ -8,7 +8,17 @@ class Form extends Component {
   render() {
       return(
         <main>
-            {getMenu(data.sections)}
+            <div className="ui inverted fixed pointing menu">
+              <div className="ui center aligned container">
+                <a className="center aligned item" href="/">
+                  <img
+                      className="ui mini image"
+                      src={require('../assets/logo.svg')}
+                      alt="logo"
+                  />
+                </a>
+              </div>
+            </div>
             <div className="ui main container">
                 <div className="ui fluid card seg">
                     <div className="ui content">
@@ -35,7 +45,7 @@ class Form extends Component {
                             <input type="date" id="fgeboortedatum" name="fgeboortedatum" min="1920-01-01" max="2016-01-01"/>
                             </div>
                             <div className="field">
-                            <label for="fstudentnummer">Studentnummer</label>
+                            <label for="fstudentnummer">Studentnummer <a className="hov">(?) </a><piv className="hid">Uitleg</piv></label>
                             <input type="number" id="fstudentnummer" name="fstudentnummer" min="1000000" max="9999999"/>
                             </div>
                             <div className="field">
@@ -78,24 +88,4 @@ class Form extends Component {
     }
   }
 }
-const getMenu = items =>{
-    return(
-      <div className="ui inverted fixed pointing menu">
-        <div className="ui center aligned container">
-          <a className="item" href="#top">
-            <img
-                className="ui mini image"
-                src={require('../assets/logo.svg')}
-                alt="logo"
-            />
-          </a>
-          {
-            items.map((item,index)=>(
-              <Menu item={item} key={index}/>
-            ))
-          }
-        </div>
-      </div>
-    )
-  }
 export default Form;
