@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import Menu from "./Menu";
 import $ from "jquery";
-import data from './data.json';
 import '../assets/inschrijven.css';
 
 class Form extends Component {

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import {findDOMNode} from 'react-dom';
 import ContactPerson from './ContactPerson';
 import Date from './Date';
 import data from './data.json';
@@ -9,7 +8,6 @@ import Association from "./Association";
 import Menu from "./Menu";
 import '../assets/home.css';
 import $ from "jquery";
-import { Sticky } from "semantic-ui-react";
 
 class Home extends Component {
   render() {
@@ -17,45 +15,50 @@ class Home extends Component {
       <main>
         {getMenu(data.sections)}
 
-        <a className="anchor" name = "top" ref="anchor0"/>
-        <div className="ui main container" ref="container">
-          <div className="parallax" ref="parallax">
+        <a className="anchor" name = "top" href="anchor0" ref="anchor0"/>
+        <a className="anchor" name="Title" href="anchor1" ref="anchor1"/>
+        <a className="anchor" name="Programma" href="anchor2" ref="anchor2"/>
+        <a className="anchor" name="Verenigingen" href="anchor3" ref="anchor3"/>
+        <a className="anchor" name="FAQ" href="anchor4" ref="anchor4"/>
+        <a className="anchor" name="Contact" href="anchor5" ref="anchor5"/>
+        <div className="ui main container" href="container" ref="container">
+          <div className="parallax" href="parallax" ref="parallax">
             <div className="video-container">
               <iframe src="https://www.youtube.com/embed/_nCyMKGLcvk" title="themabekendmakingsvideo" frameborder="0"></iframe>
             </div>
             <div className="ui fluid card seg">
               <div className="card content">
-                <a className="anchor" name="Title" ref="anchor1"/><p className="ui center aligned huge header">INCA / INKU Introductie</p>
+                <p className="ui center aligned huge header" ref="seg1">INCA / INKU Introductie</p>
                 {getText(data.introduction)}
               </div>
             </div>
             <div className="ui fluid card seg">
               <div className="card content">
-                <a className="anchor" name="Programma" ref="anchor2"/><p className="ui center aligned large header">Programma</p>
+                <p className="ui center aligned large header" ref="seg2">Programma</p>
                 {getProgram(data.program)}
               </div>
             </div>
             <div className="ui fluid card seg">
               <div className="card content">
-                <a className="anchor" name="Verenigingen" ref="anchor3"/><p className="ui center aligned large header">Verenigingen</p>
+                <p className="ui center aligned large header" ref="seg3">Verenigingen</p>
                 {getAssociation(data.Associations)}
               </div>
             </div>
             <div className="ui fluid card seg">
               <div className="card content">
-                <a className="anchor" name="FAQ" ref="anchor4"/><p className="ui center aligned large header">FAQ</p>
+                <p className="ui center aligned large header" ref="seg4">FAQ</p>
                 {getFAQ(data.FAQ)}
               </div>
             </div>
             <div className="ui fluid card seg">
               <div className="card content">
-                <a className="anchor" name="Contact" ref="anchor5"/><p className="ui center aligned large header">Contact</p>
+                <p className="ui center aligned large header" ref="seg5">Contact</p>
                 <p className="ui centered grid">Bij voorkeur mailen vanwege wisselende telefonische beschikbaarheid in de zomer</p>
                 {getContactPersons(data.contactPersons)}
               </div>
             </div>
           </div>
-          <div className="ui fixed yellow inverted segment" ref="fixed">
+          <div className="ui fixed yellow inverted segment" href="fixed" ref="fixed">
           <a href="/inschrijven"><p className="ui center aligned huge header">Schrijf je in!</p></a>
           </div>
         </div>
@@ -66,25 +69,33 @@ class Home extends Component {
   componentDidMount = () => {
     window.addEventListener('scroll', this.parallax);
     window.addEventListener('resize',this.setSize)
-    this.par = findDOMNode(this.refs.parallax);
-    this.container = findDOMNode(this.refs.container);
-    this.anchor = [findDOMNode(this.refs.anchor0),
-    findDOMNode(this.refs.anchor1),
-    findDOMNode(this.refs.anchor2),
-    findDOMNode(this.refs.anchor3),
-    findDOMNode(this.refs.anchor4),
-    findDOMNode(this.refs.anchor5)]
-    this.fixed = findDOMNode(this.refs.fixed);
+    this.par = this.refs.parallax;
+    this.anchors = [this.refs.anchor1,
+    this.refs.anchor2,
+    this.refs.anchor3,
+    this.refs.anchor4,
+    this.refs.anchor5];
+    this.segments = [this.refs.seg1,
+    this.refs.seg2,
+    this.refs.seg3,
+    this.refs.seg4,
+    this.refs.seg5];
+    this.fixed = this.refs.fixed;
     this.setSize();
+    console.log(this.fixed);
   }
   setSize = () =>{
-    $('main').height($(this.par).height() * (1.55 - $(window).height() / 5260));
-    $(findDOMNode(this.container)).height($(findDOMNode(this.container)).height() / 2.1);
-    $(this.fixed).width($(this.container).width() - 28);
+    $('main').height($(this.refs.parallax).height() * (1.55 - $(window).height() / 5260));
+    $(this.refs.container).height($(this.refs.container).height() / 2.1);
+    $(this.refs.fixed).width($(this.refs.container).width() - 28);
+    for(let i = 0; i < 5; ++i){
+      this.top = $(this.segments[i]).offset().top;
+      $(this.anchors[i]).css('top', this.top * (1.19 + this.top*this.top / 65000000));
+    }
   }
   //parallax scrolling
   parallax = () =>{
-    $(this.par).css("top",$(document).scrollTop()/4 + 58);
+    $(this.refs.parallax).css("top",$(document).scrollTop()/4 + 58);
   }
 }
 

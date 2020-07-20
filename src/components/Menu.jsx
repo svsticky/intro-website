@@ -32,10 +32,11 @@ const Menu = ({ item }) => (
           <Dropdown icon='bars'>
             <Dropdown.Menu>
               {
-                data.sections.map((item)=>(
+                data.sections.map((item,index)=>(
                   <Dropdown.Item
                     text={item.name}
                     href={"#"+item.name}
+                    key={index}
                   />
                 ))
               }
