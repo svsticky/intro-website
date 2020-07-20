@@ -111,13 +111,15 @@
     "Associations": [
         {
             "name": "Sticky",
-            "text": "Sticky is de studievereniging voor informatica, gametechnologie en informatiekunde. Het is dé plek om buiten je colleges je studiegenoten op een informele manier te leren kennen. Sticky organiseert wekelijks vele soorten activiteiten, van filmavonden tot themaborrels, en van LAN-parties tot culturele uitstapjes naar het buitenland. Daarnaast biedt Sticky ondersteuning bij je studie, bijvoorbeeld via het opzetten van hulpmiddagen, waar ouderejaars studenten je door de moeilijkste vakken kunnen helpen, en door het aanbieden van korting op je studieboeken. Kijk vooral eens een keer op svsticky.nl voor meer informatie!\nInschrijven bij Sticky kost je eenmalig €7,50 en kan via intro.svsticky.nl",
+            "text": "Sticky is de studievereniging voor informatica, gametechnologie en informatiekunde. Het is dé plek om buiten je colleges je studiegenoten op een informele manier te leren kennen. Sticky organiseert wekelijks vele soorten activiteiten, van filmavonden tot themaborrels, en van LAN-parties tot culturele uitstapjes naar het buitenland. Daarnaast biedt Sticky ondersteuning bij je studie, bijvoorbeeld via het opzetten van hulpmiddagen, waar ouderejaars studenten je door de moeilijkste vakken kunnen helpen, en door het aanbieden van korting op je studieboeken. Kijk vooral eens een keer op svsticky.nl voor meer informatie!\nInschrijven bij Sticky kost je eenmalig €7,50 en kan via ",
+            "textlink": "https://intro.svsticky.nl",
             "photo": "sticky.png",
             "link": "https://svsticky.nl/"
         },
         {
             "name": "A-Eskwadraat",
-            "text": "A–Eskwadraat is de studievereniging voor studenten van de studies Natuur- en Sterrenkunde, Wiskunde, Informatiekunde, Informatica en Gametechnologie. Lid worden van A–Eskwadraat kost je eenmalig €30,-, maar dan ben je voor de rest van je studententijd lid. Commissies binnen de vereniging organiseren een hoop leuke activiteiten. Zo zijn er borrels, feesten, sporttoernooien, symposia, studiereizen en is er een eerstejaarsweekend. Naast het deelnemen aan deze activiteiten kun je ze natuurlijk ook zelf organiseren. Daar kun je naast dat het leuk is, ontzettend veel van leren. Bovenal is het heel erg gezellig en leer je op deze manier snel nieuwe mensen kennen! Voor meer informatie over A–Eskwadraat kun je kijken op: www.a-eskwadraat.nl/vereniging/scholieren.",
+            "text": "A–Eskwadraat is de studievereniging voor studenten van de studies Natuur- en Sterrenkunde, Wiskunde, Informatiekunde, Informatica en Gametechnologie. Lid worden van A–Eskwadraat kost je eenmalig €30,-, maar dan ben je voor de rest van je studententijd lid. Commissies binnen de vereniging organiseren een hoop leuke activiteiten. Zo zijn er borrels, feesten, sporttoernooien, symposia, studiereizen en is er een eerstejaarsweekend. Naast het deelnemen aan deze activiteiten kun je ze natuurlijk ook zelf organiseren. Daar kun je naast dat het leuk is, ontzettend veel van leren. Bovenal is het heel erg gezellig en leer je op deze manier snel nieuwe mensen kennen! Voor meer informatie over A–Eskwadraat kun je kijken op: ",
+            "textlink": "https://www.a-eskwadraat.nl/vereniging/scholieren",
             "photo": "aes.png",
             "link": "https://www.a-eskwadraat.nl/"
         }
