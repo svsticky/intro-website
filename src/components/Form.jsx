@@ -6,22 +6,11 @@ class Form extends Component {
   render() {
       return(
         <main>
-            <div className="ui inverted fixed pointing menu">
-              <div className="ui center aligned container">
-                <a className="center aligned item" href="/">
-                  <img
-                      className="ui mini image"
-                      src={require('../assets/logo.svg')}
-                      alt="logo"
-                  />
-                </a>
-              </div>
-            </div>
             <div className="ui main container">
                 <div className="ui fluid card seg">
                     <div className="ui content">
                         <p className="ui center aligned huge header">Inschrijven</p>
-                        <form className = "ui form">
+                        <form className = "ui form" action={process.env.REACT_APP_POST} method="post">
                             <div className="field">
                                 <label for="fvoornaam">Voornaam</label>
                                 <input type="text" id="fvoornaam" name="fvoornaam"/>
@@ -43,7 +32,7 @@ class Form extends Component {
                             <input type="date" id="fgeboortedatum" name="fgeboortedatum" min="1920-01-01" max="2016-01-01"/>
                             </div>
                             <div className="field">
-                            <label for="fstudentnummer">Studentnummer <a className="hov">(?) </a><piv className="hid">Uitleg</piv></label>
+                            <label for="fstudentnummer">Studentnummer</label>
                             <input type="number" id="fstudentnummer" name="fstudentnummer" min="1000000" max="9999999"/>
                             </div>
                             <div className="field">
@@ -87,3 +76,4 @@ class Form extends Component {
   }
 }
 export default Form;
+
