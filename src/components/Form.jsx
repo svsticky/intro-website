@@ -13,7 +13,7 @@ class Form extends Component {
                 <div className="ui fluid card seg">
                     <div className="ui content">
                         <p className="ui center aligned huge header">Inschrijven</p>
-                        <form className = "ui form" action="/submitRegistration" method="post">
+                        <form className = "ui form" action={process.env.REACT_APP_POST} method="post">
                             <div className="field">
                                 <label for="fvoornaam">Voornaam</label>
                                 <input type="text" id="fvoornaam" name="fvoornaam"/>

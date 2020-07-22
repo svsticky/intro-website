@@ -49,7 +49,7 @@ app.post('/submitRegistration',[
 );
 
 app.listen(25565);
-
+console.log("listening on 25565");
 /**
  * Async getter for the database.
  * @param sql The SQl for the query.
@@ -138,6 +138,6 @@ function validStudentID(studentID){
         throw new Error("StudentID is not a valid student ID.");
         return false;
     }
-
+    console.log("valid");
     return true;
 }
