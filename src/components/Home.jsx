@@ -28,7 +28,7 @@ class Home extends Component {
             </div>
             <div className="ui fluid card seg">
               <div className="card content">
-                <p className="ui center aligned huge header" ref="seg1">INCA / INKU Introductie</p>
+                <p className="ui center aligned huge header" ref="seg1">Introductie Informatica, Informatiekunde en Gametechnologie 2020</p>
                 {getText(data.introduction)}
               </div>
             </div>
