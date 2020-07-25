@@ -3,53 +3,53 @@
     {
       "location": [52.087287, 5.165421],
       "title": "Buys Ballotgebouw",
-      "content": "Text",
+      "content": "In het BBG bevinden zich diverse ruimtes waarin werkcolleges worden gegeven. Hier bevinden zich ook de twee studieverenigingen voor Informatica en Informatiekunde; Sticky en A-eskwadraat.",
       "image": "https://www.uu.nl/sites/default/files/images/gebouw-buysballotgebouw-1800x1200p-4.jpg"
     },
     {
       "location": [52.085855, 5.171957],
       "title": "Educatorium",
-      "content": "Welkom bij het Educatorium! Dit gebouw wordt vooral door INCA en INKU studenten gebruikt voor het afnemen van tentamens.",
+      "content": "Dit is het Educatorium. Dit gebouw wordt vooral door INCA en INKU studenten gebruikt voor het afnemen van tentamens.",
       "image": "https://www.uu.nl/sites/default/files/photo/gebouw_educatorium_600x400.jpg"
     },
     {
       "location": [52.085909, 5.174158],
       "title": "Marinus Ruppertgebouw",
-      "content": "Text",
+      "content": "In het Ruppert bevinden zich zalen waarin hoor- en werkcolleges worden gegeven.",
       "image": "https://students.uu.nl/sites/default/files/images/gebouw-ruppertgebouw-1800x1200p-8.jpg"
     },
     {
       "location": [52.084502, 5.172525],
       "title": "Universiteitsbibliotheek",
-      "content": "Text",
+      "content": "In de Universiteitsbibliotheek wordt er dag en nacht hard geleerd voor tentamens door studenten. Dit is daarom ook de plek voor de meesten rond en tijdens tentamenweken.",
       "image": "https://lh3.googleusercontent.com/proxy/274-hrPkBv5Fd5fF6lnxV65iR5WTTgbqm9sF1JMG4KkSFzPKdnf_bGs-avs-EiFTkY4W4A6vkwWhuB9LzbO1SusH5lk247E"
     },
     {
       "location": [52.086908, 5.166599],
       "title": "Minnaertgebouw",
-      "content": "Text",
+      "content": "Het Minnaert wordt gebruikt voor verschillende (werk)colleges en activiteiten.",
       "image": "https://www.architectuur.org/images/neutelings01_1.jpg"
     },
     {
       "location": [52.087281, 5.167378],
       "title": "Victor J. Koningsbergergebouw",
-      "content": "Text",
+      "content": "Het KBG is een van de toegangen van het BBG. In dit gebouw bevinden zich ook diverse collegezalen.",
       "image": "https://www.uu.nl/sites/default/files/photo/victor_j._koningsbergergebouw_550x400.jpg"
     },
     {
-      "location": [52.081826, 5.175860],
-      "title": "Bolognalaan 101",
-      "content": "Text",
-      "image": "https://students.uu.nl/sites/default/files/images/gebouw-bolognalaan-1800x1200p-10.jpg"
+      "location": [52.0848797, 5.1748297],
+      "title": "Tram Heidelberglaan",
+      "content": "Hier kan je uitstappen om naar gebouwen te gaan zoals de UB en Ruppert",
+      "image": "https://regiotramutrecht.provincie-utrecht.nl/sites/regiotram/files/styles/image_732xn/public/2020-05/tram_op_bij_halte_heidelberglaan_0.jpg?itok=ALoribBU"
+    },
+    {
+      "location": [52.084867, 5.167407],
+      "title": "Tram Padualaan",
+      "content": "Deze tramhalte wordt gebruikt door studenten om zo dicht mogelijk te komen bij het KBG, BBG en het Minneart gebouw ten noorden van dit station.",
+      "image": "https://i.ytimg.com/vi/RNaJwlLaA3I/maxresdefault.jpg"
     }
   ],
   "paths": [
-    {
-      "positions": [[52.085855, 5.171957], [52.086908, 5.166599]],
-      "title": "Test path",
-      "content": "Dit is een voorbeeld van hoe routes op de Utrecht Science Park gedeeld kunnen worden op deze website.",
-      "video": "QKx2l6230BI"
-    },
     {
       "positions": [[52.085855, 5.171957], [52.085909, 5.174158]],
       "title": "Lopen van Educatorium naar het Marinus Ruppertgebouw",
