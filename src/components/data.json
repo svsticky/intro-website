@@ -1,25 +1,36 @@
 {
-    "sections": [
+    "menu": [
         {
-            "name": "Welkom"
+            "name": "Welkom",
+            "href": "#welkom"
         },
         {
-            "name": "Digitale introductie"
+            "name": "Digitale introductie",
+            "href": "#digitale-introductie"
         },
         {
-            "name": "Hoe werkt Microsoft Teams?"
+            "name": "Hoe werkt Microsoft Teams?",
+            "href": "#teams"
         },
         {
-            "name": "Programma"
+            "name": "Programma",
+            "href": "#programma"
         },
         {
-            "name": "Verenigingen"
+            "name": "Verenigingen",
+            "href": "#verenigingen"
         },
         {
-            "name": "FAQ"
+            "name": "FAQ",
+            "href": "#faq"
         },
         {
-            "name": "Contact"
+            "name": "Contact",
+            "href": "#contact"
+        },
+        {
+            "name": "Inschrijven",
+            "href": "#inschrijven"
         }
     ],
     "introduction": [
@@ -29,14 +40,17 @@
         },
         {
             "name": "Digitale introductie",
+            "anchor": "digitale-introductie",
             "text": "Dit jaar zal er voor het eerst een digitale introductie plaatsvinden. Achter de schermen wordt er hard gewerkt aan een introductie die aansluit op wat jullie nodig gaan hebben en om de transitie naar het studeren aan een universiteit te versoepelen. Binnenkort zal het programma worden aangevuld en hopelijk kunnen we jullie dan ook een keer op het Utrecht Science Park uitnodigen!"
         },
         {
             "name": "Hoe werkt Microsoft Teams?",
+            "anchor": "teams",
             "text": "Binnenkort zal hier een uitgebreide uitleg geplaatst worden over hoe je Microsoft Teams kan gebruiken voor de introductie."
         },
         {
             "name": "Inschrijven",
+            "anchor": "inschrijven",
             "text": "De (verplichte) inschrijvingen voor de introductie gaan op 1 augustus open op deze site"
         }
     ],

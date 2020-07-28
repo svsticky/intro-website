@@ -5,7 +5,6 @@ import * as serviceWorker from './serviceWorker';
 
 // Import components
 import Home from './components/Home.jsx';
-import Form from './components/Form.jsx';
 import MapPage from './components/usp-map/Map.jsx';
 
 // CSS framework
