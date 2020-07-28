@@ -4,13 +4,13 @@ import data from './data.json';
 import { Dropdown } from 'semantic-ui-react'
 
 
-const Menu = ({ item }) => (
+const Menu = () => (
   <div className="ui grid">
     {/* Desktop menu */}
     <div className="ui computer only row">
       <div className="ui inverted fixed pointing menu">
         <div className="ui center aligned container">
-          <a className="item" href="#top">
+          <a className="item" href="#">
             <img
               className="ui mini image"
               src={require('../assets/logo.svg')}
@@ -18,7 +18,7 @@ const Menu = ({ item }) => (
             />
           </a>
           {
-            data.sections.map((item,index)=>(
+            data.menu.map((item,index)=>(
               <MenuItem item={item} key={index}/>
             ))
           }
@@ -32,10 +32,10 @@ const Menu = ({ item }) => (
           <Dropdown icon='bars'>
             <Dropdown.Menu>
               {
-                data.sections.map((item,index)=>(
+                data.menu.map((item,index)=>(
                   <Dropdown.Item
                     text={item.name}
-                    href={"#"+item.name}
+                    href={item.href}
                     key={index}
                   />
                 ))
@@ -43,7 +43,7 @@ const Menu = ({ item }) => (
             </Dropdown.Menu>
           </Dropdown>
         </div>
-        <a className="item" href="#top">
+        <a className="item" href="#">
           <img
             className="ui mini image"
             src={require('../assets/logo.svg')}
