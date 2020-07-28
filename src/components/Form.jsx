@@ -7,7 +7,7 @@ class Form extends Component {
       return(
         <main>
             <div className="ui main container">
-                <div className="ui fluid card seg">
+                <div className="ui fluid card">
                     <div className="ui content">
                         <p className="ui center aligned huge header">Inschrijven</p>
                         <form className = "ui form" action="/submitRegistration" method="post">
