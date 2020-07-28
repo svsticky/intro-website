@@ -4,27 +4,19 @@
   height: 200%;
 }
 
-main.card{
-  padding-left: 1em;
-  padding-right: 1em;
-  background-color: white;
-}
-main.home{
+main{
   background-image: url("/images/stars.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.parallax{
-  position: relative;
-  perspective: 10px;
-  transform: translateY(0px);
-  top:58px;
-}
-a.anchor{
-  position: relative;
-}
+
 img.association{
   position: relative;
   top: -2.6em;
 }
+
 div.fluid.card{
   box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -32,9 +24,10 @@ div.fluid.card{
 div.fixed{
   position: fixed !important;
   top:47px;
+  width: 80%;
 }
-/* From: https://www.w3schools.com/howto/howto_css_responsive_iframes.asp */
 
+/* From: https://www.w3schools.com/howto/howto_css_responsive_iframes.asp */
 .video-container {
   position: relative;
   overflow: hidden;
