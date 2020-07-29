@@ -40,12 +40,9 @@ div.fluid.card{
 }
 
 p.anchor {
-  padding-top: 100px !important;
-  margin-top: -100px !important;
-}
-h2.anchor {
-  padding-top: 100px !important;
-  margin-top: -100px !important;
+  padding-top: 150px !important;
+  margin-top: -150px !important;
+  width: 0;
 }
 
 .ui.fixed.container {
