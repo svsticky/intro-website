@@ -9,7 +9,7 @@ main.card{
   padding-right: 1em;
   background-color: white;
 }
-main{
+main.home{
   background-image: url("/images/stars.png");
 }
 .parallax{

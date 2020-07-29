@@ -22,9 +22,6 @@ class MapPage extends Component {
     }
 
     this.state = {
-      title: "",
-      content: "",
-      video: "",
       hiddenSidebar: true,
       hiddenRoute: true
     }
@@ -34,10 +31,11 @@ class MapPage extends Component {
     this.close = this.close.bind(this)
   }
 
-  pointOfInterest(title, content) {
+  pointOfInterest(title, content, image) {
     this.setState({
       title: title,
       content: content,
+      image: image,
       hiddenSidebar: (title === this.state.title || this.state.hiddenSidebar) ? !this.state.hiddenSidebar : this.state.hiddenSidebar
     });
   }
@@ -53,7 +51,8 @@ class MapPage extends Component {
 
   close() {
     this.setState({
-      hiddenRoute: true
+      hiddenRoute: true,
+      hiddenSidebar: true
     });
   }
   
@@ -66,6 +65,7 @@ class MapPage extends Component {
         position={point.location}
         title={point.title}
         content={point.content}
+        image={point.image}
         handler={this.pointOfInterest}
       />
     });
@@ -83,9 +83,15 @@ class MapPage extends Component {
     return (
       <main>
         <article>
-          <article className="header">
-            <h2>Ontdek de USP</h2>
-          </article>
+          <div className="ui centered grid">
+            <div className="ui inverted center pointing menu uspHeader">
+              <div className="ui center aligned container">
+                <span className="uspHeaderText">
+                  Ontdek de USP
+                </span>
+              </div>
+            </div>
+          </div>
           <RouteInfo
             title={this.state.title}
             content={this.state.content}
@@ -93,7 +99,13 @@ class MapPage extends Component {
             hidden={this.state.hiddenRoute}
             close={this.close}
           />
-          <Sidebar title={this.state.title} content={this.state.content} hidden={this.state.hiddenSidebar} />
+          <Sidebar 
+            title={this.state.title}
+            content={this.state.content}
+            image={this.state.image}
+            hidden={this.state.hiddenSidebar} 
+            close={this.close}
+          />
           <Map
             center={position}
             zoom={this.coords.zoom}
