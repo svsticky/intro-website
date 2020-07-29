@@ -11,7 +11,7 @@ import '../assets/home.css';
 class Home extends Component {
   render() {
     return (
-      <main>
+      <main ref="background">
         {getMenu(data.menu)}
 
         <div className="ui main container">
@@ -52,6 +52,24 @@ class Home extends Component {
         </div>
       </main>
     );
+  }
+  
+  componentDidMount() {
+    window.addEventListener('scroll', this.parallax, true);
+    this.background = React.createRef();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.parallax);
+  }
+
+  //handle parallax scrolling
+  parallax = () => {
+    var scrollHeight = window.scrollY;
+    var parallax = this.refs.background;
+    parallax.style["margin-top"] = -scrollHeight/10 + "px";
+    parallax.style["padding-top"] = scrollHeight/10 + "px";
+    console.log(scrollHeight);
   }
 }
 

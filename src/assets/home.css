@@ -6,10 +6,9 @@
 
 main{
   background-image: url("/images/stars.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: repeat;
+  background-size: 100%;
 }
 
 img.association{
