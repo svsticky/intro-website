@@ -58,9 +58,9 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          {/* <div className="ui fixed yellow inverted segment" href="fixed" ref="fixed">
+          <div className="ui fixed yellow inverted segment" href="fixed" ref="fixed">
           <a href="/inschrijven"><p className="ui center aligned huge header">Schrijf je in!</p></a>
-          </div> */}
+          </div>
         </div>
       </main>
     );
