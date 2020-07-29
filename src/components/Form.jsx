@@ -10,7 +10,7 @@ class Form extends Component {
                 <div className="ui fluid card seg">
                     <div className="ui content">
                         <p className="ui center aligned huge header">Inschrijven</p>
-                        <form className = "ui form" action="http://localhost:25565/submitRegistration" method="post">
+                        <form className = "ui form" action="/submitRegistration" method="post">
                             <h4 class="ui dividing header">Jouw gegevens</h4>
                             <div className="required field">
                                 <label for="fvoornaam">Voornaam</label>
