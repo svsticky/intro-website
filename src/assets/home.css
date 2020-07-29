@@ -50,7 +50,7 @@ h2.anchor {
 
 .ui.fixed.container {
   position: fixed;
-  z-index: 500;
+  z-index: 1;
   height: 60px;
   top: 60px !important;
 }
