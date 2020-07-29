@@ -43,5 +43,5 @@ export default class Question extends Component {
                 </Accordion>
             </div>
         )
-    } 
+    }
 }
