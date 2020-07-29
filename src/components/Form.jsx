@@ -10,7 +10,7 @@ class Form extends Component {
                 <div className="ui fluid card seg">
                     <div className="ui content">
                         <p className="ui center aligned huge header">Inschrijven</p>
-                        <form className = "ui form" action="/submitRegistration" method="post">
+                        <form className = "ui form" action="http://localhost:25565/submitRegistration" method="post">
                             <h4 class="ui dividing header">Jouw gegevens</h4>
                             <div className="required field">
                                 <label for="fvoornaam">Voornaam</label>
@@ -41,7 +41,7 @@ class Form extends Component {
                             </div>
                             <div className="required field">
                                 <label for="fstudie">Studie</label>
-                                <select id="fstudie">
+                                <select id="fstudie" name="fstudie">
                                     <option value="IC">Informatica</option>
                                     <option value="IK">Informatiekunde</option>
                                     <option value="IC/IK">Informatica en Informatiekunde</option>
@@ -54,13 +54,13 @@ class Form extends Component {
                             </div>
                             
                             <div className="required field">
-                                <label for="femail">Email</label>
+                                <label for="femail">Email (mag niet je studenten mail zijn)</label>
                                 <input type="email" id="femail" name="femail" placeholder="jan@example.com" required/>
                             </div>
                             <h4 class="ui dividing header">Maaltijden</h4>
                             <div className="required field">
                                 <label for="feetvoorkeur">Heb je voorkeur voor vegetarische of veganistische maaltijden?</label>
-                                <select id="feetvoorkeur">
+                                <select id="feetvoorkeur" name="feetvoorkeur">
                                     <option value="geen">Nee</option>
                                     <option value="vega">Ja, vegetarisch</option>
                                     <option value="vegan">Ja, veganistisch</option>
