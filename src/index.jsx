@@ -14,6 +14,7 @@ import 'fomantic-ui-css/semantic.min.css';
 // Import static content
 //import './assets/index.css';
 import './assets/logo.svg';
+import FormResult from "./components/FormResult";
 
 class App extends Component {
   render() {
@@ -21,7 +22,8 @@ class App extends Component {
       <Router>
         <Switch>
           <Route path="/map" component={MapPage} />
-          {/* <Route path="/inschrijven" component={Form}/> */}
+          <Route path="/inschrijven" component={Form}/>
+          <Route path="/ingeschreven" component={FormResult}/>
           <Route component={Home} />
         </Switch>
       </Router>
