@@ -75,7 +75,7 @@ class FormResult extends Component {
     else {
         resultTitle = "Volgens mij kennen we je al";
         resultDescription = "Jouw studentennummer komt al in onze database voor, weet je zeker dat je je niet al een keer opgegeven hebt voor deze intro?<br />" +
-            "Mocht je zeker weten dat jij je nog niet ingeschreven hebt, neem dan concat op met de commissie, zij kunnen je inschrijven en uitzoeken wat er mis is gegaan.";
+            "Mocht je zeker weten dat jij je nog niet ingeschreven hebt, neem dan contact op met de commissie, zij kunnen je inschrijven en uitzoeken wat er mis is gegaan.";
         let linkElement = document.getElementById("yellowLink");
         linkElement.href = "/#Contact";
         document.getElementById("yellowLinkText").innerText = "NAAR CONTACTGEGEVENS"
