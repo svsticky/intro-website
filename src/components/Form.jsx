@@ -17,15 +17,15 @@ class Form extends Component {
                                 <input type="text" id="fvoornaam" name="fvoornaam" placeholder="Jan" required/>
                             </div>
                             <div className="fields">
-                                <div className="required six wide field">
+                                <div className="required two wide field">
                                     <label for="fvoorletters">Voorletters</label>
                                     <input type="text" id="fvoorletters" name="fvoorletters" placeholder="J" required/>
                                 </div>
-                                <div className="four wide field">
+                                <div className="two wide field">
                                     <label for="ftussenvoegsel">Tussenvoegsel</label>
                                     <input type="text" id="ftussenvoegsel" name="ftussenvoegsel" placeholder="van de"/>
                                 </div>
-                                <div className="required six wide field">
+                                <div className="required twelve wide field">
                                     <label for="fachternaam">Achternaam</label>
                                     <input type="text" id="fachternaam" name="fachternaam" placeholder="Jansen" required/>
                                 </div>
@@ -79,6 +79,29 @@ class Form extends Component {
                                 <label for="fnoodmobiel">Hoe kunnen we deze persoon bereiken (telefoonnummer)?</label>
                                 <input type="tel" id="fnoodmobiel" name="fnoodmobiel" pattern="[0-9]{10}" placeholder="0612345678" required  title="10 cijferig telefoonnummer"/>
                             </div>
+                            <h4 class="ui dividing header">Adresgegevens</h4>
+                            <p>Deze gegevens zijn niet verplicht</p>
+                            <div className="fields">
+                                <div className="eleven wide field">
+                                    <label for="fstraat">Straat</label>
+                                    <input type="text" id="fstraat" name="fstraat" placeholder="Amsterdamsestraatweg"/>
+                                </div>
+                                <div className="five wide field">
+                                    <label for="fhuisnummer">Huisnummer</label>
+                                    <input type="text" id="fhuisnummer" name="fhuisnummer" placeholder="1"/>
+                                </div>
+                            </div>
+                            <div className="fields">
+                                <div className="five wide field">
+                                    <label for="fpostcode">Straat</label>
+                                    <input type="text" id="fpostcode" name="fpostcode" placeholder="1234AB" pattern="/[1-9][0-9]{4} ?[A-Z]{2}$/" title="postcode van 4 cijfers en twee letters"/>
+                                </div>
+                                <div className="eleven wide field">
+                                    <label for="fplaats">Plaats</label>
+                                    <input type="text" id="fplaats" name="fplaats" placeholder="Utrecht"/>
+                                </div>
+                            </div>
+                            <p class="ui dividing header"/>
                             <button class="ui button" type="submit">Inschrijven</button>
                         </form>
                     </div>
