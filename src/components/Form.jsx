@@ -93,7 +93,7 @@ class Form extends Component {
                             </div>
                             <div className="fields">
                                 <div className="five wide field">
-                                    <label for="fpostcode">Straat</label>
+                                    <label for="fpostcode">Postcode</label>
                                     <input type="text" id="fpostcode" name="fpostcode" placeholder="1234AB" pattern="[1-9][0-9]{3} ?[A-Za-z]{2}$" title="postcode van 4 cijfers en twee letters"/>
                                 </div>
                                 <div className="eleven wide field">
