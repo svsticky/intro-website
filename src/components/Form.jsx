@@ -17,15 +17,15 @@ class Form extends Component {
                                 <input type="text" id="fvoornaam" name="fvoornaam" placeholder="Jan" required/>
                             </div>
                             <div className="fields">
-                                <div className="required two wide field">
+                                <div className="required three wide field">
                                     <label for="fvoorletters">Voorletters</label>
                                     <input type="text" id="fvoorletters" name="fvoorletters" placeholder="J" required/>
                                 </div>
-                                <div className="two wide field">
+                                <div className="three wide field">
                                     <label for="ftussenvoegsel">Tussenvoegsel</label>
                                     <input type="text" id="ftussenvoegsel" name="ftussenvoegsel" placeholder="van de"/>
                                 </div>
-                                <div className="required twelve wide field">
+                                <div className="required ten wide field">
                                     <label for="fachternaam">Achternaam</label>
                                     <input type="text" id="fachternaam" name="fachternaam" placeholder="Jansen" required/>
                                 </div>
