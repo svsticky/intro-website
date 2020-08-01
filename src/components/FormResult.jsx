@@ -61,7 +61,7 @@ class FormResult extends Component {
         resultDescription = "Er is bij het verwerken van je inschrijving iets mis gedaan. Probeer het alsjeblieft opnieuw. <br />" +
             "Als het de volgende keer weer mis gaat, probeer het dan over een paar uur nog een keer.";
         let linkElement = document.getElementById("yellowLink");
-        linkElement.href = "/";
+        linkElement.href = "/inschrijven";
         document.getElementById("yellowLinkText").innerText = "OPNIEUW PROBEREN"
     }
     else if(resultCode === 3){
@@ -69,7 +69,7 @@ class FormResult extends Component {
         resultDescription = "Ai, er zit een fout in je formulier. Volgens onze server klopt het volgende niet aan je formulier: <br />" +
             " ".concat(parameters.get('message'));
         let linkElement = document.getElementById("yellowLink");
-        linkElement.href = "/";
+        linkElement.href = "/inschrijven";
         document.getElementById("yellowLinkText").innerText = "OPNIEUW PROBEREN"
     }
     else {
