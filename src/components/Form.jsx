@@ -37,7 +37,7 @@ class Form extends Component {
                             <h4 class="ui dividing header">Studiegegevens</h4>
                             <div className="required field">
                                 <label for="fstudentnummer">Studentnummer</label>
-                                <input type="number" id="fstudentnummer" name="fstudentnummer" min="1000000" max="9999999" placeholder="1234567" required  title="7 cijferig studentnummer"/>
+                                <input type="number" id="fstudentnummer" name="fstudentnummer" min="000001" max="9999999" placeholder="1234567" required  title="7 cijferig studentnummer"/>
                             </div>
                             <div className="required field">
                                 <label for="fstudie">Studie</label>
