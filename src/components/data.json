@@ -54,19 +54,34 @@
             "text": "De (verplichte) inschrijvingen voor de introductie gaan op 1 augustus open op deze site"
         }
     ],
+    "programDisclaimer": [
+        {
+            "text": "Dit programma is zoals deze nu bekend is. Helaas kan deze nog veranderen door de situatie omtrent het Coronavirus. De tijden voor 2 september zullen later bekend worden. Later deze week zullen ook de avondactiviteiten aan de planning toegevoegd worden."
+        }
+    ],
     "program": [
         {
             "name": "31 Augustus",
             "activities": [
                 {
-                    "name": "Algemeen welkom",
-                    "description": "",
-                    "time": "??:?? - ??:??"
+                    "name": "Algemeen welkom en uitleg",
+                    "description": "Wat gaat er allemaal gebeuren tijdens de introductie?",
+                    "time": "9:00 - 10:00"
                 },
                 {
-                    "name": "Utrecht Science Park tour",
+                    "name": "Online kennismaking stutoren en tutorgroepen",
+                    "description": "Leer je mentoren en stutoren kennen die je zullen begeleiden tijdens het begin van je studie.",
+                    "time": "10:00 - 11:00"
+                },
+                {
+                    "name": "Informatica college digitaal",
                     "description": "",
-                    "time": "??:?? - ??:??"
+                    "time": "11:00 - 13:00"
+                },
+                {
+                    "name": "Crazy88",
+                    "description": "Ontdek Utrecht digitaal!",
+                    "time": "13:00 - 17:00"
                 }
             ]
         },
@@ -74,14 +89,14 @@
             "name": "1 September",
             "activities": [
                 {
-                    "name": "Eerste colleges informatiekunde",
+                    "name": "Informatiekunde college digitaal",
                     "description": "",
-                    "time": "??:?? - ??:??"
+                    "time": "11:00 - 13:00"
                 },
                 {
-                    "name": "Crazy ‘88 binnenstad Utrecht",
+                    "name": "Onderwijslezingen",
                     "description": "",
-                    "time": "??:?? - ??:??"
+                    "time": "13:00 - 14:00"
                 }
             ]
         },
@@ -89,13 +104,18 @@
             "name": "2 September",
             "activities": [
                 {
-                    "name": "Eerste colleges informatica en gametechnologie",
+                    "name": "Proefcollege",
                     "description": "",
                     "time": "??:?? - ??:??"
                 },
                 {
-                    "name": "Lezingen introductie",
-                    "description": "",
+                    "name": "Kennismaking stutorengroep fysiek",
+                    "description": "De planning hiervoor wordt door de universiteit gemaakt. Hier ontvang je nader bericht over.",
+                    "time": "??:?? - ??:??"
+                },
+                {
+                    "name": "Uithoftour fysiek",
+                    "description": "Leer de Uithof kennen en ontdek waar je je colleges zult volgen. De planning hiervoor wordt ook door de universiteit gemaakt.",
                     "time": "??:?? - ??:??"
                 }
             ]
@@ -104,14 +124,14 @@
             "name": "3 September",
             "activities": [
                 {
-                    "name": "Eerste colleges informatiekunde",
-                    "description": "",
-                    "time": "??:?? - ??:??"
+                    "name": "ALFAS digitaal",
+                    "description": "Leer de commissies van de studieverenigingen kennen!",
+                    "time": "11:00 - 15:00"
                 },
                 {
-                    "name": "ALFAS",
-                    "description": "Commissiemarkt studieverenigingen",
-                    "time": "??:?? - ??:??"
+                    "name": "College",
+                    "description": "",
+                    "time": "15:00 - 17:00"
                 }
             ]
         },
@@ -119,7 +139,7 @@
             "name": "4 September",
             "activities": [
                 {
-                    "name": "Eerste colleges informatica en gametechnologie",
+                    "name": "Geen introductieactiviteiten.",
                     "description": "",
                     "time": "??:?? - ??:??"
                 }

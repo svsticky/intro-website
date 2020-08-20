@@ -32,6 +32,7 @@ class Home extends Component {
             <div className="card content">
               <p className="anchor" id="programma"></p>
               <p className="ui center aligned large header">Programma</p>
+              {getText(data.programDisclaimer)}<br/>
               {getProgram(data.program)}
             </div>
           </div>
