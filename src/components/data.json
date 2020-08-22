@@ -56,7 +56,8 @@
     ],
     "programDisclaimer": [
         {
-            "text": "Dit programma is zoals deze nu bekend is. Helaas kan deze nog veranderen door de situatie omtrent het Coronavirus. De tijden voor 2 september zullen later bekend worden. Later deze week zullen ook de avondactiviteiten aan de planning toegevoegd worden."
+            "name": "Disclaimer",
+            "text": "Dit programma is zoals deze nu bekend is. Helaas kan deze nog veranderen door de situatie omtrent het Coronavirus."
         }
     ],
     "program": [
@@ -64,7 +65,7 @@
             "name": "31 Augustus",
             "activities": [
                 {
-                    "name": "Algemeen welkom en uitleg",
+                    "name": "Digitaal algemeen welkom en uitleg",
                     "description": "Wat gaat er allemaal gebeuren tijdens de introductie?",
                     "time": "9:00 - 10:00"
                 },
@@ -75,7 +76,7 @@
                 },
                 {
                     "name": "Informatica college digitaal",
-                    "description": "",
+                    "description": "College volgens het rooster",
                     "time": "11:00 - 13:00"
                 },
                 {
@@ -90,13 +91,18 @@
             "activities": [
                 {
                     "name": "Informatiekunde college digitaal",
-                    "description": "",
+                    "description": "College volgens het rooster",
                     "time": "11:00 - 13:00"
                 },
                 {
-                    "name": "Onderwijslezingen",
+                    "name": "Onderwijslezing Informatiekunde",
                     "description": "",
-                    "time": "13:00 - 14:00"
+                    "time": "14:00 - 15:00"
+                },
+                {
+                    "name": "Onderwijslezing Informatica",
+                    "description": "",
+                    "time": "15:00 - 16:00"
                 }
             ]
         },
@@ -104,19 +110,19 @@
             "name": "2 September",
             "activities": [
                 {
-                    "name": "Proefcollege",
-                    "description": "",
-                    "time": "??:?? - ??:??"
+                    "name": "Informatica college digitaal",
+                    "description": "College volgens rooster.",
+                    "time": "9:00 - 11:00"
                 },
                 {
-                    "name": "Kennismaking stutorengroep fysiek",
-                    "description": "De planning hiervoor wordt door de universiteit gemaakt. Hier ontvang je nader bericht over.",
-                    "time": "??:?? - ??:??"
+                    "name": "Kennismaking stutorgroepen fysiek",
+                    "description": "",
+                    "time": "11:00 - 17:00"
                 },
                 {
                     "name": "Uithoftour fysiek",
-                    "description": "Leer de Uithof kennen en ontdek waar je je colleges zult volgen. De planning hiervoor wordt ook door de universiteit gemaakt.",
-                    "time": "??:?? - ??:??"
+                    "description": "Leer de Uithof kennen en ontdek waar je je colleges zult volgen.",
+                    "time": "11:00 - 17:00"
                 }
             ]
         },
@@ -129,8 +135,8 @@
                     "time": "11:00 - 15:00"
                 },
                 {
-                    "name": "College",
-                    "description": "",
+                    "name": "Informatiekunde college digitaal",
+                    "description": "College volgens rooster",
                     "time": "15:00 - 17:00"
                 }
             ]
