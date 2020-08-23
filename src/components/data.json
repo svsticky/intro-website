@@ -83,6 +83,11 @@
                     "name": "Crazy88",
                     "description": "Ontdek Utrecht digitaal!",
                     "time": "13:00 - 17:00"
+                },
+                {
+                    "name": "Avondactiviteit: JackBox / .io spellen",
+                    "description": "Speel gezellige digitale spellen met JackBox of skribbl.io",
+                    "time": "20:00 - 22:00"
                 }
             ]
         },
@@ -103,6 +108,11 @@
                     "name": "Onderwijslezing Informatica",
                     "description": "",
                     "time": "15:00 - 16:00"
+                },
+                {
+                    "name": "Avondactiviteit: gametoernooi of online borrel",
+                    "description": "Doe mee aan een CS:GO toernooi of ga gezellig online borrelen met je groep.",
+                    "time": "20:00 - 23:00"
                 }
             ]
         },
@@ -123,6 +133,11 @@
                     "name": "Uithoftour fysiek",
                     "description": "Leer de Uithof kennen en ontdek waar je je colleges zult volgen.",
                     "time": "11:00 - 17:00"
+                },
+                {
+                    "name": "E-scaperoom",
+                    "description": "Een online escaperoom. Weet jij te ontsnappen?",
+                    "time": "20:00 - ..."
                 }
             ]
         },
@@ -138,16 +153,11 @@
                     "name": "Informatiekunde college digitaal",
                     "description": "College volgens rooster",
                     "time": "15:00 - 17:00"
-                }
-            ]
-        },
-        {
-            "name": "4 September",
-            "activities": [
+                },
                 {
-                    "name": "Geen introductieactiviteiten.",
-                    "description": "",
-                    "time": "??:?? - ??:??"
+                    "name": "Pubquiz",
+                    "description": "Maak je klaar voor een online pubquiz met Kahoot!",
+                    "time": "19:30 - 22:00"
                 }
             ]
         }
