@@ -110,8 +110,8 @@
                     "time": "15:00 - 16:00"
                 },
                 {
-                    "name": "Avondactiviteit: Gametoernooi of online borrel",
-                    "description": "Doe mee aan een CS:GO toernooi of ga gezellig online borrelen met je groep.",
+                    "name": "Avondactiviteit: Gametoernooi, online borrel of movie night.",
+                    "description": "Doe mee aan een CS:GO toernooi, ga gezellig online borrelen met je groep of rust lekker uit met een film.",
                     "time": "20:00 - 23:00"
                 }
             ]
@@ -145,9 +145,14 @@
             "name": "3 September",
             "activities": [
                 {
-                    "name": "ALFAS digitaal",
+                    "name": "digitale ALFAS (Actieve Leden Festival) Informatiekunde",
                     "description": "Leer de commissies van de studieverenigingen kennen!",
-                    "time": "11:00 - 15:00"
+                    "time": "13:00 - 15:00"
+                },
+                {
+                    "name": "digitale ALFAS (Actieve Leden Festival) Informatica",
+                    "description": "Leer de commissies van de studieverenigingen kennen!",
+                    "time": "15:00 - 17:00"
                 },
                 {
                     "name": "Informatiekunde college digitaal",
