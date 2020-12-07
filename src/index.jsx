@@ -21,9 +21,6 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route path="/map" component={MapPage} />
-          <Route path="/inschrijven" component={Form}/>
-          <Route path="/ingeschreven" component={FormResult}/>
           <Route component={Home} />
         </Switch>
       </Router>
