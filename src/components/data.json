@@ -27,10 +27,6 @@
         {
             "name": "Contact",
             "href": "#contact"
-        },
-        {
-            "name": "Inschrijven",
-            "href": "/inschrijven"
         }
     ],
     "introduction": [
@@ -57,115 +53,10 @@
     "programDisclaimer": [
         {
             "name": "Disclaimer",
-            "text": "Dit programma is zoals deze nu bekend is. Helaas kan deze nog veranderen door de situatie omtrent het Coronavirus."
+            "text": "Het programma van 2021 is nog niet bekend."
         }
     ],
     "program": [
-        {
-            "name": "31 Augustus",
-            "activities": [
-                {
-                    "name": "Digitaal algemeen welkom en uitleg",
-                    "description": "Wat gaat er allemaal gebeuren tijdens de introductie?",
-                    "time": "9:00 - 10:00"
-                },
-                {
-                    "name": "Online kennismaking stutoren en tutorgroepen",
-                    "description": "Leer je mentoren en stutoren kennen die je zullen begeleiden tijdens het begin van je studie.",
-                    "time": "10:00 - 11:00"
-                },
-                {
-                    "name": "Informatica college digitaal",
-                    "description": "College volgens het rooster",
-                    "time": "11:00 - 13:00"
-                },
-                {
-                    "name": "Crazy88",
-                    "description": "Ontdek Utrecht digitaal!",
-                    "time": "13:00 - 17:00"
-                },
-                {
-                    "name": "Avondactiviteit: Party games",
-                    "description": "Speel gezellige digitale spellen met JackBox of skribbl.io",
-                    "time": "20:00 - 22:00"
-                }
-            ]
-        },
-        {
-            "name": "1 September",
-            "activities": [
-                {
-                    "name": "Informatiekunde college digitaal",
-                    "description": "College volgens het rooster",
-                    "time": "11:00 - 13:00"
-                },
-                {
-                    "name": "Onderwijslezing Informatiekunde (digitaal)",
-                    "description": "Deze lezingen zullen in Teams gegeven worden.",
-                    "time": "14:00 - 15:00"
-                },
-                {
-                    "name": "Onderwijslezing Informatica (digitaal)",
-                    "description": "Deze lezingen zullen in Teams gegeven worden.",
-                    "time": "15:00 - 16:00"
-                },
-                {
-                    "name": "Avondactiviteit: Gametoernooi, online borrel of movie night.",
-                    "description": "Doe mee aan een CS:GO toernooi, ga gezellig online borrelen met je groep of rust lekker uit met een film.",
-                    "time": "20:00 - 23:00"
-                }
-            ]
-        },
-        {
-            "name": "2 September",
-            "activities": [
-                {
-                    "name": "Informatica college digitaal",
-                    "description": "College volgens rooster.",
-                    "time": "9:00 - 11:00"
-                },
-                {
-                    "name": "Kennismaking stutorgroepen fysiek",
-                    "description": "",
-                    "time": "11:00 - 17:00"
-                },
-                {
-                    "name": "Uithoftour fysiek",
-                    "description": "Leer de Uithof kennen en ontdek waar je je colleges zult volgen.",
-                    "time": "11:00 - 17:00"
-                },
-                {
-                    "name": "Avondactiviteit: E-scaperoom of bordspellenavond",
-                    "description": "Een online escaperoom. Weet jij te ontsnappen? Verder is er een bordspellenavond.",
-                    "time": "20:00 - ..."
-                }
-            ]
-        },
-        {
-            "name": "3 September",
-            "activities": [
-                {
-                    "name": "digitale ALFAS (Actieve Leden Festival) Informatiekunde",
-                    "description": "Leer de commissies van de studieverenigingen kennen!",
-                    "time": "13:00 - 15:00"
-                },
-                {
-                    "name": "digitale ALFAS (Actieve Leden Festival) Informatica",
-                    "description": "Leer de commissies van de studieverenigingen kennen!",
-                    "time": "15:00 - 17:00"
-                },
-                {
-                    "name": "Informatiekunde college digitaal",
-                    "description": "College volgens rooster",
-                    "time": "15:00 - 17:00"
-                },
-                {
-                    "name": "Pubquiz",
-                    "description": "Maak je klaar voor een online pubquiz via Twitch!",
-                    "time": "19:30 - 22:00"
-                }
-            ]
-        }
     ],
     "Associations": [
         {
@@ -186,7 +77,7 @@
     "FAQ": [
         {
             "question": "Wanneer is de introductie?",
-            "answer": "Van 31 augustus tot 4 september"
+            "answer": "Deze zal in augustus 2021 plaatsvinden."
         },
         {
             "question": "Wat gaan we doen?",

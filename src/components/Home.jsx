@@ -15,12 +15,6 @@ class Home extends Component {
         <Menu />
 
         <div className="ui main container">
-          <a href="/inschrijven" className="ui fixed bottom attached inverted yellow segment container">
-            <p className="ui huge black header">Schrijf je in!</p>
-          </a>
-          <div className="video-container">
-            <iframe src="https://www.youtube.com/embed/_nCyMKGLcvk" title="themabekendmakingsvideo" frameBorder="0"></iframe>
-          </div>
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="welkom"></p>
