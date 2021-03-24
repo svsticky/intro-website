@@ -4,9 +4,10 @@ import ReactDOM from "react-dom";
 import * as serviceWorker from './serviceWorker';
 
 // Import components
-import Home from './components/Home.jsx';
-import Form from './components/Form.jsx';
-import MapPage from './components/usp-map/Map.jsx';
+// import Home from './components/Home.jsx';
+// import Form from './components/Form.jsx';
+// import MapPage from './components/usp-map/Map.jsx';
+import Offline from './components/Offline.jsx';
 
 // CSS framework
 import 'fomantic-ui-css/semantic.min.css';
@@ -21,7 +22,7 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route component={Home} />
+          <Route component={Offline} />
         </Switch>
       </Router>
     );
