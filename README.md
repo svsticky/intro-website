@@ -14,6 +14,10 @@ Install dependencies:
 
 ## Developing
 
+`cp sample.env .env`
+
+And fill in the env variables inside `.env` to your liking
+
 `npm start`
 
 Runs the app in the development mode.
