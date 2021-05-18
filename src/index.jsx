@@ -15,7 +15,7 @@ import 'fomantic-ui-css/semantic.min.css';
 // Import static content
 //import './assets/index.css';
 import './assets/logo.svg';
-import FormResult from "./components/FormResult";
+import FormResult from './components/FormResult.jsx';
 
 class App extends Component {
   render() {

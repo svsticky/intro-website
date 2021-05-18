@@ -1,5 +1,5 @@
 import React from 'react'
-import MenuItem from './MenuItem';
+import MenuItem from './MenuItem.jsx';
 import data from './data.json';
 import { Dropdown } from 'semantic-ui-react'
 
