@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ContactPerson from './ContactPerson';
 import Date from './Date';
 import data from './data.json';
+import Mentor from './Mentor';
 import Question from './Question';
 import Text from './Text';
 import Association from "./Association";
@@ -35,6 +36,13 @@ class Home extends Component {
               <p className="anchor" id="verenigingen"></p>
               <p className="ui center aligned large header">Verenigingen</p>
               {getAssociation(data.Associations)}
+            </div>
+          </div>
+          <div className="ui fluid card">
+            <div className="card content">
+              <p className="anchor" id="hoofdmentoren"></p>
+              <p className="ui center aligned large header">Hoofdmentoren</p>
+              {getMentors(data.Mentors)}
             </div>
           </div>
           <div className="ui fluid card">
@@ -103,6 +111,17 @@ const getAssociation = associations =>{
       {
         associations.map((association, index)=>(
           <Association association={association} key={index}/>
+        ))
+      }
+    </div>
+  )
+}
+const getMentors = mentors=>{
+  return (
+    <div className="ui centered four doubling cards">
+      {
+        mentors.map((mentor, index)=>(
+          <Mentor mentor={mentor} key={index}/>
         ))
       }
     </div>
