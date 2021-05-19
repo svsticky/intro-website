@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import ContactPerson from './ContactPerson';
-import Date from './Date';
+import ContactPerson from './ContactPerson.jsx';
+import Date from './Date.jsx';
 import data from './data.json';
-import Mentor from './Mentor';
-import Question from './Question';
-import Text from './Text';
-import Association from "./Association";
-import Menu from "./Menu";
+import Mentor from './Mentor.jsx';
+import Question from './Question.jsx';
+import Text from './Text.jsx';
+import Association from './Association.jsx';
+import Menu from './Menu.jsx';
 import '../assets/home.css';
 
 class Home extends Component {
