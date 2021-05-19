@@ -74,6 +74,15 @@
             "link": "https://www.a-eskwadraat.nl/"
         }
     ],
+    "Mentors": [
+	    {
+		    "name": "Lorem",
+		    "photo": "sticky.png",
+		    "study": "Lorem ipsum",
+		    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus placerat gravida ligula, nec vulputate libero. Vivamus dictum felis velit, in fringilla nisi aliquet quis.",
+		    "contactInfo": "Lorem ipsum"
+	    }
+    ],
     "FAQ": [
         {
             "question": "Wanneer is de introductie?",
