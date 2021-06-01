@@ -10,7 +10,7 @@
     background-color: white;
   }
   main{
-    background-image: url("/images/stars.png");
+    background-image: url("/images/background.png");
   }
   div.fluid.card{
     box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
