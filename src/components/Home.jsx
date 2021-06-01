@@ -78,8 +78,8 @@ class Home extends Component {
   parallax = () => {
     var scrollHeight = window.scrollY;
     var parallax = this.refs.background;
-    parallax.style["margin-top"] = -scrollHeight/10 + "px";
-    parallax.style["padding-top"] = scrollHeight/10 + "px";
+    parallax.style["margin-top"] = -scrollHeight/7 + "px";
+    parallax.style["padding-top"] = scrollHeight/7 + "px";
   }
 }
 
