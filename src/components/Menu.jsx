@@ -18,8 +18,8 @@ const Menu = () => (
             />
           </a>
           {
-            data.menu.map((item,index)=>(
-              <MenuItem item={item} key={index}/>
+            data.menu.map((item, index) => (
+              <MenuItem item={item} key={index} />
             ))
           }
         </div>
@@ -32,7 +32,7 @@ const Menu = () => (
           <Dropdown icon='bars'>
             <Dropdown.Menu>
               {
-                data.menu.map((item,index)=>(
+                data.menu.map((item, index) => (
                   <Dropdown.Item
                     text={item.name}
                     href={item.href}
@@ -54,6 +54,5 @@ const Menu = () => (
     </div>
   </div>
 );
-
 
 export default Menu;
