@@ -61,3 +61,7 @@ p.anchor {
 .black.header {
   color: black !important;
 }
+
+.formatted-text {
+  white-space: pre-line;
+}
