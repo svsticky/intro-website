@@ -3,9 +3,9 @@ import React from 'react';
 const Text = ({ text }) => (
     <div>
         <br/>
-        <p className="anchor" id={ text.anchor }></p>
+        <p className="anchor" id={text.anchor}></p>
         <h2 className="ui left aligned large header">{text.name}</h2>
-        <p>{text.text}</p>
+        <p className="formatted-text">{text.text}</p>
     </div>
 );
 export default Text;
