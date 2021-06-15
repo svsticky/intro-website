@@ -5,20 +5,16 @@
             "href": "#welkom"
         },
         {
-            "name": "Digitale introductie",
-            "href": "#digitale-introductie"
-        },
-        {
-            "name": "Hoe werkt Microsoft Teams?",
-            "href": "#teams"
-        },
-        {
             "name": "Programma",
             "href": "#programma"
         },
         {
             "name": "Verenigingen",
             "href": "#verenigingen"
+        },
+        {
+            "name": "Hoofdmentoren",
+            "href": "#hoofdmentoren"
         },
         {
             "name": "FAQ",
@@ -32,31 +28,51 @@
     "introduction": [
         {
             "name": "Welkom",
-            "text": "Hey aankomend eerstejaars-student,\nEindelijk is het dan zover, in september ga je beginnen met studeren. Lastig, omdat veel op afstand zal moeten en je niet zomaar naar het Utrecht Science Park mag komen. Gelukkig staat er voor je een groot aantal ouderejaars-studenten klaar om jou de weg te wijzen en om de introductie tot een succes te maken. Op deze website kan je informatie vinden over de introductie voor de studies informatica, gametechnologie en informatiekunde. Deze informatie zal de komende weken worden aangevuld. Voor vragen kun je ons altijd benaderen via commissie@intro-cs.nl.\n\nTot september!\n\nVictor Severijns\nVoorzitter introductiecommissie"
-        },
-        {
-            "name": "Digitale introductie",
-            "anchor": "digitale-introductie",
-            "text": "Dit jaar zal er voor het eerst een digitale introductie plaatsvinden. Achter de schermen wordt er hard gewerkt aan een introductie die aansluit op wat jullie nodig gaan hebben en om de transitie naar het studeren aan een universiteit te versoepelen. Binnenkort zal het programma worden aangevuld en hopelijk kunnen we jullie dan ook een keer op het Utrecht Science Park uitnodigen!"
-        },
-        {
-            "name": "Hoe werkt Microsoft Teams?",
-            "anchor": "teams",
-            "text": "De intro zal in Microsoft Teams plaatsvinden. Hiervoor is een team opgezet waar jullie jezelf aan kunnen toevoegen. Deze week ontvang je van ons een mail met daarin de code die je kunt gebruiken om jezelf aan het team toe te voegen. Allereerst heb je daar de Teams app voor nodig. Deze kun je downloaden op hun website. Vervolgens log je in op Teams in met je universiteit mail en wachtwoord. Eenmaal ingelogd, navigeer je naar het kopje ‘Teams’ in het menu links. Klik dan op ‘Join or create team’, de knop rechtsboven. Vul vervolgens de ontvangen code in en voeg je bij het team.\n\n Op maandag zal de introductie volgens de planning beginnen met een algemeen welkom in het kanaal ‘General’ of ‘Algemeen’. Na dit welkom zul je je mentorgroep leren kennen. Dit gebeurd in het kanaal dat voor jouw mentorgroep is gemaakt. In welke mentorgroep je zit, zal ook duidelijk worden in de eerder benoemde mail. Het kanaal voor je mentorgroep kun je vinden onder de verborgen kanalen."
+            "text": "Hallo toekomstige ICT’er!\n\n Al meer dan 15 maanden zitten we met zijn allen zo goed als binnen. Die extra vrije tijd was in het begin nog wel leuk, maar inmiddels snakken we allemaal weer naar wat fysiek contact. Al die gesprekken via Zoom of Teams komen onze neus uit en na een digitaal eindexamenjaar verdienen jullie wel weer wat gezelligheid. Dat is precies waar we in september voor gaan: twee weken gezelligheid, nieuwe mensen leren kennen en een goed begin van je studie. Fysiek of niet, we maken er met zijn allen een geweldige introductie van!\n\n Zie je in september!\n\n     Tieke\n Voorzitter introductie 2021-2022"
         },
         {
             "name": "Inschrijven",
             "anchor": "inschrijven",
-            "text": "De (verplichte) inschrijvingen voor de introductie gaan op 1 augustus open op deze site"
+            "text": "De (verplichte) inschrijvingen voor de introductie gaan op 5 juli open op deze site."
         }
     ],
     "programDisclaimer": [
         {
-            "name": "Disclaimer",
-            "text": "Het programma van 2021 is nog niet bekend."
+            "name": "Informatie",
+            "text": "De intro is vanaf maandag 6 september tot donderdag 16 september.\nHet programma hiervoor is nog niet bekend, maar hou deze site in de gaten voor updates."
         }
     ],
     "program": [
+        {
+            "name": "6 september",
+            "activities": [
+                {
+                    "name": "Opening intro",
+                    "description": "T.B.D.",
+                    "time": "T.B.D."
+                }
+            ]
+        },
+        {
+            "name": "13 september",
+            "activities": [
+                {
+                    "name": "ALFAS (Actieve Leden Festival)",
+                    "description": "Leer de commissies van de studieverenigingen kennen!",
+                    "time": "T.B.D."
+                }
+            ]
+        },
+        {
+            "name": "16 september",
+            "activities": [
+                {
+                    "name": "Einde intro",
+                    "description": "T.B.D.",
+                    "time": "T.B.D."
+                }
+            ]
+        }
     ],
     "Associations": [
         {
@@ -68,7 +84,7 @@
         },
         {
             "name": "A-Eskwadraat",
-            "text": "A–Eskwadraat is de studievereniging voor studenten van de studies Natuur- en Sterrenkunde, Wiskunde, Informatiekunde, Informatica en Gametechnologie. Lid worden van A–Eskwadraat kost je eenmalig €30,-, maar dan ben je voor de rest van je studententijd lid. Commissies binnen de vereniging organiseren een hoop leuke activiteiten. Zo zijn er borrels, feesten, sporttoernooien, symposia, studiereizen en is er een eerstejaarsweekend. Naast het deelnemen aan deze activiteiten kun je ze natuurlijk ook zelf organiseren. Daar kun je naast dat het leuk is, ontzettend veel van leren. Bovenal is het heel erg gezellig en leer je op deze manier snel nieuwe mensen kennen! Voor meer informatie over A–Eskwadraat kun je kijken op: ",
+            "text": "A–Eskwadraat is de studievereniging voor studenten van de studies Natuur- en Sterrenkunde, Wiskunde, Informatiekunde, Informatica en Gametechnologie. Lid worden van A–Eskwadraat kost je eenmalig €12,50, maar dan ben je voor de rest van je studententijd lid. Commissies binnen de vereniging organiseren een hoop leuke activiteiten. Zo zijn er borrels, feesten, sporttoernooien, symposia, studiereizen en is er een eerstejaarsweekend. Naast het deelnemen aan deze activiteiten kun je ze natuurlijk ook zelf organiseren. Daar kun je naast dat het leuk is, ontzettend veel van leren. Bovenal is het heel erg gezellig en leer je op deze manier snel nieuwe mensen kennen! Voor meer informatie over A–Eskwadraat kun je kijken op: ",
             "textlink": "https://www.a-eskwadraat.nl/vereniging/scholieren",
             "photo": "aes.png",
             "link": "https://www.a-eskwadraat.nl/"
@@ -76,33 +92,61 @@
     ],
     "Mentors": [
 	    {
-		    "name": "Lorem",
-		    "photo": "sticky.png",
-		    "study": "Lorem ipsum",
-		    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus placerat gravida ligula, nec vulputate libero. Vivamus dictum felis velit, in fringilla nisi aliquet quis.",
-		    "contactInfo": "Lorem ipsum"
+		    "name": "Boarder Baukje",
+            "real_name": "Yfke Smit",
+		    "photo": "yfke.jpg",
+		    "text": "Er staat uiteraard maar één sport bovenaan op de berg, en dat is snowboarden. Het is namelijk erg lastig om met zo’n plank naar boven te komen, en keihard naar beneden gaan is natuurlijk veel leuker. Voor ons snowboarders is dat snowboard en wij gewoon twee handen op één Baukje. Hier in Nederland, het meest bergachtige gebied van Europa, is goed kunnen snowboarden niet vanzelfsprekend, maar hieruit spreekt juist onze daadkrachtigheid om de beste te willen zijn!\nDe andere kleuren kunnen de winst wel op hun Baukje schrijven, want alle pogingen om ons te vernederen ontwijken wij met onze soepele bochten. Als anderen in de weg staan dan springen wij er over heen met een dubbele backflip, en als ze nou nog niet doorhebben dat wij gaan winnen dan hebben ze echt een snowboard voor hun kop. Zo’n intense strijd gaat je natuurlijk niet in de koude kleren zitten, maar zodra wij het strijdveld betreden weet ik zeker dat de andere kleuren de winst als sneeuw voor de zon zullen zien verdwijnen!",
+		    "contactInfo": ""
+	    },
+        {
+		    "name": "Mega Mees",
+            "real_name": "Mees Hoving",
+		    "photo": "mees.jpg",
+		    "text": "Je zou er bijna in slaap van vallen hoe mega saai en soft sommige sporten kunnen zijn. Wat mij betreft mag er wel iets meer POWER in. Wij ijshockeyers zijn niet bang voor een stoot of kras. Zo groot als wij er uit zien zo mega groot zal onze overwinning dan ook zeker zijn. Bij het ijshockeyen zijn we niet alleen bezig met onze kracht en de snelheid van onze puck. Wij koude hockeyers staan namelijk ook bekend om onze strategische inzichten en teambuilding. Als wij dus goed samenwerken weet ik zeker dat dit appeltje ijsje is. Laten we er met zijn allen voor zorgen dat de de andere sporten compleet in de kou staan en bevriezen. Ook dit gaat met onze ijskoude moves zeker lukken. Dus pak je helm en pak je stick, want wij winnen dit dik!",
+		    "contactInfo": ""
+	    },
+        {
+		    "name": "Ice Ice Milan",
+            "real_name": "Milan Kremers",
+		    "photo": "milan.jpg",
+		    "text": "Op de vraag wat de beste sport is, is natuurlijk maar één goed antwoord: Kunstschaatsen. Alle andere sporten zijn lomp, pijnlijk of saai en je komt er helemaal vies en rood uit. Maar niet kunstschaatsen, er wordt met ons gegooid (of we gooien met mensen), we lanceren onszelf meters de lucht in, we doorstaan de kou in koude en (vooral voor vrouwen) korte kleding en dit alles doen we zonder rood hoofd of vieze zichtbare zweetplekken.\nWij bepalen volledig onze eigen score, en ik verwacht niets minder dan een dikke vette 10 als eindbeoordeling. Door zelf al onze pasjes zo precies en synchroon mogelijk te doen kunnen de andere sporten er niets aan doen dat wij als winnaars uit de intro strijd gaan komen.\nHet kan niet anders dan dat wij met één been in de lucht als eerste over de finishlijn schaatsen!",
+		    "contactInfo": ""
 	    }
     ],
     "FAQ": [
         {
             "question": "Wanneer is de introductie?",
-            "answer": "Deze zal in augustus 2021 plaatsvinden."
+            "answer": "De intro vindt plaats van maandag 6 september tot donderdag 16 september."
         },
         {
             "question": "Wat gaan we doen?",
-            "answer": "Zie het programma op deze pagina"
-        },
-        {
-            "question": "Ik kan niet inloggen op Microsoft Teams",
-            "answer": "Je kunt eerst de handleiding volgen die op deze website staat. Lukt het dan nog steeds niet?  Neem contact op met de IT-verantwoordelijke van de introductiecommissie."
+            "answer": "Dat is voor nu nog geheim! Houdt het programma op de website in de gaten."
         }
     ],
     "contactPersons": [
         {
-            "name": "Algemeen",
-            "type": "Introductiecommissie",
-            "mobile": "",
-            "email": "commissie@intro-cs.nl"
+            "name": "Marian Biekart",
+            "type": "Secretaris",
+            "mobile": "+31 6 21948326",
+            "email": "secretaris@intro-cs.nl"
+        },
+        {
+            "name": "Tieke Stellingwerf",
+            "type": "Voorzitter",
+            "mobile": "+31 6 25491539",
+            "email": "voorzitter@intro-cs.nl"
+        },
+        {
+            "name": "Luc Blankestijn",
+            "type": "Commissaris IT",
+            "mobile": "+31 6 43019258",
+            "email": "it@intro-cs.nl"
+        },
+        {
+            "name": "Bjorn van Dijen",
+            "type": "Commissaris Mentor/helpers",
+            "mobile": "+31 6 46556075",
+            "email": "mentoren@intro-cs.nl"
         }
     ]
 }
