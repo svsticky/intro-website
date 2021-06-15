@@ -13,7 +13,7 @@ const Menu = () => (
           <a className="item" href="#">
             <img
               className="ui mini image"
-              src={require('../assets/logo.svg')}
+              src={require('../assets/logos/logo.png')}
               alt="logo"
             />
           </a>
@@ -46,7 +46,7 @@ const Menu = () => (
         <a className="item" href="#">
           <img
             className="ui mini image"
-            src={require('../assets/logo.svg')}
+            src={require('../assets/logos/logo.png')}
             alt="logo"
           />
         </a>

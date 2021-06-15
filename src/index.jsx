@@ -13,8 +13,6 @@ import Offline from './components/Offline.jsx';
 import 'fomantic-ui-css/semantic.min.css';
 
 // Import static content
-//import './assets/index.css';
-import './assets/logo.svg';
 import FormResult from './components/FormResult.jsx';
 
 class App extends Component {

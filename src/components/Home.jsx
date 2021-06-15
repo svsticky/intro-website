@@ -19,7 +19,8 @@ class Home extends Component {
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="welkom"></p>
-              <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie 2020</p>
+              <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie 2021</p>
+              <img alt="Full Introduction logo" className="ui image" src={require('../assets/logos/full_logo.png')}/>
               {getText(data.introduction)}
             </div>
           </div>
@@ -56,7 +57,7 @@ class Home extends Component {
             <div className="card content">
               <p className="anchor" id="contact"></p>
               <p className="ui center aligned large header" id="contact">Contact</p>
-              <p className="ui centered grid">Bij voorkeur mailen vanwege wisselende telefonische beschikbaarheid in de zomer</p>
+              <p className="ui centered grid">Bij voorkeur mailen vanwege wisselende telefonische beschikbaarheid in de zomer.</p>
               {getContactPersons(data.contactPersons)}
             </div>
           </div>
