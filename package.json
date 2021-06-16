@@ -10,7 +10,7 @@
   "author": "Sietze Riemersma",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^13.1.9",
     "fomantic-ui-css": "^2.8.7",
