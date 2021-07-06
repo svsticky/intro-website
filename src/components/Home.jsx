@@ -15,7 +15,7 @@ class Home extends Component {
       <main ref="background">
         <Menu />
         <div className="ui main container">
-          <a href="/" className="ui fixed bottom attached inverted yellow segment container">
+          <a href="/" className="enroll ui fixed bottom attached inverted yellow segment container">
             <p className="ui huge black header">Inschrijvingen openen op 9 juli vanaf 17:00</p>
           </a>
           <div className="video-container">

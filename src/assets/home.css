@@ -32,7 +32,7 @@ div.fluid.card{
   overflow: hidden;
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-  margin-top: 60px;
+  margin-top: 90px;
 }
 
 .video-container iframe {
@@ -64,4 +64,20 @@ p.anchor {
 
 .formatted-text {
   white-space: pre-line;
+}
+
+@media only screen and (max-width: 767px) {
+  .enroll {
+    margin-left: 0 !important;
+    width: calc(100% - 30px) !important;
+    height: 90px !important;
+    text-align: center;
+    font-size: 0.9em !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mentorImage {
+    width: 100% !important;
+  }
 }
