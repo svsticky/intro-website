@@ -28,47 +28,115 @@
     "introduction": [
         {
             "name": "Welkom",
-            "text": "Hallo toekomstige ICT’er!\n\nAl meer dan 15 maanden zitten we met zijn allen zo goed als binnen. Die extra vrije tijd was in het begin nog wel leuk, maar inmiddels snakken we allemaal weer naar wat fysiek contact. Al die gesprekken via Zoom of Teams komen onze neus uit en na een digitaal eindexamenjaar verdienen jullie wel weer wat gezelligheid. Dat is precies waar we in september voor gaan: twee weken gezelligheid, nieuwe mensen leren kennen en een goed begin van je studie. Fysiek of niet, we maken er met zijn allen een geweldige introductie van!\n\nZie je in september!\n\nTieke\nVoorzitter introductie 2021-2022"
+            "text": "Hallo toekomstige ICT’er!\n\nAl meer dan 15 maanden zitten we met zijn allen zo goed als binnen. Die extra vrije tijd was in het begin nog wel leuk, maar inmiddels snakken we allemaal weer naar wat fysiek contact. Al die gesprekken via Zoom of Teams komen onze neus uit en na een digitaal eindexamenjaar verdienen jullie wel weer wat gezelligheid. Dat is precies waar we in september voor gaan: twee weken gezelligheid, nieuwe mensen leren kennen en een goed begin van je studie. Fysiek of niet, we maken er met zijn allen een geweldige introductie van!\n\nZie je in september!\n\nTieke\nVoorzitter introductie 2021-2022",
+            "textlink": ""
+        },
+        {
+            "name": "Introductie Video",
+            "text": "Om alvast in de stemming te komen heeft de introductiecommissie een video gemaakt, kijk deze vooral via ",
+            "textlink": "https://youtu.be/iidprx_t8E8"
         },
         {
             "name": "Inschrijven",
             "anchor": "inschrijven",
-            "text": "De (verplichte) inschrijvingen voor de introductie gaan op 5 juli open op deze site."
+            "text": "**BELANGRIJK**\n\n De inschrijvingen zullen aankomende vrijdag, 9 juli om 17:00 online komen. Zet dit in je agenda!",
+            "textlink": ""
         }
     ],
     "programDisclaimer": [
         {
             "name": "Informatie",
-            "text": "De intro is vanaf maandag 6 september tot donderdag 16 september.\nHet programma hiervoor is nog niet bekend, maar hou deze site in de gaten voor updates."
+            "text": "De intro is vanaf maandag 6 september tot en met donderdag 16 september. Hieronder staat hoe de planning eruit zal zien!",
+            "textlink": ""
         }
     ],
     "program": [
         {
-            "name": "6 september",
+            "name": "Maandag 6 September",
             "activities": [
                 {
-                    "name": "Opening intro",
-                    "description": "T.B.D.",
+                    "name": "Opening",
+                    "description": "Hier leer je je mentorgroepje kennen!",
+                    "time": "T.B.D."
+                },
+                {
+                    "name": "Utrecht Science Park spel",
+                    "description": "Op deze manier leer je de USP goed kennen!",
                     "time": "T.B.D."
                 }
             ]
         },
         {
-            "name": "13 september",
+            "name": "Dinsdag 7 September",
             "activities": [
                 {
-                    "name": "ALFAS (Actieve Leden Festival)",
+                    "name": "Crazy'88",
+                    "description": "Genoeg geleerd over de USP, nu ga je Utrecht leren kennen! De Crazy'88 brengt je langs de leukste plekken!",
+                    "time": "T.B.D."
+                },
+                {
+                    "name": "Kroegenavond",
+                    "description": "sluit de dag gezellig af met een drankje bij één van Utrechts beste kroegen.",
+                    "time": "T.B.D."
+                }
+            ]
+        },
+        {
+            "name": "Woensdag 8 September",
+            "activities": [
+                {
+                    "name": "Rustdag en online gezelligheid",
+                    "description": "Eventjes herstellen van een dag avontuur in Utrecht. 's avonds kan je meedoen aan de online activiteiten zoals Jackbox, skribble, of csgo.",
+                    "time": "T.B.D."
+                }
+            ]
+        },
+        {
+            "name": "Donderdag 9 September",
+            "activities": [
+                {
+                    "name": "Introlympics endgame",
+                    "description": "Hier wordt bewezen welke spelen het beste zijn!",
+                    "time": "T.B.D."
+                }
+            ]
+        },
+        {
+            "name": "Vrijdag 10 September",
+            "activities": [
+                {
+                    "name": "Dierenpark",
                     "description": "Leer de commissies van de studieverenigingen kennen!",
                     "time": "T.B.D."
                 }
             ]
         },
         {
-            "name": "16 september",
+            "name": "Maandag 13 September",
             "activities": [
                 {
-                    "name": "Einde intro",
-                    "description": "T.B.D.",
+                    "name": "ALFAS (Actieve Leden Festival)",
+                    "description": "Leer de super toffe studentenverenigingen en hun keigave commissies kennen!",
+                    "time": "T.B.D."
+                }
+            ]
+        },
+        {
+            "name": "Dinsdag 14 en Woensdag 15 September",
+            "activities": [
+                {
+                    "name": "Poolen",
+                    "description": "Gezellig poolen met je mentorgroepje, onder het genot van een drankje! In deze week heb je al colleges, maar afhankelijk van je studie ben je een van deze dagen vrij.",
+                    "time": "T.B.D."
+                }
+            ]
+        },
+        {
+            "name": "Donderdag 16 September",
+            "activities": [
+                {
+                    "name": "Afsluitende BBQ",
+                    "description": "Alweer de laatste activiteit van de intro, maar vrees niet we sluiten af met een gezamenlijke BBQ en borrel! ",
                     "time": "T.B.D."
                 }
             ]
@@ -113,7 +181,7 @@
     "FAQ": [
         {
             "question": "Wanneer is de introductie?",
-            "answer": "De intro vindt plaats van maandag 6 september tot donderdag 16 september."
+            "answer": "De intro vindt plaats van maandag 6 september tot en met donderdag 16 september."
         },
         {
             "question": "Wat gaan we doen?",
