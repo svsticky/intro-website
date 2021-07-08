@@ -15,9 +15,6 @@ class Home extends Component {
       <main ref="background">
         <Menu />
         <div className="ui main container">
-          <a href="/" className="enroll ui fixed bottom attached inverted yellow segment container">
-            <p className="ui huge black header">Inschrijvingen openen op 9 juli vanaf 17:00</p>
-          </a>
           <div className="video-container">
             <iframe src="https://www.youtube.com/embed/iidprx_t8E8" title="themabekendmakingsvideo" frameBorder="0"></iframe>
           </div>
@@ -27,6 +24,22 @@ class Home extends Component {
               <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie 2021</p>
               <img alt="Full Introduction logo" className="ui image" src={require('../assets/logos/full_logo.png')}/>
               {getText(data.introduction)}
+            </div>
+          </div>
+          <div className="ui fluid card">
+            <div className="card content">
+              <p className="anchor" id="inschrijven"></p>
+              <p className="ui center aligned large header">Inschrijving</p>
+              {getText(data.register)}
+              <pretix-widget event="https://pretix.svsticky.nl/intro/2021/"></pretix-widget>
+              <noscript>
+                <div class="pretix-widget">
+                      <div class="pretix-widget-info-message">
+                          JavaScript is disabled in your browser. To access our ticket shop without JavaScript,
+                          please <a target="_blank" href="https://pretix.svsticky.nl/intro/2021/">click here</a>.
+                      </div>
+                  </div>
+              </noscript>
             </div>
           </div>
           <div className="ui fluid card">
