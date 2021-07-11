@@ -58,6 +58,11 @@
                     "name": "Utrecht Science Park spel",
                     "description": "Op deze manier leer je de USP goed kennen!",
                     "time": "T.B.D."
+                },
+                {
+                    "name": "Uiteten met mentorgroepje, eerste avond",
+                    "description": "Gezellig eten met je mentor broertjes en zusjes om elkaar te leren kennen.",
+                    "time": "T.B.D."
                 }
             ]
         },
@@ -67,6 +72,11 @@
                 {
                     "name": "Crazy'88",
                     "description": "Genoeg geleerd over de USP, nu ga je Utrecht leren kennen! De Crazy'88 brengt je langs de leukste plekken!",
+                    "time": "T.B.D."
+                },
+                {
+                    "name": "Uiteten met mentorgroepje, tweede avond",
+                    "description": "Een tweede avond om gezellig te eten met je mentor broertjes en zusjes om elkaar te leren kennen. Hierna zal de kroegenavond plaatsvinden!",
                     "time": "T.B.D."
                 },
                 {
@@ -81,7 +91,7 @@
             "activities": [
                 {
                     "name": "Rustdag en online gezelligheid",
-                    "description": "Eventjes herstellen van een dag avontuur in Utrecht. 's avonds kan je meedoen aan de online activiteiten zoals Jackbox, skribble, of csgo.",
+                    "description": "Eventjes herstellen van een dag avontuur in Utrecht. 's avonds kan je meedoen aan de online activiteiten zoals Jackbox, skribble of csgo.",
                     "time": "T.B.D."
                 }
             ]
@@ -91,7 +101,7 @@
             "activities": [
                 {
                     "name": "Introlympics endgame",
-                    "description": "Hier wordt bewezen welke spelen het beste zijn! We sluiten de dag af met een silent disco en er wordt eten verzorgd. ",
+                    "description": "Hier wordt bewezen welke spelen het beste zijn! Wat we precies gaan doen zal in de aanloop van de intro bekend gemaakt worden. ",
                     "time": "T.B.D."
                 }
             ]
@@ -111,7 +121,7 @@
             "activities": [
                 {
                     "name": "ALFAS (Actieve Leden Festival)",
-                    "description": "Leer de super toffe studentenverenigingen en hun keigave commissies kennen!",
+                    "description": "Leer de super toffe studieverenigingen en hun keigave commissies kennen!",
                     "time": "T.B.D."
                 }
             ]

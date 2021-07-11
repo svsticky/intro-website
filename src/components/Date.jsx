@@ -12,7 +12,7 @@ const Date = ({ date }) => (
                         <p>{activity.time}</p>
                     </div>
                     */}
-                    <div className = "ui four wide column">
+                    <div className = "ui five wide column">
                         <p>{activity.name}</p>
                     </div>
                     <div className = "ui ten wide column">
