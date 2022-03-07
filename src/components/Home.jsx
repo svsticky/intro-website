@@ -8,6 +8,7 @@ import Text from './Text.jsx';
 import Association from './Association.jsx';
 import Menu from './Menu.jsx';
 import '../assets/home.css';
+import full_logo from '../assets/logos/full_logo.png'
 
 class Home extends Component {
   render() {
@@ -22,7 +23,7 @@ class Home extends Component {
             <div className="card content">
               <p className="anchor" id="welkom"></p>
               <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie 2021</p>
-              <img alt="Full Introduction logo" className="ui image" src={require('../assets/logos/full_logo.png')}/>
+              <img alt="Full Introduction logo" className="ui image" src={full_logo}/>
               {getText(data.introduction)}
             </div>
           </div>

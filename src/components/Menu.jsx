@@ -2,7 +2,7 @@ import React from 'react'
 import MenuItem from './MenuItem.jsx';
 import data from './data.json';
 import { Dropdown } from 'semantic-ui-react'
-import { logo } from '../assets/logos/logo.png'
+import logo from '../assets/logos/logo.png'
 
 
 const Menu = () => (
@@ -47,7 +47,7 @@ const Menu = () => (
         <a className="item" href="#">
           <img
             className="ui mini image"
-            src={require('../assets/logos/logo.png')}
+            src={logo}
             alt="logo"
           />
         </a>
