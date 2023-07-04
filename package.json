@@ -15,7 +15,7 @@
     "@testing-library/user-event": "^13.1.9",
     "fomantic-ui-css": "^2.8.7",
     "fs-extra": "^10.0.1",
-    "gatsby": "^4.9.2",
+    "gatsby": "^4.25.7",
     "leaflet": "^1.7.1",
     "query-string": "^7.1.1",
     "react": "^17.0.2",
@@ -23,7 +23,7 @@
     "react-leaflet": "^3.2.0",
     "react-router-dom": "^5.2.0",
     "semantic-ui-react": "^2.0.3",
-    "webpack": "^5.70.0"
+    "webpack": "5.76.0"
   },
   "scripts": {
     "start": "gatsby develop",

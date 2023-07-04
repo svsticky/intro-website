@@ -8,41 +8,41 @@ import Text from './Text.jsx';
 import Association from './Association.jsx';
 import Menu from './Menu.jsx';
 import '../assets/home.css';
-import full_logo from '../assets/logos/full_logo.png'
+import full_logo from '../assets/logos/logo.png'
 
 class Home extends Component {
   render() {
     return (
-      <main ref="background">
+      <main ref="background">l
         <Menu />
         <div className="ui main container">
-          <div className="video-container">
-            <iframe src="https://www.youtube.com/embed/iidprx_t8E8" title="themabekendmakingsvideo" frameBorder="0"></iframe>
-          </div>
+          {/*<div className="video-container">*/}
+          {/*  <iframe src="https://www.youtube.com/embed/iidprx_t8E8" title="themabekendmakingsvideo" frameBorder="0"></iframe>*/}
+          {/*</div>*/}
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="welkom"></p>
-              <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie 2021</p>
+              <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie 2023</p>
               <img alt="Full Introduction logo" className="ui image" src={full_logo}/>
               {getText(data.introduction)}
             </div>
           </div>
-          <div className="ui fluid card">
-            <div className="card content">
-              <p className="anchor" id="inschrijven"></p>
-              <p className="ui center aligned large header">Inschrijving</p>
-              {getText(data.register)}
-              <pretix-widget event="https://pretix.svsticky.nl/intro/2021/"></pretix-widget>
-              <noscript>
-                <div class="pretix-widget">
-                      <div class="pretix-widget-info-message">
-                          JavaScript is disabled in your browser. To access our ticket shop without JavaScript,
-                          please <a target="_blank" href="https://pretix.svsticky.nl/intro/2021/">click here</a>.
-                      </div>
-                  </div>
-              </noscript>
-            </div>
-          </div>
+          {/*<div className="ui fluid card">*/}
+          {/*  <div className="card content">*/}
+          {/*    <p className="anchor" id="inschrijven"></p>*/}
+          {/*    <p className="ui center aligned large header">Inschrijving</p>*/}
+          {/*    {getText(data.register)}*/}
+          {/*    <pretix-widget event="https://pretix.svsticky.nl/intro/2021/"></pretix-widget>*/}
+          {/*    <noscript>*/}
+          {/*      <div class="pretix-widget">*/}
+          {/*            <div class="pretix-widget-info-message">*/}
+          {/*                JavaScript is disabled in your browser. To access our ticket shop without JavaScript,*/}
+          {/*                please <a target="_blank" href="https://pretix.svsticky.nl/intro/2021/">click here</a>.*/}
+          {/*            </div>*/}
+          {/*        </div>*/}
+          {/*    </noscript>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="programma"></p>
@@ -54,7 +54,7 @@ class Home extends Component {
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="verenigingen"></p>
-              <p className="ui center aligned large header">Verenigingen</p>
+              <p className="ui center aligned large header">De vereniging</p>
               {getAssociation(data.Associations)}
             </div>
           </div>

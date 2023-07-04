@@ -28,7 +28,7 @@
     "introduction": [
         {
             "name": "Welkom",
-            "text": "Hallo toekomstige ICT’er!\n\nAl meer dan 15 maanden zitten we met zijn allen zo goed als binnen. Die extra vrije tijd was in het begin nog wel leuk, maar inmiddels snakken we allemaal weer naar wat fysiek contact. Al die gesprekken via Zoom of Teams komen onze neus uit en na een digitaal eindexamenjaar verdienen jullie wel weer wat gezelligheid. Dat is precies waar we in september voor gaan: twee weken gezelligheid, nieuwe mensen leren kennen en een goed begin van je studie. Fysiek of niet, we maken er met zijn allen een geweldige introductie van!\n\nZie je in september!\n\nTieke\nVoorzitter introductie 2021-2022"
+            "text": "Welkom bij de introdocutie CS 2023! \n\n Dit stukje moet nog even geschreven worden :)"
         }
     ],
     "register": [
@@ -41,108 +41,103 @@
     "programDisclaimer": [
         {
             "name": "Informatie",
-            "text": "De intro is vanaf maandag 6 september tot en met donderdag 16 september. Hieronder staat hoe de planning eruit zal zien!",
+            "text": "TODO",
             "textlink": ""
         }
     ],
     "program": [
         {
-            "name": "Maandag 6 September",
+            "name": "Donderdag 31 augustus",
             "activities": [
                 {
-                    "name": "Opening",
-                    "description": "Hier leer je je mentorgroepje kennen!",
-                    "time": "T.B.D."
+                    "name": "Crazy 88",
+                    "description": "",
+                    "time": "'s Middags"
                 },
                 {
-                    "name": "Utrecht Science Park spel",
-                    "description": "Op deze manier leer je de USP goed kennen!",
-                    "time": "T.B.D."
+                    "name": "Kroegentoch",
+                    "description": "",
+                    "time": "'s Avonds"
+                }
+            ]
+        },
+        {
+            "name": "1 september tot 3 september",
+            "activities": [
+                {
+                    "name": "Kamp",
+                    "description": "",
+                    "time": ""
+                }
+            ]
+        },
+        {
+            "name": "Maandag 4 september",
+            "activities": [
+                {
+                    "name": "Introductiecollege",
+                    "description": "",
+                    "time": "'s Ochtends"
                 },
                 {
-                    "name": "Uiteten met mentorgroepje, eerste avond",
-                    "description": "Gezellig eten met je mentor broertjes en zusjes om elkaar te leren kennen.",
-                    "time": "T.B.D."
-                }
-            ]
-        },
-        {
-            "name": "Dinsdag 7 September",
-            "activities": [
-                {
-                    "name": "Crazy'88",
-                    "description": "Genoeg geleerd over de USP, nu ga je Utrecht leren kennen! De Crazy'88 brengt je langs de leukste plekken!",
-                    "time": "T.B.D."
+                    "name": "Tutorkennismakingen",
+                    "description": "",
+                    "time": "'s Middags"
                 },
                 {
-                    "name": "Uiteten met mentorgroepje, tweede avond",
-                    "description": "Een tweede avond om gezellig te eten met je mentor broertjes en zusjes om elkaar te leren kennen. Hierna zal de kroegenavond plaatsvinden!",
-                    "time": "T.B.D."
+                    "name": "Utrecht Science Park tour",
+                    "description": "",
+                    "time": "'s Middags"
                 },
                 {
-                    "name": "Kroegenavond",
-                    "description": "Sluit de dag gezellig af met een drankje bij één van Utrechts beste kroegen.",
-                    "time": "T.B.D."
+                    "name": "Walking Dinner",
+                    "description": "",
+                    "time": "'s Avonds"
                 }
             ]
         },
         {
-            "name": "Woensdag 8 September",
+            "name": "Dinsdag 5 september",
             "activities": [
                 {
-                    "name": "Rustdag en online gezelligheid",
-                    "description": "Eventjes herstellen van een dag avontuur in Utrecht. 's avonds kan je meedoen aan de online activiteiten zoals Jackbox, skribble of csgo.",
-                    "time": "T.B.D."
+                    "name": "Colleges",
+                    "description": "",
+                    "time": "Hele dag"
                 }
             ]
         },
         {
-            "name": "Donderdag 9 September",
+            "name": "Donderdag 7 september",
             "activities": [
                 {
-                    "name": "Introlympics endgame",
-                    "description": "Hier wordt bewezen welke spelen het beste zijn! Wat we precies gaan doen zal in de aanloop van de intro bekend gemaakt worden. ",
-                    "time": "T.B.D."
+                    "name": "Stutorbijeenkomst",
+                    "description": "",
+                    "time": "'s Ochtends"
+                },
+                {
+                    "name": "Lezing",
+                    "description": "",
+                    "time": "'s Ochtends"
+                },
+                {
+                    "name": "Bowlen",
+                    "description": "",
+                    "time": "'s Middags"
                 }
             ]
         },
         {
-            "name": "Vrijdag 10 September",
+            "name": "Vrijdag 8 september",
             "activities": [
                 {
-                    "name": "Dierenpark",
-                    "description": "Haal je innerlijke Freek Vonk naar boven en bewonder alle mooie dieren in Dierenpark Amersfoort!",
-                    "time": "T.B.D."
-                }
-            ]
-        },
-        {
-            "name": "Maandag 13 September",
-            "activities": [
+                    "name": "BBQ",
+                    "description": "",
+                    "time": "'s Middags"
+                },
                 {
-                    "name": "ALFAS (Actieve Leden Festival)",
-                    "description": "Leer de super toffe studieverenigingen en hun keigave commissies kennen!",
-                    "time": "T.B.D."
-                }
-            ]
-        },
-        {
-            "name": "Dinsdag 14 en Woensdag 15 September",
-            "activities": [
-                {
-                    "name": "Poolen/lezing",
-                    "description": "Gezellig poolen met je mentorgroep, onder het genot van een drankje! In deze week heb je al colleges, maar afhankelijk van je studie ben je een van deze dagen vrij.",
-                    "time": "T.B.D."
-                }
-            ]
-        },
-        {
-            "name": "Donderdag 16 September",
-            "activities": [
-                {
-                    "name": "Afsluitende BBQ",
-                    "description": "Alweer de laatste activiteit van de intro, maar vrees niet we sluiten af met een gezamenlijke BBQ en borrel! ",
-                    "time": "T.B.D."
+                    "name": "Eindfeest",
+                    "description": "",
+                    "time": "'s Avonds"
                 }
             ]
         }
@@ -154,69 +149,15 @@
             "textlink": "https://intro.svsticky.nl",
             "photo": "sticky.png",
             "link": "https://svsticky.nl/"
-        },
-        {
-            "name": "A-Eskwadraat",
-            "text": "A–Eskwadraat is de studievereniging voor studenten van de studies Natuur- en Sterrenkunde, Wiskunde, Informatiekunde, Informatica en Gametechnologie. Lid worden van A–Eskwadraat kost je eenmalig €12,50, maar dan ben je voor de rest van je studententijd lid. Commissies binnen de vereniging organiseren een hoop leuke activiteiten. Zo zijn er borrels, feesten, sporttoernooien, symposia, studiereizen en is er een eerstejaarsweekend. Naast het deelnemen aan deze activiteiten kun je ze natuurlijk ook zelf organiseren. Daar kun je naast dat het leuk is, ontzettend veel van leren. Bovenal is het heel erg gezellig en leer je op deze manier snel nieuwe mensen kennen! Voor meer informatie over A–Eskwadraat kun je kijken op: ",
-            "textlink": "https://www.a-eskwadraat.nl/vereniging/scholieren",
-            "photo": "aes.png",
-            "link": "https://www.a-eskwadraat.nl/"
         }
     ],
     "Mentors": [
-	    {
-		    "name": "Boarder Baukje",
-            "real_name": "Yfke Smit",
-		    "photo": "yfke.jpg",
-		    "text": "Er staat uiteraard maar één sport bovenaan op de berg, en dat is snowboarden. Het is namelijk erg lastig om met zo’n plank naar boven te komen, en keihard naar beneden gaan is natuurlijk veel leuker. Voor ons snowboarders is dat snowboard en wij gewoon twee handen op één Baukje. Hier in Nederland, het meest bergachtige gebied van Europa, is goed kunnen snowboarden niet vanzelfsprekend, maar hieruit spreekt juist onze daadkrachtigheid om de beste te willen zijn!\nDe andere kleuren kunnen de winst wel op hun Baukje schrijven, want alle pogingen om ons te vernederen ontwijken wij met onze soepele bochten. Als anderen in de weg staan dan springen wij er over heen met een dubbele backflip, en als ze nou nog niet doorhebben dat wij gaan winnen dan hebben ze echt een snowboard voor hun kop. Zo’n intense strijd gaat je natuurlijk niet in de koude kleren zitten, maar zodra wij het strijdveld betreden weet ik zeker dat de andere kleuren de winst als sneeuw voor de zon zullen zien verdwijnen!"
-	    },
-        {
-		    "name": "Mega Mees",
-            "real_name": "Mees Hoving",
-		    "photo": "mees.jpg",
-		    "text": "Je zou er bijna in slaap van vallen hoe mega saai en soft sommige sporten kunnen zijn. Wat mij betreft mag er wel iets meer POWER in. Wij ijshockeyers zijn niet bang voor een stoot of kras. Zo groot als wij er uit zien zo mega groot zal onze overwinning dan ook zeker zijn. Bij het ijshockeyen zijn we niet alleen bezig met onze kracht en de snelheid van onze puck. Wij koude hockeyers staan namelijk ook bekend om onze strategische inzichten en teambuilding. Als wij dus goed samenwerken weet ik zeker dat dit appeltje ijsje is. Laten we er met zijn allen voor zorgen dat de de andere sporten compleet in de kou staan en bevriezen. Ook dit gaat met onze ijskoude moves zeker lukken. Dus pak je helm en pak je stick, want wij winnen dit dik!"
-	    },
-        {
-		    "name": "Ice Ice Milan",
-            "real_name": "Milan Kremers",
-		    "photo": "milan.jpg",
-		    "text": "Op de vraag wat de beste sport is, is natuurlijk maar één goed antwoord: Kunstschaatsen. Alle andere sporten zijn lomp, pijnlijk of saai en je komt er helemaal vies en rood uit. Maar niet kunstschaatsen, er wordt met ons gegooid (of we gooien met mensen), we lanceren onszelf meters de lucht in, we doorstaan de kou in koude en (vooral voor vrouwen) korte kleding en dit alles doen we zonder rood hoofd of vieze zichtbare zweetplekken.\nWij bepalen volledig onze eigen score, en ik verwacht niets minder dan een dikke vette 10 als eindbeoordeling. Door zelf al onze pasjes zo precies en synchroon mogelijk te doen kunnen de andere sporten er niets aan doen dat wij als winnaars uit de intro strijd gaan komen.\nHet kan niet anders dan dat wij met één been in de lucht als eerste over de finishlijn schaatsen!"
-	    }
+
     ],
     "FAQ": [
-        {
-            "question": "Wanneer is de introductie?",
-            "answer": "De intro vindt plaats van maandag 6 september tot en met donderdag 16 september."
-        },
-        {
-            "question": "Wat gaan we doen?",
-            "answer": "Dat is voor nu nog geheim! Houdt het programma op de website in de gaten."
-        }
+
     ],
     "contactPersons": [
-        {
-            "name": "Marian Biekart",
-            "type": "Secretaris",
-            "mobile": "+31 6 21948326",
-            "email": "secretaris@intro-cs.nl"
-        },
-        {
-            "name": "Tieke Stellingwerf",
-            "type": "Voorzitter",
-            "mobile": "+31 6 25491539",
-            "email": "voorzitter@intro-cs.nl"
-        },
-        {
-            "name": "Luc Blankestijn",
-            "type": "Commissaris IT",
-            "mobile": "+31 6 43019258",
-            "email": "it@intro-cs.nl"
-        },
-        {
-            "name": "Bjorn van Dijen",
-            "type": "Commissaris Mentor/helpers",
-            "mobile": "+31 6 46556075",
-            "email": "mentoren@intro-cs.nl"
-        }
+
     ]
 }
