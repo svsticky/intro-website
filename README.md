@@ -1,5 +1,7 @@
 # Intro Website
 
+Preview: Voor nu is de website te zien op https://intro-cs.array21.dev
+
 This is a single-page, association-neutral information site on the introduction of the computing and information science studies at Utrecht University.
 
 ## Installation
