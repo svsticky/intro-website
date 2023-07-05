@@ -13,9 +13,9 @@ const Date = ({ date }) => (
                     <div className = "ui five wide column">
                         <p>{activity.name}</p>
                     </div>
-                    {/*<div className = "ui ten wide column">*/}
-                    {/*    <p>{activity.description}</p>*/}
-                    {/*</div>*/}
+                    <div className = "ui six wide column">
+                       <p>{activity.description}</p>
+                    </div>
                 </div>
             ))
         }

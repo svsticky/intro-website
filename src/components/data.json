@@ -28,7 +28,7 @@
     "introduction": [
         {
             "name": "Welkom",
-            "text": "Welkom bij de introdocutie CS 2023! \n\n Dit stukje moet nog even geschreven worden :)"
+            "text": "Welkom bij de introductie CS 2023! \n\n Dit stukje moet nog even geschreven worden :)"
         }
     ],
     "register": [
@@ -41,7 +41,7 @@
     "programDisclaimer": [
         {
             "name": "Informatie",
-            "text": "TODO",
+            "text": "De intro is vanaf donderdag 31 augustus tot en met vrijdag 8 september. Hieronder staat hoe de planning eruit zal zien!\n\nLet op: Deze informatie kan nog veranderen, hou de website in de gaten!",
             "textlink": ""
         }
     ],
@@ -51,12 +51,12 @@
             "activities": [
                 {
                     "name": "Crazy 88",
-                    "description": "",
+                    "description": "Je gaat Utrecht leren kennen! De Crazy'88 brengt je langs de leukste plekken!",
                     "time": "'s Middags"
                 },
                 {
-                    "name": "Kroegentoch",
-                    "description": "",
+                    "name": "Kroegentocht",
+                    "description": "Sluit de dag gezellig af met een drankje bij één van Utrechts beste kroegen.",
                     "time": "'s Avonds"
                 }
             ]
@@ -76,17 +76,17 @@
             "activities": [
                 {
                     "name": "Introductiecollege",
-                    "description": "",
+                    "description": "Welkomswoord vanuit de Studie voor Informatica of Informatiekunde",
                     "time": "'s Ochtends"
                 },
                 {
                     "name": "Tutorkennismakingen",
-                    "description": "",
+                    "description": "Leer je mentoren en andere eerstejaars uit je tutorgroep kennen!",
                     "time": "'s Middags"
                 },
                 {
                     "name": "Utrecht Science Park tour",
-                    "description": "",
+                    "description": "Op deze manier leer je de USP goed kennen!",
                     "time": "'s Middags"
                 },
                 {
@@ -116,7 +116,7 @@
                 },
                 {
                     "name": "Lezing",
-                    "description": "",
+                    "description": "Vandaag zal er een lezing zijn op de Universiteit",
                     "time": "'s Ochtends"
                 },
                 {
@@ -155,9 +155,35 @@
 
     ],
     "FAQ": [
-
+        {
+            "question": "Wanneer is de introductie?",
+            "answer": "De intro vindt plaats van donderdag 31 augustus tot en met vrijdag 8 september"
+        },
+        {
+            "question": "Mag ik drugs en/of alcohol meenemen?",
+            "answer": "Drugs zijn NIET toegestaan tijdens de introductie, waar alcohol van toepassing is zal dit door ons aangeboden worden. Zelf meenemen is niet toegestaan."
+        },
+        {
+            "question": "Wat als ik niet weet waar ik moet zijn?",
+            "answer": "De mentoren zijn altijd op de hoogte van waar je moet zijn. Je kunt contact met hen opnemen. Daarnaast zal er tijdens de gehele introductie een centrale post (de CePo) zijn, waar altijd iemand van de introductiecommissie is te vinden die je weer op weg kan helpen. De CePo is grotendeels van de tijd waarschijnlijk te vinden in het Buys Ballot Gebouw (BBG), waar ook de studievereniging te vinden is."
+        },
+        {
+            "question": "Waar kan ik mijn studentnummer vinden?",
+            "answer": "Bij het inschrijven voor je studie heb je van Studielink een e-mail gekregen met daarin je studentnummer. Het makkelijkste is dus om even te zoeken in je mailbox naar het contact wat je met Studielink hebt gehad. Daarnaast heb je van de Universiteit Utrecht een Solis-id gekregen. Dit nummer is hetzelfde als je studentnummer."
+        }
     ],
     "contactPersons": [
-
+        {
+            "name": "Jelte van den Akker",
+            "email": "secretaris@intro-cs.nl",
+            "mobile": "+31 61425096",
+            "type": "Secretaris"
+        },
+        {
+            "name": "Antoine Bertram",
+            "email": "voorzitter@intro-cs.nl",
+            "mobile": "",
+            "type": "Voorzitter"
+        }
     ]
 }

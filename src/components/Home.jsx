@@ -62,7 +62,8 @@ class Home extends Component {
             <div className="card content">
               <p className="anchor" id="hoofdmentoren"></p>
               <p className="ui center aligned large header">Hoofdmentoren</p>
-              {getMentors(data.Mentors)}
+              <p className="center aligned large header">Wordt nog aangekondigd!</p>
+              {/*{getMentors(data.Mentors)}*/}
             </div>
           </div>
           <div className="ui fluid card">
