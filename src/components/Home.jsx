@@ -49,13 +49,13 @@ class Home extends Component {
             <div className="card content">
               <p className="anchor" id="programma"></p>
               <p className="ui center aligned large header">Programma</p>
-              {getText(data.programDisclaimer)}<br/>
+              {getText(data.programDisclaimer, true)}<br/>
               {getProgram(data.program)}
             </div>
           </div>
           <div className="ui fluid card">
             <div className="card content">
-              <p className="anchor" id="verenigingen"></p>
+              <p className="anchor" id="vereniging"></p>
               <p className="ui center aligned large header">De vereniging</p>
               {getAssociation(data.Associations)}
             </div>
@@ -107,17 +107,18 @@ class Home extends Component {
   }
 }
 
-const getText = texts =>{
+const getText = texts => {
   return(
     <div className="ui">
       {
         texts.map((text, index)=>(
-          <Text text={text} key={index}/>
+          <Text text={text} key={index} />
         ))
       }
     </div>
   )
 }
+
 const getProgram = dates =>{
   return(
     <div className="ui">

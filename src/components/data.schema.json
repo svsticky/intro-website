@@ -157,11 +157,13 @@
             },
             "textlink": {
               "type": "string"
+            },
+            "bold": {
+              "type": "boolean"
             }
           },
           "required": [
             "name",
-            "text",
             "textlink"
           ]
         }

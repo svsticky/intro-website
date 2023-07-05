@@ -9,8 +9,8 @@
             "href": "#programma"
         },
         {
-            "name": "Verenigingen",
-            "href": "#verenigingen"
+            "name": "Vereniging",
+            "href": "#vereniging"
         },
         {
             "name": "Hoofdmentoren",
@@ -28,7 +28,7 @@
     "introduction": [
         {
             "name": "Welkom",
-            "text": "Hallo toekomstige ICT’er!\n\nStudievereniging Sticky gaat voor jullie dit jaar een spectaculaire introductie neerzetten. De introductie zal plaatsvinden vanaf eind augustus tot begin september, in deze anderhalve week zullen er leuke en leerzame activiteiten worden georganiseerd. Tijdens de introductie proberen wij een paar doelen te bereiken: jullie kennis te laten maken met je medestudenten, je op weg te helpen met een goede start maken met je studie, en jullie natuurlijk een heel gezellige tijd bezorgen. Ik hoop dat jullie allemaal net zo enthousaist zijn als wij voor de introductie, mis hem dus niet!\n\nWij van de introductie commissie hopen jullie allemaal te zien op 31 augustus! \n\nAntoine \nVoorzitter introductie commissie 2023-2024"
+            "text": "Hallo toekomstige ICT’er!\n\nStudievereniging Sticky gaat voor jullie dit jaar een spectaculaire introductie neerzetten. De introductie zal plaatsvinden vanaf eind augustus tot begin september, in deze anderhalve week zullen er leuke en leerzame activiteiten worden georganiseerd. Tijdens de introductie proberen wij een paar doelen te bereiken: jullie kennis te laten maken met je medestudenten, je op weg te helpen met een goede start maken met je studie en jullie natuurlijk een heel gezellige tijd bezorgen. Ik hoop dat jullie allemaal net zo enthousaist zijn als wij voor de introductie, mis hem dus niet!\n\nWij van de introductie commissie hopen jullie allemaal te zien op 31 augustus! \n\nAntoine \nVoorzitter introductie commissie 2023-2024"
         }
     ],
     "register": [
@@ -41,8 +41,13 @@
     "programDisclaimer": [
         {
             "name": "Informatie",
-            "text": "De intro is vanaf donderdag 31 augustus tot en met vrijdag 8 september. Hieronder staat hoe de planning eruit zal zien!\n\nLet op: Deze informatie kan nog veranderen, hou de website in de gaten!",
+            "text": "De intro is vanaf donderdag 31 augustus tot en met vrijdag 8 september. Hieronder staat hoe de planning eruit zal zien!",
             "textlink": ""
+        },
+        {
+            "text": "Let op: Deze informatie kan nog veranderen, hou de website in de gaten!",
+            "textlink": "",
+            "bold": true
         }
     ],
     "program": [
@@ -161,7 +166,7 @@
         },
         {
             "question": "Mag ik drugs en/of alcohol meenemen?",
-            "answer": "Drugs zijn NIET toegestaan tijdens de introductie, waar alcohol van toepassing is zal dit door ons aangeboden worden. Zelf meenemen is niet toegestaan."
+            "answer": "Drugs zijn NIET toegestaan tijdens de introductie, waar alcohol van toepassing is zal dit door ons aangeboden worden. Zelf meenemen is niet toegestaan. Alcohol wordt alleen aan 18+ studenten geschonken."
         },
         {
             "question": "Wat als ik niet weet waar ik moet zijn?",
