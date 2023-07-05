@@ -16,17 +16,19 @@ class Home extends Component {
       <main ref="background">l
         <Menu />
         <div className="ui main container">
+          {/*TODO: Deze moet terug als de video af is*/}
           {/*<div className="video-container">*/}
           {/*  <iframe src="https://www.youtube.com/embed/iidprx_t8E8" title="themabekendmakingsvideo" frameBorder="0"></iframe>*/}
           {/*</div>*/}
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="welkom"></p>
-              <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie 2023</p>
+              <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie 2023-2024</p>
               <img alt="Full Introduction logo" className="ui image" src={full_logo}/>
               {getText(data.introduction)}
             </div>
           </div>
+          {/*TODO: Deze moet terug zodra Pretix opgezet is*/}
           {/*<div className="ui fluid card">*/}
           {/*  <div className="card content">*/}
           {/*    <p className="anchor" id="inschrijven"></p>*/}
@@ -63,6 +65,7 @@ class Home extends Component {
               <p className="anchor" id="hoofdmentoren"></p>
               <p className="ui center aligned large header">Hoofdmentoren</p>
               <p className="center aligned large header">Wordt nog aangekondigd!</p>
+              {/*TODO Terugzetten zodra de mentoren op de site moeten*/}
               {/*{getMentors(data.Mentors)}*/}
             </div>
           </div>
