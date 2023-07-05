@@ -28,7 +28,7 @@
     "introduction": [
         {
             "name": "Welkom",
-            "text": "Hallo toekomstige ICT’er!\n\nStudievereniging Sticky gaat voor jullie dit jaar een spectaculaire introductie neerzetten. De introductie zal plaatsvinden vanaf eind augustus tot begin september, in deze anderhalve week zullen er leuke en leerzame activiteiten worden georganiseerd. Tijdens de introductie proberen wij een paar doelen te bereiken: jullie kennis te laten maken met je medestudenten, je op weg te helpen met een goede start maken met je studie en jullie natuurlijk een heel gezellige tijd bezorgen. Ik hoop dat jullie allemaal net zo enthousaist zijn als wij voor de introductie, mis hem dus niet!\n\nWij van de introductie commissie hopen jullie allemaal te zien op 31 augustus! \n\nAntoine \nVoorzitter introductie commissie 2023-2024"
+            "text": "Hallo toekomstige ICT’er!\n\nStudievereniging Sticky gaat voor jullie dit jaar een spectaculaire introductie neerzetten. De introductie zal plaatsvinden vanaf eind augustus tot begin september. In deze anderhalve week zullen er leuke en leerzame activiteiten worden georganiseerd. Tijdens de introductie proberen wij een paar doelen te bereiken: jullie kennis te laten maken met je medestudenten, je op weg te helpen met een goede start maken met je studie en jullie natuurlijk een heel gezellige tijd bezorgen. Ik hoop dat jullie allemaal net zo enthousaist zijn als wij voor de introductie, mis hem dus niet!\n\nWij van de introductie commissie hopen jullie allemaal te zien op 31 augustus! \n\nAntoine \nVoorzitter introductie commissie 2023-2024"
         }
     ],
     "register": [
@@ -71,8 +71,8 @@
             "activities": [
                 {
                     "name": "Kamp",
-                    "description": "",
-                    "time": ""
+                    "description": "T.B.A.",
+                    "time": "Hele dag"
                 }
             ]
         },
@@ -81,7 +81,7 @@
             "activities": [
                 {
                     "name": "Introductiecollege",
-                    "description": "Welkomswoord vanuit de Studie voor Informatica of Informatiekunde",
+                    "description": "Welkomswoord vanuit de studie.",
                     "time": "'s Ochtends"
                 },
                 {
@@ -96,7 +96,7 @@
                 },
                 {
                     "name": "Walking Dinner",
-                    "description": "",
+                    "description": "T.B.A.",
                     "time": "'s Avonds"
                 }
             ]
@@ -106,7 +106,7 @@
             "activities": [
                 {
                     "name": "Colleges",
-                    "description": "",
+                    "description": "T.B.A.",
                     "time": "Hele dag"
                 }
             ]
@@ -115,8 +115,8 @@
             "name": "Donderdag 7 september",
             "activities": [
                 {
-                    "name": "Stutorbijeenkomst",
-                    "description": "",
+                    "name": "Eerste stutorbijeenkomst",
+                    "description": "T.B.A.",
                     "time": "'s Ochtends"
                 },
                 {
@@ -126,7 +126,7 @@
                 },
                 {
                     "name": "Bowlen",
-                    "description": "",
+                    "description": "T.B.A.",
                     "time": "'s Middags"
                 }
             ]
@@ -136,12 +136,12 @@
             "activities": [
                 {
                     "name": "BBQ",
-                    "description": "",
+                    "description": "T.B.A.",
                     "time": "'s Middags"
                 },
                 {
                     "name": "Eindfeest",
-                    "description": "",
+                    "description": "T.B.A.",
                     "time": "'s Avonds"
                 }
             ]
@@ -150,7 +150,7 @@
     "Associations": [
         {
             "name": "Sticky",
-            "text": "Sticky is de studievereniging voor informatica, gametechnologie en informatiekunde. Het is dé plek om buiten je colleges je studiegenoten op een informele manier te leren kennen. Sticky organiseert wekelijks vele soorten activiteiten, van filmavonden tot themaborrels, en van LAN-parties tot culturele uitstapjes naar het buitenland. Daarnaast biedt Sticky ondersteuning bij je studie, bijvoorbeeld via het opzetten van hulpmiddagen, waar ouderejaars studenten je door de moeilijkste vakken kunnen helpen, en door het aanbieden van korting op je studieboeken. Kijk vooral eens een keer op svsticky.nl voor meer informatie!\nInschrijven bij Sticky kost je eenmalig €7,50 en kan via ",
+            "text": "Sticky is de studievereniging voor informatica, gametechnologie en informatiekunde. Het is dé plek om buiten je colleges je studiegenoten op een informele manier te leren kennen. Sticky organiseert wekelijks vele soorten activiteiten, van filmavonden tot themaborrels, en van LAN-parties tot culturele uitstapjes naar het buitenland. Daarnaast biedt Sticky ondersteuning bij je studie, bijvoorbeeld via het opzetten van hulpmiddagen, waar ouderejaars studenten je door de moeilijkste vakken kunnen helpen, en door het aanbieden van korting op je studieboeken. Kijk vooral eens een keer op <a href='https://svsticky.nl'>svsticky.nl</a> voor meer informatie!\nInschrijven bij Sticky kost je eenmalig €7,50 en kan via ",
             "textlink": "https://intro.svsticky.nl",
             "photo": "sticky.png",
             "link": "https://svsticky.nl/"
@@ -162,7 +162,7 @@
     "FAQ": [
         {
             "question": "Wanneer is de introductie?",
-            "answer": "De intro vindt plaats van donderdag 31 augustus tot en met vrijdag 8 september"
+            "answer": "De intro vindt plaats van donderdag 31 augustus tot en met vrijdag 8 september."
         },
         {
             "question": "Mag ik drugs en/of alcohol meenemen?",
