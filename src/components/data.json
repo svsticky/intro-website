@@ -55,6 +55,11 @@
             "name": "Donderdag 31 augustus",
             "activities": [
                 {
+                    "name": "Opening introductie",
+                    "description": "Je meld je aan en ontmoet je mentoren",
+                    "time": "'s Ochtends"
+                },
+                {
                     "name": "Crazy 88",
                     "description": "Je gaat Utrecht leren kennen! De Crazy'88 brengt je langs de leukste plekken!",
                     "time": "'s Middags"
@@ -72,7 +77,7 @@
                 {
                     "name": "Kamp",
                     "description": "Gezellig op kamp met je medestudenten!",
-                    "time": "v.a. 1 septer 13:30"
+                    "time": "v.a. 1 september 13:30"
                 }
             ]
         },
@@ -96,7 +101,7 @@
                 },
                 {
                     "name": "Walking Dinner",
-                    "description": "T.B.A.",
+                    "description": "Leer de studentenhuiskamer kennen en ontmoet studenten met een lekker hapje eten!",
                     "time": "17:00 - 20:00"
                 }
             ]
@@ -107,7 +112,7 @@
                 {
                     "name": "Colleges INKU",
                     "description": "Vandaag zijn er colleges op de universiteit",
-                    "time": "Hele dag"
+                    "time": "09:00 - 17:00"
                 }
             ]
         },
@@ -117,7 +122,7 @@
                 {
                     "name": "Colleges INCA",
                     "description": "Vandaag zijn er colleges op de universiteit",
-                    "time": "Hele dag"
+                    "time": "09:00 - 17:00"
                 }
             ]
         },
@@ -127,12 +132,12 @@
                 {
                     "name": "Lezing",
                     "description": "Vandaag zal er een lezing zijn op de Universiteit",
-                    "time": "'s Ochtends"
+                    "time": "11:00 - 13:00"
                 },
                 {
                     "name": "Bowlen",
                     "description": "De middag afsluiten door een balletje te rollen!",
-                    "time": "'s Middags"
+                    "time": "14:00 - 16:00"
                 }
             ]
         },
@@ -162,7 +167,7 @@
                 {
                     "name": "Eindfeest",
                     "description": "Sluit de introductie af met een gezellig feest!",
-                    "time": "'s Avonds"
+                    "time": "20:00-01:00"
                 }
             ]
         }
@@ -177,7 +182,30 @@
         }
     ],
     "Mentors": [
-
+        {
+            "name": "Avatar (Br)aang",
+            "real_name": "Bram de Haas",
+            "photo": "",
+            "text": "Als meester van alle elementen en de laatst overgebleven air-bender, sta ik in volle glorie paraat om team lucht naar ongekende hoogten te leiden tijdens deze epische introductieweek!\nNadenken voordat we handelen? Daar doen we niet aan. Mijn motto is duidelijk: hoe meer chaos, hoe beter mijn week verloopt!\nDe strijd tegen de andere teams - water, vuur en aarde - zal uitdagend zijn, maar ik weet zeker dat we ze volledig omver gaan blazen! We zien onze tegenstanders als waardige concurrenten, maar we zijn vastbesloten om te laten zien dat lucht het ultieme element der elementen is. Met onze snelheid, wendbaarheid en doorzettingsvermogen gaan we het de andere teams niet makkelijk maken en we geven ze de wind van voren!\n\nMaak je klaar om de strijd aan te gaan en jezelf mee te laten voeren op de bries van avontuur tijdens deze onvergetelijke introductie!!"
+        },
+        {
+            "name": "Korra",
+            "real_name": "Kim van Dalen",
+            "photo": "",
+            "text": "Wie kent ze niet, onze geliefde superhelden Aquaman, Elsa, watermeisje en Spongebob. Dit zijn slechts een paar namen die de wereld redden met hun super waterkrachten. Binnenkort wordt aan dit lijstje ook mijn naam toegevoegd, Korra. De enige avatar speciaal genoeg voor haar eigen spin-off met haar roots natuurlijk in waterbending. In welk seizoen jij je ook een vis in het water voelt, team blauw heeft altijd wel wat leuks te bieden. Water is net als popcorn: zout of zoet, maakt niet uit, het is allebei goed. Van waterijsjes tot sneeuwballengevechten, het wordt allemaal mogelijk gemaakt door water. Zelfs alle grote sporten hebben een waterelement: ijshockey, zwemmen, flunkyball, beerpong, noem het maar op. Of je nu zo wild bent als een woeste zee of zo kalm als een bergbeekje, wij watermensen staan voor elkaar klaar. Wij zullen nooit water bij de wijn doen en daarom is team blauw het beste! Veel succes gewenst aan de andere elementen om hun hoofd boven water te houden."
+        },
+        {
+            "name": "Kyoshi",
+            "real_name": "Tieeny Chao",
+            "photo": "",
+            "text": "Hallo, ik ben Tieeny Chao, maar mijn ware identiteit is Kyoshi. Dit jaar heb ik de eer om Kyoshi te zijn, de Avatar van Aarde. Als Kyoshi vertegenwoordig ik de ongeëvenaarde kracht van de aarde en ben ik vastberaden om te bewijzen dat de aarde superieur is aan alle andere elementen!\n\nDe aarde is een onverwoestbare kracht die alles kan dragen en verankeren. Mijn team en ik zullen als één geheel bewegen, als een machtige aardverschuiving die alles op zijn pad verplettert.\n\nOns element mag dan langzaam en geduldig lijken, maar onderschat nooit de kracht van stabiliteit en standvastigheid. Terwijl anderen hoog vliegen of in vuur en vlam staan, zullen wij stevig op de grond staan en triomferen.\n\nMet onwrikbare vastberadenheid en de kracht van de aarde zullen we alle obstakels overwinnen die op onze weg komen. We laten zien dat aarde niet alleen beter is dan de rest, maar dat het de onbetwiste kampioen is!"
+        },
+        {
+            "name": "Roku",
+            "real_name": "Mervin de Jong",
+            "photo": "",
+            "text": "Vuur, by far het krachtigste en het beste element onder de vier elementen. Vuur is het element waar de mensheid mee is begonnen. Vuur brengt licht en warmte, en vuur brengt vernietiging en destructie. Wij als Vuurnatie gaan elke kans om de competitie te winnen dubbel en dwars vernietigen en hun dromen van een eerste plek in rook op laten gaan. Met onze passie, kracht en energie zetten wij elke activiteit in vuur en vlam, en zal bij de andere teams snel het lichtje gaan branden dat met de Vuurnatie niet te spotten valt. Toch zullen zij allemaal hetzelfde zeggen en beweren dat zij zullen gaan winnen, maar dat gooit bij ons alleen maar olie op het vuur. Wij vuurmeesters staan aan de top zodra de strijd zal ontbranden!"
+        }
     ],
     "FAQ": [
         {
