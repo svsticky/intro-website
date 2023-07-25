@@ -45,7 +45,7 @@
             "textlink": ""
         },
         {
-            "text": "Let op: Deze informatie kan nog veranderen, hou de website in de gaten!",
+            "text": "Let op: Deze informatie kan nog veranderen, houd de website in de gaten!",
             "textlink": "",
             "bold": true
         }
@@ -71,8 +71,8 @@
             "activities": [
                 {
                     "name": "Kamp",
-                    "description": "T.B.A.",
-                    "time": "Hele dag"
+                    "description": "Gezellig op kamp met je medestudenten!",
+                    "time": "v.a. 1 septer 13:30"
                 }
             ]
         },
@@ -82,22 +82,22 @@
                 {
                     "name": "Introductiecollege",
                     "description": "Welkomswoord vanuit de studie.",
-                    "time": "'s Ochtends"
+                    "time": "11:00 - 12:45"
                 },
                 {
                     "name": "Tutorkennismakingen",
                     "description": "Leer je tutors en andere eerstejaars uit je tutorgroep kennen!",
-                    "time": "'s Middags"
+                    "time": "13:00 - 13:30"
                 },
                 {
                     "name": "Utrecht Science Park tour",
                     "description": "Op deze manier leer je het USP goed kennen!",
-                    "time": "'s Middags"
+                    "time": "14:00 - 17:00"
                 },
                 {
                     "name": "Walking Dinner",
                     "description": "T.B.A.",
-                    "time": "'s Avonds"
+                    "time": "17:00 - 20:00"
                 }
             ]
         },
@@ -105,8 +105,18 @@
             "name": "Dinsdag 5 september",
             "activities": [
                 {
-                    "name": "Colleges",
-                    "description": "T.B.A.",
+                    "name": "Colleges INKU",
+                    "description": "Vandaag zijn er colleges op de universiteit",
+                    "time": "Hele dag"
+                }
+            ]
+        },
+        {
+            "name": "Woensdag 6 september",
+            "activities": [
+                {
+                    "name": "Colleges INCA",
+                    "description": "Vandaag zijn er colleges op de universiteit",
                     "time": "Hele dag"
                 }
             ]
@@ -115,18 +125,13 @@
             "name": "Donderdag 7 september",
             "activities": [
                 {
-                    "name": "Eerste stutorbijeenkomst",
-                    "description": "T.B.A.",
-                    "time": "'s Ochtends"
-                },
-                {
                     "name": "Lezing",
                     "description": "Vandaag zal er een lezing zijn op de Universiteit",
                     "time": "'s Ochtends"
                 },
                 {
                     "name": "Bowlen",
-                    "description": "T.B.A.",
+                    "description": "De middag afsluiten door een balletje te rollen!",
                     "time": "'s Middags"
                 }
             ]
@@ -135,13 +140,28 @@
             "name": "Vrijdag 8 september",
             "activities": [
                 {
-                    "name": "BBQ",
-                    "description": "T.B.A.",
-                    "time": "'s Middags"
+                    "name": "ALMS INCA",
+                    "description": "Leer alle commissies binnen Sticky kennen",
+                    "time": "15:00 - 16:30"
                 },
                 {
+                    "name": "ALMS INKU",
+                    "description": "Leer alle commissies binnen Sticky kennen",
+                    "time": "16:30 - 18:00"
+                },
+                {
+                    "name": "BBQ",
+                    "description": "Eet!",
+                    "time": "18:00 - 21:00"
+                }
+            ]
+        },
+        {
+            "name": "Donderdag 14 september",
+            "activities": [
+                {
                     "name": "Eindfeest",
-                    "description": "T.B.A.",
+                    "description": "Sluit de introductie af met een gezellig feest!",
                     "time": "'s Avonds"
                 }
             ]
