@@ -27,23 +27,22 @@ class Home extends Component {
               {getText(data.introduction)}
             </div>
           </div>
-          {/*TODO: Deze moet terug zodra Pretix opgezet is*/}
-          {/*<div className="ui fluid card">*/}
-          {/*  <div className="card content">*/}
-          {/*    <p className="anchor" id="inschrijven"></p>*/}
-          {/*    <p className="ui center aligned large header">Inschrijving</p>*/}
-          {/*    {getText(data.register)}*/}
-          {/*    <pretix-widget event="https://pretix.svsticky.nl/intro/2021/"></pretix-widget>*/}
-          {/*    <noscript>*/}
-          {/*      <div class="pretix-widget">*/}
-          {/*            <div class="pretix-widget-info-message">*/}
-          {/*                JavaScript is disabled in your browser. To access our ticket shop without JavaScript,*/}
-          {/*                please <a target="_blank" href="https://pretix.svsticky.nl/intro/2021/">click here</a>.*/}
-          {/*            </div>*/}
-          {/*        </div>*/}
-          {/*    </noscript>*/}
-          {/*  </div>*/}
-          {/*</div>*/}
+          <div className="ui fluid card">
+           <div className="card content">
+             <p className="anchor" id="inschrijven"></p>
+             <p className="ui center aligned large header">Inschrijving</p>
+             {getText(data.register)}
+             <pretix-widget event="https://pretix.svsticky.nl/intro/2023/"></pretix-widget>
+             <noscript>
+               <div class="pretix-widget">
+                     <div class="pretix-widget-info-message">
+                         JavaScript is disabled in your browser. To access our ticket shop without JavaScript,
+                         please <a target="_blank" href="https://pretix.svsticky.nl/intro/2021/">click here</a>.
+                     </div>
+                 </div>
+             </noscript>
+           </div>
+          </div>
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="programma"></p>
