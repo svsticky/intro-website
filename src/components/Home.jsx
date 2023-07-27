@@ -41,6 +41,9 @@ class Home extends Component {
                      </div>
                  </div>
              </noscript>
+             <p>
+              Je kunt onze privacy statement <a href="https://raw.githubusercontent.com/svsticky/intro-website/intro-2023/src/assets/privacy-statement.md">hier</a> vinden.
+             </p>
            </div>
           </div>
           <div className="ui fluid card">
