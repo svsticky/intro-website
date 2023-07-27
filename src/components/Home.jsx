@@ -37,7 +37,7 @@ class Home extends Component {
                <div class="pretix-widget">
                      <div class="pretix-widget-info-message">
                          JavaScript is disabled in your browser. To access our ticket shop without JavaScript,
-                         please <a target="_blank" href="https://pretix.svsticky.nl/intro/2021/">click here</a>.
+                         please <a target="_blank" href="https://pretix.svsticky.nl/intro/2023/">click here</a>.
                      </div>
                  </div>
              </noscript>
@@ -87,21 +87,35 @@ class Home extends Component {
   }
   
   componentDidMount() {
-    window.addEventListener('scroll', this.parallax, true);
+    // window.addEventListener('scroll', this.parallax, true);
     this.background = React.createRef();
+
+
+    // Pretix
+    const script = document.createElement('script');
+    script.src = "https://pretix.eu/widget/v1.en.js";
+    script.async = true;
+
+    const link = document.createElement('link');
+    link.href = "https://pretix.eu/demo/democon/widget/v1.css";
+    link.rel = "stylesheet";
+    link.type = "text/css";
+
+    document.body.appendChild(link);
+    document.body.appendChild(script);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.parallax);
+    // window.removeEventListener('scroll', this.parallax);
   }
 
-  //handle parallax scrolling
-  parallax = () => {
-    var scrollHeight = window.scrollY;
-    var parallax = this.refs.background;
-    parallax.style["margin-top"] = -scrollHeight/7 + "px";
-    parallax.style["padding-top"] = scrollHeight/7 + "px";
-  }
+  // //handle parallax scrolling
+  // parallax = () => {
+  //   var scrollHeight = window.scrollY;
+  //   var parallax = this.refs.background;
+  //   parallax.style["margin-top"] = -scrollHeight/7 + "px";
+  //   parallax.style["padding-top"] = scrollHeight/7 + "px";
+  // }
 }
 
 const getText = texts => {
