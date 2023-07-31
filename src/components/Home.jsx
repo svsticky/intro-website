@@ -10,6 +10,7 @@ import Menu from './Menu.jsx';
 import '../assets/home.css';
 import full_logo from '../assets/logos/logo.png'
 import Social from "./Social";
+import {StaticImage} from "gatsby-plugin-image";
 
 class Home extends Component {
   render() {
@@ -24,7 +25,7 @@ class Home extends Component {
             <div className="card content">
               <p className="anchor" id="welkom"></p>
               <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie 2023-2024</p>
-              <img alt="Full Introduction logo" className="ui image" src={full_logo}/>
+              <StaticImage src="../assets/logos/logo.png" alt="Full Introduction logo" className="ui image"></StaticImage>
               {getText(data.introduction)}
             </div>
           </div>
