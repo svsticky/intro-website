@@ -5,6 +5,14 @@
             "href": "#welkom"
         },
         {
+            "name": "Socials",
+            "href": "#socials"
+        },
+        {
+            "name": "Inschrijving",
+            "href": "#inschrijven"
+        },
+        {
             "name": "Programma",
             "href": "#programma"
         },
@@ -31,6 +39,16 @@
             "text": "Hallo toekomstige ICT’er!\n\nStudievereniging Sticky gaat voor jullie dit jaar een spectaculaire introductie neerzetten. De introductie zal plaatsvinden vanaf eind augustus tot begin september. In deze anderhalve week zullen er leuke en leerzame activiteiten worden georganiseerd. Tijdens de introductie proberen wij een paar doelen te bereiken: jullie kennis te laten maken met je medestudenten, je op weg te helpen met een goede start maken met je studie en jullie natuurlijk een heel gezellige tijd bezorgen. Ik hoop dat jullie allemaal net zo enthousaist zijn als wij voor de introductie, mis hem dus niet!\n\nWij van de introductie commissie hopen jullie allemaal te zien op 31 augustus! \n\nAntoine \nVoorzitter introductie commissie 2023-2024"
         }
     ],
+    "socials": {
+        "description": "Houd onze social media in te gaten voor frequente updates over de introductie!",
+        "items": [
+            {
+                "name": "Instagram",
+                "linkTo": "https://www.instagram.com/stickyutrecht/",
+                "icon": "instagram.svg"
+            }
+        ]
+    },
     "register": [
         {
             "name": "Inschrijven",

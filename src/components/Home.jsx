@@ -9,6 +9,7 @@ import Association from './Association.jsx';
 import Menu from './Menu.jsx';
 import '../assets/home.css';
 import full_logo from '../assets/logos/logo.png'
+import Social from "./Social";
 
 class Home extends Component {
   render() {
@@ -28,14 +29,22 @@ class Home extends Component {
             </div>
           </div>
           <div className="ui fluid card">
+            <div className="card content">
+              <p className="anchor" id="socials"></p>
+              <p className="ui center aligned large header">Bekijk ook onze social media</p>
+              <p className="ui center aligned">{data.socials.description}</p>
+              {getSocials(data.socials.items)}
+            </div>
+          </div>
+          <div className="ui fluid card">
            <div className="card content">
              <p className="anchor" id="inschrijven"></p>
              <p className="ui center aligned large header">Inschrijving</p>
              {getText(data.register)}
              <pretix-widget event="https://pretix.svsticky.nl/intro/2023/"></pretix-widget>
              <noscript>
-               <div class="pretix-widget">
-                     <div class="pretix-widget-info-message">
+               <div className="pretix-widget">
+                     <div className="pretix-widget-info-message">
                          JavaScript is disabled in your browser. To access our ticket shop without JavaScript,
                          please <a target="_blank" href="https://pretix.svsticky.nl/intro/2023/">click here</a>.
                      </div>
@@ -65,7 +74,6 @@ class Home extends Component {
             <div className="card content">
               <p className="anchor" id="hoofdmentoren"></p>
               <p className="ui center aligned large header">Hoofdmentoren</p>
-              {/* <p className="center aligned large header">Wordt nog aangekondigd!</p> */}
               {getMentors(data.Mentors)}
             </div>
           </div>
@@ -90,9 +98,7 @@ class Home extends Component {
   }
   
   componentDidMount() {
-    // window.addEventListener('scroll', this.parallax, true);
     this.background = React.createRef();
-
 
     // Pretix
     const script = document.createElement('script');
@@ -107,18 +113,18 @@ class Home extends Component {
     document.body.appendChild(link);
     document.body.appendChild(script);
   }
+}
 
-  componentWillUnmount() {
-    // window.removeEventListener('scroll', this.parallax);
-  }
-
-  // //handle parallax scrolling
-  // parallax = () => {
-  //   var scrollHeight = window.scrollY;
-  //   var parallax = this.refs.background;
-  //   parallax.style["margin-top"] = -scrollHeight/7 + "px";
-  //   parallax.style["padding-top"] = scrollHeight/7 + "px";
-  // }
+const getSocials = socials => {
+  return (
+      <div className="ui row center aligned">
+        {
+          socials.map((social, index) => (
+              <Social social={social} key={index}></Social>
+          ))
+        }
+      </div>
+  )
 }
 
 const getText = texts => {
