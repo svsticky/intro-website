@@ -31,6 +31,13 @@ class Home extends Component {
           </div>
           <div className="ui fluid card">
             <div className="card content">
+              <p className="anchor" id="kamp"></p>
+              <p className="ui center aligned large header">Kamp</p>
+              {getText(data.kamp)}
+            </div>
+          </div>
+          <div className="ui fluid card">
+            <div className="card content">
               <p className="anchor" id="socials"></p>
               <p className="ui center aligned large header">Bekijk ook onze social media</p>
               <p className="ui center aligned">{data.socials.description}</p>
