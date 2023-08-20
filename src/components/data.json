@@ -42,7 +42,7 @@
     "kamp": [
         {
             "name": "Kamp",
-            "text": "Kom gezellig mee op introkamp en leer je studiegenoten kennen. Dit is de manier om kennis te maken met de mensen waarmee je komende jaren je studie doet! Het kamp zit vol met leuke activiteiten, zoals karaoke, kampvuur, een themafeest en meer. Daarnaast wordt het eten geregeld door de chef-koks van onze kookcommissie. De heenreis is geregeld vanaf Utrecht Science Park. Meld je zo snel mogelijk aan, voordat de kaartverkoop sluit!\nLet op, het kamp is geen ontgroening! Alles mag, niks moet! Dit is puur alleen plezier en elkaar leren kennen."
+            "text": "Kom gezellig mee op introkamp en leer je studiegenoten kennen. Dit is de manier om kennis te maken met de mensen waarmee je komende jaren je studie doet! Het kamp zit vol met leuke activiteiten, zoals karaoke, kampvuur, een themafeest en meer. Daarnaast wordt het eten geregeld door de chef-koks van onze kookcommissie. De heenreis is geregeld vanaf Utrecht Science Park. Meld je zo snel mogelijk aan, voordat de kaartverkoop sluit!\n\nLet op, het kamp is geen ontgroening! Alles mag, niks moet! Dit is puur alleen plezier en elkaar leren kennen.\n\nDe inschrijvingen voor het kamp sluiten op 29 augustus om 17:00. Je kunt je daarna niet meer aanmelden voor het kamp, dus wees er op tijd bij!"
         }
     ],
     "socials": {
@@ -59,7 +59,7 @@
         {
             "name": "Inschrijven",
             "anchor": "inschrijven",
-            "text": "Als je ingeschreven staat voor een van de studies sta je automatisch ingeschreven voor het algemene deel van de introductie. Je moet je echter voor sommige activiteiten zelf inschrijven en een kaartje kopen. Dit kun je hier doen:"
+            "text": "Als je ingeschreven staat voor een van de studies sta je automatisch ingeschreven voor het algemene deel van de introductie. Je moet je echter voor sommige activiteiten zelf inschrijven en een kaartje kopen. Dit kun je hier doen. \n\nLet op, de inschrijving voor kamp sluit op 27 augustus om 17:00. De inschrijvingen voor de overige activiteiten sluiten de dag voor de betreffende activiteit om 23:59. Wees er op tijd bij!"
         }
     ],
     "programDisclaimer": [
@@ -80,18 +80,18 @@
             "activities": [
                 {
                     "name": "Opening introductie",
-                    "description": "Je meld je aan en ontmoet je mentoren",
-                    "time": "'s Ochtends"
+                    "description": "Start je introductie gezamenlijk en ontmoet je mentoren. Je mentoren zullen je begeleiden voor de rest van de introductie samen met andere eerstejaars van je groep! Daarnaast geeft de opleidingsdirecteur van Informatiekunde een welkomstpraatje. ",
+                    "time": "09:00 - 11:00"
                 },
                 {
                     "name": "Crazy 88",
-                    "description": "Je gaat Utrecht leren kennen! De Crazy'88 brengt je langs de leukste plekken!",
-                    "time": "'s Middags"
+                    "description": "Je gaat Utrecht leren kennen! De Crazy88 brengt je langs de leukste plekken in Utrecht en dit is een goede manier om je groepje beter te leren kennen.",
+                    "time": "13:00 - 17:00"
                 },
                 {
                     "name": "Kroegentocht",
-                    "description": "Sluit de dag gezellig af met een drankje bij één van Utrechts beste kroegen.",
-                    "time": "'s Avonds"
+                    "description": "Sluit je eerste dag gezellig af terwijl je samen met je mentorgroep de beste kroegen van Utrecht bezoekt!",
+                    "time": "Eigen invulling"
                 }
             ]
         },
@@ -110,22 +110,22 @@
             "activities": [
                 {
                     "name": "Introductiecollege",
-                    "description": "Welkomswoord vanuit de studie.",
+                    "description": "Welkomstwoord vanuit de studie. In dit college leer je meer over je studie en het verloop van je jaar.",
                     "time": "11:00 - 12:45"
                 },
                 {
                     "name": "Tutorkennismakingen",
-                    "description": "Leer je tutors en andere eerstejaars uit je tutorgroep kennen!",
+                    "description": "Leer je stutor en andere eerstejaars uit je stutorgroep kennen! Je stutor kan je meer vertellen over je studieverloop en helpt je op weg met je studie, ook voor de rest van het jaar.",
                     "time": "13:00 - 13:30"
                 },
                 {
                     "name": "Utrecht Science Park tour",
-                    "description": "Op deze manier leer je het USP goed kennen!",
+                    "description": "Om het studiejaar fluitend te beginnen, leer je tijdens deze tour de belangrijkste plekken op het science park kennen. Aankomend jaar zal je veel les hebben op Utrecht Science Park, daarom is het belangrijk om te leren waar je moet zijn :)",
                     "time": "14:00 - 17:00"
                 },
                 {
                     "name": "Walking Dinner",
-                    "description": "Leer de studentenhuiskamer kennen en ontmoet studenten met een lekker hapje eten!",
+                    "description": "Walking Dinner is in de Vagant. De Vagant is een gebouw voor de universiteit waar de wekelijkse borrels van Sticky worden gehouden! Tijdens Walking Dinner kun je gezellig kletsen met mede-eerstejaars en samen avondeten. Er zal verschillend eten en drinken aanwezig zijn. ",
                     "time": "17:00 - 20:00"
                 }
             ]
@@ -155,12 +155,12 @@
             "activities": [
                 {
                     "name": "Lezing",
-                    "description": "Vandaag zal er een lezing zijn op de Universiteit",
+                    "description": "Vandaag zal er een lezing zijn op de universiteit. Deze lezing zal meer informatie geven over je studie.",
                     "time": "11:00 - 13:00"
                 },
                 {
                     "name": "Bowlen",
-                    "description": "De middag afsluiten door een balletje te rollen!",
+                    "description": "Het bowlen is bij Bison Bowling wat goed aansluit bij het thema van de Introductie.",
                     "time": "14:00 - 16:00"
                 }
             ]
@@ -170,17 +170,17 @@
             "activities": [
                 {
                     "name": "ALMS INCA",
-                    "description": "Leer alle commissies binnen Sticky kennen",
+                    "description": "De ALMS is de Actieve Leden Markt van Sticky. Op deze markt staan er leden van alle verschillende commissies om je meer informatie te geven over de commissies. Sticky kent heel veel leuke commissies die allerlei activiteiten organiseren, dus kom vooral langs om kennis te maken! ",
                     "time": "15:00 - 16:30"
                 },
                 {
                     "name": "ALMS INKU",
-                    "description": "Leer alle commissies binnen Sticky kennen",
+                    "description": "De ALMS is de Actieve Leden Markt van Sticky. Op deze markt staan er leden van alle verschillende commissies om je meer informatie te geven over de commissies. Sticky kent heel veel leuke commissies die allerlei activiteiten organiseren, dus kom vooral langs om kennis te maken! ",
                     "time": "16:30 - 18:00"
                 },
                 {
                     "name": "BBQ",
-                    "description": "Een uitgebreide barbecue met vlees en vegetarisch of vegan eten",
+                    "description": "Kom naar de eind barbecue van Sticky met zowel vlees, vegetarisch als vegan eten! Dit is een mooie manier om samen avond te eten en de week goed af te sluiten. ",
                     "time": "18:00 - 21:00"
                 }
             ]
@@ -190,7 +190,7 @@
             "activities": [
                 {
                     "name": "Eindfeest",
-                    "description": "Sluit de introductie af met een gezellig feest!",
+                    "description": "Sluit de introductie af met een groot feest en luid samen met je medestudenten het studiejaar in! ",
                     "time": "20:00-01:00"
                 }
             ]
