@@ -42,7 +42,7 @@
     "kamp": [
         {
             "name": "Kamp",
-            "text": "Kom gezellig mee op introkamp en leer je studiegenoten kennen. Dit is de manier om kennis te maken met de mensen waarmee je komende jaren je studie doet! Het kamp zit vol met leuke activiteiten, zoals karaoke, kampvuur, een themafeest en meer. Daarnaast wordt het eten geregeld door de chef-koks van onze kookcommissie. De heenreis is geregeld vanaf Utrecht Science Park. Meld je zo snel mogelijk aan, voordat de kaartverkoop sluit!\n\nLet op, het kamp is geen ontgroening! Alles mag, niks moet! Dit is puur alleen plezier en elkaar leren kennen.\n\nDe inschrijvingen voor het kamp sluiten op 29 augustus om 17:00. Je kunt je daarna niet meer aanmelden voor het kamp, dus wees er op tijd bij!"
+            "text": "Kom gezellig mee op introkamp en leer je studiegenoten kennen. Dit is de manier om kennis te maken met de mensen waarmee je komende jaren je studie doet! Het kamp zit vol met leuke activiteiten, zoals karaoke, kampvuur, een themafeest en meer. Daarnaast wordt het eten geregeld door de chef-koks van onze kookcommissie. De heenreis is geregeld vanaf Utrecht Science Park. Meld je zo snel mogelijk aan, voordat de kaartverkoop sluit!\n\nLet op, het kamp is geen ontgroening! Alles mag, niks moet! Dit is puur alleen plezier en elkaar leren kennen.\n\nDe inschrijvingen voor het kamp sluiten op 29 augustus om 17:00. Je kunt je daarna niet meer aanmelden voor het kamp, dus wees er op tijd bij!\n\nDe kamp locatie is 'De Hoof' in Someren."
         }
     ],
     "socials": {
@@ -65,7 +65,7 @@
     "programDisclaimer": [
         {
             "name": "Informatie",
-            "text": "De intro is vanaf donderdag 31 augustus tot en met vrijdag 8 september. Hieronder staat hoe de planning eruit zal zien!",
+            "text": "De intro is vanaf donderdag 31 augustus tot en met donderdag 14 september. Hieronder staat hoe de planning eruit zal zien!",
             "textlink": ""
         },
         {
@@ -91,17 +91,37 @@
                 {
                     "name": "Kroegentocht",
                     "description": "Sluit je eerste dag gezellig af terwijl je samen met je mentorgroep de beste kroegen van Utrecht bezoekt!",
-                    "time": "Eigen invulling"
+                    "time": "17:00 - 22:00"
                 }
             ]
         },
         {
-            "name": "1 september tot 3 september",
+            "name": "Vrijdag 1 september",
             "activities": [
                 {
-                    "name": "Kamp",
-                    "description": "Gezellig op kamp met je medestudenten!",
-                    "time": "v.a. 1 september 13:30"
+                    "name": "Kamp dag 1",
+                    "description": "Vertrek naar De Hoof, Karaoke en een feest.",
+                    "time": "Hele dag"
+                }
+            ]
+        },
+        {
+            "name": "Zaterdag 2 september",
+            "activities": [
+                {
+                    "name": "Kamp dag 2",
+                    "description": "Yoga, bootcamp, kampvuur en een themafeest.",
+                    "time": "Hele dag"
+                }
+            ]
+        },
+        {
+            "name": "Zondag 3 september",
+            "activities": [
+                {
+                    "name": "Kamp dag 3",
+                    "description": "Vrije tijd en vertrek terug naar Utrecht.",
+                    "time": "Hele dag"
                 }
             ]
         },
