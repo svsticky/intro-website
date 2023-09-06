@@ -174,9 +174,14 @@
             "name": "Donderdag 7 september",
             "activities": [
                 {
-                    "name": "Lezing",
-                    "description": "Vandaag zal er een lezing zijn op de universiteit. Deze lezing zal meer informatie geven over je studie.",
-                    "time": "11:00 - 13:00"
+                    "name": "Lezing INCA - Minnaerthal",
+                    "description": "Vandaag zal er een lezing zijn voor informatica op de universiteit. Deze lezing zal meer informatie geven over je studie. De lezing wordt gegeven in de hal van het Minaertgebouw op de 1e etage.",
+                    "time": "11:00 - 11:45"
+                },
+                {
+                    "name": "Lezing INKU - Minnaerthal",
+                    "description": "Vandaag zal er een lezing zijn voor informatiekunde op de universiteit. Deze lezing zal meer informatie geven over je studie. De lezing wordt gegeven in de hal van het Minaertgebouw op de 1e etage.",
+                    "time": "12:00 - 12:45"
                 },
                 {
                     "name": "Bowlen",
