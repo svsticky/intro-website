@@ -18,14 +18,14 @@ class Home extends Component {
       <main ref="background">l
         <Menu />
         <div className="ui main container">
-          <div className="video-container">
-           <iframe src="https://www.youtube.com/embed/2QVqjSWKahA" title="themabekendmakingsvideo" frameBorder="0"></iframe>
-          </div>
+          {/*<div className="video-container">*/}
+          {/* <iframe src="https://www.youtube.com/embed/2QVqjSWKahA" title="themabekendmakingsvideo" frameBorder="0"></iframe>*/}
+          {/*</div>*/}
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="welkom"></p>
-              <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie 2023-2024</p>
-              <StaticImage src="../assets/logos/logo.png" alt="Full Introduction logo" className="ui image"></StaticImage>
+              <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie 2024-2025</p>
+              {/*<StaticImage src="../assets/logos/logo.png" alt="Full Introduction logo" className="ui image"></StaticImage>*/}
               {getText(data.introduction)}
             </div>
           </div>
@@ -49,25 +49,25 @@ class Home extends Component {
              <p className="anchor" id="inschrijven"></p>
              <p className="ui center aligned large header">Inschrijving</p>
              {getText(data.register)}
-             <pretix-widget event="https://pretix.svsticky.nl/intro/2023/"></pretix-widget>
-             <noscript>
-               <div className="pretix-widget">
-                     <div className="pretix-widget-info-message">
-                         JavaScript is disabled in your browser. To access our ticket shop without JavaScript,
-                         please <a target="_blank" href="https://pretix.svsticky.nl/intro/2023/">click here</a>.
-                     </div>
-                 </div>
-             </noscript>
-             <p>
-              Je kunt onze privacy statement <a href="https://raw.githubusercontent.com/svsticky/intro-website/intro-2023/src/assets/privacy-statement.md">hier</a> vinden.
-             </p>
+             {/*<pretix-widget event="https://pretix.svsticky.nl/intro/2023/"></pretix-widget>*/}
+             {/*<noscript>*/}
+             {/*  <div className="pretix-widget">*/}
+             {/*        <div className="pretix-widget-info-message">*/}
+             {/*            JavaScript is disabled in your browser. To access our ticket shop without JavaScript,*/}
+             {/*            please <a target="_blank" href="https://pretix.svsticky.nl/intro/2023/">click here</a>.*/}
+             {/*        </div>*/}
+             {/*    </div>*/}
+             {/*</noscript>*/}
+             {/*<p>*/}
+             {/* Je kunt onze privacy statement <a href="https://raw.githubusercontent.com/svsticky/intro-website/intro-2023/src/assets/privacy-statement.md">hier</a> vinden.*/}
+             {/*</p>*/}
            </div>
           </div>
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="programma"></p>
               <p className="ui center aligned large header">Programma</p>
-              {getText(data.programDisclaimer, true)}<br/>
+              {/*{getText(data.programDisclaimer, true)}<br/>*/}
               {getProgram(data.program)}
             </div>
           </div>
@@ -78,13 +78,13 @@ class Home extends Component {
               {getAssociation(data.Associations)}
             </div>
           </div>
-          <div className="ui fluid card">
-            <div className="card content">
-              <p className="anchor" id="hoofdmentoren"></p>
-              <p className="ui center aligned large header">Hoofdmentoren</p>
-              {getMentors(data.Mentors)}
-            </div>
-          </div>
+          {/*<div className="ui fluid card">*/}
+          {/*  <div className="card content">*/}
+          {/*    <p className="anchor" id="hoofdmentoren"></p>*/}
+          {/*    <p className="ui center aligned large header">Hoofdmentoren</p>*/}
+          {/*    {getMentors(data.Mentors)}*/}
+          {/*  </div>*/}
+          {/*</div>*/}
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="faq"></p>

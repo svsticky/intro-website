@@ -6,8 +6,10 @@
 
 main{
   /* TODO: Uncomment after creating new background image */
-  background-image: url("./images/background.jpg");
-  background-attachment: fixed;
+  /*background-image: url("./images/background.jpg");*/
+  /*background-attachment: fixed;*/
+
+  background-color: #61518f;
 }
 
 img.association{
