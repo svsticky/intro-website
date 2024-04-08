@@ -1,0 +1,647 @@
+
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "menu": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "href": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "href"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "href": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "href"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "href": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "href"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "href": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "href"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "href": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "href"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "href": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "href"
+          ]
+        }
+      ]
+    },
+    "introduction": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "text"
+          ]
+        }
+      ]
+    },
+    "register": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "anchor": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "anchor",
+            "text"
+          ]
+        }
+      ]
+    },
+    "programDisclaimer": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            },
+            "textlink": {
+              "type": "string"
+            },
+            "bold": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "textlink"
+          ]
+        }
+      ]
+    },
+    "program": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "activities": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "description",
+                    "time"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "description",
+                    "time"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "activities"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "activities": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "description",
+                    "time"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "activities"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "activities": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "description",
+                    "time"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "description",
+                    "time"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "description",
+                    "time"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "description",
+                    "time"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "activities"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "activities": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "description",
+                    "time"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "activities"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "activities": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "description",
+                    "time"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "description",
+                    "time"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "description",
+                    "time"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "activities"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "activities": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "description",
+                    "time"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "description",
+                    "time"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "activities"
+          ]
+        }
+      ]
+    },
+    "Associations": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            },
+            "textlink": {
+              "type": "string"
+            },
+            "photo": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "text",
+            "textlink",
+            "photo",
+            "link"
+          ]
+        }
+      ]
+    },
+    "Mentors": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "real_name": {
+              "type": "string"
+            },
+            "photo": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "real_name",
+            "photo",
+            "text"
+          ]
+        }
+      ]
+    },
+    "FAQ": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "question": {
+              "type": "string"
+            },
+            "answer": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "question",
+            "answer"
+          ]
+        }
+      ]
+    },
+    "contactPersons": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "mobile": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "type",
+            "mobile",
+            "email"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "menu",
+    "introduction",
+    "register",
+    "programDisclaimer",
+    "program",
+    "Associations",
+    "Mentors",
+    "FAQ",
+    "contactPersons"
+  ]
+}
+

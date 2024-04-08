@@ -5,12 +5,20 @@
             "href": "#welkom"
         },
         {
+            "name": "Socials",
+            "href": "#socials"
+        },
+        {
+            "name": "Inschrijving",
+            "href": "#inschrijven"
+        },
+        {
             "name": "Programma",
             "href": "#programma"
         },
         {
-            "name": "Verenigingen",
-            "href": "#verenigingen"
+            "name": "Vereniging",
+            "href": "#vereniging"
         },
         {
             "name": "Hoofdmentoren",
@@ -28,121 +36,187 @@
     "introduction": [
         {
             "name": "Welkom",
-            "text": "Hallo toekomstige ICT’er!\n\nAl meer dan 15 maanden zitten we met zijn allen zo goed als binnen. Die extra vrije tijd was in het begin nog wel leuk, maar inmiddels snakken we allemaal weer naar wat fysiek contact. Al die gesprekken via Zoom of Teams komen onze neus uit en na een digitaal eindexamenjaar verdienen jullie wel weer wat gezelligheid. Dat is precies waar we in september voor gaan: twee weken gezelligheid, nieuwe mensen leren kennen en een goed begin van je studie. Fysiek of niet, we maken er met zijn allen een geweldige introductie van!\n\nZie je in september!\n\nTieke\nVoorzitter introductie 2021-2022"
+            "text": "Hallo toekomstige ICT’er!\n\nStudievereniging Sticky gaat voor jullie dit jaar een spectaculaire introductie neerzetten. De introductie zal plaatsvinden vanaf eind augustus tot begin september. In deze anderhalve week zullen er leuke en leerzame activiteiten worden georganiseerd. Tijdens de introductie proberen wij een paar doelen te bereiken: jullie kennis te laten maken met je medestudenten, je op weg te helpen met een goede start maken met je studie en jullie natuurlijk een heel gezellige tijd bezorgen. Ik hoop dat jullie allemaal net zo enthousaist zijn als wij voor de introductie, mis hem dus niet!\n\nWij van de introductie commissie hopen jullie allemaal te zien op 31 augustus! \n\nAntoine \nVoorzitter introductie commissie 2023-2024"
         }
     ],
+    "kamp": [
+        {
+            "name": "Kamp",
+            "text": "Kom gezellig mee op introkamp en leer je studiegenoten kennen. Dit is de manier om kennis te maken met de mensen waarmee je komende jaren je studie doet! Het kamp zit vol met leuke activiteiten, zoals karaoke, kampvuur, een themafeest en meer. Daarnaast wordt het eten geregeld door de chef-koks van onze kookcommissie. De heenreis is geregeld vanaf Utrecht Science Park. Meld je zo snel mogelijk aan, voordat de kaartverkoop sluit!\n\nLet op, het kamp is geen ontgroening! Alles mag, niks moet! Dit is puur alleen plezier en elkaar leren kennen.\n\nDe inschrijvingen voor het kamp sluiten op 29 augustus om 17:00. Je kunt je daarna niet meer aanmelden voor het kamp, dus wees er op tijd bij!\n\nDe kamp locatie is 'De Hoof' in Someren."
+        }
+    ],
+    "socials": {
+        "description": "Houd onze social media in te gaten voor frequente updates over de introductie!",
+        "items": [
+            {
+                "name": "Instagram",
+                "linkTo": "https://www.instagram.com/stickyutrecht/",
+                "icon": "instagram.svg"
+            }
+        ]
+    },
     "register": [
         {
             "name": "Inschrijven",
             "anchor": "inschrijven",
-            "text": "Schrijf je hieronder in voor de introductie!"
+            "text": "Als je ingeschreven staat voor een van de studies sta je automatisch ingeschreven voor het algemene deel van de introductie. Je moet je echter voor sommige activiteiten zelf inschrijven en een kaartje kopen. Dit kun je hier doen. \n\nLet op, de inschrijving voor kamp sluit op 29 augustus om 17:00. De inschrijvingen voor de overige activiteiten sluiten de dag voor de betreffende activiteit om 23:59. Wees er op tijd bij!"
         }
     ],
     "programDisclaimer": [
         {
             "name": "Informatie",
-            "text": "De intro is vanaf maandag 6 september tot en met donderdag 16 september. Hieronder staat hoe de planning eruit zal zien!",
+            "text": "De intro is vanaf donderdag 31 augustus tot en met donderdag 14 september. Hieronder staat hoe de planning eruit zal zien!",
             "textlink": ""
+        },
+        {
+            "text": "Let op: Deze informatie kan nog veranderen, houd de website in de gaten!",
+            "textlink": "",
+            "bold": true
         }
     ],
     "program": [
         {
-            "name": "Maandag 6 September",
+            "name": "Donderdag 31 augustus",
             "activities": [
                 {
-                    "name": "Opening",
-                    "description": "Hier leer je je mentorgroepje kennen!",
-                    "time": "T.B.D."
+                    "name": "Opening introductie - Minnaerthal",
+                    "description": "Start je introductie gezamenlijk en ontmoet je mentoren. Je mentoren zullen je begeleiden voor de rest van de introductie samen met andere eerstejaars van je groep! Daarnaast geeft de opleidingsdirecteur van Informatiekunde een welkomstpraatje. De opening vindt plaats in de Minnartgebouw op de eerste etage.",
+                    "time": "09:00 - 11:00"
                 },
                 {
-                    "name": "Utrecht Science Park spel",
-                    "description": "Op deze manier leer je de USP goed kennen!",
-                    "time": "T.B.D."
+                    "name": "Crazy 88",
+                    "description": "Je gaat Utrecht leren kennen! De Crazy88 brengt je langs de leukste plekken in Utrecht en dit is een goede manier om je groepje beter te leren kennen.",
+                    "time": "13:00 - 17:00"
                 },
                 {
-                    "name": "Uiteten met mentorgroepje, eerste avond",
-                    "description": "Gezellig eten met je mentor broertjes en zusjes om elkaar te leren kennen.",
-                    "time": "T.B.D."
+                    "name": "Kroegentocht",
+                    "description": "Sluit je eerste dag gezellig af terwijl je samen met je mentorgroep de beste kroegen van Utrecht bezoekt!",
+                    "time": "17:00 - 22:00"
                 }
             ]
         },
         {
-            "name": "Dinsdag 7 September",
+            "name": "Vrijdag 1 september",
             "activities": [
                 {
-                    "name": "Crazy'88",
-                    "description": "Genoeg geleerd over de USP, nu ga je Utrecht leren kennen! De Crazy'88 brengt je langs de leukste plekken!",
-                    "time": "T.B.D."
+                    "name": "Kamp dag 1",
+                    "description": "Vertrek naar De Hoof, Karaoke en een feest.",
+                    "time": "Hele dag"
+                }
+            ]
+        },
+        {
+            "name": "Zaterdag 2 september",
+            "activities": [
+                {
+                    "name": "Kamp dag 2",
+                    "description": "Yoga, bootcamp, kampvuur en een themafeest.",
+                    "time": "Hele dag"
+                }
+            ]
+        },
+        {
+            "name": "Zondag 3 september",
+            "activities": [
+                {
+                    "name": "Kamp dag 3",
+                    "description": "Vrije tijd en vertrek terug naar Utrecht.",
+                    "time": "Hele dag"
+                }
+            ]
+        },
+        {
+            "name": "Maandag 4 september",
+            "activities": [
+                {
+                    "name": "Introductiecollege",
+                    "description": "Welkomstwoord vanuit de studie. In dit college leer je meer over je studie en het verloop van je jaar.",
+                    "time": "11:00 - 12:45"
                 },
                 {
-                    "name": "Uiteten met mentorgroepje, tweede avond",
-                    "description": "Een tweede avond om gezellig te eten met je mentor broertjes en zusjes om elkaar te leren kennen. Hierna zal de kroegenavond plaatsvinden!",
-                    "time": "T.B.D."
+                    "name": "Tutorkennismakingen",
+                    "description": "Leer je stutor en andere eerstejaars uit je stutorgroep kennen! Je stutor kan je meer vertellen over je studieverloop en helpt je op weg met je studie, ook voor de rest van het jaar.",
+                    "time": "13:00 - 13:30"
                 },
                 {
-                    "name": "Kroegenavond",
-                    "description": "Sluit de dag gezellig af met een drankje bij één van Utrechts beste kroegen.",
-                    "time": "T.B.D."
+                    "name": "Utrecht Science Park tour",
+                    "description": "Om het studiejaar fluitend te beginnen, leer je tijdens deze tour de belangrijkste plekken op het science park kennen. Aankomend jaar zal je veel les hebben op Utrecht Science Park, daarom is het belangrijk om te leren waar je moet zijn :)",
+                    "time": "14:00 - 17:00"
+                },
+                {
+                    "name": "Walking Dinner",
+                    "description": "Walking Dinner is in de Vagant. De Vagant is een gebouw voor de universiteit waar de wekelijkse borrels van Sticky worden gehouden! Tijdens Walking Dinner kun je gezellig kletsen met mede-eerstejaars en samen avondeten. Er zal verschillend eten en drinken aanwezig zijn. ",
+                    "time": "17:00 - 20:00"
                 }
             ]
         },
         {
-            "name": "Woensdag 8 September",
+            "name": "Dinsdag 5 september",
             "activities": [
                 {
-                    "name": "Rustdag en online gezelligheid",
-                    "description": "Eventjes herstellen van een dag avontuur in Utrecht. 's avonds kan je meedoen aan de online activiteiten zoals Jackbox, skribble of csgo.",
-                    "time": "T.B.D."
+                    "name": "Colleges INKU",
+                    "description": "Vandaag zijn er colleges op de universiteit",
+                    "time": "09:00 - 17:00"
                 }
             ]
         },
         {
-            "name": "Donderdag 9 September",
+            "name": "Woensdag 6 september",
             "activities": [
                 {
-                    "name": "Introlympics endgame",
-                    "description": "Hier wordt bewezen welke spelen het beste zijn! Wat we precies gaan doen zal in de aanloop van de intro bekend gemaakt worden. ",
-                    "time": "T.B.D."
+                    "name": "Colleges INCA",
+                    "description": "Vandaag zijn er colleges op de universiteit",
+                    "time": "09:00 - 17:00"
                 }
             ]
         },
         {
-            "name": "Vrijdag 10 September",
+            "name": "Donderdag 7 september",
             "activities": [
                 {
-                    "name": "Dierenpark",
-                    "description": "Haal je innerlijke Freek Vonk naar boven en bewonder alle mooie dieren in Dierenpark Amersfoort!",
-                    "time": "T.B.D."
+                    "name": "Lezing INCA - Minnaerthal",
+                    "description": "Vandaag zal er een lezing zijn voor informatica op de universiteit. Deze lezing zal meer informatie geven over je studie. De lezing wordt gegeven in de hal van het Minaertgebouw op de 1e etage.",
+                    "time": "11:00 - 11:45"
+                },
+                {
+                    "name": "Lezing INKU - Minnaerthal",
+                    "description": "Vandaag zal er een lezing zijn voor informatiekunde op de universiteit. Deze lezing zal meer informatie geven over je studie. De lezing wordt gegeven in de hal van het Minaertgebouw op de 1e etage.",
+                    "time": "12:00 - 12:45"
+                },
+                {
+                    "name": "Bowlen",
+                    "description": "Het bowlen is bij Bison Bowling wat goed aansluit bij het thema van de Introductie.",
+                    "time": "14:00 - 16:00"
                 }
             ]
         },
         {
-            "name": "Maandag 13 September",
+            "name": "Vrijdag 8 september",
             "activities": [
                 {
-                    "name": "ALFAS (Actieve Leden Festival)",
-                    "description": "Leer de super toffe studieverenigingen en hun keigave commissies kennen!",
-                    "time": "T.B.D."
+                    "name": "ALMS INCA",
+                    "description": "De ALMS is de Actieve Leden Markt van Sticky. Op deze markt staan er leden van alle verschillende commissies om je meer informatie te geven over de commissies. Sticky kent heel veel leuke commissies die allerlei activiteiten organiseren, dus kom vooral langs om kennis te maken! ",
+                    "time": "15:00 - 16:30"
+                },
+                {
+                    "name": "ALMS INKU",
+                    "description": "De ALMS is de Actieve Leden Markt van Sticky. Op deze markt staan er leden van alle verschillende commissies om je meer informatie te geven over de commissies. Sticky kent heel veel leuke commissies die allerlei activiteiten organiseren, dus kom vooral langs om kennis te maken! ",
+                    "time": "16:30 - 18:00"
+                },
+                {
+                    "name": "BBQ",
+                    "description": "Kom naar de eind barbecue van Sticky met zowel vlees, vegetarisch als vegan eten! Dit is een mooie manier om samen avond te eten en de week goed af te sluiten. ",
+                    "time": "18:00 - 21:00"
                 }
             ]
         },
         {
-            "name": "Dinsdag 14 en Woensdag 15 September",
+            "name": "Donderdag 14 september",
             "activities": [
                 {
-                    "name": "Poolen/lezing",
-                    "description": "Gezellig poolen met je mentorgroep, onder het genot van een drankje! In deze week heb je al colleges, maar afhankelijk van je studie ben je een van deze dagen vrij.",
-                    "time": "T.B.D."
-                }
-            ]
-        },
-        {
-            "name": "Donderdag 16 September",
-            "activities": [
-                {
-                    "name": "Afsluitende BBQ",
-                    "description": "Alweer de laatste activiteit van de intro, maar vrees niet we sluiten af met een gezamenlijke BBQ en borrel! ",
-                    "time": "T.B.D."
+                    "name": "Eindfeest",
+                    "description": "Sluit de introductie af met een groot feest en luid samen met je medestudenten het studiejaar in! ",
+                    "time": "20:00-01:00"
                 }
             ]
         }
@@ -150,73 +224,68 @@
     "Associations": [
         {
             "name": "Sticky",
-            "text": "Sticky is de studievereniging voor informatica, gametechnologie en informatiekunde. Het is dé plek om buiten je colleges je studiegenoten op een informele manier te leren kennen. Sticky organiseert wekelijks vele soorten activiteiten, van filmavonden tot themaborrels, en van LAN-parties tot culturele uitstapjes naar het buitenland. Daarnaast biedt Sticky ondersteuning bij je studie, bijvoorbeeld via het opzetten van hulpmiddagen, waar ouderejaars studenten je door de moeilijkste vakken kunnen helpen, en door het aanbieden van korting op je studieboeken. Kijk vooral eens een keer op svsticky.nl voor meer informatie!\nInschrijven bij Sticky kost je eenmalig €7,50 en kan via ",
+            "text": "Sticky is de studievereniging voor informatica, gametechnologie en informatiekunde. Het is dé plek om buiten je colleges je studiegenoten op een informele manier te leren kennen. Sticky organiseert wekelijks vele soorten activiteiten, van filmavonden tot themaborrels, en van LAN-parties tot culturele uitstapjes naar het buitenland. Daarnaast biedt Sticky ondersteuning bij je studie, bijvoorbeeld via het opzetten van hulpmiddagen, waar ouderejaars studenten je door de moeilijkste vakken kunnen helpen, en door het aanbieden van korting op je studieboeken. Kijk vooral eens een keer op <a href='https://svsticky.nl'>svsticky.nl</a> voor meer informatie!\nInschrijven bij Sticky kost je eenmalig €7,50 en kan via ",
             "textlink": "https://intro.svsticky.nl",
             "photo": "sticky.png",
             "link": "https://svsticky.nl/"
-        },
-        {
-            "name": "A-Eskwadraat",
-            "text": "A–Eskwadraat is de studievereniging voor studenten van de studies Natuur- en Sterrenkunde, Wiskunde, Informatiekunde, Informatica en Gametechnologie. Lid worden van A–Eskwadraat kost je eenmalig €12,50, maar dan ben je voor de rest van je studententijd lid. Commissies binnen de vereniging organiseren een hoop leuke activiteiten. Zo zijn er borrels, feesten, sporttoernooien, symposia, studiereizen en is er een eerstejaarsweekend. Naast het deelnemen aan deze activiteiten kun je ze natuurlijk ook zelf organiseren. Daar kun je naast dat het leuk is, ontzettend veel van leren. Bovenal is het heel erg gezellig en leer je op deze manier snel nieuwe mensen kennen! Voor meer informatie over A–Eskwadraat kun je kijken op: ",
-            "textlink": "https://www.a-eskwadraat.nl/vereniging/scholieren",
-            "photo": "aes.png",
-            "link": "https://www.a-eskwadraat.nl/"
         }
     ],
     "Mentors": [
-	    {
-		    "name": "Boarder Baukje",
-            "real_name": "Yfke Smit",
-		    "photo": "yfke.jpg",
-		    "text": "Er staat uiteraard maar één sport bovenaan op de berg, en dat is snowboarden. Het is namelijk erg lastig om met zo’n plank naar boven te komen, en keihard naar beneden gaan is natuurlijk veel leuker. Voor ons snowboarders is dat snowboard en wij gewoon twee handen op één Baukje. Hier in Nederland, het meest bergachtige gebied van Europa, is goed kunnen snowboarden niet vanzelfsprekend, maar hieruit spreekt juist onze daadkrachtigheid om de beste te willen zijn!\nDe andere kleuren kunnen de winst wel op hun Baukje schrijven, want alle pogingen om ons te vernederen ontwijken wij met onze soepele bochten. Als anderen in de weg staan dan springen wij er over heen met een dubbele backflip, en als ze nou nog niet doorhebben dat wij gaan winnen dan hebben ze echt een snowboard voor hun kop. Zo’n intense strijd gaat je natuurlijk niet in de koude kleren zitten, maar zodra wij het strijdveld betreden weet ik zeker dat de andere kleuren de winst als sneeuw voor de zon zullen zien verdwijnen!"
-	    },
         {
-		    "name": "Mega Mees",
-            "real_name": "Mees Hoving",
-		    "photo": "mees.jpg",
-		    "text": "Je zou er bijna in slaap van vallen hoe mega saai en soft sommige sporten kunnen zijn. Wat mij betreft mag er wel iets meer POWER in. Wij ijshockeyers zijn niet bang voor een stoot of kras. Zo groot als wij er uit zien zo mega groot zal onze overwinning dan ook zeker zijn. Bij het ijshockeyen zijn we niet alleen bezig met onze kracht en de snelheid van onze puck. Wij koude hockeyers staan namelijk ook bekend om onze strategische inzichten en teambuilding. Als wij dus goed samenwerken weet ik zeker dat dit appeltje ijsje is. Laten we er met zijn allen voor zorgen dat de de andere sporten compleet in de kou staan en bevriezen. Ook dit gaat met onze ijskoude moves zeker lukken. Dus pak je helm en pak je stick, want wij winnen dit dik!"
-	    },
+            "name": "Avatar (Br)aang",
+            "real_name": "Bram de Haas",
+            "photo": "bram.jpeg",
+            "text": "Als meester van alle elementen en de laatst overgebleven air-bender, sta ik in volle glorie paraat om team lucht naar ongekende hoogten te leiden tijdens deze epische introductieweek!\nNadenken voordat we handelen? Daar doen we niet aan. Mijn motto is duidelijk: hoe meer chaos, hoe beter mijn week verloopt!\nDe strijd tegen de andere teams - water, vuur en aarde - zal uitdagend zijn, maar ik weet zeker dat we ze volledig omver gaan blazen! We zien onze tegenstanders als waardige concurrenten, maar we zijn vastbesloten om te laten zien dat lucht het ultieme element der elementen is. Met onze snelheid, wendbaarheid en doorzettingsvermogen gaan we het de andere teams niet makkelijk maken en we geven ze de wind van voren!\n\nMaak je klaar om de strijd aan te gaan en jezelf mee te laten voeren op de bries van avontuur tijdens deze onvergetelijke introductie!!"
+        },
         {
-		    "name": "Ice Ice Milan",
-            "real_name": "Milan Kremers",
-		    "photo": "milan.jpg",
-		    "text": "Op de vraag wat de beste sport is, is natuurlijk maar één goed antwoord: Kunstschaatsen. Alle andere sporten zijn lomp, pijnlijk of saai en je komt er helemaal vies en rood uit. Maar niet kunstschaatsen, er wordt met ons gegooid (of we gooien met mensen), we lanceren onszelf meters de lucht in, we doorstaan de kou in koude en (vooral voor vrouwen) korte kleding en dit alles doen we zonder rood hoofd of vieze zichtbare zweetplekken.\nWij bepalen volledig onze eigen score, en ik verwacht niets minder dan een dikke vette 10 als eindbeoordeling. Door zelf al onze pasjes zo precies en synchroon mogelijk te doen kunnen de andere sporten er niets aan doen dat wij als winnaars uit de intro strijd gaan komen.\nHet kan niet anders dan dat wij met één been in de lucht als eerste over de finishlijn schaatsen!"
-	    }
+            "name": "Korra",
+            "real_name": "Kim van Dalen",
+            "photo": "kim.jpg",
+            "text": "Wie kent ze niet, onze geliefde superhelden Aquaman, Elsa, watermeisje en Spongebob. Dit zijn slechts een paar namen die de wereld redden met hun super waterkrachten. Binnenkort wordt aan dit lijstje ook mijn naam toegevoegd, Korra. De enige avatar speciaal genoeg voor haar eigen spin-off met haar roots natuurlijk in waterbending. In welk seizoen jij je ook een vis in het water voelt, team blauw heeft altijd wel wat leuks te bieden. Water is net als popcorn: zout of zoet, maakt niet uit, het is allebei goed. Van waterijsjes tot sneeuwballengevechten, het wordt allemaal mogelijk gemaakt door water. Zelfs alle grote sporten hebben een waterelement: ijshockey, zwemmen, flunkyball, beerpong, noem het maar op. Of je nu zo wild bent als een woeste zee of zo kalm als een bergbeekje, wij watermensen staan voor elkaar klaar. Wij zullen nooit water bij de wijn doen en daarom is team blauw het beste! Veel succes gewenst aan de andere elementen om hun hoofd boven water te houden."
+        },
+        {
+            "name": "Kyoshi",
+            "real_name": "Tieeny Chao",
+            "photo": "tieeny.jpeg",
+            "text": "Hallo, ik ben Tieeny Chao, maar mijn ware identiteit is Kyoshi. Dit jaar heb ik de eer om Kyoshi te zijn, de Avatar van Aarde. Als Kyoshi vertegenwoordig ik de ongeëvenaarde kracht van de aarde en ben ik vastberaden om te bewijzen dat de aarde superieur is aan alle andere elementen!\n\nDe aarde is een onverwoestbare kracht die alles kan dragen en verankeren. Mijn team en ik zullen als één geheel bewegen, als een machtige aardverschuiving die alles op zijn pad verplettert.\n\nOns element mag dan langzaam en geduldig lijken, maar onderschat nooit de kracht van stabiliteit en standvastigheid. Terwijl anderen hoog vliegen of in vuur en vlam staan, zullen wij stevig op de grond staan en triomferen.\n\nMet onwrikbare vastberadenheid en de kracht van de aarde zullen we alle obstakels overwinnen die op onze weg komen. We laten zien dat aarde niet alleen beter is dan de rest, maar dat het de onbetwiste kampioen is!"
+        },
+        {
+            "name": "Roku",
+            "real_name": "Mervin de Jong",
+            "photo": "mervin.jpg",
+            "text": "Vuur, by far het krachtigste en het beste element onder de vier elementen. Vuur is het element waar de mensheid mee is begonnen. Vuur brengt licht en warmte, en vuur brengt vernietiging en destructie. Wij als Vuurnatie gaan elke kans om de competitie te winnen dubbel en dwars vernietigen en hun dromen van een eerste plek in rook op laten gaan. Met onze passie, kracht en energie zetten wij elke activiteit in vuur en vlam, en zal bij de andere teams snel het lichtje gaan branden dat met de Vuurnatie niet te spotten valt. Toch zullen zij allemaal hetzelfde zeggen en beweren dat zij zullen gaan winnen, maar dat gooit bij ons alleen maar olie op het vuur. Wij vuurmeesters staan aan de top zodra de strijd zal ontbranden!"
+        }
     ],
     "FAQ": [
         {
             "question": "Wanneer is de introductie?",
-            "answer": "De intro vindt plaats van maandag 6 september tot en met donderdag 16 september."
+            "answer": "De intro vindt plaats van donderdag 31 augustus tot en met donderdag 14 september."
         },
         {
-            "question": "Wat gaan we doen?",
-            "answer": "Dat is voor nu nog geheim! Houdt het programma op de website in de gaten."
+            "question": "Mag ik drugs en/of alcohol meenemen?",
+            "answer": "Drugs zijn NIET toegestaan tijdens de introductie, waar alcohol van toepassing is zal dit door ons aangeboden worden. Zelf meenemen is niet toegestaan. Alcohol wordt alleen aan 18+ studenten geschonken."
+        },
+        {
+            "question": "Wat als ik niet weet waar ik moet zijn?",
+            "answer": "De mentoren zijn altijd op de hoogte van waar je moet zijn. Je kunt contact met hen opnemen. Daarnaast zal er tijdens de gehele introductie een centrale post (de CePo) zijn, waar altijd iemand van de introductiecommissie is te vinden die je weer op weg kan helpen. De CePo is grotendeels van de tijd waarschijnlijk te vinden in het Buys Ballot Gebouw (BBG), waar ook de studievereniging te vinden is."
+        },
+        {
+            "question": "Waar kan ik mijn studentnummer vinden?",
+            "answer": "Bij het inschrijven voor je studie heb je van Studielink een e-mail gekregen met daarin je studentnummer. Het makkelijkste is dus om even te zoeken in je mailbox naar het contact wat je met Studielink hebt gehad. Daarnaast heb je van de Universiteit Utrecht een Solis-id gekregen. Dit nummer is hetzelfde als je studentnummer."
         }
     ],
     "contactPersons": [
         {
-            "name": "Marian Biekart",
-            "type": "Secretaris",
-            "mobile": "+31 6 21948326",
-            "email": "secretaris@intro-cs.nl"
+            "name": "Jelte van den Akker",
+            "email": "secretaris@intro-cs.nl",
+            "mobile": "+31 6 1425096",
+            "type": "Secretaris"
         },
         {
-            "name": "Tieke Stellingwerf",
-            "type": "Voorzitter",
-            "mobile": "+31 6 25491539",
-            "email": "voorzitter@intro-cs.nl"
-        },
-        {
-            "name": "Luc Blankestijn",
-            "type": "Commissaris IT",
-            "mobile": "+31 6 43019258",
-            "email": "it@intro-cs.nl"
-        },
-        {
-            "name": "Bjorn van Dijen",
-            "type": "Commissaris Mentor/helpers",
-            "mobile": "+31 6 46556075",
-            "email": "mentoren@intro-cs.nl"
+            "name": "Antoine Bertram",
+            "email": "voorzitter@intro-cs.nl",
+            "mobile": "+31 6 83576016",
+            "type": "Voorzitter"
         }
     ]
 }

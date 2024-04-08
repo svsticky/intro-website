@@ -8,53 +8,73 @@ import Text from './Text.jsx';
 import Association from './Association.jsx';
 import Menu from './Menu.jsx';
 import '../assets/home.css';
-import full_logo from '../assets/logos/full_logo.png'
+import full_logo from '../assets/logos/logo.png'
+import Social from "./Social";
+import {StaticImage} from "gatsby-plugin-image";
 
 class Home extends Component {
   render() {
     return (
-      <main ref="background">
+      <main ref="background">l
         <Menu />
         <div className="ui main container">
           <div className="video-container">
-            <iframe src="https://www.youtube.com/embed/iidprx_t8E8" title="themabekendmakingsvideo" frameBorder="0"></iframe>
+           <iframe src="https://www.youtube.com/embed/2QVqjSWKahA" title="themabekendmakingsvideo" frameBorder="0"></iframe>
           </div>
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="welkom"></p>
-              <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie 2021</p>
-              <img alt="Full Introduction logo" className="ui image" src={full_logo}/>
+              <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie 2023-2024</p>
+              <StaticImage src="../assets/logos/logo.png" alt="Full Introduction logo" className="ui image"></StaticImage>
               {getText(data.introduction)}
             </div>
           </div>
           <div className="ui fluid card">
             <div className="card content">
-              <p className="anchor" id="inschrijven"></p>
-              <p className="ui center aligned large header">Inschrijving</p>
-              {getText(data.register)}
-              <pretix-widget event="https://pretix.svsticky.nl/intro/2021/"></pretix-widget>
-              <noscript>
-                <div class="pretix-widget">
-                      <div class="pretix-widget-info-message">
-                          JavaScript is disabled in your browser. To access our ticket shop without JavaScript,
-                          please <a target="_blank" href="https://pretix.svsticky.nl/intro/2021/">click here</a>.
-                      </div>
-                  </div>
-              </noscript>
+              <p className="anchor" id="kamp"></p>
+              <p className="ui center aligned large header">Kamp</p>
+              {getText(data.kamp)}
             </div>
+          </div>
+          <div className="ui fluid card">
+            <div className="card content">
+              <p className="anchor" id="socials"></p>
+              <p className="ui center aligned large header">Bekijk ook onze social media</p>
+              <p className="ui center aligned">{data.socials.description}</p>
+              {getSocials(data.socials.items)}
+            </div>
+          </div>
+          <div className="ui fluid card">
+           <div className="card content">
+             <p className="anchor" id="inschrijven"></p>
+             <p className="ui center aligned large header">Inschrijving</p>
+             {getText(data.register)}
+             <pretix-widget event="https://pretix.svsticky.nl/intro/2023/"></pretix-widget>
+             <noscript>
+               <div className="pretix-widget">
+                     <div className="pretix-widget-info-message">
+                         JavaScript is disabled in your browser. To access our ticket shop without JavaScript,
+                         please <a target="_blank" href="https://pretix.svsticky.nl/intro/2023/">click here</a>.
+                     </div>
+                 </div>
+             </noscript>
+             <p>
+              Je kunt onze privacy statement <a href="https://raw.githubusercontent.com/svsticky/intro-website/intro-2023/src/assets/privacy-statement.md">hier</a> vinden.
+             </p>
+           </div>
           </div>
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="programma"></p>
               <p className="ui center aligned large header">Programma</p>
-              {getText(data.programDisclaimer)}<br/>
+              {getText(data.programDisclaimer, true)}<br/>
               {getProgram(data.program)}
             </div>
           </div>
           <div className="ui fluid card">
             <div className="card content">
-              <p className="anchor" id="verenigingen"></p>
-              <p className="ui center aligned large header">Verenigingen</p>
+              <p className="anchor" id="vereniging"></p>
+              <p className="ui center aligned large header">De vereniging</p>
               {getAssociation(data.Associations)}
             </div>
           </div>
@@ -86,34 +106,47 @@ class Home extends Component {
   }
   
   componentDidMount() {
-    window.addEventListener('scroll', this.parallax, true);
     this.background = React.createRef();
-  }
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.parallax);
-  }
+    // Pretix
+    const script = document.createElement('script');
+    script.src = "https://pretix.eu/widget/v1.en.js";
+    script.async = true;
 
-  //handle parallax scrolling
-  parallax = () => {
-    var scrollHeight = window.scrollY;
-    var parallax = this.refs.background;
-    parallax.style["margin-top"] = -scrollHeight/7 + "px";
-    parallax.style["padding-top"] = scrollHeight/7 + "px";
+    const link = document.createElement('link');
+    link.href = "https://pretix.eu/demo/democon/widget/v1.css";
+    link.rel = "stylesheet";
+    link.type = "text/css";
+
+    document.body.appendChild(link);
+    document.body.appendChild(script);
   }
 }
 
-const getText = texts =>{
+const getSocials = socials => {
+  return (
+      <div className="ui row center aligned">
+        {
+          socials.map((social, index) => (
+              <Social social={social} key={index}></Social>
+          ))
+        }
+      </div>
+  )
+}
+
+const getText = texts => {
   return(
     <div className="ui">
       {
         texts.map((text, index)=>(
-          <Text text={text} key={index}/>
+          <Text text={text} key={index} />
         ))
       }
     </div>
   )
 }
+
 const getProgram = dates =>{
   return(
     <div className="ui">

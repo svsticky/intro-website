@@ -11,13 +11,6 @@ const Menu = () => (
     <div className="ui computer only row">
       <div className="ui inverted fixed pointing menu">
         <div className="ui center aligned container">
-          <a className="item" href="#">
-            <img
-              className="ui mini image"
-              src={logo}
-              alt="logo"
-            />
-          </a>
           {
             data.menu.map((item, index) => (
               <MenuItem item={item} key={index} />

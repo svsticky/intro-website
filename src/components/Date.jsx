@@ -7,16 +7,14 @@ const Date = ({ date }) => (
         {
             date.activities.map((activity, index) =>(
                 <div className = "ui row" key={index}>
-                    {/* tijdelijk nog niet nodig, wel voor vrijdag 9 juli
                     <div className = "ui three wide column">
                         <p>{activity.time}</p>
                     </div>
-                    */}
                     <div className = "ui five wide column">
                         <p>{activity.name}</p>
                     </div>
-                    <div className = "ui ten wide column">
-                        <p>{activity.description}</p>
+                    <div className = "ui six wide column">
+                       <p>{activity.description}</p>
                     </div>
                 </div>
             ))

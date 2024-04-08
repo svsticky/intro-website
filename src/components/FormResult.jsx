@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import $ from "jquery";
 import '../assets/inschrijven.css';
-import data from "./data";
+import data from "./data.json";
 
 class FormResult extends Component {
   render() {
