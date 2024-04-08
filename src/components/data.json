@@ -105,15 +105,15 @@
     ],
     "contactPersons": [
         {
-            "name": "Jelte van den Akker",
+            "name": "Annemiek Tigchelaar",
             "email": "secretaris@intro-cs.nl",
-            "mobile": "+31 6 1425096",
+            "mobile": "+31 6 13696801",
             "type": "Secretaris"
         },
         {
-            "name": "Antoine Bertram",
+            "name": "Hanna Mock",
             "email": "voorzitter@intro-cs.nl",
-            "mobile": "+31 6 83576016",
+            "mobile": "+31 6 86605424",
             "type": "Voorzitter"
         }
     ]
