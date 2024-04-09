@@ -125,12 +125,6 @@
         {
           "type": "object",
           "properties": {
-            "name": {
-              "type": "string"
-            },
-            "anchor": {
-              "type": "string"
-            },
             "text": {
               "type": "string"
             }
@@ -149,9 +143,6 @@
         {
           "type": "object",
           "properties": {
-            "name": {
-              "type": "string"
-            },
             "text": {
               "type": "string"
             },
@@ -533,9 +524,6 @@
               "type": "string"
             },
             "text": {
-              "type": "string"
-            },
-            "textlink": {
               "type": "string"
             },
             "photo": {

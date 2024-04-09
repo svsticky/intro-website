@@ -6,7 +6,7 @@ const Association = ({ association }) => (
         <a href={association.link}>
             <img className="ui right floated medium spaced image association" src='https://public.svsticky.nl/logos/logo_compact_outline_kleur.svg' alt={association.name}/>
         </a>
-        <p><div dangerouslySetInnerHTML={{ __html: association.text}}></div> <a href={association.textlink}>{association.textlink.substring(8)}</a></p>
+        <div dangerouslySetInnerHTML={{ __html: association.text}} />
     </div>
 
 );
