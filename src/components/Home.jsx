@@ -15,7 +15,7 @@ import {StaticImage} from "gatsby-plugin-image";
 class Home extends Component {
   render() {
     return (
-      <main ref="background">l
+      <main ref="background">
         <Menu />
         <div className="ui main container">
           {/*<div className="video-container">*/}
@@ -32,7 +32,6 @@ class Home extends Component {
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="kamp"></p>
-              <p className="ui center aligned large header">Kamp</p>
               {getText(data.kamp)}
             </div>
           </div>
@@ -45,30 +44,31 @@ class Home extends Component {
             </div>
           </div>
           <div className="ui fluid card">
-           <div className="card content">
-             <p className="anchor" id="inschrijven"></p>
-             <p className="ui center aligned large header">Inschrijving</p>
-             {getText(data.register)}
-             {/*<pretix-widget event="https://pretix.svsticky.nl/intro/2023/"></pretix-widget>*/}
-             {/*<noscript>*/}
-             {/*  <div className="pretix-widget">*/}
-             {/*        <div className="pretix-widget-info-message">*/}
-             {/*            JavaScript is disabled in your browser. To access our ticket shop without JavaScript,*/}
-             {/*            please <a target="_blank" href="https://pretix.svsticky.nl/intro/2023/">click here</a>.*/}
-             {/*        </div>*/}
-             {/*    </div>*/}
-             {/*</noscript>*/}
-             {/*<p>*/}
-             {/* Je kunt onze privacy statement <a href="https://raw.githubusercontent.com/svsticky/intro-website/intro-2023/src/assets/privacy-statement.md">hier</a> vinden.*/}
-             {/*</p>*/}
-           </div>
+            <div className="card content">
+              <p className="anchor" id="inschrijven"></p>
+              <p className="ui center aligned large header">Inschrijven</p>
+
+              {getText(data.register)}
+              {/*<pretix-widget event="https://pretix.svsticky.nl/intro/2023/"></pretix-widget>*/}
+              {/*<noscript>*/}
+              {/*  <div className="pretix-widget">*/}
+              {/*        <div className="pretix-widget-info-message">*/}
+              {/*            JavaScript is disabled in your browser. To access our ticket shop without JavaScript,*/}
+              {/*            please <a target="_blank" href="https://pretix.svsticky.nl/intro/2023/">click here</a>.*/}
+              {/*        </div>*/}
+              {/*    </div>*/}
+              {/*</noscript>*/}
+              {/*<p>*/}
+              {/* Je kunt onze privacy statement <a href="https://raw.githubusercontent.com/svsticky/intro-website/intro-2023/src/assets/privacy-statement.md">hier</a> vinden.*/}
+              {/*</p>*/}
+            </div>
           </div>
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="programma"></p>
               <p className="ui center aligned large header">Programma</p>
-              {/*{getText(data.programDisclaimer, true)}<br/>*/}
-              {getProgram(data.program)}
+              {getText(data.programDisclaimer)}<br/>
+              {/*{getProgram(data.program)}*/}
             </div>
           </div>
           <div className="ui fluid card">
