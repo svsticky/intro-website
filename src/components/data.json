@@ -36,7 +36,7 @@
     "introduction": [
         {
             "name": "Welkom",
-            "text": "Hallo toekomstige ICT’er!\n\nStudievereniging Sticky gaat voor jullie dit jaar een spectaculaire introductie neerzetten. De introductie zal plaatsvinden van vrijdag 23 augustus tot vrijdag 30 augustus. Het exacte programma wordt nog bekend gemaakt!\n\nHoudt deze website in de gaten om op de hoogte te blijven."
+            "text": "Hallo toekomstige ICT’er!\n\nStudievereniging Sticky gaat voor jullie dit jaar een spectaculaire introductie neerzetten. De introductie zal plaatsvinden van vrijdag 23 augustus tot vrijdag 6 september. Het exacte programma vind je hieronder!\n\nHoudt deze website in de gaten om op de hoogte te blijven."
         }
     ],
     "kamp": [
@@ -62,12 +62,118 @@
     ],
     "programDisclaimer": [
         {
-            "text": "De planning wordt nog bekend gemaakt!",
+            "text": "Let op: deze planning is onder voorbehoud en kan nog veranderen",
             "textlink": "",
             "bold": true
         }
     ],
-    "program": [],
+    "program": [
+        {
+            "activities": [
+                {
+                    "name": "Kamp dag 1",
+                    "time": "Hele dag",
+                    "description": "TBA"
+                }
+            ],
+            "name": "Vrijdag 23 augustus"
+        },
+        {
+            "activities": [
+                {
+                    "name": "Kamp dag 2",
+                    "time": "Hele dag",
+                    "description": "TBA"
+                }
+            ],
+            "name": "Zaterdag 24 augustus"
+        },
+        {
+            "activities": [
+                {
+                    "name": "Kamp dag 3",
+                    "time": "Hele dag",
+                    "description": "TBA"
+                }
+            ],
+            "name": "Zondag 25 augustus"
+        },
+        {
+            "activities": [
+                {
+                    "name": "Opening",
+                    "time": "12:00 - 14:00",
+                    "description": "Start je introductie gezamenlijk en ontmoet je mentoren. Je mentoren zullen je begeleiden voor de rest van de introductie samen met andere eerstejaars van je groep!"
+                },
+                {
+                    "name": "Crazy '88",
+                    "time": "14:00 - 17:00",
+                    "description": "Je gaat Utrecht leren kennen! De Crazy88 brengt je langs de leukste plekken in Utrecht en dit is een goede manier om je groepje beter te leren kennen."
+                },
+                {
+                    "name": "Kroegentocht",
+                    "time": "19:00 - 22:00",
+                    "description": "Sluit je eerste dag in Utrecht gezellig af terwijl je samen met je mentorgroep de beste kroegen van Utrecht bezoekt!"
+                }
+            ],
+            "name": "Dinsdag 27 augustus"
+        },
+        {
+            "name": "Woensdag 28 augustus",
+            "activities": [
+                {
+                    "name": "USP Tour",
+                    "time": "13:00 - 17:00",
+                    "description": "Om het studiejaar fluitend te beginnen, leer je tijdens deze tour de belangrijkste plekken op het science park kennen. Aankomend jaar zal je veel les hebben op Utrecht Science Park, daarom is het belangrijk om te leren waar je moet zijn :)"
+                },
+                {
+                    "name": "Walking Dinner",
+                    "time": "17:00 - 22:00",
+                    "description": "Walking Dinner is in de Vagant. De Vagant is een gebouw voor de universiteit waar de wekelijkse borrels van Sticky worden gehouden! Tijdens Walking Dinner kun je gezellig kletsen met mede-eerstejaars en samen avondeten. Er zal verschillend eten en drinken aanwezig zijn. "
+                }
+            ]
+        },
+        {
+            "name": "Donderdag 29 augustus",
+            "activities": [
+                {
+                    "name": "Workshop",
+                    "time": "13:00 - 15:00",
+                    "description": "TBA"
+                },
+                {
+                    "name": "Bowlen",
+                    "time": "16:00 - 18:00",
+                    "description": "TBA"
+                }
+            ]
+        },
+        {
+            "name": "Maandag 2 september",
+            "activities": [
+                {
+                    "name": "ALMS",
+                    "time": "'s Middags",
+                    "description": "De ALMS is de Actieve Leden Markt van Sticky. Op deze markt staan er leden van alle verschillende commissies om je meer informatie te geven over de commissies. Sticky kent heel veel leuke commissies die allerlei activiteiten organiseren, dus kom vooral langs om kennis te maken! "
+                },
+                {
+                    "name": "BBQ",
+                    "time": "'s Avonds",
+                    "description": "Kom naar de eind barbecue van Sticky met zowel vlees, vegetarisch als vegan eten! Dit is een mooie manier om samen avond te eten en de week goed af te sluiten. "
+                }
+            ]
+        },
+        {
+            "name": "Vrijdag 6 september",
+            "activities": [
+                {
+                    "name": "Eindfeest",
+                    "time": "'s Avonds",
+                    "description": "Sluit de introductie af met een groot feest en luid samen met je medestudenten het studiejaar in! "
+                }
+            ]
+        }
+    ],
     "Associations": [
         {
             "name": "Sticky",
