@@ -138,12 +138,12 @@
             "activities": [
                 {
                     "name": "Workshop",
-                    "time": "13:00 - 15:00",
+                    "time": "12:00 - 14:00",
                     "description": "TBA"
                 },
                 {
                     "name": "Bowlen",
-                    "time": "16:00 - 18:00",
+                    "time": "15:00 - 17:00",
                     "description": "TBA"
                 }
             ]
