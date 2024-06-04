@@ -36,7 +36,7 @@
     "introduction": [
         {
             "name": "Welkom",
-            "text": "Hallo toekomstige ICT’er!\n\nStudievereniging Sticky gaat voor jullie dit jaar een spectaculaire introductie neerzetten. De introductie zal plaatsvinden van vrijdag 23 augustus tot vrijdag 6 september. Het exacte programma vind je hieronder!\n\nHoudt deze website in de gaten om op de hoogte te blijven."
+            "text": "Hallo toekomstige ICT’er!\n\nStudievereniging Sticky gaat voor jullie dit jaar een spectaculaire introductie neerzetten. De introductie zal plaatsvinden van vrijdag 23 augustus tot vrijdag 6 september. Het exacte programma vind je hieronder!\n\nHoudt deze website in de gaten om op de hoogte te blijven. Je kunt je ook aanmelden om via de mail op te hoogte gehouden te worden. Dat kan door <a href='https://docs.google.com/forms/d/e/1FAIpQLSdhfdc7_570N98ZXgOx9_CEQLwq8Vs4yfsoK8BzSGcYAjFUGw/viewform?pli=1'>deze form</a> in te vullen."
         }
     ],
     "kamp": [
@@ -177,7 +177,7 @@
     "Associations": [
         {
             "name": "Sticky",
-            "text": "Sticky is de studievereniging voor informatica, gametechnologie en informatiekunde. Het is dé plek om buiten je colleges je studiegenoten op een informele manier te leren kennen. Sticky organiseert wekelijks vele soorten activiteiten, van filmavonden tot themaborrels, en van LAN-parties tot culturele uitstapjes naar het buitenland. Daarnaast biedt Sticky ondersteuning bij je studie, bijvoorbeeld via het opzetten van hulpmiddagen, waar ouderejaars studenten je door de moeilijkste vakken kunnen helpen, en door het aanbieden van korting op je studieboeken. Kijk vooral eens een keer op <a href='https://svsticky.nl'>svsticky.nl</a> voor meer informatie!\nInschrijven bij Sticky kost je eenmalig €7,50 en kan via<a href='https://intro.svsticky.nl'>intro.svsticky.nl</a>",
+            "text": "Sticky is de studievereniging voor informatica, gametechnologie en informatiekunde. Het is dé plek om buiten je colleges je studiegenoten op een informele manier te leren kennen. Sticky organiseert wekelijks vele soorten activiteiten, van filmavonden tot themaborrels, en van LAN-parties tot culturele uitstapjes naar het buitenland. Daarnaast biedt Sticky ondersteuning bij je studie, bijvoorbeeld via het opzetten van hulpmiddagen, waar ouderejaars studenten je door de moeilijkste vakken kunnen helpen, en door het aanbieden van korting op je studieboeken. Kijk vooral eens een keer op <a href='https://svsticky.nl'>svsticky.nl</a> voor meer informatie!\nInschrijven bij Sticky kost je eenmalig €7,50 en kan via <a href='https://intro.svsticky.nl'>intro.svsticky.nl</a>",
             "photo": "sticky.png",
             "link": "https://svsticky.nl/"
         }

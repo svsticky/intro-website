@@ -24,9 +24,11 @@ class Home extends Component {
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="welkom"></p>
-              <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie 2024-2025</p>
+              <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie
+                2024-2025</p>
               {/*<StaticImage src="../assets/logos/logo.png" alt="Full Introduction logo" className="ui image"></StaticImage>*/}
-              {getText(data.introduction)}
+              <h2 className="ui left aligned large header">{ data.introduction[0].name }</h2>
+              <div dangerouslySetInnerHTML={{__html: data.introduction[0].text}}/>
             </div>
           </div>
           <div className="ui fluid card">
