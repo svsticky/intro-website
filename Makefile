@@ -2,10 +2,10 @@ SRC=$(shell find src/ -type f)
 STATIC=$(shell find static -type f)
 
 node_modules: package.json
-	npm install
+	yarn install
 
 public: $(SRC) $(STATIC) node_modules
-	npm run build
+	yarn run build
 
 .PHONY: deploy
 deploy: public
