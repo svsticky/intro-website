@@ -49,8 +49,8 @@ class Home extends Component {
             <div className="card content">
               <p className="anchor" id="inschrijven"></p>
               <p className="ui center aligned large header">Inschrijven</p>
+              <div dangerouslySetInnerHTML={{__html: data.register[0].text}}/>
 
-              {getText(data.register)}
               {/*<pretix-widget event="https://pretix.svsticky.nl/intro/2023/"></pretix-widget>*/}
               {/*<noscript>*/}
               {/*  <div className="pretix-widget">*/}
@@ -80,13 +80,13 @@ class Home extends Component {
               {getAssociation(data.Associations)}
             </div>
           </div>
-          {/*<div className="ui fluid card">*/}
-          {/*  <div className="card content">*/}
-          {/*    <p className="anchor" id="hoofdmentoren"></p>*/}
-          {/*    <p className="ui center aligned large header">Hoofdmentoren</p>*/}
-          {/*    {getMentors(data.Mentors)}*/}
-          {/*  </div>*/}
-          {/*</div>*/}
+          <div className="ui fluid card">
+            <div className="card content">
+              <p className="anchor" id="hoofdmentoren"></p>
+              <p className="ui center aligned large header">Hoofdmentoren</p>
+              {getMentors(data.Mentors)}
+            </div>
+          </div>
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="faq"></p>
