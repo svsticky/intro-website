@@ -57,7 +57,7 @@
     },
     "register": [
         {
-            "text": "Als je ingeschreven staat voor een van de studies sta je automatisch ingeschreven voor het algemene deel van de introductie. Je moet je echter voor sommige activiteiten zelf inschrijven en een kaartje kopen.\n\nDe inschrijvingen zijn nog niet open. Houdt deze site in de gaten!"
+            "text": "Als je ingeschreven staat voor een van de studies sta je automatisch ingeschreven voor het algemene deel van de introductie. Je moet je echter voor sommige activiteiten zelf inschrijven en een kaartje kopen.<br/><br/>De inschrijvingen zijn nog niet open. Schrijf je in via <a target='_blank' href='https://docs.google.com/forms/d/e/1FAIpQLSdhfdc7_570N98ZXgOx9_CEQLwq8Vs4yfsoK8BzSGcYAjFUGw/viewform?usp=sf_link'>deze form</a> om op de hoogte te blijven wanneer de inschrijvingen open gaan. Na de introductie worden jouw gegevens weer verwijderd."
         }
     ],
     "programDisclaimer": [
@@ -182,7 +182,32 @@
             "link": "https://svsticky.nl/"
         }
     ],
-    "Mentors": [],
+    "Mentors": [
+        {
+            "name": "Poseidon",
+            "real_name": "Daan",
+            "photo": "daan.jpg",
+            "text": "Als god van de zeeën en meester van alle wateren, sta ik klaar om team BLAUW naar de overwinning te leiden tijdens deze epische introductieweek! Mijn naam is Poseidon, en ik ben de ultieme water-bender. Met mijn onbegrensde kracht over de oceanen en rivieren, breng ik een tsunami aan energie en enthousiasme naar ons team.\n\nWater is niet alleen mijn domein, maar ook onze grootste bondgenoot. Samen zullen we de strijd aangaan tegen de andere Goden – Athena, Artemis en Dionysus – en laten zien waarom wij de sterkste god zijn. Water is flexibel, krachtig en onmisbaar. Het past zich aan, stroomt waar het nodig is, en kan de sterkste rotsen verslijten. Dit symboliseert onze strategie: we passen ons aan elke situatie aan en gebruiken onze kracht en doorzettingsvermogen om elke uitdaging te overwinnen.\n"
+        },
+        {
+            "name": "Artemis",
+            "real_name": "Sara",
+            "photo": "sara.jpg",
+            "text": "Hi, ik ben niemand minder dan Artemis, de godin van de jacht, de natuur en de maan. Tijdens de introweek nemen we jullie mee op een episch avontuur in de wereld van de Griekse goden.\n\nAls Artemis leid ik team GROEN, het team dat de kracht en rust van de natuur belichaamt. Onze groene spirit staat voor groei, vernieuwing en het onoverwinnelijke teamwerk. Samen gaan we de competitie aan tegen de andere goden, maar die zijn niks vergeleken ons.\n\nDus maak je klaar om de boog van Artemis te dragen, de groene paden te bewandelen en te laten zien dat team GROEN de ultieme kracht van de natuur in zich heeft. Laten we deze introductieweek onvergetelijk maken, op naar de overwinning en veel plezier!\n"
+        },
+        {
+            "name": "Dionysos",
+            "real_name": "Joep",
+            "photo": "joep.jpg",
+            "text": "Als god van wijn productie (ROOD) hou ik wel van een feestje. Ik ben dan ook helemaal klaar om mijn krachten te gebruiken om de introductie week onvergetelijk te maken! Het gaat er mij om dat we zo veel mogelijk plezier en herinneringen in een week proppen. Hoe we dat gaan doen, daar komen we snel genoeg achter. \n\nWe moeten gedurende de week natuurlijk ook tegen andere teams strijden, maar met de goede sfeer die wij met zijn allen creëren zijn we eigenlijk al met één been over de finishlijn. De andere teams zullen niet weten wat hun overkomt wanneer wij de strijd ingaan alsof we elkaar al jaren kennen.\n\nBereid je voor op veel plezier en een enorme strijd tussen de verschillende goden en teams tijdens de meest mythische introductie ooit! \n"
+        },
+        {
+            "name": "Athena",
+            "real_name": "Annemiek",
+            "photo": "annemiek.jpg",
+            "text": "Ik ben Athena, de godin van wijsheid, strategie en oorlogskunst. Tijdens deze introductieweek zal ik team GEEL leiden naar glorie en succes! \n\nAls Athena belichaam ik de kracht van intelligentie en strategie. Ons team staat voor helderheid, creativiteit en onverschrokken leiderschap. We zullen samen de strijd aangaan tegen de andere goden – Poseidon, Artemis en Dionysus – en laten zien waarom wij de ware kampioenen zijn. \n\nBereid je voor om de wijsheid en kracht van Athena te ervaren. Met de helderheid van ons denken en de vastberadenheid van ons team zullen we iedere hindernis overwinnen. Team GEEL zal zijn briljantie tonen en elke uitdaging met zelfvertrouwen en slimme strategieën aanpakken. Samen zullen we deze introductieweek onvergetelijk maken en triomferen!\n"
+        }
+    ],
     "FAQ": [
         {
             "question": "Wanneer is de introductie?",
