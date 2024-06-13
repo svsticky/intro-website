@@ -8,7 +8,7 @@ import Text from './Text.jsx';
 import Association from './Association.jsx';
 import Menu from './Menu.jsx';
 import '../assets/home.css';
-import full_logo from '../assets/logos/logo.png'
+// import banner_logo from '../assets/logos/banner.png'
 import Social from "./Social";
 import {StaticImage} from "gatsby-plugin-image";
 
@@ -26,7 +26,7 @@ class Home extends Component {
               <p className="anchor" id="welkom"></p>
               <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie
                 2024-2025</p>
-              {/*<StaticImage src="../assets/logos/logo.png" alt="Full Introduction logo" className="ui image"></StaticImage>*/}
+              <StaticImage src="../assets/logos/banner.png" alt="Introduction banner" className="ui image"></StaticImage>
               <h2 className="ui left aligned large header">{ data.introduction[0].name }</h2>
               <div dangerouslySetInnerHTML={{__html: data.introduction[0].text}}/>
             </div>
