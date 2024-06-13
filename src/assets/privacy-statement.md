@@ -9,7 +9,7 @@ Buys Ballot Gebouw
 Kamer 2.81
 Princetonplein 5
 3584CC Utrecht
-0641087871
++31 627628900
 
 Persoonsgegevens die wij verwerken
 Studievereniging Sticky verwerkt uw persoonsgegevens doordat u gebruik maakt van onze diensten en/of omdat u deze zelf aan ons verstrekt.
@@ -30,12 +30,11 @@ Met welk doel en op basis van welke grondslag wij persoonsgegevens verwerken
 Studievereniging Sticky verwerkt uw persoonsgegevens voor de volgende doelen:
 - Om goederen en diensten bij u af te leveren
 
-
 Hoe lang we persoonsgegevens bewaren
 
 Studievereniging Sticky bewaart uw persoonsgegevens niet langer dan strikt nodig is om de doelen te realiseren waarvoor uw gegevens worden verzameld. Wij hanteren de volgende bewaartermijnen voor de volgende (categorieën) van persoonsgegevens:
 
-De gegevens worden bewaard t/m het einde van de introductie 2023-2024, ofwel 15 september 2023.
+De gegevens worden bewaard t/m het einde van de introductie 2024-2025.
 
 
 Delen van persoonsgegevens met derden
