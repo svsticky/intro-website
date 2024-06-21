@@ -29,6 +29,10 @@
             "href": "#faq"
         },
         {
+            "name": "Vertrouwenscontactpersonen",
+            "href": "#vertrouwenscontactpersonen"
+        },
+        {
             "name": "Contact",
             "href": "#contact"
         }
@@ -58,8 +62,9 @@
     "confidentialContactPersons": [
         {
             "name": "Olivier Drees",
-            "text": "Foo",
-            "image": "olivier.jpg"
+            "text": "Heyy ik ben Olivier, één van de twee vertrouwenscontactpersonen van deze introductie. Mocht je nou een onaangename situatie hebben of gehad hebben, aarzel dan niet om contact met mij op te nemen.",
+            "image": "olivier.jpg",
+            "tel": "+31 6 028073134"
         }
     ],
     "register": [
