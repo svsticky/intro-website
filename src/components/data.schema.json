@@ -543,6 +543,28 @@
         }
       ]
     },
+    "confidentialContactPersons": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "tel": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
     "Mentors": {
       "type": "array",
       "items": [
@@ -629,7 +651,8 @@
     "Associations",
     "Mentors",
     "FAQ",
-    "contactPersons"
+    "contactPersons",
+    "confidentialContactPersons"
   ]
 }
 

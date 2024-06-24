@@ -29,6 +29,10 @@
             "href": "#faq"
         },
         {
+            "name": "Vertrouwenscontactpersonen",
+            "href": "#vertrouwenscontactpersonen"
+        },
+        {
             "name": "Contact",
             "href": "#contact"
         }
@@ -55,6 +59,20 @@
             }
         ]
     },
+    "confidentialContactPersons": [
+        {
+            "name": "Olivier Drees",
+            "text": "Heyy ik ben Olivier, één van de twee vertrouwenscontactpersonen van deze introductie. Mocht je nou een onaangename situatie hebben of gehad hebben, aarzel dan niet om contact met mij op te nemen.",
+            "image": "olivier.jpg",
+            "tel": "+31 6 028073134"
+        },
+        {
+            "name": "Lisa van Dijk",
+            "text": "Hi, Mijn naam is Lisa en ik ben dit jaar vertrouwenspersoon tijdens de introductieperiode. Als je ergens mee zit, vragen hebt of gewoon even wilt praten, dan ben ik er voor je. Niets is te groot of te klein om te bespreken. Je kunt me altijd aanspreken tijdens de activiteiten of een berichtje sturen. Samen zorgen we ervoor dat jouw introductie zo leuk en soepel mogelijk verloopt. Ik kijk ernaar uit om je te ontmoeten!",
+            "image": "lisa.jpg",
+            "tel": "+31 6 40266566"
+        }
+    ],
     "register": [
         {
             "text": "Als je ingeschreven staat voor een van de studies sta je automatisch ingeschreven voor het algemene deel van de introductie. Je moet je echter voor sommige activiteiten zelf inschrijven en een kaartje kopen.<br/><br/>De inschrijvingen zijn nog niet open. Schrijf je in via <a target='_blank' href='https://docs.google.com/forms/d/e/1FAIpQLSdhfdc7_570N98ZXgOx9_CEQLwq8Vs4yfsoK8BzSGcYAjFUGw/viewform?usp=sf_link'>deze form</a> om op de hoogte te blijven wanneer de inschrijvingen open gaan. Na de introductie worden jouw gegevens weer verwijderd."

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ContactPerson from './ContactPerson.jsx';
+import ConfidentialContactPerson from './ConfidentialContactPerson';
 import Date from './Date.jsx';
 import data from './data.json';
 import Mentor from './Mentor.jsx';
@@ -92,6 +93,13 @@ class Home extends Component {
               <p className="anchor" id="faq"></p>
               <p className="ui center aligned large header">FAQ</p>
               {getFAQ(data.FAQ)}
+            </div>
+          </div>
+          <div className="ui fluid card">
+            <div className="card content">
+              <p className="anchor" id="vertrouwenscontactpersonen"></p>
+              <p className="ui center aligned large header">Vertrouwenscontactpersonen</p>
+              {getConfidentialContactPersons(data.confidentialContactPersons)}
             </div>
           </div>
           <div className="ui fluid card">
@@ -194,11 +202,24 @@ const getFAQ = FAQ =>{
     </div>
   )
 }
-const getContactPersons = contactPersons=>{
+
+const getConfidentialContactPersons = confidentialContactPersons => {
   return (
     <div className="ui centered four doubling cards">
       {
-        contactPersons.map((contactPerson, index)=>(
+        confidentialContactPersons.map((confidentialContactPerson, index) => (
+          <ConfidentialContactPerson confidentialContactPerson={confidentialContactPerson} key={index}/>
+        ))
+      }
+    </div>
+  )
+}
+
+const getContactPersons = contactPersons => {
+  return (
+    <div className="ui centered four doubling cards">
+      {
+        contactPersons.map((contactPerson, index) => (
           <ContactPerson contactPerson={contactPerson} key={index}/>
         ))
       }
