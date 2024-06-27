@@ -115,7 +115,7 @@ class Home extends Component {
               <p className="anchor" id="terms-and-conditions"></p>
               <p className="ui center aligned large header" id="terms-and-conditions">Voorwaarden</p>
               <p>
-                De algemene voorwaarden van de introductie kun je <a href="https://github.com/svsticky/intro-website/blob/master/src/assets/terms_and_conditions.md">hier</a> vinden.<br/>
+                De algemene voorwaarden van de introductie kun je <a href="https://raw.githubusercontent.com/svsticky/intro-website/master/src/assets/terms_and_conditions.md">hier</a> vinden.<br/>
                 De privacy statement van de introductie kun je <a href="https://raw.githubusercontent.com/svsticky/intro-website/master/src/assets/privacy-statement.md">hier</a> vinden.<br/>
                 De gedragsregels van Studievereniging Sticky kun je <a href="https://public.svsticky.nl/Code%20of%20Conduct%20[Nederlands].pdf">hier</a> vinden.
               </p>
