@@ -15,7 +15,7 @@ Princetonplein 5
 Introduction 2024-2025
 
 Dit document vult de volgende documenten aan:
-- [Privacy statement introductie](./privacy-statement.md)
+- [Privacy statement introductie](https://raw.githubusercontent.com/svsticky/intro-website/master/src/assets/privacy-statement.md)
 - [Gedragsregels Sticky](https://public.svsticky.nl/Code%20of%20Conduct%20[Nederlands].pdf)
 
 # Foto's 
