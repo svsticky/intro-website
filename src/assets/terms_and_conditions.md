@@ -21,5 +21,4 @@ Dit document vult de volgende documenten aan:
 # Foto's 
 Tijdens de introductie zullen er foto's of video's worden gemaakt, verder genoemd 'media'.
 De media gemaakt tijdens de introductie wordt alleen met leden gedeeld en kan verder gebruikt worden
-op sociale media kanalen. Indien je niet op media vastgelegd wilt worden kun
-je dit aangeven bij de fotograaf, een commissielied of het bestuur.
+op sociale media kanalen.
