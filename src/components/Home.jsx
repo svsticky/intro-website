@@ -52,18 +52,13 @@ class Home extends Component {
               <p className="ui center aligned large header">Inschrijven</p>
               <div dangerouslySetInnerHTML={{__html: data.register[0].text}}/>
 
-              {/*<pretix-widget event="https://pretix.svsticky.nl/intro/2023/"></pretix-widget>*/}
-              {/*<noscript>*/}
-              {/*  <div className="pretix-widget">*/}
-              {/*        <div className="pretix-widget-info-message">*/}
-              {/*            JavaScript is disabled in your browser. To access our ticket shop without JavaScript,*/}
-              {/*            please <a target="_blank" href="https://pretix.svsticky.nl/intro/2023/">click here</a>.*/}
-              {/*        </div>*/}
-              {/*    </div>*/}
-              {/*</noscript>*/}
-              {/*<p>*/}
-              {/* Je kunt onze privacy statement <a href="https://raw.githubusercontent.com/svsticky/intro-website/intro-2023/src/assets/privacy-statement.md">hier</a> vinden.*/}
-              {/*</p>*/}
+              <div className="ui center aligned">
+                <a href="https://pretix.svsticky.nl/intro/intro-2024-2025/" target="_blank">
+                  <button className="ui button large" style={{backgroundColor: "#61518f", color: "#FFF"}}>
+                    Ga naar de shop
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
           <div className="ui fluid card">
@@ -76,7 +71,7 @@ class Home extends Component {
           </div>
           <div className="ui fluid card">
             <div className="card content">
-              <p className="anchor" id="vereniging"></p>
+            <p className="anchor" id="vereniging"></p>
               <p className="ui center aligned large header">De vereniging</p>
               {getAssociation(data.Associations)}
             </div>
