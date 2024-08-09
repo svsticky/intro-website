@@ -19,9 +19,16 @@ class Home extends Component {
       <main ref="background">
         <Menu />
         <div className="ui main container">
-          {/*<div className="video-container">*/}
+          <div className="video-container">
           {/* <iframe src="https://www.youtube.com/embed/2QVqjSWKahA" title="themabekendmakingsvideo" frameBorder="0"></iframe>*/}
-          {/*</div>*/}
+          <iframe width="315" height="560"
+            src="https://www.youtube.com/embed/cIDGDxRnxnE"
+            title="Themabekendmakingsvideo"
+            frameBorder="0"
+            allow="encrypted-media; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          </div>
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="welkom"></p>
