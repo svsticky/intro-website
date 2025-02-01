@@ -19,23 +19,25 @@ class Home extends Component {
       <main ref="background">
         <Menu />
         <div className="ui main container">
-          <div className="video-container">
-          {/* <iframe src="https://www.youtube.com/embed/2QVqjSWKahA" title="themabekendmakingsvideo" frameBorder="0"></iframe>*/}
-          <iframe width="315" height="560"
-            src="https://www.youtube.com/embed/cIDGDxRnxnE"
-            title="Themabekendmakingsvideo"
-            frameBorder="0"
-            allow="encrypted-media; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-          </div>
+          {/*<div className="video-container">*/}
+          {/*<iframe width="315" height="560"*/}
+          {/*  src="https://www.youtube.com/embed/cIDGDxRnxnE"*/}
+          {/*  title="Themabekendmakingsvideo"*/}
+          {/*  frameBorder="0"*/}
+          {/*  allow="encrypted-media; picture-in-picture; web-share"*/}
+          {/*  allowfullscreen*/}
+          {/*></iframe>*/}
+          {/*</div>*/}
           <div className="ui fluid card">
             <div className="card content">
               <p className="anchor" id="welkom"></p>
               <p className="ui center aligned huge header">Introductie Informatica, Informatiekunde en Gametechnologie
-                2024-2025</p>
-              <StaticImage src="../assets/logos/banner.png" alt="Introduction banner" className="ui image"></StaticImage>
-              <h2 className="ui left aligned large header">{ data.introduction[0].name }</h2>
+                2025-2026</p>
+              {/*<StaticImage src="../assets/logos/banner.png" alt="Introduction banner"*/}
+              {/*             className="ui image"></StaticImage>*/}
+              <StaticImage src="https://public.svsticky.nl/logos/logo_outline_kleur.png" className="ui image" />
+
+              <h2 className="ui left aligned large header">{data.introduction[0].name}</h2>
               <div dangerouslySetInnerHTML={{__html: data.introduction[0].text}}/>
             </div>
           </div>
@@ -61,7 +63,7 @@ class Home extends Component {
 
               <div className="ui center aligned">
                 <a href="https://pretix.svsticky.nl/intro/intro-2024-2025/" target="_blank">
-                  <button className="ui button large" style={{backgroundColor: "#61518f", color: "#FFF"}}>
+                  <button className="ui button large" style={{backgroundColor: "#197052", color: "#FFF"}}>
                     Ga naar de shop
                   </button>
                 </a>

@@ -46,7 +46,7 @@
     "kamp": [
         {
             "name": "Kamp",
-            "text": "Kom gezellig mee op introkamp en leer je studiegenoten kennen. Dit is de manier om kennis te maken met de mensen waarmee je komende jaren je studie doet! Het kamp zit vol met leuke activiteiten, zoals karaoke, kampvuur, een themafeest en meer. Daarnaast wordt het eten geregeld door de chef-koks van onze kookcommissie. De heenreis is geregeld vanaf Utrecht Science Park. Meld je zo snel mogelijk aan, voordat de kaartverkoop sluit!\n\nLet op, het kamp is geen ontgroening! Alles mag, niks moet! Dit is puur alleen plezier en elkaar leren kennen.\n\nDe kamp locatie is 'De Hoof' in Someren.\n\nDe opening van de introductie vind plaats in de Megaron zaal van het Educatorium op 27 augustus om 12:00."
+            "text": "Kom gezellig mee op introkamp en leer je studiegenoten kennen. Dit is de manier om kennis te maken met de mensen waarmee je komende jaren je studie doet! Het kamp zit vol met leuke activiteiten, zoals karaoke, kampvuur, een themafeest en meer. Daarnaast wordt het eten geregeld door de chef-koks van onze kookcommissie. De heenreis is geregeld vanaf Utrecht Science Park. Meld je zo snel mogelijk aan, voordat de kaartverkoop sluit!\n\nLet op, het kamp is geen ontgroening! Alles mag, niks moet! Dit is puur alleen plezier en elkaar leren kennen.\n\nDe kamp locatie is 'De Hoof' in Someren."
         }
     ],
     "socials": {
@@ -60,18 +60,7 @@
         ]
     },
     "confidentialContactPersons": [
-        {
-            "name": "Olivier Drees",
-            "text": "Heyy ik ben Olivier, één van de twee vertrouwenscontactpersonen van deze introductie. Mocht je nou een onaangename situatie hebben of gehad hebben, aarzel dan niet om contact met mij op te nemen.",
-            "image": "olivier.jpg",
-            "tel": "+31 6 028073134"
-        },
-        {
-            "name": "Lisa van Dijk",
-            "text": "Hi, Mijn naam is Lisa en ik ben dit jaar vertrouwenspersoon tijdens de introductieperiode. Als je ergens mee zit, vragen hebt of gewoon even wilt praten, dan ben ik er voor je. Niets is te groot of te klein om te bespreken. Je kunt me altijd aanspreken tijdens de activiteiten of een berichtje sturen. Samen zorgen we ervoor dat jouw introductie zo leuk en soepel mogelijk verloopt. Ik kijk ernaar uit om je te ontmoeten!",
-            "image": "lisa.jpg",
-            "tel": "+31 6 40266566"
-        }
+
     ],
     "register": [
         {
@@ -86,111 +75,7 @@
         }
     ],
     "program": [
-        {
-            "activities": [
-                {
-                    "name": "Kamp dag 1",
-                    "time": "Hele dag",
-                    "description": "De eerste dag van kamp staat in het teken van elkaar leren kennen en rustig opstarten. We komen rond 18:00 aan op de locatie waarna we zo snel mogelijk aanschuiven voor het avondeten. Hierna is er ruimte voor vrije tijd, spelletjes, karaoke en sluiten we de nacht af met een groot feest in de muziekkelder."
-                }
-            ],
-            "name": "Vrijdag 23 augustus"
-        },
-        {
-            "activities": [
-                {
-                    "name": "Kamp dag 2",
-                    "time": "Hele dag",
-                    "description": "De tweede dag van kamp staan sport, spel en nieuwe indrukken centraal. Om het thema Griekse mythologie in ons achterhoofd te houden, is er in de middag een groot tienkamp toernooi met een olympisch thema. Daarnaast is er vooral veel tijd om je medestudenten te leren kennen en is er de ruimte vrije tijd om je eigen plan te trekken. Na het eten maken we een groot kampvuur en is het grote thema feest in de muziekkelder waar tot in de vroege uurtjes de muziek zal klinken. Niet gevreesd! Ben je niet zo’n groot feestbeest, uiteraard is er ook de mogelijkheid om ’s avonds lekker een spelletjes te spelen."
-                }
-            ],
-            "name": "Zaterdag 24 augustus"
-        },
-        {
-            "activities": [
-                {
-                    "name": "Kamp dag 3",
-                    "time": "Hele dag",
-                    "description": "De derde dag zullen we rond 15:00 vertrekken richting Utrecht. Deze ochtend is dan ook lekker relaxed en heeft geen activiteiten buiten dat de locatie weer schoon opgeleverd moet worden, waar we natuurlijk allemaal ons steentje voor bij dragen."
-                }
-            ],
-            "name": "Zondag 25 augustus"
-        },
-        {
-            "activities": [
-                {
-                    "name": "Opening",
-                    "time": "12:00 - 14:00",
-                    "description": "Start je introductie gezamenlijk en ontmoet je mentoren. Je mentoren zullen je begeleiden voor de rest van de introductie samen met andere eerstejaars van je groep! De opening vind plaats in de Megaron zaal van het Educatorium gebouw."
-                },
-                {
-                    "name": "Crazy '88",
-                    "time": "14:00 - 17:00",
-                    "description": "Je gaat Utrecht leren kennen! De Crazy88 brengt je langs de leukste plekken in Utrecht en dit is een goede manier om je groepje beter te leren kennen."
-                },
-                {
-                    "name": "Kroegentocht",
-                    "time": "19:00 - 22:00",
-                    "description": "Sluit je eerste dag in Utrecht gezellig af terwijl je samen met je mentorgroep de beste kroegen van Utrecht bezoekt!"
-                }
-            ],
-            "name": "Dinsdag 27 augustus"
-        },
-        {
-            "name": "Woensdag 28 augustus",
-            "activities": [
-                {
-                    "name": "USP Tour",
-                    "time": "13:00 - 17:00",
-                    "description": "Om het studiejaar fluitend te beginnen, leer je tijdens deze tour de belangrijkste plekken op het science park kennen. Aankomend jaar zal je veel les hebben op Utrecht Science Park, daarom is het belangrijk om te leren waar je moet zijn :) De USP tour begint buiten bij het KBG."
-                },
-                {
-                    "name": "Walking Dinner",
-                    "time": "17:00 - 22:00",
-                    "description": "Walking Dinner is in de Vagant. De Vagant is een gebouw voor de universiteit waar de wekelijkse borrels van Sticky worden gehouden! Tijdens Walking Dinner kun je gezellig kletsen met mede-eerstejaars en samen avondeten. Er zal verschillend eten en drinken aanwezig zijn. "
-                }
-            ]
-        },
-        {
-            "name": "Donderdag 29 augustus",
-            "activities": [
-                {
-                    "name": "Workshop",
-                    "time": "12:00 - 14:00",
-                    "description": "Een interactieve workshop voor een eerste kennismaking met belangrijke programma's voor een student informatica of informatiekunde. Keuze uit twee verschillende workshops:\n\nEen over git. Elke programmeur zal hoe dan ook te maken krijgen met de git. Git is een versiebeheersoftware, essentieel voor de samenwerking met mede-programmeurs. Voor beginners kan het best ingewikkeld zijn, dus deze workshop heeft als doel jou alvast de beginselen te laten snappen, zodat je meteen zal leren werken als programmeurs in de praktijk ook doen!\n\nEen andere over LaTeX in Overleaf. LaTeX is een manier om mooie verslagen te schrijven. Het werkt als een soort programmeertaal voor het schrijven van documenten, waarmee je hele precieze controle hebt over de opmaak. Zo zullen je verslagen er professioneler uitzien dan ooit!"
-                },
-                {
-                    "name": "Bowlen",
-                    "time": "15:00 - 17:00",
-                    "description": "Neem het op tegen je groepje tijdens het bowlen bij Olround Utrecht!\nPak de mooiste bowlingschoenen van de plank en haal al je bowling-skills uit de kast voor dit uur van spektakel. Een leuke manier om samen met je studiegenoten iets actiefs te doen en elkaar beter te leren kennen."
-                }
-            ]
-        },
-        {
-            "name": "Maandag 2 september",
-            "activities": [
-                {
-                    "name": "ALMS",
-                    "time": "'s Middags",
-                    "description": "De ALMS is de Actieve Leden Markt van Sticky. Op deze markt staan er leden van alle verschillende commissies om je meer informatie te geven over de commissies. Sticky kent heel veel leuke commissies die allerlei activiteiten organiseren, dus kom vooral langs om kennis te maken! "
-                },
-                {
-                    "name": "BBQ",
-                    "time": "'s Avonds",
-                    "description": "Kom naar de eind barbecue van Sticky met zowel vlees, vegetarisch als vegan eten! Dit is een mooie manier om samen avond te eten en de week goed af te sluiten. "
-                }
-            ]
-        },
-        {
-            "name": "Donderdag 12 september",
-            "activities": [
-                {
-                    "name": "Eindfeest",
-                    "time": "'s Avonds",
-                    "description": "Sluit de introductie af met een groot feest en luid samen met je medestudenten het studiejaar in! "
-                }
-            ]
-        }
+
     ],
     "Associations": [
         {
@@ -201,30 +86,7 @@
         }
     ],
     "Mentors": [
-        {
-            "name": "Poseidon",
-            "real_name": "Daan",
-            "photo": "daan.jpg",
-            "text": "Als god van de zeeën en meester van alle wateren, sta ik klaar om team BLAUW naar de overwinning te leiden tijdens deze epische introductieweek! Mijn naam is Poseidon, en ik ben de ultieme water-bender. Met mijn onbegrensde kracht over de oceanen en rivieren, breng ik een tsunami aan energie en enthousiasme naar ons team.\n\nWater is niet alleen mijn domein, maar ook onze grootste bondgenoot. Samen zullen we de strijd aangaan tegen de andere Goden – Athena, Artemis en Dionysus – en laten zien waarom wij de sterkste god zijn. Water is flexibel, krachtig en onmisbaar. Het past zich aan, stroomt waar het nodig is, en kan de sterkste rotsen verslijten. Dit symboliseert onze strategie: we passen ons aan elke situatie aan en gebruiken onze kracht en doorzettingsvermogen om elke uitdaging te overwinnen.\n"
-        },
-        {
-            "name": "Artemis",
-            "real_name": "Sara",
-            "photo": "sara.jpg",
-            "text": "Hi, ik ben niemand minder dan Artemis, de godin van de jacht, de natuur en de maan. Tijdens de introweek nemen we jullie mee op een episch avontuur in de wereld van de Griekse goden.\n\nAls Artemis leid ik team GROEN, het team dat de kracht en rust van de natuur belichaamt. Onze groene spirit staat voor groei, vernieuwing en het onoverwinnelijke teamwerk. Samen gaan we de competitie aan tegen de andere goden, maar die zijn niks vergeleken ons.\n\nDus maak je klaar om de boog van Artemis te dragen, de groene paden te bewandelen en te laten zien dat team GROEN de ultieme kracht van de natuur in zich heeft. Laten we deze introductieweek onvergetelijk maken, op naar de overwinning en veel plezier!\n"
-        },
-        {
-            "name": "Dionysos",
-            "real_name": "Joep",
-            "photo": "joep.jpg",
-            "text": "Als god van wijn productie (ROOD) hou ik wel van een feestje. Ik ben dan ook helemaal klaar om mijn krachten te gebruiken om de introductie week onvergetelijk te maken! Het gaat er mij om dat we zo veel mogelijk plezier en herinneringen in een week proppen. Hoe we dat gaan doen, daar komen we snel genoeg achter. \n\nWe moeten gedurende de week natuurlijk ook tegen andere teams strijden, maar met de goede sfeer die wij met zijn allen creëren zijn we eigenlijk al met één been over de finishlijn. De andere teams zullen niet weten wat hun overkomt wanneer wij de strijd ingaan alsof we elkaar al jaren kennen.\n\nBereid je voor op veel plezier en een enorme strijd tussen de verschillende goden en teams tijdens de meest mythische introductie ooit! \n"
-        },
-        {
-            "name": "Athena",
-            "real_name": "Annemiek",
-            "photo": "annemiek.jpg",
-            "text": "Ik ben Athena, de godin van wijsheid, strategie en oorlogskunst. Tijdens deze introductieweek zal ik team GEEL leiden naar glorie en succes! \n\nAls Athena belichaam ik de kracht van intelligentie en strategie. Ons team staat voor helderheid, creativiteit en onverschrokken leiderschap. We zullen samen de strijd aangaan tegen de andere goden – Poseidon, Artemis en Dionysus – en laten zien waarom wij de ware kampioenen zijn. \n\nBereid je voor om de wijsheid en kracht van Athena te ervaren. Met de helderheid van ons denken en de vastberadenheid van ons team zullen we iedere hindernis overwinnen. Team GEEL zal zijn briljantie tonen en elke uitdaging met zelfvertrouwen en slimme strategieën aanpakken. Samen zullen we deze introductieweek onvergetelijk maken en triomferen!\n"
-        }
+
     ],
     "FAQ": [
         {
