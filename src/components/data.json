@@ -108,15 +108,15 @@
     ],
     "contactPersons": [
         {
-            "name": "Olaf Boekholt",
+            "name": "Olivier Drees",
             "email": "secretaris@intro-cs.nl",
-            "mobile": "+31 6 38640003",
+            "mobile": "+31 6 28073134",
             "type": "Secretaris"
         },
         {
-            "name": "Hanna Mock",
+            "name": "Iris van der Zwart",
             "email": "voorzitter@intro-cs.nl",
-            "mobile": "+31 6 86605424",
+            "mobile": "+31 6 42472899",
             "type": "Voorzitter"
         }
     ]
