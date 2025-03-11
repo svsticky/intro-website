@@ -1,0 +1,65 @@
+name: Build artifact with Contentful and deploy
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+      - development
+
+# Ensure only the latest job runs on the same branch, to safe the environment.
+# Also prevents slower jobs from replacing the latest artifact, when concurrently running two jobs.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build the website as an artifact
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup `bun` 🥟
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: |
+          bun install
+
+      - name: Generate a production build # TODO create development build
+        env:
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+        run: |
+          bun run build
+
+      # Astro will produce a build in `dist/`
+      - name: Upload build artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist/
+
+  deploy:
+    needs: build
+    name: Silently whisper to our server that there is a new build # Alert server for new build TODO
+
+      - name: Trigger deploy to staging if on development
+        uses: distributhor/workflow-webhook@v3
+        if: ${{ github.ref == 'refs/heads/development' }}
+        env:
+          webhook_url: ${{ secrets.WEBHOOK_URL_STAGING }} # TODO make this dependent on environment
+          webhook_secret: ${{ secrets.WEBHOOK_SECRET_STAGING }}
+
+      - name: Trigger deploy to production if on main
+        uses: distributhor/workflow-webhook@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        env:
+          webhook_url: ${{ secrets.WEBHOOK_URL_PRODUCTION }}
+          webhook_secret: ${{ secrets.WEBHOOK_SECRET_PRODUCTION }}
