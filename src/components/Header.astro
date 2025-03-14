@@ -1,0 +1,134 @@
+---
+import { contentfulClient } from "../contentful";
+import type { EntryFieldTypes } from "contentful";
+
+interface HeroImage {
+  contentTypeId: "heroImage",
+  fields: {
+    title: EntryFieldTypes.Symbol,
+    image: EntryFieldTypes.AssetLink
+  }
+}
+
+const images = await contentfulClient.withoutUnresolvableLinks.getEntries<HeroImage>({
+  content_type: "heroImage",
+});
+---
+
+<header>
+    <div class="header-background background-top"></div>
+    <div class="header-background background-bottom"></div>
+    <div class="hero">
+        <div class="carousel">
+            {images.items.map((image, idx) =>
+                <div class="carousel-item">
+                    <img src={image.fields.image?.fields.file?.url} />
+                    <p><strong>Foto:</strong> {image.fields.title}</p>
+                </div>
+            )}
+        </div>
+        <div class="hero-text">
+            <h2>Sticky: Studievereniging Informatica en Informatiekunde Utrecht</h2>
+            <p>Welkom op de introductie website van de studievereniging voor informatica en informatiekunde in Utrecht!</p>
+            <p>Alle informatie voor de introductie kan je hier vinden!</p>
+        </div>
+    </div>
+</header>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const items: HTMLDivElement[] = Array.from(document.querySelectorAll(".carousel-item"));
+    let currentIndex = 0;
+
+    setInterval(() => {
+        const oldIndex = currentIndex;
+        currentIndex = (currentIndex + 1) % items.length;
+        for (let i = 0; i < items.length; i++) {
+            if (i === oldIndex) {
+                items[oldIndex].style.transform = "translateX(-80vw)";
+                setTimeout(() => {
+                    items[i].style.display = "none";
+                    items[i].style.transform = "translateX(80vw)";
+                    setTimeout(() => items[i].style.display = "block", 1500);
+                }, 1500);
+            } else if (i === currentIndex) {
+                items[currentIndex].style.transform = "translateX(0)";
+            }
+        }
+    }, 4000);
+});
+</script>
+
+<style lang="scss">
+header {
+    color: white;
+    position: relative;
+
+    .header-background {
+        background: #197052;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &.background-top {
+            height: 80%;
+        }
+
+        &.background-bottom {
+            top: 70%;
+            height: 20%;
+            clip-path: ellipse(70% 50%);
+        }
+    }
+
+    .hero {
+        width: 80vw;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+
+        .carousel {
+            border-radius: 1rem;
+            overflow: hidden;
+            height: 60vh;
+            box-sizing: border-box;
+            display: grid;
+
+            .carousel-item {
+                transform: translateX(80vw);
+                transition: transform 1.5s ease-in-out;
+                border-radius: 1rem;
+                height: 60vh;
+                grid-area: 1 / 1;
+                display: block;
+
+                &:first-of-type {
+                    transform: translateX(0);
+                }
+                
+                img {
+                    width: 80vw;
+                    height: 60vh;
+                    object-fit: cover;
+                    filter: brightness(50%);
+                }
+
+                p {
+                    position: absolute;
+                    top: calc(60vh - 3rem);
+                    right: 1rem;
+                    font-size: .75rem;
+                }
+            }
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: 50%;
+        }
+    }
+}
+</style>
