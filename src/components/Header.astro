@@ -1,18 +1,20 @@
 ---
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { contentfulClient } from "../contentful";
 import type { EntryFieldTypes } from "contentful";
 
-interface HeroImage {
-  contentTypeId: "heroImage",
-  fields: {
-    title: EntryFieldTypes.Symbol,
-    image: EntryFieldTypes.AssetLink
-  }
+interface Hero {
+    contentTypeId: "hero",
+    fields: {
+        content: EntryFieldTypes.RichText,
+        pictures: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>
+    }
 }
 
-const images = await contentfulClient.withoutUnresolvableLinks.getEntries<HeroImage>({
-  content_type: "heroImage",
+const heros = await contentfulClient.withoutUnresolvableLinks.getEntries<Hero>({
+    content_type: "hero"
 });
+const hero = heros.items[0];
 ---
 
 <header>
@@ -20,18 +22,14 @@ const images = await contentfulClient.withoutUnresolvableLinks.getEntries<HeroIm
     <div class="header-background background-bottom"></div>
     <div class="hero">
         <div class="carousel">
-            {images.items.map((image, idx) =>
+            {hero.fields.pictures.map(image =>
                 <div class="carousel-item">
-                    <img src={image.fields.image?.fields.file?.url} />
-                    <p><strong>Foto:</strong> {image.fields.title}</p>
+                    <img src={image?.fields.file?.url} />
+                    <p><strong>Foto:</strong> {image?.fields.title}</p>
                 </div>
             )}
         </div>
-        <div class="hero-text">
-            <h2>Sticky: Studievereniging Informatica en Informatiekunde Utrecht</h2>
-            <p>Welkom op de introductie website van de studievereniging voor informatica en informatiekunde in Utrecht!</p>
-            <p>Alle informatie voor de introductie kan je hier vinden!</p>
-        </div>
+        <div class="hero-text" set:html={documentToHtmlString(hero.fields.content)}></div>
     </div>
 </header>
 
