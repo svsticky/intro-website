@@ -1,4 +1,4 @@
-name: Build artifact with Contentful and deploy
+name: Build and deploy
 
 on:
   workflow_dispatch:
@@ -16,8 +16,9 @@ concurrency:
 
 jobs:
   build:
-    name: Build the website as an artifact
+    name: Build artifact with Contentful
     runs-on: ubuntu-latest
+    environment: production
 
     defaults:
       run:
@@ -30,15 +31,13 @@ jobs:
         uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
-        run: |
-          bun install
+        run: bun install
 
       - name: Generate a production build # TODO create development build
+        run: bun run build
         env:
-          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-        run: |
-          bun run build
+          CONTENTFUL_SPACE_ID:     ${{ secrets.CONTENTFUL_SPACE_ID     }}
+          CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
 
       # Astro will produce a build in `dist/`
       - name: Upload build artifacts
@@ -47,9 +46,11 @@ jobs:
           path: ./dist/
 
   deploy:
+    name: Notify server of new artifact
     needs: build
-    name: Silently whisper to our server that there is a new build # Alert server for new build TODO
+    runs-on: ubuntu-latest
 
+    steps:
       - name: Trigger deploy to staging if on development
         uses: distributhor/workflow-webhook@v3
         if: ${{ github.ref == 'refs/heads/development' }}
