@@ -1,66 +1,84 @@
 ---
+
 ---
+
 <section class="backgroundje">
     <div class="content">
         <h1>Ik wil mij inschrijven voor de introductie!</h1>
-        <p>Op dit moment is het nog niet mogelijk om in te schrijven voor de introductie. Wel kan je je alvast aanmelden voor de voor-inschrijvingen. Als je je hier voor aanmeld krijg je als eerste te horen wanneer de inschrijvingen open gaan! Aanmelden voor de voor-ischrijvingen kan via de knop hieronder</p>
-        <a href="https://forms.gle/U3PhUwCmCBSDXC1B8" class="button">Aanmelden!</a>
+        <p>
+            Op dit moment is het nog niet mogelijk om in te schrijven voor de
+            introductie. Wel kan je je alvast aanmelden voor de
+            voor-inschrijvingen. Als je je hier voor aanmeldt krijg je als
+            eerste te horen wanneer de inschrijvingen open gaan! Aanmelden voor
+            de voor-inchrijvingen kan via de knop hieronder.
+        </p>
+        <a href="https://forms.gle/U3PhUwCmCBSDXC1B8" class="button"
+            >Aanmelden!</a
+        >
     </div>
-    
-    <svg xmlns="http://www.w3.org/2000/svg" width="1908" height="647" viewBox="0 0 1908 647" fill="none">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M881.01 15.2611C1286.16 -1.18828 1806.37 -17.8327 1948.87 43.7567C1948.87 178.757 2338.85 348.265 1852.35 453.757C1447.52 541.538 -90.7748 372.846 -42.128 596.761C6.51873 820.675 -714.655 222.826 -445.666 95.1282C-235.177 -4.79789 362.4 36.3172 881.01 15.2611Z" fill="url(#paint0_linear_171_966)"/>
-      <defs>
-        <linearGradient id="paint0_linear_171_966" x1="-578.396" y1="111.56" x2="1932.16" y2="-20.0122" gradientUnits="userSpaceOnUse">
-          <stop offset="0.381" stop-color="#197052"/>
-          <stop offset="1" stop-color="#28B886"/>
-        </linearGradient>
-      </defs>
-    </svg>
 
-    
-  </section>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1908 647" fill="none">
+        <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M881.01 15.2611C1286.16 -1.18828 1806.37 -17.8327 1948.87 43.7567C1948.87 178.757 2338.85 348.265 1852.35 453.757C1447.52 541.538 -90.7748 372.846 -42.128 596.761C6.51873 820.675 -714.655 222.826 -445.666 95.1282C-235.177 -4.79789 362.4 36.3172 881.01 15.2611Z"
+            fill="url(#paint0_linear_171_966)"></path>
+        <defs>
+            <linearGradient
+                id="paint0_linear_171_966"
+                x1="-578.396"
+                y1="111.56"
+                x2="1932.16"
+                y2="-20.0122"
+                gradientUnits="userSpaceOnUse"
+            >
+                <stop offset="0.381" stop-color="#197052"></stop>
+                <stop offset="1" stop-color="#28B886"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
+</section>
 
 <style lang="scss">
-  h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-
-  .backgroundje {
-    position: relative;
-    color: white;
-    overflow: hidden;
-    display: grid;
-    overflow-x: hidden;
-
-
-    .content {
-      padding: 4rem 15rem;
-      margin: auto;
-      position: absolute;
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
     }
 
-    svg{
-     
-      flex-shrink: 0;
-      fill: linear-gradient(90deg, #197052 34.31%, #28B886 94.32%);
-    }
-  }
+    .backgroundje {
+        position: relative;
+        color: white;
+        display: grid;
+        width: 100vw;
+        margin-left: -12.5vw;
+        overflow-x: hidden;
 
-  .button {
-      display: inline-block;
-      padding: 1rem 2rem;
-      margin-top: 1rem;
-      background-color: #ffffff;
-      color: #197052;
-      font-size: 1.2rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      text-align: center;
+        .content {
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -75%);
+        }
+
+        svg {
+            z-index: -100;
+            width: 120vw;
+            flex-shrink: 0;
+            fill: linear-gradient(90deg, #197052 34.31%, #28b886 94.32%);
+        }
     }
 
-  
+    .button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+        background-color: #ffffff;
+        color: #197052;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+    }
 </style>
-
-

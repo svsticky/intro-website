@@ -7,7 +7,7 @@ import Program from '../components/Program.astro'
 import Sticky from '../components/Sticky.astro'
 import Smallprint from '../components/Smallprint.astro'
 import Contact from '../components/Contact.astro'
-import Secretcontact from '../components/Secretcontact.astro'
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
@@ -22,17 +22,19 @@ import Secretcontact from '../components/Secretcontact.astro'
 	<body>
 		<Nav />
 		<Header />
-		<Information />
-		<Program />
-		<Inschrijven />
-		<Sticky />
-		<Contact />
-		<Secretcontact />
-		<Smallprint />
+		<main>
+			<Information />
+			<Program />
+			<Inschrijven />
+			<Sticky />
+			<Contact />
+			<Smallprint />
+		</main>
+		<Footer />
 	</body>
 </html>
 
-<style>
+<style is:global>
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 html,
@@ -41,5 +43,20 @@ body {
 	width: 100%;
 	height: 100vw;
     font-family: 'Outfit', 'Arial', 'sans-serif';
+}
+
+p { text-align: justify; }
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+
+h1, h2, h3, h4, h5, h6 {
+	> strong { color: #197052; }
+}
+
+main {
+	width: 75vw;
+	margin: 0 auto;
+	overflow: visible;
 }
 </style>
