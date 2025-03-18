@@ -1,7 +1,15 @@
 name: Build and deploy
 
+# TODO replace conetnful API secrets to point to final contentful space
+
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Manual dispatch on GitHub
+  repository_dispatch: # Webhooks from Contentful TODO do not forget to let the webhook point to final repo name
+  #   FIXME het is alleen nog de vraag hoe je dispatched voor beide enviroments
+  schedule:
+    # Trigger a monthly deploy in order to prevent artifact staleness
+    - cron: "0 0 1 * *"
+  #   TODO add this routine to healthchecks.io
 
   push:
     branches:
@@ -11,7 +19,7 @@ on:
 # Ensure only the latest job runs on the same branch, to safe the environment.
 # Also prevents slower jobs from replacing the latest artifact, when concurrently running two jobs.
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.head_ref || github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }} # Does not distinguish PRs, for this workflow won't run on PR branches
   cancel-in-progress: true
 
 jobs:
@@ -41,27 +49,23 @@ jobs:
 
       # Astro will produce a build in `dist/`
       - name: Upload build artifacts
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
+          name: build-website
           path: ./dist/
+          retention-days: 45 # Default value is 90, and cannot be higher than that. Because of this we have the cron job above to prevent the latest artifact from being deleted without being replaced. Since we do that monthly anyway, we remove it earlier for we use less storage that way.
 
   deploy:
     name: Notify server of new artifact
+          # The server will pull the artifact and deploy it. We simply have to whisper in its ear.
     needs: build
-    runs-on: linux
+    runs-on: ubuntu-latest
     environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'development' }}
 
     steps:
-      - name: Trigger deploy to staging if on development
+      - name: Trigger deploy on server
         uses: distributhor/workflow-webhook@v3
-        if: ${{ github.ref == 'refs/heads/development' }}
         env:
-          webhook_url:    ${{ secrets.WEBHOOK_URL_STAGING    }}
-          webhook_secret: ${{ secrets.WEBHOOK_SECRET_STAGING }}
+          webhook_url:    ${{ secrets.SERVER_WEBHOOK_URL    }}
+          webhook_secret: ${{ secrets.SERVER_WEBHOOK_SECRET }}
 
-      - name: Trigger deploy to production if on main
-        uses: distributhor/workflow-webhook@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
-        env:
-          webhook_url:    ${{ secrets.WEBHOOK_URL_PRODUCTION    }}
-          webhook_secret: ${{ secrets.WEBHOOK_SECRET_PRODUCTION }}
