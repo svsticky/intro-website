@@ -3,8 +3,7 @@ name: Build and deploy
 # TODO replace conetnful API secrets to point to final contentful space
 
 on:
-  workflow_dispatch: # Manual dispatch on GitHub
-  repository_dispatch: # Webhooks from Contentful TODO do not forget to let the webhook point to final repo name
+  workflow_dispatch: # For manual dispatch on GitHub, and webhooks from Contentful TODO do not forget to let the webhook point to final repo name
   #   FIXME het is alleen nog de vraag hoe je dispatched voor beide enviroments
   schedule:
     # Trigger a monthly deploy in order to prevent artifact staleness
@@ -51,7 +50,7 @@ jobs:
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: build-website
+          name: website-build-static-files
           path: ./dist/
           retention-days: 45 # Default value is 90, and cannot be higher than that. Because of this we have the cron job above to prevent the latest artifact from being deleted without being replaced. Since we do that monthly anyway, we remove it earlier for we use less storage that way.
 
