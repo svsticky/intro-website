@@ -1,7 +1,7 @@
 ---
 ---
 <section class="backgroundje">
-    <div>
+    <div class="content">
         <h1>Ik wil mij inschrijven voor de introductie!</h1>
         <p>Op dit moment is het nog niet mogelijk om in te schrijven voor de introductie. Wel kan je je alvast aanmelden voor de voor-inschrijvingen. Als je je hier voor aanmeld krijg je als eerste te horen wanneer de inschrijvingen open gaan! Aanmelden voor de voor-ischrijvingen kan via de knop hieronder</p>
         <p class="button">Aanmelden!</p>
@@ -29,10 +29,21 @@
   .backgroundje {
     position: relative;
     color: white;
-    
-    div {
-      position: absolute;
+    overflow: hidden;
+    display: grid;
+    overflow-x: hidden;
+
+
+    .content {
       padding: 4rem 15rem;
+      margin: auto;
+      position: absolute;
+    }
+
+    svg{
+     
+      flex-shrink: 0;
+      fill: linear-gradient(90deg, #197052 34.31%, #28B886 94.32%);
     }
   }
 
@@ -44,20 +55,12 @@
 
   p .button{
     display: flex;
-    width: 13.3125rem;
-    height: 4.9375rem;
     padding: 1rem 1.5rem;
     justify-content: center;
     align-items: center;
   }
 
-  svg .backgroundje{
-    width: 162.06106rem;
-    height: 38.39238rem;
-    transform: rotate(-3deg);
-    flex-shrink: 0;
-    fill: linear-gradient(90deg, #197052 34.31%, #28B886 94.32%);
-  }
+  
 </style>
 
 
