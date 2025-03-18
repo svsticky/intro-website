@@ -1,32 +1,36 @@
 ---
-const contacts = [
-    {
-        name: "Iris van der Zwart",
-        role: "Voorzitter",
-        email: "intro-voorzitter@svsticky.nl",
-        phone: "06 42 47 28 99",
-        image: "https://media.licdn.com/dms/image/v2/D4E03AQHTSK-3eEuvww/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1698498302485?e=1747872000&v=beta&t=LStwbpfLQ51_4MizWPonEzCqs5T6f0u0EJDWu7LtTm8",
-    },
-    {
-        name: "Olivier Drees",
-        role: "Secretaris",
-        email: "intro-secretaris@svsticky.nl",
-        phone: "06 28 07 31 34",
-        image: "https://media.licdn.com/dms/image/v2/D4D03AQEubJi3pKovKQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1696024634444?e=1747872000&v=beta&t=qXTFqex5qcF94Rl8aFkacFqqtFlpOrw7nep_R3snYXs",
-    },
-    {
-        name: "Hanna Mock",
-        role: "Vertrouwenscontactpersoon",
-        phone: "06 86 60 54 24",
-        image: "https://media.licdn.com/dms/image/v2/D4E03AQFN-0LQNc8WBA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727087115387?e=1747872000&v=beta&t=XbNhvb4jPWz0MQXkisqe32hJwOeoB6YLdo2K0JWuA0o",
-    },
-    {
-        name: "Bram de Haas",
-        role: "Vertrouwenscontactpersoon",
-        phone: "06 25 09 77 15",
-        image: "https://media.licdn.com/dms/image/v2/D4E03AQERPwzWhLIgtw/profile-displayphoto-shrink_400_400/B4EZRLbQCWGgAk-/0/1736432222842?e=1747872000&v=beta&t=iF9iMk-n1JljFGdh1ZirgWNYuyoyurSiSaNHq3FUFDM",
-    },
-];
+import { contentfulClient } from "../contentful";
+import type { EntryFieldTypes } from "contentful";
+
+interface Person {
+    contentTypeId: "person";
+    fields: {
+        name: EntryFieldTypes.Symbol;
+        email: EntryFieldTypes.Symbol;
+        phone: EntryFieldTypes.Symbol;
+        role: EntryFieldTypes.Array<
+            EntryFieldTypes.Symbol<
+                "Secretaris" | "Vertrouwenscontactpersoon" | "Voorzitter"
+            >
+        >;
+        photo: EntryFieldTypes.AssetLink;
+    };
+}
+
+const contacts =
+    await contentfulClient.withoutUnresolvableLinks.getEntries<Person>({
+        content_type: "person",
+    });
+
+const voorzitter = contacts.items.find((contact) =>
+    contact.fields.role.includes("Voorzitter"),
+);
+const secretary = contacts.items.find((contact) =>
+    contact.fields.role.includes("Secretaris"),
+);
+const vertrouwenspersonen = contacts.items.filter((contact) =>
+    contact.fields.role.includes("Vertrouwenscontactpersoon"),
+);
 ---
 
 <style>
@@ -91,25 +95,23 @@ const contacts = [
 
     <div class="contact-grid">
         {
-            contacts
-                .filter(({ role }) => role !== "Vertrouwenscontactpersoon")
-                .map((contact) => (
-                    <div class="contact-card">
-                        <div class="contact-info">
-                            <h3>{contact.name}</h3>
-                            <p>
-                                <strong>{contact.role}</strong>
-                            </p>
-                            <p>📧 {contact.email}</p>
-                            <p>📞 {contact.phone}</p>
-                        </div>
-                        <img
-                            src={contact.image}
-                            alt={contact.name}
-                            class="contact-image"
-                        />
+            [voorzitter, secretary].map((contact) => (
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <h3>{contact!.fields.name}</h3>
+                        <p>
+                            <strong>{contact!.fields.role}</strong>
+                        </p>
+                        <p>📧 {contact!.fields.email}</p>
+                        <p>📞 {contact!.fields.phone}</p>
                     </div>
-                ))
+                    <img
+                        src={contact!.fields.photo?.fields.file?.url}
+                        alt={contact!.fields.name}
+                        class="contact-image"
+                    />
+                </div>
+            ))
         }
     </div>
     <h1>Dit zijn onze <strong>vertrouwenscontactpersonen</strong></h1>
@@ -127,24 +129,22 @@ const contacts = [
     </p>
     <div class="contact-grid">
         {
-            contacts
-                .filter(({ role }) => role === "Vertrouwenscontactpersoon")
-                .map((contact) => (
-                    <div class="contact-card">
-                        <div class="contact-info">
-                            <h3>{contact.name}</h3>
-                            <p>
-                                <strong>{contact.role}</strong>
-                            </p>
-                            <p>📞 {contact.phone}</p>
-                        </div>
-                        <img
-                            src={contact.image}
-                            alt={contact.name}
-                            class="contact-image"
-                        />
+            vertrouwenspersonen.map((contact) => (
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <h3>{contact!.fields.name}</h3>
+                        <p>
+                            <strong>{contact!.fields.role}</strong>
+                        </p>
+                        <p>📞 {contact!.fields.phone}</p>
                     </div>
-                ))
+                    <img
+                        src={contact!.fields.photo?.fields.file?.url}
+                        alt={contact!.fields.name}
+                        class="contact-image"
+                    />
+                </div>
+            ))
         }
     </div>
 </section>
