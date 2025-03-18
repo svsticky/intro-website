@@ -1,66 +1,52 @@
 ---
-import { contentfulClient } from "../contentful";
-import type { EntryFieldTypes } from "contentful";
 
-interface Page {
-    contentTypeId: "page",
-    fields: {
-        sections: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<Section>>
-    }
-}
-
-interface Section {
-  contentTypeId: "kamp",
-  fields: {
-    title: EntryFieldTypes.Text
-    content: EntryFieldTypes.RichText,
-    appearInNav: EntryFieldTypes.Boolean
-  }
-}
-
-const entries = await contentfulClient.withoutUnresolvableLinks.getEntries<Page>({
-  content_type: "page",
-});
-const page = entries.items[0];
 ---
 
 <nav>
-    <img src="https://public.svsticky.nl/logos/logo_compact_outline_wit.png" alt="Logo SV. Sticky" />
+    <img
+        src="https://public.svsticky.nl/logos/logo_compact_outline_wit.png"
+        alt="Logo SV. Sticky"
+    />
     <ul>
-        {page.fields.sections
-            .filter(section => section?.fields.appearInNav)
-            .map(section =>
-                <li>{section?.fields.title}</li>
-        )}
+        <li><a href="#info">Over de introductie</a></li>
+        <li><a href="#programme">Programma</a></li>
+        <li><a href="#signup">Inschrijven</a></li>
+        <li><a href="#sticky">De vereniging</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
 <style lang="scss">
-nav {
-    background: #197052;
-    height: 5rem;
-    padding: 1rem 10rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(100vw - 20rem);
-
-    img {
+    nav {
+        background: #197052;
         height: 5rem;
-        align-self: flex-start;
-    }
-
-    ul {
-        align-self: flex-end;
+        padding: 1rem 10rem;
         display: flex;
-        list-style-type: none;
-        gap: 3rem;
-        padding: 0;
-        margin: auto 0;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100vw - 20rem);
 
-        li {
-            color: white;
+        img {
+            height: 5rem;
+            align-self: flex-start;
+        }
+
+        ul {
+            align-self: flex-end;
+            display: flex;
+            list-style-type: none;
+            gap: 3rem;
+            padding: 0;
+            margin: auto 0;
+
+            li a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
-}
 </style>
