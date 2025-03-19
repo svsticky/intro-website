@@ -1,0 +1,73 @@
+---
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { contentfulClient } from "../contentful";
+import type { EntryFieldTypes } from "contentful";
+
+interface Association {
+    contentTypeId: "association";
+    fields: {
+        content: EntryFieldTypes.RichText;
+    };
+}
+
+const [association] = await contentfulClient.withoutUnresolvableLinks
+    .getEntries<Association>({
+        content_type: "association",
+    })
+    .then((result) => result.items);
+---
+
+<style lang="scss">
+    #sticky {
+        position: relative;
+        z-index: 100;
+        margin-top: -5rem;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .content {
+            max-width: 75%;
+        }
+
+        .image {
+            width: 35%;
+            display: flex;
+            justify-content: center;
+            padding-left: 3rem;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+        background-color: #197052;
+        color: white;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+    }
+</style>
+
+<section id="sticky">
+    <div class="content">
+        <div set:html={documentToHtmlString(association.fields.content)} />
+        <a href="https://wordlid.svsticky.nl" class="button">Word lid!</a>
+    </div>
+
+    <div class="image">
+        <img
+            src="https://public.svsticky.nl/logos/hoofd_outline_kleur.svg"
+            alt="Sticky logo"
+        />
+    </div>
+</section>
