@@ -3,10 +3,11 @@ import Nav from '../components/Nav.astro';
 import Header from '../components/Header.astro';
 import Information from '../components/Information.astro';
 import Inschrijven from '../components/Inschrijven.astro';
-import Program from '../components/Program.astro'
-import Association from '../components/Association.astro'
-import Smallprint from '../components/Smallprint.astro'
-import Contact from '../components/Contact.astro'
+import Program from '../components/Program.astro';
+import Theme from '../components/Theme.astro';
+import Association from '../components/Association.astro';
+import Smallprint from '../components/Smallprint.astro';
+import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -15,9 +16,10 @@ import Footer from '../components/Footer.astro';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="https://public.svsticky.nl/logos/hoofd_outline_kleur.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 	</head>
 	<body>
 		<Nav />
@@ -25,6 +27,7 @@ import Footer from '../components/Footer.astro';
 		<main>
 			<Information />
 			<Program />
+			<Theme />
 			<Inschrijven />
 			<Association />
 			<Contact />
@@ -58,5 +61,9 @@ main {
 	width: 75vw;
 	margin: 0 auto;
 	overflow: visible;
+}
+
+a {
+	color: #197052;
 }
 </style>
