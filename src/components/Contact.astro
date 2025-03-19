@@ -1,4 +1,5 @@
 ---
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { contentfulClient } from "../contentful";
 import type { EntryFieldTypes } from "contentful";
 
@@ -17,21 +18,75 @@ interface Person {
     };
 }
 
-const contacts =
-    await contentfulClient.withoutUnresolvableLinks.getEntries<Person>({
-        content_type: "person",
-    });
+interface Contact {
+    contentTypeId: "contact";
+    fields: {
+        contactContent: EntryFieldTypes.RichText;
+        contactPersons: EntryFieldTypes.Array<
+            EntryFieldTypes.EntryLink<Person>
+        >;
+        confidentialContent: EntryFieldTypes.RichText;
+        confidentialContactPersons: EntryFieldTypes.Array<
+            EntryFieldTypes.EntryLink<Person>
+        >;
+    };
+}
 
-const voorzitter = contacts.items.find((contact) =>
-    contact.fields.role.includes("Voorzitter"),
-);
-const secretary = contacts.items.find((contact) =>
-    contact.fields.role.includes("Secretaris"),
-);
-const vertrouwenspersonen = contacts.items.filter((contact) =>
-    contact.fields.role.includes("Vertrouwenscontactpersoon"),
-);
+const [contact] = await contentfulClient.withoutUnresolvableLinks
+    .getEntries<Contact>({
+        content_type: "contact",
+    })
+    .then((result) => result.items);
 ---
+
+<section id="contact">
+    <div set:html={documentToHtmlString(contact.fields.contactContent)} />
+
+    <div class="contact-grid">
+        {
+            contact.fields.contactPersons.map((contact) => (
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <h3>{contact!.fields.name}</h3>
+                        <p>
+                            <strong>{contact!.fields.role}</strong>
+                        </p>
+                        <p>📧 {contact!.fields.email}</p>
+                        <p>📞 {contact!.fields.phone}</p>
+                    </div>
+                    <img
+                        src={contact!.fields.photo?.fields.file?.url}
+                        alt={contact!.fields.name}
+                        class="contact-image"
+                    />
+                </div>
+            ))
+        }
+    </div>
+
+    <div set:html={documentToHtmlString(contact.fields.confidentialContent)} />
+
+    <div class="contact-grid">
+        {
+            contact.fields.confidentialContactPersons.map((contact) => (
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <h3>{contact!.fields.name}</h3>
+                        <p>
+                            <strong>{contact!.fields.role}</strong>
+                        </p>
+                        <p>📞 {contact!.fields.phone}</p>
+                    </div>
+                    <img
+                        src={contact!.fields.photo?.fields.file?.url}
+                        alt={contact!.fields.name}
+                        class="contact-image"
+                    />
+                </div>
+            ))
+        }
+    </div>
+</section>
 
 <style>
     .contact-grid {
@@ -84,67 +139,3 @@ const vertrouwenspersonen = contacts.items.filter((contact) =>
         color: black;
     }
 </style>
-
-<section id="contact">
-    <h1>Dit zijn onze <strong>contactpersonen</strong></h1>
-    <p>
-        Heb je vragen over de introductie, wil je meer weten over lidmaatschap
-        of heb je andere vragen? Neem gerust contact met ons op! <br />
-        We staan klaar om je te helpen, dus aarzel niet om een bericht te sturen!
-    </p>
-
-    <div class="contact-grid">
-        {
-            [voorzitter, secretary].map((contact) => (
-                <div class="contact-card">
-                    <div class="contact-info">
-                        <h3>{contact!.fields.name}</h3>
-                        <p>
-                            <strong>{contact!.fields.role}</strong>
-                        </p>
-                        <p>📧 {contact!.fields.email}</p>
-                        <p>📞 {contact!.fields.phone}</p>
-                    </div>
-                    <img
-                        src={contact!.fields.photo?.fields.file?.url}
-                        alt={contact!.fields.name}
-                        class="contact-image"
-                    />
-                </div>
-            ))
-        }
-    </div>
-    <h1>Dit zijn onze <strong>vertrouwenscontactpersonen</strong></h1>
-    <p>
-        Bij Sticky vinden we een veilige en prettige omgeving voor al onze leden
-        erg belangrijk. Mocht er iets voorvallen waar je mee zit, of heb je
-        behoefte aan een vertrouwelijk gesprek, dan kun je terecht bij onze
-        vertrouwenscontactpersonen. Zij luisteren naar je verhaal, bieden
-        ondersteuning en kunnen je indien nodig doorverwijzen naar de juiste
-        hulp.
-    </p>
-    <p>
-        Alles wat je bespreekt blijft vertrouwelijk. Neem gerust contact op als
-        je ergens over wilt praten.
-    </p>
-    <div class="contact-grid">
-        {
-            vertrouwenspersonen.map((contact) => (
-                <div class="contact-card">
-                    <div class="contact-info">
-                        <h3>{contact!.fields.name}</h3>
-                        <p>
-                            <strong>{contact!.fields.role}</strong>
-                        </p>
-                        <p>📞 {contact!.fields.phone}</p>
-                    </div>
-                    <img
-                        src={contact!.fields.photo?.fields.file?.url}
-                        alt={contact!.fields.name}
-                        class="contact-image"
-                    />
-                </div>
-            ))
-        }
-    </div>
-</section>
