@@ -51,8 +51,18 @@ const [contact] = await contentfulClient.withoutUnresolvableLinks
                         <p>
                             <strong>{contact!.fields.role}</strong>
                         </p>
-                        <p>📧 {contact!.fields.email}</p>
-                        <p>📞 {contact!.fields.phone}</p>
+                        <p>
+                            <>
+                                <span class="icon">📧</span>
+                                <span>{contact!.fields.email}</span>
+                            </>
+                        </p>
+                        <p>
+                            <>
+                                <span class="icon">📞</span>
+                                <span>{contact!.fields.phone}</span>
+                            </>
+                        </p>
                     </div>
                     <img
                         src={contact!.fields.photo?.fields.file?.url}
@@ -66,7 +76,7 @@ const [contact] = await contentfulClient.withoutUnresolvableLinks
 
     <div set:html={documentToHtmlString(contact.fields.confidentialContent)} />
 
-    <div class="contact-grid">
+    <div class="contact-grid" >
         {
             contact.fields.confidentialContactPersons.map((contact) => (
                 <div class="contact-card">
@@ -75,7 +85,10 @@ const [contact] = await contentfulClient.withoutUnresolvableLinks
                         <p>
                             <strong>{contact!.fields.role}</strong>
                         </p>
-                        <p>📞 {contact!.fields.phone}</p>
+                        <p>
+                            <span class="icon">📞</span>{" "}
+                            <span>{contact!.fields.phone}</span>
+                        </p>
                     </div>
                     <img
                         src={contact!.fields.photo?.fields.file?.url}
@@ -113,7 +126,6 @@ const [contact] = await contentfulClient.withoutUnresolvableLinks
         display: flex;
         flex-direction: column;
         justify-content: center;
-        text-align: left;
     }
 
     .contact-info h3 {
@@ -137,5 +149,45 @@ const [contact] = await contentfulClient.withoutUnresolvableLinks
 
     .contact-card p strong {
         color: black;
+    }
+
+    @media (max-width: 767px) {
+        h1 {
+            hyphens: auto;
+            overflow-wrap: break-word;
+        }
+
+        .contact-grid {
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: stretch;
+        }
+
+        .contact-card {
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        .contact-info p span {
+            font-size: 0.85rem;
+        }
+
+        .contact-info {
+            flex: 1 1 60%;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .contact-image {
+            flex: 0 1 40%;
+            min-width: 120px; /* Prevent image from getting too small */
+            height: auto;
+            object-fit: cover;
+            align-self: stretch; /* Image fills the height of the card */
+        }
     }
 </style>

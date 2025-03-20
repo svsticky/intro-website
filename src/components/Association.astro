@@ -26,24 +26,25 @@ const [association] = await contentfulClient.withoutUnresolvableLinks
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        flex-wrap: wrap;
+    
         .content {
-            max-width: 75%;
+            width: 100%;
+            padding: 1rem 0;
+            text-align: left;
         }
-
+    
         .image {
-            width: 35%;
-            display: flex;
-            justify-content: center;
-            padding-left: 3rem;
-
+            width: 100%;
+            padding: 1rem 0;
+            text-align: center;
+    
             img {
-                max-width: 100%;
-                height: auto;
+                max-width: 200px;
             }
         }
     }
-
+    
     .button {
         display: inline-block;
         padding: 1rem 2rem;
@@ -56,12 +57,36 @@ const [association] = await contentfulClient.withoutUnresolvableLinks
         font-weight: bold;
         text-align: center;
         transition: opacity 0.3s ease;
-
+    
         &:hover {
             opacity: 0.7;
         }
     }
-</style>
+    
+    /* Hide image on small screens */
+    @media (max-width: 767px) {
+        #sticky .image {
+            display: none;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        #sticky {
+            flex-wrap: nowrap;
+    
+            .content {
+                max-width: 75%;
+                text-align: left;
+            }
+    
+            .image {
+                width: 35%;
+                padding-left: 3rem;
+                display: block;
+            }
+        }
+    }
+    </style>
 
 <section id="sticky">
     <div class="content">
