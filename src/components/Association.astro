@@ -55,6 +55,11 @@ const [association] = await contentfulClient.withoutUnresolvableLinks
         text-decoration: none;
         font-weight: bold;
         text-align: center;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.7;
+        }
     }
 </style>
 
