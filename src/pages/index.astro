@@ -44,6 +44,8 @@ import Eerstejaarsweekend from '../components/Eerstejaarsweekend.astro';
 <style is:global>
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
+/* GLOBAL STYLES */
+
 html,
 body {
 	margin: 0;
@@ -62,15 +64,23 @@ h1, h2, h3, h4, h5, h6 {
 	> strong, > b { color: #197052; }
 }
 
+a {
+	color: #197052;
+}
+
+/* PAGE LAYOUT STYLES */
+
 main {
 	width: 90vw;              
 	max-width: 1200px;        
 	margin: 0 auto;
 	overflow: visible;
-	padding: 1rem;
 }
 
-a {
-	color: #197052;
+@media screen and (min-width: 800px) {
+    main {
+        width: 75vw;
+    }
 }
+
 </style>
