@@ -1,68 +1,126 @@
 ---
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { BLOCKS, type Document } from "@contentful/rich-text-types";
+import { contentfulClient } from "../contentful";
+import type { EntryFieldTypes, Entry } from "contentful";
 
+interface Supermentor {
+    contentTypeId: "supermentor";
+    fields: {
+        name: EntryFieldTypes.Text;
+        picture: EntryFieldTypes.AssetLink;
+        content: EntryFieldTypes.RichText;
+    };
+}
+
+interface Theme {
+    contentTypeId: "theme";
+    fields: {
+        content: EntryFieldTypes.RichText;
+        reveal?: EntryFieldTypes.RichText;
+        supermentors?: EntryFieldTypes.RichText;
+    }
+}
+
+function isSuperMentor(node: any): node is { data: { target: Entry<Supermentor, "WITHOUT_UNRESOLVABLE_LINKS"> } } {
+    return node.data.target.sys.contentType.sys.id === "supermentor";
+}
+
+const [theme] = await contentfulClient.withoutUnresolvableLinks
+    .getEntries<Theme>({
+        content_type: "theme",
+    })
+    .then((result) => result.items);
+
+const mentors = theme.fields.supermentors;
 ---
 
 <section id="theme">
     <h1>Het <strong>thema</strong></h1>
     <p>
-        Elk jaar staat de introductieperiode van Sticky in het teken van
-        een uniek thema! Dit thema brengt niet alleen sfeer en creativiteit,
-        maar zorgt er ook voor dat alle activiteiten en evenementen een extra
-        speciale twist krijgen. Van decoratie en outfits tot spellen en challenges, 
-        alles ademt het gekozen thema.
+        Elk jaar staat de introductieperiode van Sticky in het teken van een
+        uniek thema! Dit thema brengt niet alleen sfeer en creativiteit, maar
+        zorgt er ook voor dat alle activiteiten en evenementen een extra
+        speciale twist krijgen. Van decoratie en outfits tot spellen en
+        challenges, alles ademt het gekozen thema.
     </p>
 
     <h2>Het thema van dit jaar is ... !!</h2>
 
     <div class="theme-box">
-        <img src="https://public.svsticky.nl/logos/logo_outline_zwart.svg" alt="Thema Logo">
+        <img
+            src="https://public.svsticky.nl/logos/logo_outline_zwart.svg"
+            alt="Thema Logo"
+        />
     </div>
 
-    <h2>Dit zijn de <strong>supermentoren</strong></h2>
-    <p>
-        Tijdens de introductie wordt er in vier verschillende kleuren gestreden, 
-        waarbij elke kleur haar eigen supermentor heeft! Maak kennis met de supermentoren van dit jaar:
-    </p>
-
-    <h3>Naam1</h3>
-    <p>
-        Stukje tekst en foto
-    </p>
-
-    <h3>Naam2</h3>
-    <p>
-        Stukje tekst en foto
-    </p>
-
-    <h3>Naam3</h3>
-    <p>
-        Stukje tekst en foto
-    </p>
-
-    <h3>Naam4</h3>
-    <p>
-        Stukje tekst en foto
-    </p>
-
+    <div class="supermentors" set:html={
+    mentors
+        ? documentToHtmlString(mentors, {
+            renderNode: {
+                [BLOCKS.EMBEDDED_ENTRY]: (node) => {
+                    if (isSuperMentor(node)) {
+                        const mentor = node.data.target;
+                        return `
+                            <div class="supermentor">
+                                <div class="content">
+                                    <h3>${mentor.fields.name}</h3>
+                                    ${documentToHtmlString(mentor.fields.content)}
+                                </div>
+                                <img
+                                    src=${mentor.fields.picture?.fields.file?.url}
+                                    alt=${mentor.fields.name}
+                                />
+                            </div>
+                        `;
+                    } else {
+                        return "";
+                    }
+                }
+            }
+        })
+        : ""
+    } />
 </section>
 
-<style>
-  .theme-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 100%;
-    margin: 2rem 0;
-    padding: 2rem;
-  }
+<style lang="scss">
+    .theme-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 100%;
+        margin: 2rem 0;
+        padding: 2rem;
+    }
 
-  .theme-box img {
-    width: 100%;
-    height: auto;
-  }
+    .theme-box img {
+        width: 100%;
+        height: auto;
+    }
+
+    .supermentors {
+        height: max-content;
+
+        :global(.supermentor) {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 1rem;
+
+            :global(.content) {
+                margin: auto;
+            }
+
+            :global(img) {
+                margin-top: 4.5rem;
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+            }
+        }
+    }
 </style>
