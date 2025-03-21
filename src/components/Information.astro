@@ -28,24 +28,32 @@ const [information] = await contentfulClient.withoutUnresolvableLinks
 </section>
 
 <style lang="scss">
-    #info:has(div + .images) {
-        display: grid;
-        grid-template-columns: 6fr 4fr;
-        align-items: start;
-
+    #info {
         .images {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            margin-top: 2rem;
-            height: 100%;
+            display: none;
+        }
+    }
 
-            img {
-                width: 80%;
-                margin: 0 auto;
-                height: calc(33.3% - 3rem);
-                object-fit: cover;
-                border-radius: 1rem;
+    @media screen and (min-width: 800px) {
+        #info:has(div + .images) {
+            display: grid;
+            grid-template-columns: 6fr 4fr;
+            align-items: start;
+
+            .images {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                margin-top: 2rem;
+                height: 100%;
+
+                img {
+                    width: 80%;
+                    margin: 0 auto;
+                    height: calc(33.3% - 3rem);
+                    object-fit: cover;
+                    border-radius: 1rem;
+                }
             }
         }
     }
