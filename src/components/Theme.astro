@@ -36,23 +36,23 @@ const mentors = theme.fields.supermentors;
 ---
 
 <section id="theme">
-    <h1>Het <strong>thema</strong></h1>
-    <p>
-        Elk jaar staat de introductieperiode van Sticky in het teken van een
-        uniek thema! Dit thema brengt niet alleen sfeer en creativiteit, maar
-        zorgt er ook voor dat alle activiteiten en evenementen een extra
-        speciale twist krijgen. Van decoratie en outfits tot spellen en
-        challenges, alles ademt het gekozen thema.
-    </p>
+    <div set:html={documentToHtmlString(theme.fields.content)} />
 
-    <h2>Het thema van dit jaar is ... !!</h2>
-
-    <div class="theme-box">
-        <img
-            src="https://public.svsticky.nl/logos/logo_outline_zwart.svg"
-            alt="Thema Logo"
-        />
-    </div>
+    <div set:html={
+    theme.fields.reveal
+        ? documentToHtmlString(theme.fields.reveal, {
+            renderNode: {
+                [BLOCKS.EMBEDDED_ASSET]: (node) => 
+                    `<div class="theme-box">
+                        <img
+                            src=${node.data.target.fields.file.url}
+                            alt=${node.data.target.fields.description}
+                        />
+                    </div>`
+            }
+        })
+        : ""
+    } />
 
     <div class="supermentors" set:html={
     mentors
@@ -84,7 +84,7 @@ const mentors = theme.fields.supermentors;
 </section>
 
 <style lang="scss">
-    .theme-box {
+    :global(.theme-box) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -95,17 +95,21 @@ const mentors = theme.fields.supermentors;
         width: 100%;
         max-width: 100%;
         margin: 2rem 0;
-    }
 
-    .theme-box img {
-        width: 100%;
-        height: auto;
-        padding: 3rem;
+        :global(img) {
+            width: 100%;
+            height: auto;
+            padding: 3rem;
+        }
     }
 
     .supermentors {
         height: max-content;
 
+        /*
+            We need :global here since the supermentors are generated
+            by contentful and are therefore not astro-managed.
+        */
         :global(.supermentor) {
             display: grid;
             grid-template-columns: 3fr 1fr;
