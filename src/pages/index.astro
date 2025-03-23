@@ -50,6 +50,31 @@ body {
     font-family: 'Outfit', 'Arial', 'sans-serif';
 }
 
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-image:
+		linear-gradient(
+			to right,
+			rgba(255,255,255,0.15) 0%,
+			rgba(255,255,255,0.95) 10%,
+			rgba(255,255,255,0.95) 90%,
+			rgba(255,255,255,0.15) 100%
+		),
+		url('https://production-svsticky-photos.ams3.cdn.digitaloceanspaces.com/41418d91-41ef-4822-8c09-51c96f6d9a7d_w_1600.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	z-index: -1;
+	opacity: 1;
+	pointer-events: none;
+}
+
 p { text-align: justify; margin-bottom: 1rem;}
 
 h1 { font-size: clamp(2rem, 5vw, 2.5rem); }
@@ -80,3 +105,4 @@ main {
 }
 
 </style>
+
