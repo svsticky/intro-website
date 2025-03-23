@@ -1,5 +1,20 @@
 ---
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { contentfulClient } from "../contentful";
+import type { EntryFieldTypes } from "contentful";
 
+interface Smallprint {
+    contentTypeId: "smallPrint";
+    fields: {
+        content: EntryFieldTypes.RichText;
+    };
+}
+
+const [smallprint] = await contentfulClient.withoutUnresolvableLinks
+    .getEntries<Smallprint>({
+        content_type: "smallPrint",
+    })
+    .then((result) => result.items);
 ---
 
 <style>
@@ -8,20 +23,4 @@
     }
 </style>
 
-<section>
-    <h1>De kleine <strong>lettertjes</strong></h1>
-    <p>
-        De algemene voorwaarden van de introductie kun je <a
-            href="https://raw.githubusercontent.com/svsticky/intro-website/master/src/assets/terms_and_conditions.md"
-            >hier</a
-        > vinden.<br />
-        De privacy statement van de introductie kun je <a
-            href="https://raw.githubusercontent.com/svsticky/intro-website/master/src/assets/privacy-statement.md"
-            >hier</a
-        > vinden.<br />
-        De gedragsregels van Studievereniging Sticky kun je <a
-            href="https://public.svsticky.nl/Code%20of%20Conduct%20[Nederlands].pdf"
-            >hier</a
-        > vinden.
-    </p>
-</section>
+<section id="smallprint" set:html={documentToHtmlString(smallprint.fields.content)} />
