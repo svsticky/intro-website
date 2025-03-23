@@ -1,19 +1,29 @@
 ---
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { contentfulClient } from "../contentful";
+import type { EntryFieldTypes } from "contentful";
 
+interface Signup {
+    contentTypeId: "signup";
+    fields: {
+        content: EntryFieldTypes.RichText;
+        buttonContent: EntryFieldTypes.Text;
+        buttonLink: EntryFieldTypes.Text;
+    };
+}
+
+const [signup] = await contentfulClient.withoutUnresolvableLinks
+    .getEntries<Signup>({
+        content_type: "signup",
+    })
+    .then((result) => result.items);
 ---
 
 <section id="signup">
     <div class="content">
-        <h1>Ik wil mij inschrijven voor de introductie!</h1>
-        <p>
-            Op dit moment is het nog niet mogelijk om in te schrijven voor de
-            introductie. Wel kan je je alvast aanmelden voor de
-            voor-inschrijvingen. Als je je hier voor aanmeldt krijg je als
-            eerste te horen wanneer de inschrijvingen open gaan! Aanmelden voor
-            de voor-inchrijvingen kan via de knop hieronder.
-        </p>
-        <a href="https://forms.gle/U3PhUwCmCBSDXC1B8" class="button"
-            >Aanmelden!</a
+        <div set:html={documentToHtmlString(signup.fields.content)} />
+        <a href={signup.fields.buttonLink} class="button"
+            >{signup.fields.buttonContent}</a
         >
     </div>
 

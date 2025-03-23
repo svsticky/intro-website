@@ -17,4 +17,4 @@ const [faq] = await contentfulClient.withoutUnresolvableLinks
     .then((result) => result.items);
 ---
 
-<section id="id" set:html={documentToHtmlString(faq.fields.content)} />
+<section id="FAQ" set:html={documentToHtmlString(faq.fields.content)} />
