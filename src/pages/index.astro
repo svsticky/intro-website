@@ -66,11 +66,19 @@ a {
 
 /* PAGE LAYOUT STYLES */
 
+#signup ~ * {
+    z-index: 20;
+}
+
 main {
 	width: 90vw;              
 	max-width: 1200px;        
 	margin: 0 auto;
 	overflow: visible;
+
+    > section {
+        position: relative;
+    }
 }
 
 @media screen and (min-width: 800px) {
