@@ -21,7 +21,7 @@ const [information] = await contentfulClient.withoutUnresolvableLinks
 <section id="info">
     {information.fields.images &&
         information.fields.images.map(image =>
-            <img src={image?.fields.file?.url} alt={image?.fields.title} />
+            <img class="images" src={image?.fields.file?.url} alt={image?.fields.title} />
         )
     }
     <div set:html={documentToHtmlString(information.fields.content)} />
@@ -29,10 +29,9 @@ const [information] = await contentfulClient.withoutUnresolvableLinks
 
 <!-- TODO: Add table styles for programme -->
 <style lang="scss">
-
-    @media screen and (max-width: 767px) {
-        #info img {
-            display: none;
+    #info {
+        .images {
+             display: none;
         }
     }
   
