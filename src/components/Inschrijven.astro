@@ -20,33 +20,13 @@ const [signup] = await contentfulClient.withoutUnresolvableLinks
 ---
 
 <section id="signup">
+    <div class="background"></div>
     <div class="content">
         <div set:html={documentToHtmlString(signup.fields.content)} />
         <a href={signup.fields.buttonLink} class="button"
             >{signup.fields.buttonContent}</a
         >
     </div>
-
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1908 647" fill="none">
-        <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M881.01 15.2611C1286.16 -1.18828 1806.37 -17.8327 1948.87 43.7567C1948.87 178.757 2338.85 348.265 1852.35 453.757C1447.52 541.538 -90.7748 372.846 -42.128 596.761C6.51873 820.675 -714.655 222.826 -445.666 95.1282C-235.177 -4.79789 362.4 36.3172 881.01 15.2611Z"
-            fill="url(#paint0_linear_171_966)"></path>
-        <defs>
-            <linearGradient
-                id="paint0_linear_171_966"
-                x1="-578.396"
-                y1="111.56"
-                x2="1932.16"
-                y2="-20.0122"
-                gradientUnits="userSpaceOnUse"
-            >
-                <stop offset="0.381" stop-color="#197052"></stop>
-                <stop offset="1" stop-color="#28B886"></stop>
-            </linearGradient>
-        </defs>
-    </svg>
 </section>
 
 <style lang="scss">
@@ -54,23 +34,25 @@ const [signup] = await contentfulClient.withoutUnresolvableLinks
         position: relative;
         color: white;
         display: grid;
-        width: 100vw;
-        margin-left: -12.5vw;
-        overflow-x: hidden;
-        margin-bottom: -7.5rem;
+        width: 100%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            background: linear-gradient(90deg, #197052 34.31%, #28b886 94.32%);
+            margin-left: -12.5vw;
+        }
 
         .content {
             margin: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -75%);
-        }
-
-        svg {
-            width: 120vw;
-            flex-shrink: 0;
-            fill: linear-gradient(90deg, #197052 34.31%, #28b886 94.32%);
+            padding: 3rem 3rem;
+            text-align: center;
+            z-index: 100;
         }
     }
 
