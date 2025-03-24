@@ -41,16 +41,22 @@ const [signup] = await contentfulClient.withoutUnresolvableLinks
         .background {
             position: absolute;
             top: 0;
-            left: 0;
+            left: -5vw;
             width: 100vw;
             height: 100%;
             background: linear-gradient(90deg, #197052 34.31%, #28b886 94.32%);
-            margin-left: -12.5vw;
+
+            /* The padding on the main element increases on larger screens */
+            @media screen and (min-width: 800px) {
+                & {
+                    left: -12.5vw;
+                }
+            }
         }
 
         .content {
             margin: auto;
-            padding: 3rem 3rem;
+            padding: 3rem 1rem;
             text-align: center;
             z-index: 100;
         }
