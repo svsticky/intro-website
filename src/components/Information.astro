@@ -29,13 +29,15 @@ const [information] = await contentfulClient.withoutUnresolvableLinks
 
 <!-- TODO: Add table styles for programme -->
 <style lang="scss">
-    #info {
-        .images {
-            // display: none;
+
+    @media screen and (max-width: 767px) {
+        #info img {
+            display: none;
         }
     }
+  
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 768px) {
         #info {
             img {
                 width: 25%;
