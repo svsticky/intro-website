@@ -151,12 +151,11 @@ const [contact] = await contentfulClient.withoutUnresolvableLinks
         color: black;
     }
 
-    @media (max-width: 767px) {
-        h1 {
-            hyphens: auto;
-            overflow-wrap: break-word;
-        }
+    :global(h1) {
+        hyphens: auto;
+    }
 
+    @media (max-width: 767px) {
         .contact-grid {
             flex-direction: column;
             gap: 1.5rem;
