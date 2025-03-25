@@ -59,6 +59,10 @@ const [signup] = await contentfulClient.withoutUnresolvableLinks
             padding: 3rem 1rem;
             text-align: center;
             z-index: 100;
+
+            :global(h1, h2) {
+                margin-top: 0;
+            }
         }
     }
 
