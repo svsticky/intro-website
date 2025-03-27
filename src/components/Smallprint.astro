@@ -1,5 +1,6 @@
 ---
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { INLINES } from "@contentful/rich-text-types";
 import { contentfulClient } from "../contentful";
 import type { EntryFieldTypes } from "contentful";
 
@@ -17,10 +18,9 @@ const [smallprint] = await contentfulClient.withoutUnresolvableLinks
     .then((result) => result.items);
 ---
 
-<style>
-    section {
-        text-align: left;
+<section id="smallprint" set:html={documentToHtmlString(smallprint.fields.content, {
+    renderNode: {
+        [INLINES.HYPERLINK]: ({ data, content }, next) =>
+            `<a href=${data.uri} target="_blank">${next(content)}</a>`
     }
-</style>
-
-<section id="smallprint" set:html={documentToHtmlString(smallprint.fields.content)} />
+})} />
