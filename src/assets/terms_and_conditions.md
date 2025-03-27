@@ -12,7 +12,7 @@ Princetonplein 5
 +31 627628900
 
 # Algemene voorwaarden
-Introduction 2024-2025
+Introduction 2025-2026
 
 Dit document vult de volgende documenten aan:
 - [Privacy statement introductie](https://raw.githubusercontent.com/svsticky/intro-website/master/src/assets/privacy-statement.md)
