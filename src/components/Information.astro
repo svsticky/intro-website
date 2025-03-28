@@ -19,10 +19,11 @@ const [information] = await contentfulClient.withoutUnresolvableLinks
 ---
 
 <section id="info">
-    {information.fields.images &&
-        information.fields.images.map(image =>
-            <img src={image?.fields.file?.url} alt={image?.fields.title} />
-        )
+    {
+        information.fields.images &&
+            information.fields.images.map((image) => (
+                <img src={image?.fields.file?.url} alt={image?.fields.title} />
+            ))
     }
     <div set:html={documentToHtmlString(information.fields.content)} />
 </section>
@@ -32,7 +33,7 @@ const [information] = await contentfulClient.withoutUnresolvableLinks
     #info img {
         display: none;
     }
-  
+
     @media screen and (min-width: 768px) {
         #info {
             img {

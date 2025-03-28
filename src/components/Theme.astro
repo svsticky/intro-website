@@ -19,10 +19,14 @@ interface Theme {
         content: EntryFieldTypes.RichText;
         reveal?: EntryFieldTypes.RichText;
         supermentors?: EntryFieldTypes.RichText;
-    }
+    };
 }
 
-function isSuperMentor(node: any): node is { data: { target: Entry<Supermentor, "WITHOUT_UNRESOLVABLE_LINKS"> } } {
+function isSuperMentor(
+    node: any,
+): node is {
+    data: { target: Entry<Supermentor, "WITHOUT_UNRESOLVABLE_LINKS"> };
+} {
     return node.data.target.sys.contentType.sys.id === "supermentor";
 }
 
@@ -38,30 +42,31 @@ const mentors = theme.fields.supermentors;
 <section id="theme">
     <div set:html={documentToHtmlString(theme.fields.content)} />
 
-    <div set:html={
-    theme.fields.reveal
-        ? documentToHtmlString(theme.fields.reveal, {
-            renderNode: {
-                [BLOCKS.EMBEDDED_ASSET]: (node) => 
-                    `<div class="theme-box">
+    <div
+        set:html={theme.fields.reveal
+            ? documentToHtmlString(theme.fields.reveal, {
+                  renderNode: {
+                      [BLOCKS.EMBEDDED_ASSET]: (node) =>
+                          `<div class="theme-box">
                         <img
                             src=${node.data.target.fields.file.url}
                             alt=${node.data.target.fields.description}
                         />
-                    </div>`
-            }
-        })
-        : ""
-    } />
+                    </div>`,
+                  },
+              })
+            : ""}
+    />
 
-    <div class="supermentors" set:html={
-    mentors
-        ? documentToHtmlString(mentors, {
-            renderNode: {
-                [BLOCKS.EMBEDDED_ENTRY]: (node) => {
-                    if (isSuperMentor(node)) {
-                        const mentor = node.data.target;
-                        return `
+    <div
+        class="supermentors"
+        set:html={mentors
+            ? documentToHtmlString(mentors, {
+                  renderNode: {
+                      [BLOCKS.EMBEDDED_ENTRY]: (node) => {
+                          if (isSuperMentor(node)) {
+                              const mentor = node.data.target;
+                              return `
                             <div class="supermentor">
                                 <div class="content">
                                     <h3>${mentor.fields.name}</h3>
@@ -73,14 +78,14 @@ const mentors = theme.fields.supermentors;
                                 />
                             </div>
                         `;
-                    } else {
-                        return "";
-                    }
-                }
-            }
-        })
-        : ""
-    } />
+                          } else {
+                              return "";
+                          }
+                      },
+                  },
+              })
+            : ""}
+    />
 </section>
 
 <style lang="scss">

@@ -1,64 +1,61 @@
----
----
-  
-  <footer>
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="https://public.svsticky.nl/logos/hoofd_outline_wit.svg" alt="Sticky Logo">
-      </div>
-  
-      <div class="footer-icons">
-        <a href="https://svsticky.nl/instagram" target="_blank" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://svsticky.nl/linkedin" target="_blank" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://svsticky.nl/github" target="_blank" aria-label="GitHub">
-          <i class="fa-brands fa-github"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
-  
+<footer>
+    <img
+        src="https://public.svsticky.nl/logos/hoofd_outline_wit.svg"
+        alt="Sticky Logo"
+    />
 
-  <style>
+    <div class="footer-icons">
+        <a
+            href="https://svsticky.nl/instagram"
+            target="_blank"
+            aria-label="Instagram"
+        >
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+            href="https://svsticky.nl/linkedin"
+            target="_blank"
+            aria-label="LinkedIn"
+        >
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+            href="https://svsticky.nl/github"
+            target="_blank"
+            aria-label="GitHub"
+        >
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </div>
+</footer>
+
+<style lang="scss">
     footer {
-      background-color: #404040;
-      padding: 1rem 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      margin-top: 3rem;
+        background-color: #404040;
+        width: calc(100% - 4rem);
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+
+        img {
+            height: 4rem;
+        }
+
+        .footer-icons {
+            display: flex;
+            gap: 2rem;
+
+            a {
+                color: white;
+                font-size: 2rem;
+                transition: opacity 0.3s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
     }
-  
-    .footer-container {
-      max-width: 100%;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      padding: 0 2rem;
-    }
-  
-    .footer-logo img {
-      height: 4rem;
-    }
-  
-    .footer-icons {
-      display: flex;
-      gap: 2rem;
-    }
-  
-    .footer-icons a {
-      color: white;
-      font-size: 2rem;
-      transition: opacity 0.3s;
-    }
-  
-    .footer-icons a:hover {
-      opacity: 0.7;
-    }
-  </style>
+</style>

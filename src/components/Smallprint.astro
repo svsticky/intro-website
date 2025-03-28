@@ -18,9 +18,12 @@ const [smallprint] = await contentfulClient.withoutUnresolvableLinks
     .then((result) => result.items);
 ---
 
-<section id="smallprint" set:html={documentToHtmlString(smallprint.fields.content, {
-    renderNode: {
-        [INLINES.HYPERLINK]: ({ data, content }, next) =>
-            `<a href=${data.uri} target="_blank">${next(content)}</a>`
-    }
-})} />
+<section
+    id="smallprint"
+    set:html={documentToHtmlString(smallprint.fields.content, {
+        renderNode: {
+            [INLINES.HYPERLINK]: ({ data, content }, next) =>
+                `<a href=${data.uri} target="_blank">${next(content)}</a>`,
+        },
+    })}
+/>

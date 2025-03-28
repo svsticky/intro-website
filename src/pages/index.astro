@@ -1,130 +1,146 @@
 ---
-import Nav from '../components/Nav.astro';
-import Header from '../components/Header.astro';
-import Information from '../components/Information.astro';
-import Inschrijven from '../components/Inschrijven.astro';
-import Theme from '../components/Theme.astro';
-import Association from '../components/Association.astro';
-import Smallprint from '../components/Smallprint.astro';
-import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
-import FAQ from '../components/FAQ.astro';
+import Nav from "../components/Nav.astro";
+import Header from "../components/Header.astro";
+import Information from "../components/Information.astro";
+import Inschrijven from "../components/Inschrijven.astro";
+import Theme from "../components/Theme.astro";
+import Association from "../components/Association.astro";
+import Smallprint from "../components/Smallprint.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import FAQ from "../components/FAQ.astro";
 ---
 
 <!doctype html>
 <html lang="nl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="/favicon-96x96.png"
+            sizes="96x96"
+        />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
         <meta name="apple-mobile-web-app-title" content="Introductie Sticky" />
         <link rel="manifest" href="/site.webmanifest" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Introductie Sticky</title>
-        <meta name="description" content="Informatiepagina voor de bachelorintroductie informatica en informatiekunde georganiseerd door studievereniging Sticky." />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-	</head>
-	<body>
-		<Nav />
-		<Header />
-		<main>
-			<Information />
-			<Inschrijven />
-			<Theme />
-			<Association />
-			<FAQ />
-			<Contact />
-			<Smallprint />
-		</main>
-		<Footer />
-	</body>
+        <meta name="generator" content={Astro.generator} />
+        <title>Introductie Sticky</title>
+        <meta
+            name="description"
+            content="Informatiepagina voor de bachelorintroductie informatica en informatiekunde georganiseerd door studievereniging Sticky."
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+    </head>
+    <body>
+        <Nav />
+        <Header />
+        <main>
+            <Information />
+            <Inschrijven />
+            <Theme />
+            <Association />
+            <FAQ />
+            <Contact />
+            <Smallprint />
+        </main>
+        <Footer />
+    </body>
 </html>
 
 <style is:global>
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
-/* GLOBAL STYLES */
+    /* GLOBAL STYLES */
 
-html,
-body {
-	margin: 0;
-	width: 100%;
-	height: auto;
-    font-family: 'Outfit', 'Arial', 'sans-serif';
-}
-
-body::before {
-	content: '';
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	/*
-	background-image:
-		linear-gradient(
-			to right,
-			rgba(255,255,255,0.0) 0%,
-			rgba(255,255,255,0.5) 8%,
-			rgba(255,255,255,1) 10%,
-			rgba(255,255,255,1) 90%,
-			rgba(255,255,255,0.5) 92%,
-			rgba(255,255,255,0.0) 100%
-		),
-		url('https://production-svsticky-photos.ams3.cdn.digitaloceanspaces.com/41418d91-41ef-4822-8c09-51c96f6d9a7d_w_1600.jpg');
-	*/
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	z-index: -1;
-	opacity: 1;
-	pointer-events: none;
-}
-
-p {margin-bottom: 1rem;}
-
-h1 { font-size: clamp(2rem, 5vw, 2.5rem); }
-h2 { font-size: clamp(1.75rem, 4.5vw, 2rem); }
-h3 { font-size: clamp(1.5rem, 4vw, 1.5rem); }
-
-h1, h2, h3, h4, h5, h6 {
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-
-	> strong, > b { color: #197052; }
-}
-
-a {
-	color: #197052;
-}
-
-/* PAGE LAYOUT STYLES */
-
-#signup ~ * {
-    z-index: 20;
-}
-
-main {
-	width: 90vw;              
-	max-width: 1200px;        
-	margin: 0 auto;
-	overflow: visible;
-
-    > section {
-        position: relative;
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: auto;
+        font-family: "Outfit", "Arial", "sans-serif";
     }
-}
 
-@media screen and (min-width: 800px) {
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        z-index: -1;
+        opacity: 1;
+        pointer-events: none;
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+    }
+    h2 {
+        font-size: clamp(1.75rem, 4.5vw, 2rem);
+    }
+    h3 {
+        font-size: clamp(1.5rem, 4vw, 1.5rem);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+
+        > strong,
+        > b {
+            color: #197052;
+        }
+    }
+
+    a {
+        color: #197052;
+    }
+
+    /* PAGE LAYOUT STYLES */
+
+    #signup ~ * {
+        z-index: 20;
+    }
+
     main {
-        width: 75vw;
+        width: 90vw;
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow: visible;
+
+        > section {
+            position: relative;
+        }
     }
-}
 
+    @media screen and (min-width: 800px) {
+        main {
+            width: 75vw;
+        }
+    }
 </style>
-
