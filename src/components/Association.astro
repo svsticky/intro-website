@@ -17,84 +17,62 @@ const [association] = await contentfulClient.withoutUnresolvableLinks
     .then((result) => result.items);
 ---
 
-<style lang="scss">
-    #sticky {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        .content {
-            width: 100%;
-            padding: 1rem 0;
-            text-align: left;
-        }
-
-        .image {
-            width: 100%;
-            padding: 1rem 0;
-            text-align: center;
-
-            img {
-                max-width: 100%;
-            }
-        }
-    }
-
-    .button {
-        display: inline-block;
-        padding: 1rem 2rem;
-        margin-top: 1rem;
-        background-color: #197052;
-        color: white;
-        font-size: 1.2rem;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        text-align: center;
-        transition: opacity 0.3s ease;
-
-        &:hover {
-            opacity: 0.7;
-        }
-    }
-
-    /* Hide image on small screens */
-    @media (max-width: 767px) {
-        #sticky .image {
-            display: none;
-        }
-    }
-
-    @media (min-width: 768px) {
-        #sticky {
-            flex-wrap: nowrap;
-
-            .content {
-                max-width: 75%;
-                text-align: left;
-            }
-
-            .image {
-                width: 35%;
-                padding-left: 3rem;
-                display: block;
-            }
-        }
-    }
-</style>
-
 <section id="sticky">
     <div class="content">
         <div set:html={documentToHtmlString(association.fields.content)} />
         <a href="https://wordlid.svsticky.nl" class="button">Word lid!</a>
     </div>
 
-    <div class="image">
-        <img
-            src="https://public.svsticky.nl/logos/hoofd_outline_kleur.svg"
-            alt="Sticky logo"
-        />
-    </div>
+    <img
+        src="https://public.svsticky.nl/logos/hoofd_outline_kleur.svg"
+        alt="Sticky logo"
+    />
 </section>
+
+<style lang="scss">
+    #sticky {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto;
+
+        .content {
+            width: 100%;
+            padding: 1rem 0;
+            text-align: left;
+
+            .button {
+                display: inline-block;
+                padding: 1rem 2rem;
+                margin-top: 1rem;
+                background-color: #197052;
+                color: white;
+                font-size: 1.2rem;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+                text-align: center;
+                transition: opacity 0.3s ease;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            display: none;
+            margin: auto;
+        }
+    }
+
+    @media (min-width: 800px) {
+        #sticky {
+            grid-template-columns: 65% 35%;
+
+            img {
+                display: block;
+            }
+        }
+    }
+</style>
