@@ -52,10 +52,14 @@ const hero = heros.items[0];
             currentIndex = (currentIndex + 1) % items.length;
             for (let i = 0; i < items.length; i++) {
                 if (i === oldIndex) {
-                    items[oldIndex].style.transform = "translateX(-80vw)";
+                    items[oldIndex].style.transform = window.innerWidth >= 650
+                        ? "translateX(-80vw)"
+                        : "translateX(-100vw)";
                     setTimeout(() => {
                         items[i].style.display = "none";
-                        items[i].style.transform = "translateX(80vw)";
+                        items[i].style.transform = window.innerWidth >= 650
+                            ? "translateX(80vw)"
+                            : "translateX(100vw)";
                         setTimeout(
                             () => (items[i].style.display = "block"),
                             1500,
@@ -71,74 +75,124 @@ const hero = heros.items[0];
 
 <style lang="scss">
     header {
+        height: calc(100vh - 6rem);
+        width: 100vw;
         color: white;
-        position: relative;
-
-        .header-background {
-            background: #197052;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            &.background-top {
-                height: 80%;
-            }
-
-            &.background-bottom {
-                top: 70%;
-                height: 20%;
-                clip-path: ellipse(70% 50%);
-            }
-        }
 
         .hero {
-            width: 80vw;
-            display: block;
-            margin: 0 auto;
-            position: relative;
+            width: 100%;
+            height: 100%;
 
             .carousel {
-                border-radius: 1rem;
                 overflow: hidden;
-                height: 60vh;
-                box-sizing: border-box;
                 display: grid;
-                box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
+                position: relative;
 
                 .carousel-item {
-                    transform: translateX(80vw);
+                    transform: translateX(100vw);
                     transition: transform 1.5s ease-in-out;
-                    border-radius: 1rem;
-                    height: 60vh;
                     grid-area: 1 / 1;
-                    display: block;
 
                     &:first-of-type {
                         transform: translateX(0);
                     }
 
                     img {
-                        width: 80vw;
-                        height: 60vh;
+                        width: 100vw;
+                        height: calc(100vh - 6rem);
                         object-fit: cover;
                         filter: brightness(75%);
                     }
 
                     p {
                         position: absolute;
-                        top: calc(60vh - 3rem);
+                        bottom: 2rem;
                         right: 1rem;
                         font-size: 0.75rem;
                     }
                 }
             }
-
+            
             .hero-text {
                 position: absolute;
-                top: 1rem;
-                left: 1rem;
-                width: 50%;
+                top: 6rem;
+                left: 0;
+                padding: 1rem
+            }
+        }
+    }
+
+    @media screen and (min-width: 650px) {
+        header {
+            color: white;
+            position: relative;
+
+            .header-background {
+                background: #197052;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                &.background-top {
+                    height: 80%;
+                }
+
+                &.background-bottom {
+                    top: 70%;
+                    height: 20%;
+                    clip-path: ellipse(70% 50%);
+                }
+            }
+
+            .hero {
+                width: 80vw;
+                display: block;
+                margin: 0 auto;
+                position: relative;
+
+                .carousel {
+                    border-radius: 1rem;
+                    overflow: hidden;
+                    height: 60vh;
+                    box-sizing: border-box;
+                    display: grid;
+                    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
+
+                    .carousel-item {
+                        transform: translateX(80vw);
+                        transition: transform 1.5s ease-in-out;
+                        border-radius: 1rem;
+                        height: 60vh;
+                        grid-area: 1 / 1;
+                        display: block;
+
+                        &:first-of-type {
+                            transform: translateX(0);
+                        }
+
+                        img {
+                            width: 80vw;
+                            height: 60vh;
+                            object-fit: cover;
+                            filter: brightness(75%);
+                        }
+
+                        p {
+                            position: absolute;
+                            bottom: 3rem;
+                            right: 1rem;
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+
+                .hero-text {
+                    position: absolute;
+                    top: 1rem;
+                    left: 1rem;
+                    width: 50%;
+                }
             }
         }
     }
