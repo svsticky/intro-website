@@ -15,15 +15,16 @@
 </nav>
 
 <script>
-    const toggleNav = () =>
-        document.querySelector("nav")!.classList.toggle("responsive");
-
     document
         .getElementById("nav-icon")!
-        .addEventListener("click", (_) => toggleNav());
+        .addEventListener("click", (_) =>
+            document.querySelector("nav")!.classList.toggle("responsive"),
+        );
 
     document.querySelectorAll("nav ul a").forEach((link) => {
-        link.addEventListener("click", (_) => toggleNav());
+        link.addEventListener("click", (_) =>
+            document.querySelector("nav")!.classList.remove("responsive"),
+        );
     });
 </script>
 
