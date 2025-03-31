@@ -4,17 +4,127 @@ import { contentfulClient } from "../contentful";
 import type { EntryFieldTypes } from "contentful";
 
 interface FAQ {
-    contentTypeId: "faq";
-    fields: {
-        content: EntryFieldTypes.RichText;
-    };
+  contentTypeId: "faq";
+  fields: {
+    content: EntryFieldTypes.RichText;
+  };
 }
 
 const [faq] = await contentfulClient.withoutUnresolvableLinks
-    .getEntries<FAQ>({
-        content_type: "faq",
-    })
-    .then((result) => result.items);
+  .getEntries<FAQ>({
+    content_type: "faq",
+  })
+  .then((result) => result.items);
+
+const faqBlocks = faq.fields.content.content;
 ---
 
-<section id="FAQ" set:html={documentToHtmlString(faq.fields.content)} />
+<section id="FAQ" class="faq-section">
+  {faqBlocks.map((block, index) => {
+    // ✅ Show the first heading normally (the section title)
+    if (index === 0 && block.nodeType.startsWith("heading-")) {
+      const titleHtml = documentToHtmlString({
+        nodeType: "document",
+        content: [block],
+        data: {},
+      });
+
+      return <div set:html={titleHtml} />;
+    }
+
+    // ✅ All h3s are dropdown triggers
+    if (block.nodeType === "heading-3") {
+      const question = block.content[0]?.value || "Vraag";
+      const answerBlock = faqBlocks[index + 1];
+      const answerHtml = answerBlock
+        ? documentToHtmlString({
+            nodeType: "document",
+            content: [answerBlock],
+            data: {},
+          })
+        : "";
+
+      return (
+        <div class="faq-item">
+          <button class="faq-question" data-target={`faq-${index}`}>
+            <span class="arrow">&#9662;</span>
+            <span>{question}</span>
+          </button>
+          <div class="faq-answer" id={`faq-${index}`} set:html={answerHtml} />
+        </div>
+      );
+    }
+
+    return null;
+  })}
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".faq-question").forEach((button) => {
+      button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-target");
+        const answer = document.getElementById(targetId);
+        const arrow = button.querySelector(".arrow");
+
+        if (answer) {
+          const isOpen = answer.classList.toggle("open");
+
+          if (isOpen) {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            arrow.classList.add("rotated");
+          } else {
+            answer.style.maxHeight = null;
+            arrow.classList.remove("rotated");
+          }
+        }
+      });
+    });
+  });
+</script>
+
+<style lang="scss">
+  .faq-section {
+    margin-top: 2rem;
+  }
+
+  .faq-item {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+  }
+
+  .faq-question {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .faq-question .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+  }
+
+  .faq-question .arrow.rotated {
+    transform: rotate(180deg); /* ▲ when open */
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .faq-answer.open {
+    padding-top: 0.5rem;
+  }
+</style>
