@@ -53,15 +53,16 @@
             margin: 0;
 
             li a {
+                display: inline-block;
                 color: white;
+                padding: 3px;
                 text-decoration: none;
                 transition: transform 0.2s ease, opacity 0.2s ease;
-                //transform: translateY(100px); Deze had Job toegevoegd
 
                 &:hover {
                     text-decoration: none;
-                    transform: translate(-50px, -50px);
                     opacity: 0.8;
+                    transform: translateY(-3px);
                 }
             }
         }
