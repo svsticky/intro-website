@@ -40,23 +40,19 @@ const mentors = theme.fields.supermentors;
 <section id="theme">
   <div set:html={documentToHtmlString(theme.fields.content)} />
 
-  <div
-    set:html={
-      theme.fields.reveal
-        ? documentToHtmlString(theme.fields.reveal, {
-            renderNode: {
-              [BLOCKS.EMBEDDED_ASSET]: (node) =>
-                `<div class="theme-box">
-                  <img
-                    src=${node.data.target.fields.file.url}
-                    alt=${node.data.target.fields.description}
-                  />
-                </div>`,
-            },
-          })
-        : ""
+  {theme.fields.reveal?.content.map((node) => {
+    if (node.nodeType === "embedded-asset-block") {
+      const asset = node.data.target;
+      const url = asset.fields.file.url;
+      const alt = asset.fields.description || "Thema afbeelding";
+
+      return (
+        <div class="theme-box">
+          <img src={url} alt={alt} />
+        </div>
+      );
     }
-  />
+  })}
 
   <div class="supermentors">
     {
@@ -86,7 +82,7 @@ const mentors = theme.fields.supermentors;
 <style lang="scss">
   .supermentor {
     margin-bottom: 4rem;
-    overflow: auto; // ensure floats are contained
+    overflow: auto;
     padding-bottom: 1rem;
     border-bottom: 1px solid #e0e0e0;
   }
@@ -97,7 +93,7 @@ const mentors = theme.fields.supermentors;
 
   .mentor-content {
     position: relative;
-    overflow: auto; // contains float
+    overflow: auto;
   }
 
   .mentor-img {
@@ -109,6 +105,7 @@ const mentors = theme.fields.supermentors;
     margin-bottom: 1rem;
     clear: both;
     display: block;
+    aspect-ratio: 1/1;
   }
 
   @media screen and (min-width: 601px) {
@@ -130,5 +127,20 @@ const mentors = theme.fields.supermentors;
       max-width: none;
       display: inline;
     }
+  }
+
+  .theme-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    width: 100%;
+  }
+
+  .theme-box img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 0.5rem;
   }
 </style>
