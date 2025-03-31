@@ -5,132 +5,130 @@ import { contentfulClient } from "../contentful";
 import type { EntryFieldTypes, Entry } from "contentful";
 
 interface Supermentor {
-    contentTypeId: "supermentor";
-    fields: {
-        name: EntryFieldTypes.Text;
-        picture: EntryFieldTypes.AssetLink;
-        content: EntryFieldTypes.RichText;
-    };
+  contentTypeId: "supermentor";
+  fields: {
+    name: EntryFieldTypes.Text;
+    picture: EntryFieldTypes.AssetLink;
+    content: EntryFieldTypes.RichText;
+  };
 }
 
 interface Theme {
-    contentTypeId: "theme";
-    fields: {
-        content: EntryFieldTypes.RichText;
-        reveal?: EntryFieldTypes.RichText;
-        supermentors?: EntryFieldTypes.RichText;
-    };
+  contentTypeId: "theme";
+  fields: {
+    content: EntryFieldTypes.RichText;
+    reveal?: EntryFieldTypes.RichText;
+    supermentors?: EntryFieldTypes.RichText;
+  };
 }
 
-function isSuperMentor(
-    node: any,
-): node is {
-    data: { target: Entry<Supermentor, "WITHOUT_UNRESOLVABLE_LINKS"> };
+function isSuperMentor(node: any): node is {
+  data: { target: Entry<Supermentor, "WITHOUT_UNRESOLVABLE_LINKS"> };
 } {
-    return node.data.target.sys.contentType.sys.id === "supermentor";
+  return node.data.target.sys.contentType.sys.id === "supermentor";
 }
 
 const [theme] = await contentfulClient.withoutUnresolvableLinks
-    .getEntries<Theme>({
-        content_type: "theme",
-    })
-    .then((result) => result.items);
+  .getEntries<Theme>({
+    content_type: "theme",
+  })
+  .then((result) => result.items);
 
 const mentors = theme.fields.supermentors;
 ---
 
 <section id="theme">
-    <div set:html={documentToHtmlString(theme.fields.content)} />
+  <div set:html={documentToHtmlString(theme.fields.content)} />
 
-    <div
-        set:html={theme.fields.reveal
-            ? documentToHtmlString(theme.fields.reveal, {
-                  renderNode: {
-                      [BLOCKS.EMBEDDED_ASSET]: (node) =>
-                          `<div class="theme-box">
-                        <img
-                            src=${node.data.target.fields.file.url}
-                            alt=${node.data.target.fields.description}
-                        />
-                    </div>`,
-                  },
-              })
-            : ""}
-    />
+  <div
+    set:html={
+      theme.fields.reveal
+        ? documentToHtmlString(theme.fields.reveal, {
+            renderNode: {
+              [BLOCKS.EMBEDDED_ASSET]: (node) =>
+                `<div class="theme-box">
+                  <img
+                    src=${node.data.target.fields.file.url}
+                    alt=${node.data.target.fields.description}
+                  />
+                </div>`,
+            },
+          })
+        : ""
+    }
+  />
 
-    <div
-        class="supermentors"
-        set:html={mentors
-            ? documentToHtmlString(mentors, {
-                  renderNode: {
-                      [BLOCKS.EMBEDDED_ENTRY]: (node) => {
-                          if (isSuperMentor(node)) {
-                              const mentor = node.data.target;
-                              return `
-                            <div class="supermentor">
-                                <div class="content">
-                                    <h3>${mentor.fields.name}</h3>
-                                    ${documentToHtmlString(mentor.fields.content)}
-                                </div>
-                                <img
-                                    src=${mentor.fields.picture?.fields.file?.url}
-                                    alt=${mentor.fields.name}
-                                />
-                            </div>
-                        `;
-                          } else {
-                              return "";
-                          }
-                      },
-                  },
-              })
-            : ""}
-    />
+  <div class="supermentors">
+    {
+      mentors &&
+        mentors.content.map((node) => {
+          if (node.nodeType === "embedded-entry-block" && isSuperMentor(node)) {
+            const mentor = node.data.target;
+            const imageUrl = mentor.fields.picture?.fields.file?.url;
+            const imageAlt = mentor.fields.name;
+            const contentHtml = documentToHtmlString(mentor.fields.content);
+
+            return (
+              <div class="supermentor">
+                <h3>{mentor.fields.name}</h3>
+                <div class="mentor-content">
+                  <img src={imageUrl} alt={imageAlt} class="mentor-img" />
+                  <div set:html={contentHtml} />
+                </div>
+              </div>
+            );
+          }
+        })
+    }
+  </div>
 </section>
 
 <style lang="scss">
-    :global(.theme-box) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #fff;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        max-width: 100%;
-        margin: 2rem 0;
+  .supermentor {
+    margin-bottom: 4rem;
+    overflow: auto; // ensure floats are contained
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
 
-        :global(img) {
-            width: 100%;
-            height: auto;
-            padding: 3rem;
-        }
+  .supermentor h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .mentor-content {
+    position: relative;
+    overflow: auto; // contains float
+  }
+
+  .mentor-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    clear: both;
+    display: block;
+  }
+
+  @media screen and (min-width: 601px) {
+    .mentor-img {
+      float: right;
+      width: 200px;
+      margin-left: 1rem;
+      margin-bottom: 0.5rem;
+      display: inline;
     }
+  }
 
-    .supermentors {
-        height: max-content;
-
-        /*
-            We need :global here since the supermentors are generated
-            by contentful and are therefore not astro-managed.
-        */
-        :global(.supermentor) {
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 1rem;
-
-            :global(.content) {
-                margin: auto;
-            }
-
-            :global(img) {
-                margin: auto;
-                padding: 1rem 0;
-                width: 100%;
-                aspect-ratio: 1 / 1;
-                object-fit: cover;
-            }
-        }
+  @media screen and (max-width: 600px) {
+    .mentor-img {
+      float: right;
+      width: 50%;
+      margin-left: 1rem;
+      margin-bottom: 0.5rem;
+      max-width: none;
+      display: inline;
     }
+  }
 </style>
