@@ -55,9 +55,13 @@
             li a {
                 color: white;
                 text-decoration: none;
+                transition: transform 0.2s ease, opacity 0.2s ease;
+                //transform: translateY(100px); Deze had Job toegevoegd
 
                 &:hover {
-                    text-decoration: underline;
+                    text-decoration: none;
+                    transform: translate(-50px, -50px);
+                    opacity: 0.8;
                 }
             }
         }
