@@ -55,33 +55,33 @@ const mentors = theme.fields.supermentors;
   })}
 
 <div
-class="supermentors"
-set:html={mentors
-    ? documentToHtmlString(mentors, {
-          renderNode: {
-              [BLOCKS.EMBEDDED_ENTRY]: (node) => {
-                  if (isSuperMentor(node)) {
-                    const mentor = node.data.target;
-                  const imageUrl = mentor.fields.picture?.fields.file?.url;
-                  const imageAlt = mentor.fields.name;
-                  const contentHtml = documentToHtmlString(mentor.fields.content);
+  class="supermentors"
+  set:html={mentors
+      ? documentToHtmlString(mentors, {
+            renderNode: {
+                [BLOCKS.EMBEDDED_ENTRY]: (node) => {
+                    if (isSuperMentor(node)) {
+                      const mentor = node.data.target;
+                      const imageUrl = mentor.fields.picture?.fields.file?.url;
+                      const imageAlt = mentor.fields.name;
+                      const contentHtml = documentToHtmlString(mentor.fields.content);
 
-                  return `
-                    <div class="supermentor">
-                      <h3>${mentor.fields.name}</h3>
-                      <div class="mentor-content">
-                        <img src=${imageUrl} alt=${imageAlt} class="mentor-img" />
-                        <div>${contentHtml} </div>
-                      </div>
-                    </div>
-                  `; 
-                        } else {
-                            return "";
-                        }
-                    },
-                },
-            })
-          : ""}
+                      return `
+                        <div class="supermentor">
+                          <h3>${mentor.fields.name}</h3>
+                          <div class="mentor-content">
+                            <img src=${imageUrl} alt=${imageAlt} class="mentor-img" />
+                            <div>${contentHtml} </div>
+                          </div>
+                        </div>
+                      `; 
+                          } else {
+                              return "";
+                          }
+                      },
+                  },
+              })
+            : ""}
 />
 
 </section>
