@@ -48,4 +48,30 @@ const [information] = await contentfulClient.withoutUnresolvableLinks
             }
         }
     }
+
+    :global(table) {
+        border-radius: 0.25rem;
+        border: 1px solid #cccccc;
+        width: 100%;
+        border-collapse: collapse;
+
+
+        :global(tbody > tr + tr) {
+            border-top: 1px solid #cccccc;
+        }
+
+        :global(tbody > tr > td) {  
+            padding: 0.825rem;
+
+            :global(p) {
+                margin: 0;
+            }
+        }
+
+        :global(tbody > tr > td:last-child) {
+            max-width: 500px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
 </style>
