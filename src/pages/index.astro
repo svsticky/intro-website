@@ -9,68 +9,25 @@ import Smallprint from "../components/Smallprint.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 import FAQ from "../components/FAQ.astro";
+import Layout from "../components/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="nl">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link
-            rel="icon"
-            type="image/png"
-            href="/favicon-96x96.png"
-            sizes="96x96"
-        />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png"
-        />
-        <meta name="apple-mobile-web-app-title" content="Introductie Sticky" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Introductie Sticky</title>
-        <meta
-            name="description"
-            content="Informatiepagina voor de bachelorintroductie informatica en informatiekunde georganiseerd door studievereniging Sticky."
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        />
-    </head>
-    <body>
-        <Nav />
-        <Header />
-        <main>
-            <Information />
-            <Inschrijven />
-            <Theme />
-            <Association />
-            <FAQ />
-            <Contact />
-            <Smallprint />
-        </main>
-        <Footer />
-    </body>
-</html>
+<Layout>
+    <Nav />
+    <Header />
+    <main>
+        <Information />
+        <Inschrijven />
+        <Theme />
+        <Association />
+        <FAQ />
+        <Contact />
+        <Smallprint />
+    </main>
+    <Footer />
+</Layout>
 
 <style is:global>
-    @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-
-    /* GLOBAL STYLES */
-
-    html,
-    body {
-        margin: 0;
-        width: 100%;
-        height: auto;
-        font-family: "Outfit", "Arial", "sans-serif";
-    }
-
     body::before {
         content: "";
         position: fixed;
@@ -114,6 +71,7 @@ import FAQ from "../components/FAQ.astro";
         > strong,
         > b {
             color: #197052;
+            font-weight: bold;
         }
     }
 
