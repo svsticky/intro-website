@@ -54,48 +54,56 @@ const mentors = theme.fields.supermentors;
     }
   })}
 
-  <div class="supermentors">
-    {
-      mentors &&
-        mentors.content.map((node) => {
-          if (node.nodeType === "embedded-entry-block" && isSuperMentor(node)) {
-            const mentor = node.data.target;
-            const imageUrl = mentor.fields.picture?.fields.file?.url;
-            const imageAlt = mentor.fields.name;
-            const contentHtml = documentToHtmlString(mentor.fields.content);
+<div
+  class="supermentors"
+  set:html={mentors
+      ? documentToHtmlString(mentors, {
+            renderNode: {
+                [BLOCKS.EMBEDDED_ENTRY]: (node) => {
+                    if (isSuperMentor(node)) {
+                      const mentor = node.data.target;
+                      const imageUrl = mentor.fields.picture?.fields.file?.url;
+                      const imageAlt = mentor.fields.name;
+                      const contentHtml = documentToHtmlString(mentor.fields.content);
 
-            return (
-              <div class="supermentor">
-                <h3>{mentor.fields.name}</h3>
-                <div class="mentor-content">
-                  <img src={imageUrl} alt={imageAlt} class="mentor-img" />
-                  <div set:html={contentHtml} />
-                </div>
-              </div>
-            );
-          }
-        })
-    }
-  </div>
+                      return `
+                        <div class="supermentor">
+                          <h3>${mentor.fields.name}</h3>
+                          <div class="mentor-content">
+                            <img src=${imageUrl} alt=${imageAlt} class="mentor-img" />
+                            <div>${contentHtml} </div>
+                          </div>
+                        </div>
+                      `; 
+                          } else {
+                              return "";
+                          }
+                      },
+                  },
+              })
+            : ""}
+/>
+
 </section>
 
 <style lang="scss">
-  .supermentor {
+  :global(.supermentor) {
     overflow: auto;
     padding-bottom: 1rem;
     border-bottom: 1px solid #e0e0e0;
+    :global(h3) {
+      margin-bottom: 0.5rem;
+  }
   }
 
-  .supermentor h3 {
-    margin-bottom: 0.5rem;
-  }
 
-  .mentor-content {
+
+  :global(.mentor-content) {
     position: relative;
     overflow: auto;
   }
 
-  .mentor-img {
+  :global(.mentor-img) {
     width: 100%;
     max-width: 200px;
     height: auto;
@@ -108,7 +116,7 @@ const mentors = theme.fields.supermentors;
   }
 
   @media screen and (min-width: 601px) {
-    .mentor-img {
+    :global(.mentor-img) {
       float: right;
       width: 200px;
       margin-left: 1rem;
@@ -118,7 +126,7 @@ const mentors = theme.fields.supermentors;
   }
 
   @media screen and (max-width: 600px) {
-    .mentor-img {
+    :global(.mentor-img) {
       float: right;
       width: 50%;
       margin-left: 1rem;

@@ -23,7 +23,7 @@ const [signup] = await contentfulClient.withoutUnresolvableLinks
     <div class="background"></div>
     <div class="content">
         <div set:html={documentToHtmlString(signup.fields.content)} />
-        <a href={signup.fields.buttonLink} class="button"
+        <a href={signup.fields.buttonLink} class="button" target="_blank"
             >{signup.fields.buttonContent}</a
         >
     </div>

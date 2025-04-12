@@ -28,24 +28,86 @@ const [information] = await contentfulClient.withoutUnresolvableLinks
     <div set:html={documentToHtmlString(information.fields.content)} />
 </section>
 
-<!-- TODO: Add table styles for programme -->
 <style lang="scss">
-    #info img {
-        display: none;
-    }
+#info img {
+    display: none;
+}
 
-    @media screen and (min-width: 768px) {
-        #info {
-            img {
-                display: block;
-                width: 25%;
-                float: right;
-                aspect-ratio: 2 / 1;
-                object-fit: cover;
-                border-radius: 1rem;
-                clear: right;
-                margin: 1rem 0 1rem 2rem;
-            }
+@media screen and (min-width: 768px) {
+    #info {
+        img {
+            display: block;
+            width: 25%;
+            float: right;
+            aspect-ratio: 2 / 1;
+            object-fit: cover;
+            border-radius: 1rem;
+            clear: right;
+            margin: 1rem 0 1rem 2rem;
         }
     }
+}
+
+:global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #cccccc; // ✅ Outer border for desktop
+    border-radius: 0.25rem;
+}
+
+:global(tbody > tr + tr) {
+    border-top: 1px solid #cccccc;
+}
+
+:global(tbody > tr > td) {
+    padding: 0.825rem;
+    text-align: left;
+    border: none;
+
+    :global(p) {
+        margin: 0;
+    }
+}
+
+:global(tbody > tr > td:last-child) {
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 767px) {
+    :global(table) {
+        border: none !important;
+        margin: 0 auto; // ✅ Center the table
+        box-sizing: border-box;
+    }
+
+    :global(table),
+    :global(tbody),
+    :global(tr),
+    :global(td) {
+        display: block;
+        width: 100%;
+    }
+
+    :global(tbody > tr) {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        background: #fff;
+        box-sizing: border-box;
+    }
+
+    :global(tbody > tr > td) {
+        border-bottom: 1px solid #eee;
+        padding: 0.5rem 0;
+        text-align: left;
+        box-sizing: border-box;
+    }
+
+    :global(tbody > tr > td:last-child) {
+        border-bottom: none;
+    }
+}
 </style>
