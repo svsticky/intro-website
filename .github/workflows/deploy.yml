@@ -62,8 +62,9 @@ jobs:
 
     steps:
       - name: Trigger deploy on server
+        # Triggers a webhook on our server, handled by Aas (svsticky/aas)
         uses: distributhor/workflow-webhook@v3
         env:
-          webhook_url:    ${{ secrets.SERVER_WEBHOOK_URL    }}
-          webhook_secret: ${{ secrets.SERVER_WEBHOOK_SECRET }}
+          webhook_url:    ${{ vars.AAS_URL }}
+          webhook_secret: ${{ secrets.AAS_PRE_SHARED_KEY }}
 
