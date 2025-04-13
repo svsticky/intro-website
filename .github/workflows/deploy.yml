@@ -44,6 +44,7 @@ jobs:
         env:
           CONTENTFUL_SPACE_ID:       ${{ secrets.CONTENTFUL_SPACE_ID       }}
           CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
+          CONTENTFUL_ENVIRONMENT:    ${{ vars.CONTENTFUL_ENVIRONMENT }}
 
       # Astro will produce a build in `dist/`
       - name: Upload build artifacts
