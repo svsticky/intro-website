@@ -49,7 +49,7 @@ const [signup] = await contentfulClient.withoutUnresolvableLinks
             /* The padding on the main element increases on larger screens */
             @media screen and (min-width: 800px) {
                 & {
-                    left: -12.5vw;
+                    left: calc(max(12.5vw, (100vw - 1200px) / 2) * -1);
                 }
             }
         }
