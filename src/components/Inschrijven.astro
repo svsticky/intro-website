@@ -36,7 +36,7 @@ const [signup] = await contentfulClient.withoutUnresolvableLinks
         display: grid;
         width: 100%;
         margin-top: 3rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
 
         .background {
             position: absolute;
@@ -59,6 +59,7 @@ const [signup] = await contentfulClient.withoutUnresolvableLinks
             padding: 3rem 1rem;
             text-align: center;
             z-index: 100;
+            max-width: 80ch;
 
             :global(h1, h2) {
                 margin-top: 0;
