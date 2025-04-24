@@ -23,6 +23,7 @@ const [association] = await contentfulClient.withoutUnresolvableLinks
         <a href="https://wordlid.svsticky.nl" class="button" target="_blank">Word lid!</a>
     </div>
 
+    <!-- Using <img> here because we don't want to preload the sticky logo -->
     <img
         src="https://public.svsticky.nl/logos/hoofd_outline_kleur.svg"
         alt="Sticky logo"
@@ -60,6 +61,7 @@ const [association] = await contentfulClient.withoutUnresolvableLinks
 
         img {
             width: 100%;
+            height: auto;
             display: none;
             margin: auto;
         }

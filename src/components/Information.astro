@@ -2,6 +2,7 @@
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { contentfulClient } from "../contentful";
 import type { EntryFieldTypes } from "contentful";
+import { Image } from "astro-preload/components";
 
 interface Information {
     contentTypeId: "information";
@@ -22,7 +23,12 @@ const [information] = await contentfulClient.withoutUnresolvableLinks
     {
         information.fields.images &&
             information.fields.images.map((image) => (
-                <img src={image?.fields.file?.url} alt={image?.fields.title} />
+                <Image
+                    url={"https:" + image!.fields.file!.url}
+                    alt={image!.fields.title ?? ""}
+                    width={image!.fields.file?.details.image?.width ?? 0}
+                    height={image!.fields.file?.details.image?.height ?? 0}
+                />
             ))
     }
     <div set:html={documentToHtmlString(information.fields.content)} />
@@ -37,9 +43,10 @@ const [information] = await contentfulClient.withoutUnresolvableLinks
     #info {
         img {
             display: block;
-            width: 25%;
+            width: 25% !important;
             float: right;
-            aspect-ratio: 2 / 1;
+            aspect-ratio: 2 / 1!important;
+            height: auto;
             object-fit: cover;
             border-radius: 1rem;
             clear: right;

@@ -1,5 +1,7 @@
 # build output
 dist/
+public/assets/preloaded/*
+!.gitkeep
 
 # generated types
 .astro/
