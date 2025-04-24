@@ -68,7 +68,8 @@ const mentors = theme.fields.supermentors ?? [];
                                 <Image
                                     url={
                                         "https:" +
-                                        mentor.fields.picture!.fields.file!.url
+                                        mentor.fields.picture!.fields.file!.url +
+                                        "?w=400&h=400&fit=thumb"
                                     }
                                     alt={mentor.fields.picture!.fields.title}
                                 />

@@ -27,7 +27,7 @@ const hero = heros.items[0];
                 hero.fields.pictures.map((image) => image && (
                     <div class="carousel-item">
                         <Image
-                            url={"https:" + image.fields.file!.url}
+                            url={"https:" + image.fields.file!.url + "?w=1000&h=500&fit=fill"}
                             alt={image.fields.title}
                         />
                         <p>

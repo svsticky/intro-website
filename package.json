@@ -11,9 +11,12 @@
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^17.0.0",
     "@fontsource/outfit": "^5.2.5",
+    "@playform/compress": "^0.1.9",
     "astro": "^5.4.3",
     "astro-preload": "^1.1.2",
+    "autoprefixer": "^10.4.21",
     "contentful": "^11.5.6",
+    "cssnano": "^7.0.6",
     "sass": "^1.85.1"
   }
 }

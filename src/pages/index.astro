@@ -27,7 +27,7 @@ import Layout from "../components/Layout.astro";
     <Footer />
 </Layout>
 
-<style is:global>
+<style lang="scss" is:global>
     p {
         margin-bottom: 1rem;
     }
@@ -53,11 +53,8 @@ import Layout from "../components/Layout.astro";
     h5,
     h6 {
         hyphens: auto;
-        -webkit-hyphens: auto;
-        -moz-hyphens: auto;
 
-        > strong,
-        > b {
+        > strong, > b {
             color: #197052;
             font-weight: bold;
         }
