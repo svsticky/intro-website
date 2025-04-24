@@ -1,153 +1,132 @@
 ---
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { BLOCKS } from "@contentful/rich-text-types";
 import { contentfulClient } from "../contentful";
-import type { EntryFieldTypes, Entry } from "contentful";
+import type { EntryFieldTypes } from "contentful";
+import { Image } from "astro-preload/components";
 
 interface Supermentor {
-  contentTypeId: "supermentor";
-  fields: {
-    name: EntryFieldTypes.Text;
-    picture: EntryFieldTypes.AssetLink;
-    content: EntryFieldTypes.RichText;
-  };
+    contentTypeId: "supermentor";
+    fields: {
+        name: EntryFieldTypes.Text;
+        picture: EntryFieldTypes.AssetLink;
+        content: EntryFieldTypes.RichText;
+    };
 }
 
 interface Theme {
-  contentTypeId: "theme";
-  fields: {
-    content: EntryFieldTypes.RichText;
-    reveal?: EntryFieldTypes.RichText;
-    supermentors?: EntryFieldTypes.RichText;
-  };
-}
-
-function isSuperMentor(node: any): node is {
-  data: { target: Entry<Supermentor, "WITHOUT_UNRESOLVABLE_LINKS"> };
-} {
-  return node.data.target.sys.contentType.sys.id === "supermentor";
+    contentTypeId: "theme";
+    fields: {
+        content: EntryFieldTypes.RichText;
+        reveal?: EntryFieldTypes.RichText;
+        supermentorText?: EntryFieldTypes.RichText;
+        supermentors?: EntryFieldTypes.Array<
+            EntryFieldTypes.EntryLink<Supermentor>
+        >;
+    };
 }
 
 const [theme] = await contentfulClient.withoutUnresolvableLinks
-  .getEntries<Theme>({
-    content_type: "theme",
-  })
-  .then((result) => result.items);
+    .getEntries<Theme>({
+        content_type: "theme",
+    })
+    .then((result) => result.items);
 
-const mentors = theme.fields.supermentors;
+const mentorsText = theme.fields.supermentorText;
+const mentors = theme.fields.supermentors ?? [];
 ---
 
 <section id="theme">
-  <div set:html={documentToHtmlString(theme.fields.content)} />
+    <div set:html={documentToHtmlString(theme.fields.content)} />
 
-  {theme.fields.reveal?.content.map((node) => {
-    if (node.nodeType === "embedded-asset-block") {
-      const asset = node.data.target;
-      const url = asset.fields.file.url;
-      const alt = asset.fields.description || "Thema afbeelding";
+    {
+        theme.fields.reveal?.content.map((node) => {
+            if (node.nodeType === "embedded-asset-block") {
+                const asset = node.data.target;
+                const url = asset.fields.file.url;
+                const alt = asset.fields.description || "Thema afbeelding";
 
-      return (
-        <div class="theme-box">
-          <img src={url} alt={alt} />
-        </div>
-      );
+                return (
+                    <div class="theme-box">
+                        <img src={url} alt={alt} />
+                    </div>
+                );
+            }
+        })
     }
-  })}
 
-<div
-  class="supermentors"
-  set:html={mentors
-      ? documentToHtmlString(mentors, {
-            renderNode: {
-                [BLOCKS.EMBEDDED_ENTRY]: (node) => {
-                    if (isSuperMentor(node)) {
-                      const mentor = node.data.target;
-                      const imageUrl = mentor.fields.picture?.fields.file?.url;
-                      const imageAlt = mentor.fields.name;
-                      const contentHtml = documentToHtmlString(mentor.fields.content);
+    { mentorsText &&
+        <div set:html={documentToHtmlString(mentorsText)} /> }
 
-                      return `
+    <div class="supermentors">
+        {
+            mentors.map(
+                (mentor) =>
+                    mentor && (
                         <div class="supermentor">
-                          <h3>${mentor.fields.name}</h3>
-                          <div class="mentor-content">
-                            <img src=${imageUrl} alt=${imageAlt} class="mentor-img" />
-                            <div>${contentHtml} </div>
-                          </div>
+                            <h3>{mentor.fields.name}</h3>
+                            <div class="mentor-content">
+                                <Image
+                                    url={
+                                        "https:" +
+                                        mentor.fields.picture!.fields.file!.url
+                                    }
+                                    alt={mentor.fields.picture!.fields.title}
+                                />
+                                <div
+                                    set:html={documentToHtmlString(
+                                        mentor.fields.content,
+                                    )}
+                                />
+                            </div>
                         </div>
-                      `; 
-                          } else {
-                              return "";
-                          }
-                      },
-                  },
-              })
-            : ""}
-/>
-
+                    ),
+            )
+        }
+    </div>
 </section>
 
 <style lang="scss">
-  :global(.supermentor) {
-    overflow: auto;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #e0e0e0;
-    :global(h3) {
-      margin-bottom: 0.5rem;
-  }
-  }
+    .supermentor {
+        overflow: auto;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e0e0e0;
 
+        h3 {
+            margin-bottom: 0.5rem;
+        }
 
+        .mentor-content {
+            position: relative;
+            overflow: auto;
 
-  :global(.mentor-content) {
-    position: relative;
-    overflow: auto;
-  }
-
-  :global(.mentor-img) {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-    clear: both;
-    display: block;
-    aspect-ratio: 1/1;
-  }
-
-  @media screen and (min-width: 601px) {
-    :global(.mentor-img) {
-      float: right;
-      width: 200px;
-      margin-left: 1rem;
-      margin-bottom: 0.5rem;
-      display: inline;
+            img {
+                float: right;
+                width: 50%;
+                max-width: 200px;
+                height: auto;
+                object-fit: cover;
+                border-radius: 0.5rem;
+                margin-bottom: 0.5rem;
+                margin-left: 1rem;
+                clear: both;
+                display: inline-block;
+                aspect-ratio: 1 / 1;
+            }
+        }
     }
-  }
 
-  @media screen and (max-width: 600px) {
-    :global(.mentor-img) {
-      float: right;
-      width: 50%;
-      margin-left: 1rem;
-      margin-bottom: 0.5rem;
-      max-width: none;
-      display: inline;
+    .theme-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+        width: 100%;
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 0.5rem;
+        }
     }
-  }
-
-  .theme-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0;
-    width: 100%;
-  }
-
-  .theme-box img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 0.5rem;
-  }
 </style>
