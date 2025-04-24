@@ -2,6 +2,7 @@
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { contentfulClient } from "../contentful";
 import type { EntryFieldTypes } from "contentful";
+import { Image } from "astro-preload/components";
 
 interface Person {
     contentTypeId: "person";
@@ -44,25 +45,25 @@ const [contact] = await contentfulClient.withoutUnresolvableLinks
 
     <div class="contact-grid">
         {
-            contact.fields.contactPersons.map((contact) => (
+            contact.fields.contactPersons.map((contact) => contact && (
                 <div class="contact-card">
                     <div class="contact-info">
-                        <h3>{contact!.fields.name}</h3>
+                        <h3>{contact.fields.name}</h3>
                         <p>
-                            <strong>{contact!.fields.role}</strong>
+                            <strong>{contact.fields.role}</strong>
                         </p>
                         <p>
                             <span class="icon">📧</span>
-                            <span>{contact!.fields.email}</span>
+                            <span>{contact.fields.email}</span>
                         </p>
                         <p>
                             <span class="icon">📞</span>
-                            <span>{contact!.fields.phone}</span>
+                            <span>{contact.fields.phone}</span>
                         </p>
                     </div>
-                    <img
-                        src={contact!.fields.photo?.fields.file?.url}
-                        alt={contact!.fields.name}
+                    <Image
+                        url={"https:" + contact.fields.photo!.fields.file!.url}
+                        alt={contact.fields.name}
                     />
                 </div>
             ))
@@ -73,21 +74,21 @@ const [contact] = await contentfulClient.withoutUnresolvableLinks
 
     <div class="contact-grid">
         {
-            contact.fields.confidentialContactPersons.map((contact) => (
+            contact.fields.confidentialContactPersons.map((contact) => contact && (
                 <div class="contact-card">
                     <div class="contact-info">
-                        <h3>{contact!.fields.name}</h3>
+                        <h3>{contact.fields.name}</h3>
                         <p>
-                            <strong>{contact!.fields.role}</strong>
+                            <strong>{contact.fields.role}</strong>
                         </p>
                         <p>
                             <span class="icon">📞</span>{" "}
-                            <span>{contact!.fields.phone}</span>
+                            <span>{contact.fields.phone}</span>
                         </p>
                     </div>
-                    <img
-                        src={contact!.fields.photo?.fields.file?.url}
-                        alt={contact!.fields.name}
+                    <Image
+                        url={"https:" + contact.fields.photo!.fields.file!.url}
+                        alt={contact.fields.name}
                         class="contact-image"
                     />
                 </div>
@@ -125,7 +126,6 @@ const [contact] = await contentfulClient.withoutUnresolvableLinks
 
             p {
                 margin: 0.2rem 0;
-                color: #555;
 
                 span {
                     font-size: 0.85rem;
@@ -135,6 +135,7 @@ const [contact] = await contentfulClient.withoutUnresolvableLinks
 
         img {
             width: 100%;
+            height: auto;
             aspect-ratio: 1 / 1;
             object-fit: cover;
         }
