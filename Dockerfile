@@ -1,4 +1,4 @@
-FROM nginx:1.25-alpine
+FROM nginx:1.28-alpine-slim
 
 # Create non-root user and group
 RUN addgroup -S astro && adduser -S astro -G astro
