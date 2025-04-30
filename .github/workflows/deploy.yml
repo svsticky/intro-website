@@ -85,7 +85,7 @@ jobs:
       
       - name: Build Docker image
         run: |
-          docker build -t astro-site:${{ github.event.commit_id }} .
+          docker build -t astro-site:${{ github.sha }} .
 
       # as we do not have a proper docker registry yet; just save it as an artifact. TODO: make this push to our self-hosted docker registry.
       - name: Save Docker image as .tar
