@@ -67,3 +67,34 @@ jobs:
           webhook_url:    ${{ vars.AAS_URL }}
           webhook_secret: ${{ secrets.AAS_PRE_SHARED_KEY }}
 
+  dockerize:
+    name: Package Docker image as artifact
+    needs: build
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'development' }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download Astro build artifact (dist/)
+        uses: actions/download-artifact@v4
+        with:
+          name: website-build-static-files
+          path: dist/
+      
+      - name: Build Docker image
+        run: |
+          docker build -t astro-site:${{ github.event.commit_id }} .
+
+      # as we do not have a proper docker registry yet; just save it as an artifact. TODO: make this push to our self-hosted docker registry.
+      - name: Save Docker image as .tar
+        run: |
+          docker save astro-site | gzip > astro-site.tar.gz
+
+      - name: Upload Docker image artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: astro-site-docker-image
+          path: astro-site.tar.gz
+          retention-days: 30
