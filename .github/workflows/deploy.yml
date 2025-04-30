@@ -1,7 +1,7 @@
 name: Build and deploy
 
 on:
-  workflow_dispatch: # For manual dispatch on GitHub, and webhooks from Contentful TODO do not forget to let the webhook point to final repo name
+  workflow_dispatch: # For manual dispatch on GitHub, and webhooks from Contentful
   schedule:
     # Trigger a monthly deploy in order to prevent artifact staleness
     - cron: "0 0 1 * *"
