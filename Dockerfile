@@ -13,7 +13,7 @@ COPY dist/ /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # become astro user so you are rootless
-RUN chown -R astro:astro /usr/share/nginx/html
+USER astro
 
 EXPOSE 80
 
