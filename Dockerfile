@@ -12,9 +12,12 @@ COPY dist/ /usr/share/nginx/html/
 # Copy secure nginx config, which is owned by root
 COPY nginx.conf /etc/nginx/nginx.conf
 
+RUN mkdir -p /var/cache/nginx/client_temp /run && \
+    chown -R astro:astro /var/cache/nginx /run
+
 # become astro user so you are rootless
 USER astro
 
-EXPOSE 80
+EXPOSE 8080
 
 # Default command remains
