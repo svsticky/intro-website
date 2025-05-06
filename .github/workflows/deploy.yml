@@ -12,7 +12,7 @@ on:
       - '**'  # Listen to all branches
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}  # Does not distinguish PRs, for this workflow won't run on PR branches
   cancel-in-progress: true
 
 jobs:
@@ -41,12 +41,13 @@ jobs:
           CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
           CONTENTFUL_ENVIRONMENT:    ${{ vars.CONTENTFUL_ENVIRONMENT }}
 
+      # Astro will produce a build in `dist/`
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: website-build-static-files
           path: ./dist/
-          retention-days: 45
+          retention-days: 45  # Default value is 90, and cannot be higher than that. Because of this we have the cron job above to prevent the latest artifact from being deleted without being replaced. Since we do that monthly anyway, we remove it earlier for we use less storage that way.
 
   deploy:
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/development'
@@ -56,7 +57,7 @@ jobs:
     environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'development' }}
 
     steps:
-      - name: Trigger deploy on server
+      - name: Trigger deploy on server  # Triggers a webhook on our server, handled by Aas (svsticky/aas)
         uses: distributhor/workflow-webhook@v3
         env:
           webhook_url:    ${{ vars.AAS_URL }}
