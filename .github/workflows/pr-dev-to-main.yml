@@ -1,0 +1,36 @@
+name: Create Pull Request from development to main
+
+###
+#
+# This workflow creates a 'snapshot' of the dev branch (by creating a new branch) and creates a PR from that snapshot into main.
+# This allows easy approval of the merge to main, without future commits to dev interrupting the review process.
+# Furthermore, it sets in stone what should be the process of merging to main, preventing confusion (for example, should you rebase?).
+#
+###
+
+
+on:
+  # This workflow is branch agnostic
+  workflow_dispatch:
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create Development to Main pull request
+        run: |
+          git fetch --all
+          git switch development
+          git pull
+          commit=$(git rev-parse --short HEAD)
+          git switch -c dev-to-main-$commit
+          git push origin dev-to-main-$commit
+          gh pr create --base main --head dev-to-main-$commit --title "Merge development at commit $commit to main" --body "This PR merges the development branch at version $commit to the main branch."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
