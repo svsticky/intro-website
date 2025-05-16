@@ -1,5 +1,14 @@
 name: Create Pull Request from development to main
 
+###
+#
+# This workflow creates a 'snapshot' of the dev branch (by creating a new branch) and creates a PR from that snapshot into main.
+# This allows easy approval of the merge to main, without future commits to dev interrupting the review process.
+# Furthermore, it sets in stone what should be the process of merging to main, preventing confusion (for example, should you rebase?).
+#
+###
+
+
 on:
   # This workflow is branch agnostic
   workflow_dispatch:
