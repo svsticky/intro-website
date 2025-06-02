@@ -64,7 +64,7 @@ jobs:
           webhook_secret: ${{ secrets.AAS_PRE_SHARED_KEY }}
 
   dockerize:
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/development'
+    # if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/development'
     name: Build and push Docker image to Harbor
     needs: build
     runs-on: ubuntu-latest
