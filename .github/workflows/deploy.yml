@@ -64,8 +64,8 @@ jobs:
           webhook_secret: ${{ secrets.AAS_PRE_SHARED_KEY }}
 
   dockerize:
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/development'
-    name: Package Docker image as artifact
+    # if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/development'
+    name: Build and push Docker image to Harbor
     needs: build
     runs-on: ubuntu-latest
     environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'development' }}
@@ -79,19 +79,19 @@ jobs:
         with:
           name: website-build-static-files
           path: dist/
-      
-      - name: Build Docker image
-        run: |
-          docker build -t astro-site:${{ github.sha }} . --build-arg BUILD_NUMBER=${{ github.run_id }}
 
-      # as we do not have a proper docker registry yet; just save it as an artifact. TODO: make this push to our self-hosted docker registry.
-      - name: Save Docker image as .tar
-        run: |
-          docker save astro-site | gzip > astro-site.tar.gz
-
-      - name: Upload Docker image artifact
-        uses: actions/upload-artifact@v4
+      - name: Log in to Harbor registry
+        uses: docker/login-action@v3
         with:
-          name: astro-site-docker-image
-          path: astro-site.tar.gz
-          retention-days: 30
+          registry: ${{ secrets.HARBOR_REGISTRY }}
+          username: ${{ secrets.HARBOR_USERNAME }}
+          password: ${{ secrets.HARBOR_PASSWORD }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.HARBOR_REGISTRY }}/${{ vars.HARBOR_PROJECT }}/intro-website:latest
+          build-args: |
+            BUILD_NUMBER=${{ github.run_id }}
