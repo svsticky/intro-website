@@ -92,6 +92,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.HARBOR_REGISTRY }}/${{ secrets.HARBOR_PROJECT }}/intro-website:latest
+          tags: ${{ secrets.HARBOR_REGISTRY }}/${{ vars.HARBOR_PROJECT }}/intro-website:latest
           build-args: |
             BUILD_NUMBER=${{ github.run_id }}
