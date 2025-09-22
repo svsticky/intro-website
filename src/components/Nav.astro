@@ -29,12 +29,14 @@
 </script>
 
 <style lang="scss">
+    @use '../common';
+
     html {
         scroll-behavior: smooth;
     }
 
     nav {
-        background: #fa6b20;
+        background: common.$board-colour;
         height: 4rem;
         display: flex;
         justify-content: space-between;
@@ -73,7 +75,7 @@
             padding: 1rem;
             display: flex;
             z-index: 100;
-            background: #fa6b20;
+            background: common.$board-colour;
             width: calc(100vw - 2rem);
             flex-direction: column;
             gap: 1rem;

@@ -28,6 +28,8 @@ import Layout from "../components/Layout.astro";
 </Layout>
 
 <style lang="scss" is:global>
+    @use '../common';
+
     p {
         margin-bottom: 1rem;
     }
@@ -55,13 +57,13 @@ import Layout from "../components/Layout.astro";
         hyphens: auto;
 
         > strong, > b {
-            color: #fa6b20;
+            color: common.$board-colour;
             font-weight: bold;
         }
     }
 
     a {
-        color: #fa6b20;
+        color: common.$board-colour;
     }
 
     /* PAGE LAYOUT STYLES */

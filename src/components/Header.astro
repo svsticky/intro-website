@@ -80,6 +80,8 @@ const hero = heros.items[0];
 </script>
 
 <style lang="scss">
+    @use '../common';
+
     header {
         height: calc(100vh - 6rem);
         width: 100vw;
@@ -88,7 +90,7 @@ const hero = heros.items[0];
 
         .header-background {
             display: none;
-            background: #fa6b20;
+            background: common.$board-colour;
             width: 100%;
             position: absolute;
             top: 0;
