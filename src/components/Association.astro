@@ -31,6 +31,8 @@ const [association] = await contentfulClient.withoutUnresolvableLinks
 </section>
 
 <style lang="scss">
+    @use '../common';
+
     #sticky {
         position: relative;
         display: grid;
@@ -44,7 +46,7 @@ const [association] = await contentfulClient.withoutUnresolvableLinks
                 display: inline-block;
                 padding: 1rem 2rem;
                 margin-top: 1rem;
-                background-color: #197052;
+                background-color: common.$board-colour;
                 color: white;
                 font-size: 1.2rem;
                 border-radius: 5px;

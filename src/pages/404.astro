@@ -20,7 +20,10 @@ import Layout from "../components/Layout.astro";
     </div>
 </Layout>
 
-<style>
+<style lang="scss">
+    @use '../common';
+    @use 'sass:color';
+
     @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
     
     html, body {
@@ -45,7 +48,7 @@ import Layout from "../components/Layout.astro";
         font-size: clamp(6rem, 15vw, 10rem);
         font-weight: 900;
         margin: 0;
-        color: #197052;
+        color: common.$board-colour;
         line-height: 1;
     }
     
@@ -62,7 +65,7 @@ import Layout from "../components/Layout.astro";
     }
     
     .home-button {
-        background-color: #197052;
+        background-color: common.$board-colour;
         color: white;
         border: none;
         border-radius: 4px;
@@ -75,7 +78,7 @@ import Layout from "../components/Layout.astro";
     }
     
     .home-button:hover {
-        background-color: #145c44;
+        background-color: color.scale(common.$board-colour, $lightness: -20%);
     }
     
     .error-footer {
@@ -85,7 +88,7 @@ import Layout from "../components/Layout.astro";
     }
     
     .error-footer a {
-        color: #197052;
+        color: common.$board-colour;
         text-decoration: none;
     }
     
