@@ -1,97 +1,56 @@
 name: Build and deploy
 
 on:
-  workflow_dispatch: # For manual dispatch on GitHub, and webhooks from Contentful
-  schedule:
-    # Trigger a monthly deploy in order to prevent artifact staleness
-    - cron: "0 0 1 * *"
-  #   TODO add this routine to healthchecks.io
-
+  workflow_dispatch:
+  pull_request:
   push:
     branches:
-      - '**'  # Listen to all branches
+      - main
+      - development
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }} # Does not distinguish PRs, for this workflow won't run on PR branches
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
-  build:
-    name: Build artifact with Contentful
+  docker:
+    name: Build & push Docker image
     runs-on: ubuntu-latest
     environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'development' }}
 
-    defaults:
-      run:
-        shell: bash
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup `bun` 🥟
-        uses: oven-sh/setup-bun@v2
-
-      - name: Install dependencies
-        run: bun install
-
-      - name: Generate a production build
-        run: bun run build
-        env:
-          CONTENTFUL_SPACE_ID:       ${{ secrets.CONTENTFUL_SPACE_ID       }}
-          CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
-          CONTENTFUL_ENVIRONMENT:    ${{ vars.CONTENTFUL_ENVIRONMENT }}
-
-      # Astro will produce a build in `dist/`
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: website-build-static-files
-          path: ./dist/
-          retention-days: 45 # Default value is 90, and cannot be higher than that. Because of this we have the cron job above to prevent the latest artifact from being deleted without being replaced. Since we do that monthly anyway, we remove it earlier for we use less storage that way.
-
-  deploy:
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/development'
-    name: Notify server of new artifact
-    needs: build
-    runs-on: ubuntu-latest
-    environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'development' }}
-
-    steps:
-      - name: Trigger deploy on server  # Triggers a webhook on our server, handled by Aas (svsticky/aas)
-        uses: distributhor/workflow-webhook@v3
-        env:
-          webhook_url:    ${{ vars.AAS_URL }}
-          webhook_secret: ${{ secrets.AAS_PRE_SHARED_KEY }}
-
-  dockerize:
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/development'
-    name: Package Docker image as artifact
-    needs: build
-    runs-on: ubuntu-latest
-    environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'development' }}
-    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download Astro build artifact (dist/)
-        uses: actions/download-artifact@v4
-        with:
-          name: website-build-static-files
-          path: dist/
-      
-      - name: Build Docker image
-        run: |
-          docker build -t astro-site:${{ github.sha }} . --build-arg BUILD_NUMBER=${{ github.run_id }}
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
-      # as we do not have a proper docker registry yet; just save it as an artifact. TODO: make this push to our self-hosted docker registry.
-      - name: Save Docker image as .tar
-        run: |
-          docker save astro-site | gzip > astro-site.tar.gz
-
-      - name: Upload Docker image artifact
-        uses: actions/upload-artifact@v4
+      - name: Login to GHCR
+        uses: docker/login-action@v3
         with:
-          name: astro-site-docker-image
-          path: astro-site.tar.gz
-          retention-days: 30
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push image (secure)
+        env:
+          DOCKER_BUILDKIT: "1"
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
+          CONTENTFUL_PREVIEW_TOKEN: ${{ secrets.CONTENTFUL_PREVIEW_TOKEN }}
+          CONTENTFUL_ENVIRONMENT: ${{ secrets.CONTENTFUL_ENVIRONMENT }}
+        run: |
+          docker build \
+            --secret id=contentful_space_id,env=CONTENTFUL_SPACE_ID \
+            --secret id=contentful_delivery_token,env=CONTENTFUL_DELIVERY_TOKEN \
+            --secret id=contentful_preview_token,env=CONTENTFUL_PREVIEW_TOKEN \
+            --secret id=contentful_environment,env=CONTENTFUL_ENVIRONMENT \
+            -t $IMAGE .
+
+      - name: Push image
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/development'
+        run: docker push $IMAGE

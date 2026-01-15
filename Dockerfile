@@ -1,26 +1,21 @@
-FROM nginx:1.28-alpine-slim
+# syntax=docker/dockerfile:1.6
 
-ARG BUILD_NUMBER=notset
+FROM node:lts AS build
+WORKDIR /app
 
-# Create non-root user and group
-RUN addgroup -S astro && adduser -S astro -G astro
+COPY . .
+RUN npm ci
 
-# Remove default files
-RUN rm -rf /usr/share/nginx/html/*
+RUN --mount=type=secret,id=contentful_space_id \
+    --mount=type=secret,id=contentful_delivery_token \
+    --mount=type=secret,id=contentful_preview_token \
+    --mount=type=secret,id=contentful_environment \
+    export CONTENTFUL_SPACE_ID="$(cat /run/secrets/contentful_space_id)" && \
+    export CONTENTFUL_DELIVERY_TOKEN="$(cat /run/secrets/contentful_delivery_token)" && \
+    export CONTENTFUL_PREVIEW_TOKEN="$(cat /run/secrets/contentful_preview_token)" && \
+    export CONTENTFUL_ENVIRONMENT="$(cat /run/secrets/contentful_environment)" && \
+    npm run build
 
-# Copy static files
-COPY dist/ /usr/share/nginx/html/
-RUN echo ${BUILD_NUMBER} > /usr/share/nginx/html/version.txt
-
-# Copy secure nginx config, which is owned by root
-COPY nginx.conf /etc/nginx/nginx.conf
-
-RUN mkdir -p /var/cache/nginx/client_temp /run && \
-    chown -R astro:astro /var/cache/nginx /run
-
-# become astro user so you are rootless
-USER astro
-
-EXPOSE 8080
-
-# Default command remains
+FROM httpd:2.4 AS runtime
+COPY --from=build /app/dist /usr/local/apache2/htdocs/
+EXPOSE 80
