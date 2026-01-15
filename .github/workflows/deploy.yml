@@ -7,6 +7,7 @@ on:
     branches:
       - main
       - development
+      - '**' # temp do always
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
