@@ -1,3 +1,3 @@
 FROM httpd:2.4
-COPY dist/ /usr/local/apache2/htdocs/
+COPY docker-dist/ /usr/local/apache2/htdocs/
 EXPOSE 80
