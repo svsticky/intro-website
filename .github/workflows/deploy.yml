@@ -41,8 +41,7 @@ jobs:
         env:
           CONTENTFUL_SPACE_ID:       ${{ secrets.CONTENTFUL_SPACE_ID       }}
           CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
-          CONTENTFUL_ENVIRONMENT:    ${{ vars.CONTENTFUL_ENVIRONMENT }}
-
+          CONTENTFUL_ENVIRONMENT:    ${{ vars.CONTENTFUL_ENVIRONMENT }}      
       # Astro will produce a build in `dist/`
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
@@ -60,7 +59,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+      - name: view files here
+        run: ls -al
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
