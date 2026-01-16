@@ -7,7 +7,7 @@ on:
     branches:
       - main
       - development
-      - '**' # temp do always
+      - feat/proper-docker
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
