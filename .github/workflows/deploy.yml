@@ -84,5 +84,5 @@ jobs:
         run: docker build -t $IMAGE .
 
       - name: Push Docker image
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/development'
+        # if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/development'
         run: docker push $IMAGE
