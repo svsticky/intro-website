@@ -26,3 +26,4 @@ to contentful. The content itself (i.e. the pictures, text and links) is stored
 in contentful and filled out by astro into the layout. In [docs/contentful-organisation.md](docs/contentful-organisation.md),
 the contentful layout and some gimmicks for the page are explained.
 
+
