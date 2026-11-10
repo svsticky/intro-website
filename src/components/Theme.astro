@@ -21,7 +21,7 @@ const theme = await payload.findGlobal({ slug: "theme", depth: 2 });
                     <h3>{mentor.name}</h3>
                     <div class="mentor-content">
                         <Image
-                            url={decodeURI(mentor.picture!.url + "?w=400&h=400&fit=thumb")}
+                            url={encodeURI(mentor.picture!.url + "?w=400&h=400&fit=thumb")}
                             alt={mentor.picture!.alt}
                         />
                         <div set:html={convertLexicalToHTML({ data: mentor.content })} />

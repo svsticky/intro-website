@@ -31,7 +31,7 @@ const contact = await payload.findGlobal({
                         </p>
                     </div>
                     <Image
-                        url={decodeURI(contact.photo!.url + "?w=400&h=400&fit=thumb")}
+                        url={encodeURI(contact.photo!.url + "?w=400&h=400&fit=thumb")}
                         alt={contact.name}
                     />
                 </div>
@@ -56,7 +56,7 @@ const contact = await payload.findGlobal({
                         </p>
                     </div>
                     <Image
-                        url={decodeURI(contact.photo!.url + "?w=400&h=400&fit=thumb")}
+                        url={encodeURI(contact.photo!.url + "?w=400&h=400&fit=thumb")}
                         alt={contact.name}
                         class="contact-image"
                     />
