@@ -37,9 +37,8 @@ jobs:
       - name: Generate a production build
         run: bun run build
         env:
-          CONTENTFUL_SPACE_ID:       ${{ secrets.CONTENTFUL_SPACE_ID       }}
-          CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
-          CONTENTFUL_ENVIRONMENT:    ${{ vars.CONTENTFUL_ENVIRONMENT }}
+          SECRET_PAYLOAD_API_KEY: ${{ secrets.SECRET_PAYLOAD_API_KEY }}
+          PAYLOAD_BASE_URL:       ${{ vars.PAYLOAD_BASE_URL }}
 
       # Astro will produce a build in `dist/`
       - name: Upload build artifacts
