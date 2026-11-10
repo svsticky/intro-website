@@ -10,7 +10,7 @@ const information = await payload.findGlobal({ slug: "information" });
     {
         information.images.map((image) => (
             <Image
-                url={encodeURI(image!.url + "?w=1000&h=500&fit=fill")}
+                url={(image!.url + "?w=1000&h=500&fit=fill")}
                 alt={image!.alt ?? ""}
             />
         ))
