@@ -4,7 +4,6 @@ import payload from "../payload";
 import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
 
 const information = await payload.findGlobal({ slug: "information" });
-console.log(decodeURI(information.images[0].url))
 ---
 
 <section id="info">

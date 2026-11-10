@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro-preload/components";
+import { Image } from "astro:assets";
 import payload from "../payload";
 import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
 
@@ -21,7 +21,9 @@ const theme = await payload.findGlobal({ slug: "theme", depth: 2 });
                     <h3>{mentor.name}</h3>
                     <div class="mentor-content">
                         <Image
-                            url={(mentor.picture!.url + "?w=400&h=400&fit=thumb")}
+                            src={(mentor.picture!.url + "?w=400&h=400&fit=thumb")}
+                            width={mentor.picture.width}
+                            height={mentor.picture.height}
                             alt={mentor.picture!.alt}
                         />
                         <div set:html={convertLexicalToHTML({ data: mentor.content })} />

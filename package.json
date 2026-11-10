@@ -9,16 +9,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@contentful/rich-text-html-renderer": "^17.0.0",
     "@fontsource/outfit": "^5.2.5",
     "@payloadcms/richtext-lexical": "^3.93.0",
     "@payloadcms/sdk": "^3.93.0",
-    "@playform/compress": "^0.1.9",
     "astro": "^7.4.7",
     "astro-favicons": "^3.1.5",
     "autoprefixer": "^10.4.21",
-    "contentful": "^11.5.6",
-    "cssnano": "^7.0.6",
+    "cssnano": "^9.9.0",
     "sass": "^1.85.1"
   },
   "allowScripts": {
