@@ -1,21 +1,9 @@
 ---
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { contentfulClient } from "../contentful";
-import type { EntryFieldTypes } from "contentful";
 import { Image } from "astro-preload/components";
+import payload from "../payload";
+import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
 
-interface Hero {
-    contentTypeId: "hero";
-    fields: {
-        content: EntryFieldTypes.RichText;
-        pictures: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>;
-    };
-}
-
-const heros = await contentfulClient.withoutUnresolvableLinks.getEntries<Hero>({
-    content_type: "hero",
-});
-const hero = heros.items[0];
+const hero = await payload.findGlobal({ slug: "hero" });
 ---
 
 <header>
@@ -24,14 +12,14 @@ const hero = heros.items[0];
     <div class="hero">
         <div class="carousel">
             {
-                hero.fields.pictures.map((image) => image && (
+                hero.pictures.map((image) => (
                     <div class="carousel-item">
                         <Image
-                            url={"https:" + image.fields.file!.url + "?w=1000&h=500&fit=fill"}
-                            alt={image.fields.title}
+                            url={image.url + "?w=1000&h=500&fit=fill"}
+                            alt={image.alt}
                         />
                         <p>
-                            <strong>Foto:</strong> {image.fields.title}
+                            <strong>Foto:</strong> {image.alt}
                         </p>
                     </div>
                 ))
@@ -39,7 +27,7 @@ const hero = heros.items[0];
         </div>
         <div
             class="hero-text"
-            set:html={documentToHtmlString(hero.fields.content)}
+            set:html={convertLexicalToHTML({ data: hero.content })}
         />
     </div>
 </header>

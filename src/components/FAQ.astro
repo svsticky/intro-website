@@ -1,51 +1,26 @@
 ---
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { contentfulClient } from "../contentful";
-import type { EntryFieldTypes } from "contentful";
+import payload from "../payload";
+import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
 
-interface Question {
-    contentTypeId: "faqQuestion";
-    fields: {
-        question: EntryFieldTypes.Text;
-        answer: EntryFieldTypes.RichText;
-    };
-}
-
-interface FAQ {
-    contentTypeId: "faq";
-    fields: {
-        questions: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<Question>>;
-    };
-}
-
-const [faq] = await contentfulClient.withoutUnresolvableLinks
-    .getEntries<FAQ>({
-        content_type: "faq",
-    })
-    .then((result) => result.items);
+const faq = await payload.findGlobal({ slug: "faq", depth: 2 });
 ---
 
 <section id="FAQ">
     <h1>Frequently Asked Questions</h1>
     {
-        faq.fields.questions.map(
-            (question, idx) =>
-                question && (
-                    <div>
-                        <button class="question" data-target={`faq-${idx}`}>
-                            <span class="arrow">&#9662;</span>
-                            <span>{question.fields.question}</span>
-                        </button>
-                        <div
-                            class="answer"
-                            id={`faq-${idx}`}
-                            set:html={documentToHtmlString(
-                                question.fields.answer,
-                            )}
-                        />
-                    </div>
-                ),
-        )
+        faq.questions.map((question, idx) => (
+            <div>
+                <button class="question" data-target={`faq-${idx}`}>
+                    <span class="arrow">&#9662;</span>
+                    <span>{question.question}</span>
+                </button>
+                <div
+                    class="answer"
+                    id={`faq-${idx}`}
+                    set:html={convertLexicalToHTML({ data: question.answer })}
+                />
+            </div>
+        ))
     }
 </section>
 

@@ -11,13 +11,24 @@
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^17.0.0",
     "@fontsource/outfit": "^5.2.5",
+    "@payloadcms/richtext-lexical": "^3.93.0",
+    "@payloadcms/sdk": "^3.93.0",
     "@playform/compress": "^0.1.9",
-    "astro": "^5.4.3",
+    "astro": "^7.4.7",
     "astro-favicons": "^3.1.5",
     "astro-preload": "^1.1.2",
     "autoprefixer": "^10.4.21",
     "contentful": "^11.5.6",
     "cssnano": "^7.0.6",
     "sass": "^1.85.1"
+  },
+  "allowScripts": {
+    "sharp@0.34.5": true,
+    "sharp@0.33.5": true,
+    "esbuild@0.27.7": true,
+    "esbuild@0.25.12": true,
+    "@parcel/watcher@2.6.0": true,
+    "esbuild@0.28.2": true,
+    "fsevents@2.3.3": true
   }
 }

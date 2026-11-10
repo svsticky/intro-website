@@ -1,94 +1,63 @@
 ---
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { contentfulClient } from "../contentful";
-import type { EntryFieldTypes } from "contentful";
 import { Image } from "astro-preload/components";
+import payload from "../payload";
+import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
 
-interface Person {
-    contentTypeId: "person";
-    fields: {
-        name: EntryFieldTypes.Symbol;
-        email: EntryFieldTypes.Symbol;
-        phone: EntryFieldTypes.Symbol;
-        role: EntryFieldTypes.Array<
-            EntryFieldTypes.Symbol<
-                "Secretaris" | "Vertrouwenscontactpersoon" | "Voorzitter"
-            >
-        >;
-        photo: EntryFieldTypes.AssetLink;
-    };
-}
-
-interface Contact {
-    contentTypeId: "contact";
-    fields: {
-        contactContent: EntryFieldTypes.RichText;
-        contactPersons: EntryFieldTypes.Array<
-            EntryFieldTypes.EntryLink<Person>
-        >;
-        confidentialContent: EntryFieldTypes.RichText;
-        confidentialContactPersons: EntryFieldTypes.Array<
-            EntryFieldTypes.EntryLink<Person>
-        >;
-    };
-}
-
-const [contact] = await contentfulClient.withoutUnresolvableLinks
-    .getEntries<Contact>({
-        content_type: "contact",
-    })
-    .then((result) => result.items);
+const contact = await payload.findGlobal({
+    slug: "contact",
+    depth: 2
+});
 ---
 
 <section id="contact">
-    <div set:html={documentToHtmlString(contact.fields.contactContent)} />
+    <div set:html={convertLexicalToHTML({ data: contact.contactContent })} />
 
     <div class="contact-grid">
         {
-            contact.fields.contactPersons.map((contact) => contact && (
+            contact.contactPersons.map((contact) => (
                 <div class="contact-card">
                     <div class="contact-info">
-                        <h3>{contact.fields.name}</h3>
+                        <h3>{contact.name}</h3>
                         <p>
-                            <strong>{contact.fields.role}</strong>
+                            <strong>{contact.role}</strong>
                         </p>
                         <p>
                             <span class="icon">📧</span>
-                            <span>{contact.fields.email}</span>
+                            <span>{contact.email}</span>
                         </p>
                         <p>
                             <span class="icon">📞</span>
-                            <span>{contact.fields.phone}</span>
+                            <span>{contact.phone}</span>
                         </p>
                     </div>
                     <Image
-                        url={"https:" + contact.fields.photo!.fields.file!.url + "?w=400&h=400&fit=thumb"}
-                        alt={contact.fields.name}
+                        url={contact.photo!.url + "?w=400&h=400&fit=thumb"}
+                        alt={contact.name}
                     />
                 </div>
             ))
         }
     </div>
 
-    <div set:html={documentToHtmlString(contact.fields.confidentialContent)} />
+    <div set:html={convertLexicalToHTML({ data: contact.confidentialContent })} />
 
     <div class="contact-grid">
         {
-            contact.fields.confidentialContactPersons.map((contact) => contact && (
+            contact.confidentialContactPersons.map((contact) => (
                 <div class="contact-card">
                     <div class="contact-info">
-                        <h3>{contact.fields.name}</h3>
+                        <h3>{contact.name}</h3>
                         <p>
-                            <strong>{contact.fields.role}</strong>
+                            <strong>{contact.role}</strong>
                         </p>
                         <p>
                             <span class="icon">📞</span>{" "}
-                            <span>{contact.fields.phone}</span>
+                            <span>{contact.phone}</span>
                         </p>
                     </div>
                     <Image
-                        url={"https:" + contact.fields.photo!.fields.file!.url + "?w=400&h=400&fit=thumb"}
-                        alt={contact.fields.name}
+                        url={contact.photo!.url + "?w=400&h=400&fit=thumb"}
+                        alt={contact.name}
                         class="contact-image"
                     />
                 </div>

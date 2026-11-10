@@ -1,25 +1,15 @@
 ---
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { contentfulClient } from "../contentful";
-import type { EntryFieldTypes } from "contentful";
+import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
+import payload from "../payload";
 
-interface Association {
-    contentTypeId: "association";
-    fields: {
-        content: EntryFieldTypes.RichText;
-    };
-}
-
-const [association] = await contentfulClient.withoutUnresolvableLinks
-    .getEntries<Association>({
-        content_type: "association",
-    })
-    .then((result) => result.items);
+const association = await payload.findGlobal({
+    slug: "association"
+});
 ---
 
 <section id="sticky">
     <div class="content">
-        <div set:html={documentToHtmlString(association.fields.content)} />
+        <div set:html={convertLexicalToHTML({ data: association.content })} />
         <a href="https://wordlid.svsticky.nl" class="button" target="_blank">Word lid!</a>
     </div>
 

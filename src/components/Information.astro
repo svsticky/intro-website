@@ -1,37 +1,21 @@
 ---
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { contentfulClient } from "../contentful";
-import type { EntryFieldTypes } from "contentful";
 import { Image } from "astro-preload/components";
+import payload from "../payload";
+import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
 
-interface Information {
-    contentTypeId: "information";
-    fields: {
-        content: EntryFieldTypes.RichText;
-        images?: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>;
-    };
-}
-
-const [information] = await contentfulClient.withoutUnresolvableLinks
-    .getEntries<Information>({
-        content_type: "information",
-    })
-    .then((result) => result.items);
+const information = await payload.findGlobal({ slug: "information" });
 ---
 
 <section id="info">
     {
-        information.fields.images &&
-            information.fields.images.map((image) => (
-                <Image
-                    url={"https:" + image!.fields.file!.url + "?w=1000&h=500&fit=fill"}
-                    alt={image!.fields.title ?? ""}
-                    width={image!.fields.file?.details.image?.width ?? 0}
-                    height={image!.fields.file?.details.image?.height ?? 0}
-                />
-            ))
+        information.images.map((image) => (
+            <Image
+                url={image!.url + "?w=1000&h=500&fit=fill"}
+                alt={image!.alt ?? ""}
+            />
+        ))
     }
-    <div set:html={documentToHtmlString(information.fields.content)} />
+    <div set:html={convertLexicalToHTML({ data: information.content })} />
 </section>
 
 <style lang="scss">

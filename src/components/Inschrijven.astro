@@ -1,30 +1,16 @@
 ---
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { contentfulClient } from "../contentful";
-import type { EntryFieldTypes } from "contentful";
+import payload from "../payload";
+import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
 
-interface Signup {
-    contentTypeId: "signup";
-    fields: {
-        content: EntryFieldTypes.RichText;
-        buttonContent: EntryFieldTypes.Text;
-        buttonLink: EntryFieldTypes.Text;
-    };
-}
-
-const [signup] = await contentfulClient.withoutUnresolvableLinks
-    .getEntries<Signup>({
-        content_type: "signup",
-    })
-    .then((result) => result.items);
+const signup = await payload.findGlobal({ slug: "signup" });
 ---
 
 <section id="signup">
     <div class="background"></div>
     <div class="content">
-        <div set:html={documentToHtmlString(signup.fields.content)} />
-        <a href={signup.fields.buttonLink} class="button" target="_blank"
-            >{signup.fields.buttonContent}</a
+        <div set:html={convertLexicalToHTML({ data: signup.content })} />
+        <a href={signup.buttonLink} class="button" target="_blank"
+            >{signup.buttonContent}</a
         >
     </div>
 </section>

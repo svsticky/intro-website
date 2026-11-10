@@ -1,29 +1,12 @@
 ---
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { INLINES } from "@contentful/rich-text-types";
-import { contentfulClient } from "../contentful";
-import type { EntryFieldTypes } from "contentful";
+import payload from "../payload";
+import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
 
-interface Smallprint {
-    contentTypeId: "smallPrint";
-    fields: {
-        content: EntryFieldTypes.RichText;
-    };
-}
-
-const [smallprint] = await contentfulClient.withoutUnresolvableLinks
-    .getEntries<Smallprint>({
-        content_type: "smallPrint",
-    })
-    .then((result) => result.items);
+const smallprint = await payload.findGlobal({ slug: "small-print" });
 ---
 
+<!-- TODO: There used to be extra logic that made links open in a new tab, we might want to implement that again here -->
 <section
     id="smallprint"
-    set:html={documentToHtmlString(smallprint.fields.content, {
-        renderNode: {
-            [INLINES.HYPERLINK]: ({ data, content }, next) =>
-                `<a href=${data.uri} target="_blank">${next(content)}</a>`,
-        },
-    })}
+    set:html={convertLexicalToHTML({ data: smallprint.content })}
 />
