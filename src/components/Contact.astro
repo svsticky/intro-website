@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro-preload/components";
+import { Image } from "astro:assets";
 import payload from "../payload";
 import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
 
@@ -31,7 +31,8 @@ const contact = await payload.findGlobal({
                         </p>
                     </div>
                     <Image
-                        url={(contact.photo!.url + "?w=400&h=400&fit=thumb")}
+                        src={(contact.photo!.url + "?w=400&h=400&fit=thumb")}
+                        width={contact.photo.width} height={contact.photo.height}
                         alt={contact.name}
                     />
                 </div>
@@ -56,8 +57,9 @@ const contact = await payload.findGlobal({
                         </p>
                     </div>
                     <Image
-                        url={(contact.photo!.url + "?w=400&h=400&fit=thumb")}
+                        src={(contact.photo!.url + "?w=400&h=400&fit=thumb")}
                         alt={contact.name}
+                        width={contact.photo.width} height={contact.photo.height}
                         class="contact-image"
                     />
                 </div>

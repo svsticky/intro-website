@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro-preload/components";
+import { Image } from "astro:assets";
 import payload from "../payload";
 import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
 
@@ -15,7 +15,8 @@ const hero = await payload.findGlobal({ slug: "hero" });
                 hero.pictures.map((image) => (
                     <div class="carousel-item">
                         <Image
-                            url={(image.url + "?w=1000&h=500&fit=fill")}
+                            src={decodeURI(image.url + "?w=1000&h=500&fit=fill")}
+                            width={image.width} height={image.height}
                             alt={image.alt}
                         />
                         <p>

@@ -1,16 +1,18 @@
 ---
-import { Image } from "astro-preload/components";
+import { Image } from "astro:assets";
 import payload from "../payload";
 import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
 
 const information = await payload.findGlobal({ slug: "information" });
+console.log(decodeURI(information.images[0].url))
 ---
 
 <section id="info">
     {
         information.images.map((image) => (
             <Image
-                url={(image!.url + "?w=1000&h=500&fit=fill")}
+                src={decodeURI(image!.url + "?w=1000&h=500&fit=fill")}
+                width={image.width} height={image.height}
                 alt={image!.alt ?? ""}
             />
         ))
