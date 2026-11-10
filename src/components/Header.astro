@@ -15,7 +15,7 @@ const hero = await payload.findGlobal({ slug: "hero" });
                 hero.pictures.map((image) => (
                     <div class="carousel-item">
                         <Image
-                            url={image.url + "?w=1000&h=500&fit=fill"}
+                            url={decodeURI(image.url + "?w=1000&h=500&fit=fill")}
                             alt={image.alt}
                         />
                         <p>
